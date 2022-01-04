@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
+import ArticleProjet from "../components/ArticleProjet";
+
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -17,6 +19,7 @@ const Pages = () => {
       header: () => <Header data={data} />,
       logo: () => <Logo data={data} />,
       footer: () => <Footer data={data} />,
+      articleProjet: () => <ArticleProjet data={data} />,
     };
     return component[type]();
   };
