@@ -3,7 +3,7 @@ import React from "react";
 const Abonnement = ({ data }) => {
   return (
     <div className="abonnement">
-      <h1>{data.title}</h1>
+      <h1 className="text-center text-[#275852] text-9xl">{data.title}</h1>
       <br />
       <br />
       <div className="details border-8 border-indigo-500">
