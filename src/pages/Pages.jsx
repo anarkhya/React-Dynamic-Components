@@ -10,6 +10,7 @@ import home from "../data/Home";
 import concept from "../data/Concept";
 import abonnement from "../data/Abonnement";
 import services from "../data/Services";
+import echanges from "../data/Echanges";
 
 const Pages = () => {
   const { pages } = useParams();
@@ -27,6 +28,7 @@ const Pages = () => {
       concept,
       abonnement,
       services,
+      echanges,
     };
     const DetailsComp = DetailsPages[pages] || home;
 
