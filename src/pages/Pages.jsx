@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
+import ArticleProjet from "../components/ArticleProjet";
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -19,6 +20,7 @@ const Pages = () => {
       logo: () => <Logo data={data} />,
       footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
+      articleProjet: () => <ArticleProjet data={data} />,
     };
     return component[type]();
   };
