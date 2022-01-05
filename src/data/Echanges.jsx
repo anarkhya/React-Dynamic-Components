@@ -34,78 +34,78 @@ const echanges = [
   },
 
   // // LES TYPES D'OBJETS
-  // {
-  //   component: "objets",
-  //   data: {
-  //     categorie: [
-  //       {
-  //         id: 1,
-  //         appartenance: "Vêtements",
-  //         cible: "Femme ~ Homme ~ Enfant ~ Accessoire ~ Chaussures ...",
-  //       },
-  //       {
-  //         id: 2,
-  //         appartenance: "Maison",
-  //         cible: "Petit mobilier ~ Vaisselle ~ Décoration ~ Puériculture ... ",
-  //       },
-  //       {
-  //         id: 3,
-  //         appartenance: "Culture & loisirs",
-  //         cible:
-  //           "Livre ~ Jeu ~ CD/K7 ~ vinyle ~ Jeu vidéo ~ Univers sport ... ",
-  //       },
-  //     ],
-  //   },
-  // },
+  {
+    component: "objets",
+    data: {
+      categorie: [
+        {
+          id: 1,
+          appartenance: "Vêtements",
+          cible: "Femme ~ Homme ~ Enfant ~ Accessoire ~ Chaussures ...",
+        },
+        {
+          id: 2,
+          appartenance: "Maison",
+          cible: "Petit mobilier ~ Vaisselle ~ Décoration ~ Puériculture ... ",
+        },
+        {
+          id: 3,
+          appartenance: "Culture & loisirs",
+          cible:
+            "Livre ~ Jeu ~ CD/K7 ~ vinyle ~ Jeu vidéo ~ Univers sport ... ",
+        },
+      ],
+    },
+  },
 
-  // // CATEGORIES
+  // CATEGORIES
 
-  // {
-  //   component: "Categorie",
-  //   data: {
-  //     texte:
-  //       "La valeur des objets n'est pas la même pour tout le monde. La valeur du produit dans la Trocquerie est considérée différement de son prix d'achat. L'idée est de privilégier l'éthique et se détacher de la valeur monétaire et aussi sentimentale de ceux-ci.",
-  //     sousTexte: "Les échanges sont catégorisés par un système de gommettes:",
-  //     gommettes: [
-  //       {
-  //         id: 1,
-  //         color: "bleu",
-  //       },
-  //       {
-  //         id: 2,
-  //         color: "rose",
-  //       },
-  //       {
-  //         id: 3,
-  //         color: "jaune",
-  //       },
-  //       {
-  //         id: 4,
-  //         color: "vert",
-  //       },
-  //     ],
-  //     principe: [
-  //       {
-  //         id: 1,
-  //         color: "bleu = bleu",
-  //       },
-  //       {
-  //         id: 2,
-  //         color: "rose = rose",
-  //       },
-  //       {
-  //         id: 3,
-  //         color: "jaune = jaune",
-  //       },
-  //       {
-  //         id: 4,
-  //         color: "vert = vert",
-  //       },
-  //     ],
-  //     infos: "Il est également possible de combiner des couleurs",
-  //     more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
-  //   },
-  // },
+  {
+    component: "categorie",
+    data: {
+      texte:
+        "La valeur des objets n'est pas la même pour tout le monde. La valeur du produit dans la Trocquerie est considérée différement de son prix d'achat. L'idée est de privilégier l'éthique et se détacher de la valeur monétaire et aussi sentimentale de ceux-ci.",
+      sousTexte: "Les échanges sont catégorisés par un système de gommettes:",
+      gommettes: [
+        {
+          id: 1,
+          color: "bleu",
+        },
+        {
+          id: 2,
+          color: "rose",
+        },
+        {
+          id: 3,
+          color: "jaune",
+        },
+        {
+          id: 4,
+          color: "vert",
+        },
+      ],
+      principe: [
+        {
+          id: 1,
+          color: "bleu = bleu",
+        },
+        {
+          id: 2,
+          color: "rose = rose",
+        },
+        {
+          id: 3,
+          color: "jaune = jaune",
+        },
+        {
+          id: 4,
+          color: "vert = vert",
+        },
+      ],
+      infos: "Il est également possible de combiner des couleurs",
+      more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
+    },
+  },
 
   // FONCTIONNEMENT
 
@@ -115,20 +115,6 @@ const echanges = [
       titre: "Comment ça marche:",
       paragraphe:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo culpa aspernatur libero sint in enim soluta earum facilis, animi sed, neque nemo eveniet ullam laudantium hic nam pariatur. Temporibus?",
-    },
-  },
-
-  // FOOTER
-  {
-    component: "footer",
-    data: {
-      address: "23 rue Petite-Biesse - quartier île de Nantes",
-      horaires: [
-        { id: 1, horaire: "Mercredi 10h30 - 19h00" },
-        { id: 2, horaire: "Jeudi 10h30 - 19h00" },
-        { id: 3, horaire: "Vendredi 10h30 - 19h00" },
-        { id: 4, horaire: "Samedi 10h30 - 19h00" },
-      ],
     },
   },
 ];
