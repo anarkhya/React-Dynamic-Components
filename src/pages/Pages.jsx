@@ -8,6 +8,7 @@ import Article from "../components/Article";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 
+
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -25,6 +26,7 @@ const Pages = () => {
       article: () => <Article data={data} />,
       product: () => <Product data={data} />,
       echanges: () => <Echanges data={data} />,
+
     };
     return component[type]();
   };
@@ -42,12 +44,7 @@ const Pages = () => {
     );
     return res;
   };
-  return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      {createComponent()}
-    </div>
-  );
+  return <div>{createComponent()}</div>;
 };
 
 export default Pages;
