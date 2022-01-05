@@ -51,6 +51,25 @@ const AbonnementData = [
     },
   },
   {
+    component: "utilisateur",
+    data: {
+      titre: "Utilisateur.trices",
+      textes: [
+        {
+          detail1: "Les familles",
+          detail2: "Les curieux.se",
+          detail3: "Les connaisseur.eusses du système D",
+          detail4: "Les petits budgets",
+          detail5:
+            "Les consommateur.trices qui souhaitent consommer autrement responsable",
+          detail6: "Les écolos",
+          detail7: "Les amateur.trices de seconde main",
+          detail8: "Les minimalistes",
+        },
+      ],
+    },
+  },
+  {
     component: "footer",
     data: {
       address: "23 rue Petite-Biesse - quartier île de Nantes",

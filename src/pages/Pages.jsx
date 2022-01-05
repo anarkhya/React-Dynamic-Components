@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
 import ArticleProjet from "../components/ArticleProjet";
+import Utilisateur from "../components/Utilisateur";
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -21,6 +22,7 @@ const Pages = () => {
       footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
       articleProjet: () => <ArticleProjet data={data} />,
+      utilisateur: () => <Utilisateur data={data} />,
     };
     return component[type]();
   };
