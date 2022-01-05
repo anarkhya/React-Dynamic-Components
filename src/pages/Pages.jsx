@@ -5,13 +5,17 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
-import ArticleProjet from "../components/ArticleProjet";
 import Utilisateur from "../components/Utilisateur";
+import Article from "../components/Article";
+import ArticleProjet from "../components/ArticleProjet";
+import Product from "../components/Product";
+import Echanges from "../components/Echanges";
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
 import abonnement from "../data/Abonnement";
 import services from "../data/Services";
+import echanges from "../data/Echanges";
 
 const Pages = () => {
   const { pages } = useParams();
@@ -21,8 +25,11 @@ const Pages = () => {
       logo: () => <Logo data={data} />,
       footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
-      articleProjet: () => <ArticleProjet data={data} />,
       utilisateur: () => <Utilisateur data={data} />,
+      article: () => <Article data={data} />,
+      articleProjet: () => <ArticleProjet data={data} />,
+      product: () => <Product data={data} />,
+      echanges: () => <Echanges data={data} />,
     };
     return component[type]();
   };
@@ -31,6 +38,7 @@ const Pages = () => {
       concept,
       abonnement,
       services,
+      echanges,
     };
     const DetailsComp = DetailsPages[pages] || home;
 
