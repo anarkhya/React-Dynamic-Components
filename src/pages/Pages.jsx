@@ -7,6 +7,7 @@ import Logo from "../components/Logo";
 import Article from "../components/Article";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
+import Objets from "../components/Objets";
 
 // data
 import home from "../data/Home";
@@ -24,7 +25,8 @@ const Pages = () => {
       footer: () => <Footer data={data} />,
       article: () => <Article data={data} />,
       product: () => <Product data={data} />,
-      echanges: () => <Echanges data={data} />,
+      categorie: () => <Echanges data={data} />,
+      objets: () => <Objets data={data} />,
     };
     return component[type]();
   };

@@ -8,7 +8,7 @@ const Product = ({ data }) => {
         {data.presentation.map((pres) => (
           <div>
             <p>{pres.infos}</p>
-            <img src={data.src} alt={data.alt} />
+            <img src={pres.src} alt={pres.alt} />
           </div>
         ))}
       </section>
