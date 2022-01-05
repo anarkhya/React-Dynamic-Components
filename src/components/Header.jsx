@@ -40,7 +40,7 @@ const Header = () => {
                         <a
                           key={item.name}
                           href={item.to}
-                          className="text-teal-900"
+                          className="font-bold text-teal-900"
                         >
                           {item.name}
                         </a>
@@ -53,10 +53,13 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="flex flex-col px-2 pt-2 pb-3 space-y-1">
+            <div className="bg-teal-900 flex flex-col px-2 pt-2 pb-3 space-y-1">
               {Menu.map((item) => (
                 <Link to={item.to}>
-                  <Disclosure.Button key={item.name} className="text-teal-900">
+                  <Disclosure.Button
+                    key={item.name}
+                    className="font-bold text-white"
+                  >
                     {item.name}
                   </Disclosure.Button>
                 </Link>
