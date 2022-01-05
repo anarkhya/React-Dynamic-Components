@@ -1,17 +1,4 @@
-const home = [
-  {
-    component: "header",
-    data: {
-      title: "Header",
-      burger: { title: "burger" },
-      logo: {
-        src: "./assets/images/logo.png",
-        alt: "logo de l entreprise",
-        cls: "logo",
-        url: "/home",
-      },
-    },
-  },
+const footer = [
   {
     component: "footer",
     data: {
@@ -33,4 +20,4 @@ const home = [
   },
 ];
 
-export default home;
+export default footer;
