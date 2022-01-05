@@ -4,6 +4,11 @@ const Footer = ({ data }) => {
   return (
     <div className={data.cls}>
       <div className="container">
+        <div className="contact">
+          {data.contact.map((contact) => (
+            <li key={contact.id}>{contact.contact}</li>
+          ))}
+        </div>
         <p>{data.address}</p>
         <h2>{data.title}</h2>
         <div className="horaires">
