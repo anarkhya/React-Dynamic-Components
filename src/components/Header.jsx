@@ -1,7 +1,8 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
-import Menu from "../data/Index";
+import HeaderData from "../data/HeaderData";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
@@ -21,21 +22,10 @@ const Header = () => {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="../../assets/images/logo.png"
-                    alt="Workflow"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="../../assets/images/logo.png"
-                    alt="Workflow"
-                  />
-                </div>
+                <Logo data={HeaderData.logo} />
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
-                    {Menu.map((item) => (
+                    {HeaderData.menu.map((item) => (
                       <Link to={item.to}>
                         <a
                           key={item.name}
@@ -54,7 +44,7 @@ const Header = () => {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="bg-teal-900 flex flex-col px-2 pt-2 pb-3 space-y-1">
-              {Menu.map((item) => (
+              {HeaderData.menu.map((item) => (
                 <Link to={item.to}>
                   <Disclosure.Button
                     key={item.name}
