@@ -4,7 +4,10 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
+import Article from "../components/Article";
 import Product from "../components/Product";
+import Echanges from "../components/Echanges";
+
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -19,7 +22,9 @@ const Pages = () => {
       header: () => <Header data={data} />,
       logo: () => <Logo data={data} />,
       footer: () => <Footer data={data} />,
+      article: () => <Article data={data} />,
       product: () => <Product data={data} />,
+      echanges: () => <Echanges data={data} />,
     };
     return component[type]();
   };
