@@ -10,6 +10,7 @@ import Article from "../components/Article";
 import ArticleProjet from "../components/ArticleProjet";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
+import Objets from "../components/Objets";
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -29,6 +30,8 @@ const Pages = () => {
       article: () => <Article data={data} />,
       articleProjet: () => <ArticleProjet data={data} />,
       product: () => <Product data={data} />,
+      categorie: () => <Echanges data={data} />,
+      objets: () => <Objets data={data} />,
       echanges: () => <Echanges data={data} />,
     };
     return component[type]();
