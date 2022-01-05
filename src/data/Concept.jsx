@@ -2,10 +2,9 @@ const concept = [
   {
     component: "articleProjet",
     data: {
-      classContainerVert:
-        "p-4 gap-3 flex items-center flex-col bg-vert text-blanc",
+      classContainer: "p-4 gap-3 flex items-center flex-col bg-vert text-blanc",
       classTitle: "text-h1 font-light",
-      classRoundedFullImg: "w-32 rounded-full",
+      classImg: "w-32 rounded-full",
       classParagraph: "",
       title: "Porteuse de projet",
       src: "./assets/images/placeholder.png",
