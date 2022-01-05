@@ -25,14 +25,6 @@ const concept = [
     },
   },
   {
-    component: "logo",
-    data: {
-      src: "./assets/images/logo.png",
-      alt: "logo de l entreprise",
-      cls: "image",
-    },
-  },
-  {
     component: "footer",
     data: {
       address: "23 rue Petite-Biesse - quartier île de Nantes",
