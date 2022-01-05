@@ -6,7 +6,10 @@ import Logo from "./Logo";
 
 const Header = () => {
   return (
-    <Disclosure as="nav" className="border-b-2 border-b-neutral-200">
+    <Disclosure
+      as="nav"
+      className="border-b-2 border-b-neutral-200 sticky top-0 bg-white"
+    >
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -30,7 +33,7 @@ const Header = () => {
                         <a
                           key={item.name}
                           href={item.to}
-                          className="font-bold text-teal-900"
+                          className="font-bold text-teal-900 hover:text-rose"
                         >
                           {item.name}
                         </a>
