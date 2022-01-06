@@ -13,6 +13,7 @@ const footer = {
     { id: 3, horaire: "Vendredi 10h30 - 19h00" },
     { id: 4, horaire: "Samedi 10h30 - 19h00" },
   ],
+  cls: "",
 };
 
 export default footer;
