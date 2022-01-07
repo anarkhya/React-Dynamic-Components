@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = ({ data }) => {
+const Contact = ({ data, img }) => {
   return (
     <div className="">
       <div className="text-vert bg-gris_clair text-center pb-7">
@@ -13,6 +13,13 @@ const Contact = ({ data }) => {
           <p>{data.insta}</p>
           <p>{data.adresse}</p>
         </div>
+      </div>
+      <div className="map">
+        <li>
+          <a href={img.url}>
+            <img src={img.src} onClick={img.src} key={id} />
+          </a>
+        </li>
       </div>
     </div>
   );
