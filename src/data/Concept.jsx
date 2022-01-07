@@ -22,7 +22,7 @@ const concept = [
     component: "articleProjet",
     data: {
       classContainer:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-b-lg shadow-2xl",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-b-lg shadow-2xl shadow-vert/25",
       classTitle: "text-h1 font-light",
       classImg: "w-32 rounded-full",
       classParagraph: "",
