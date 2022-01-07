@@ -6,6 +6,7 @@ const echanges = [
     data: {
       titre: "Dans la Trocquerie, il est possible de troquer:",
       paragraphe: "¡ Uniquement des objets en bon état",
+      cls: "bg-gris_clair",
     },
   },
 
@@ -13,7 +14,7 @@ const echanges = [
   {
     component: "product",
     data: {
-      title: "Les différents produits",
+      title: "Les différents produits échangeables:",
       presentation: [
         {
           infos:
@@ -115,6 +116,7 @@ const echanges = [
       titre: "Comment ça marche:",
       paragraphe:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo culpa aspernatur libero sint in enim soluta earum facilis, animi sed, neque nemo eveniet ullam laudantium hic nam pariatur. Temporibus?",
+      cls: "",
     },
   },
 ];
