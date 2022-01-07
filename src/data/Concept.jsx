@@ -3,7 +3,7 @@ const concept = [
     component: "article",
     data: {
       classBg:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl",
       classTitre: "text-h1 font-light",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Concept",
@@ -22,7 +22,7 @@ const concept = [
     component: "articleProjet",
     data: {
       classContainer:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-b-lg shadow-2xl",
       classTitle: "text-h1 font-light",
       classImg: "w-32 rounded-full",
       classParagraph: "",
