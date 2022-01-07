@@ -12,6 +12,17 @@ const contact = [
       cls: "",
     },
   },
+  {
+    component: "map",
+    data: {
+      img: {
+        src: "",
+        alt: "",
+        url: "",
+        cls: "",
+      },
+    },
+  },
 ];
 
 export default contact;
