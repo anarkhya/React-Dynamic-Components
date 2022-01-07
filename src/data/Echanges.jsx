@@ -1,12 +1,29 @@
 const echanges = [
   // COMPOSANTS
   // TITRE
+  // {
+  //   component: "article",
+  //   data: {
+  //     titre: "Dans la Trocquerie, il est possible de troquer:",
+  //     paragraphe: "¡ Uniquement des objets en bon état",
+  //     cls: "bg-gris_clair",
+  //   },
+  // },
+
   {
     component: "article",
     data: {
+      classBg:
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl",
+      classTitre: "text-h1 font-light",
+      classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Dans la Trocquerie, il est possible de troquer:",
-      paragraphe: "¡ Uniquement des objets en bon état",
-      cls: "bg-gris_clair",
+      paragraphe: "",
+      paragraphe2: true,
+      paragraphe2contenu: "¡ Uniquement des objets en bon état",
+      paragraphe3: true,
+      paragraphe3contenu: "",
+      button: false,
     },
   },
 
@@ -113,12 +130,30 @@ const echanges = [
   {
     component: "article",
     data: {
+      classBg:
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl",
+      classTitre: "text-h1 font-light",
+      classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Comment ça marche:",
-      paragraphe:
+      paragraphe: "",
+      paragraphe2: true,
+      paragraphe2contenu:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo culpa aspernatur libero sint in enim soluta earum facilis, animi sed, neque nemo eveniet ullam laudantium hic nam pariatur. Temporibus?",
-      cls: "",
+      paragraphe3: true,
+      paragraphe3contenu: "",
+      button: false,
     },
   },
+
+  // {
+  //   component: "article",
+  //   data: {
+  //     titre: "Comment ça marche:",
+  //     paragraphe:
+  //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo culpa aspernatur libero sint in enim soluta earum facilis, animi sed, neque nemo eveniet ullam laudantium hic nam pariatur. Temporibus?",
+  //     cls: "",
+  //   },
+  // },
 ];
 
 export default echanges;
