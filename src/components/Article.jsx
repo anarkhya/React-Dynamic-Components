@@ -8,6 +8,13 @@ const Article = ({ data }) => {
       {/* Si il y a du contenu, il s'affiche sinon rien */}
       {data.paragraphe2 ? <p>{data.paragraphe2contenu}</p> : ""}
       {data.paragraphe3 ? <p>{data.paragraphe3contenu}</p> : ""}
+      {data.button ? (
+        <button className={data.classButton} type="submit">
+          En savoir plus
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
