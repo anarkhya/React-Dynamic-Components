@@ -4,7 +4,7 @@ const contact = [
     data: {
       title: "Contact",
       name: "Agathe Violain",
-      phone: "06 07 08 09 10",
+      phone: "06 79 21 42 19",
       mail: "latrocquerie@gmail.com",
       insta: "@latrocquerie",
       adresse: "rue de la petite Biesse - quartier île de Nantes",
