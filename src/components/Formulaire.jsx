@@ -5,10 +5,7 @@ const Formulaire = () => {
     <div className="">
       <div className="text-vert flex flex-col mb-4 items-center bg-gris_clair">
         <form className="flex flex-col my-5">
-          <label
-            className="m-2 border-2 border-vert rounded-full"
-            htmlFor="nom"
-          >
+          <label className="m-2 border-2 border-vert" htmlFor="nom">
             <input
               className=""
               type="text"
@@ -17,10 +14,7 @@ const Formulaire = () => {
               placeholder="Nom"
             />
           </label>
-          <label
-            className="m-2 border-vert border-2 rounded-full"
-            htmlFor="Prénom"
-          >
+          <label className="m-2 border-vert border-2" htmlFor="Prénom">
             <input type="text" name="Prénom" id="Prénom" placeholder="Prénom" />
           </label>
           <label className="m-2 border-vert border-2" htmlFor="Email">
