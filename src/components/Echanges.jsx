@@ -3,8 +3,8 @@ import React from "react";
 const Echanges = ({ data }) => {
   return (
     // composant categorie
-    <div className="bg-vert text-blanc pl-4 pt-4 pr-4 gap-4 flex flex-col">
-      <h1 className="text-center ">{data.texte}</h1>
+    <div className="bg-vert text-blanc pl-4 pt-4 pr-4 gap-8 flex flex-col">
+      <h1 className="text-center pl-20 pr-20">{data.texte}</h1>
       <p className="mt-4 text-center">{data.sousTexte}</p>
       <section className="flex justify-around">
         {data.gommettes.map((gommette) => (
