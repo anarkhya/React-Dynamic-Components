@@ -3,7 +3,7 @@ const concept = [
     component: "article",
     data: {
       classBg:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl md:rounded-bl-lg md:rounded-br-lg",
       classTitre: "text-h1 font-light",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Concept",
@@ -19,10 +19,24 @@ const concept = [
     },
   },
   {
+    component: "article",
+    data: {
+      classBg:
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-lg md:my-4 ",
+      classTitre: "",
+      classButton: "",
+      clsPara: "px-8 text-[26px] font-light leading-tight",
+      titre: "",
+      paragraphe:
+        "“Perçu comme un acte militant, le troc véhicule des valeurs fortes comme l’entraide, le partage, la convivialité, mais il contribue aussi à la lutte contre le gaspillage et la surconsommation.”",
+      button: false,
+    },
+  },
+  {
     component: "utilisateur",
     data: {
       classContainer:
-        "px-4 pb-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-gris_clair text-vert shadow-xl",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-gris_clair text-vert shadow-xl md:rounded-tl-lg md:rounded-tr-lg",
       classTitre: "text-center text-h1 font-light",
       titre: "Pour qui ?",
       textes: [
