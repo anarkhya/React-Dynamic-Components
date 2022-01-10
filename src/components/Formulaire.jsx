@@ -2,43 +2,45 @@ import React from "react";
 
 const Formulaire = ({ data }) => {
   return (
-    <div>
-      <div className="bg-gris_clair text-vert text-h1 text-center pt-3">
-        {data.titre}
-      </div>
-      <div className="text-vert flex flex-col mb-4 items-center bg-gris_clair">
-        <form className="flex flex-col my-5">
-          <label
-            className="m-2 border-2 border-vert rounded caret-rose"
-            htmlFor="nom"
-          >
+    <div className="p-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-vert text-blanc md:rounded-lg md:my-4 ">
+      <div className="text-h1 text-center">{data.titre}</div>
+      <div className="text-vert flex flex-col mb-4 ">
+        <form className="flex flex-col items-center my-5">
+          <label htmlFor="nom">
             <input
-              className=""
+              className="m-2 px-2 border-none md:w-96 rounded-lg focus:outline-none"
               type="text"
               name="Nom"
               id="nom"
               placeholder="Nom"
             />
           </label>
-          <label className="m-2 border-vert border-2 rounded" htmlFor="Prénom">
-            <input type="text" name="Prénom" id="Prénom" placeholder="Prénom" />
-          </label>
-          <label className="m-2 border-vert border-2 rounded" htmlFor="Email">
-            <input type="text" name="Email" id="Email" placeholder="Email" />
-          </label>
-          <label
-            className="m-2 border-vert border-2 rounded resize"
-            htmlFor="Message"
-          >
+          <label htmlFor="Prénom">
             <input
+              className="m-2 px-2 border-none md:w-96 rounded-lg focus:outline-none"
               type="text"
-              name="Message"
-              id="Message"
-              placeholder="Message"
+              name="Prénom"
+              id="Prénom"
+              placeholder="Prénom"
             />
           </label>
+          <label htmlFor="Email">
+            <input
+              className="m-2 px-2 border-none md:w-96 rounded-lg focus:outline-none"
+              type="text"
+              name="Email"
+              id="Email"
+              placeholder="Email"
+            />
+          </label>
+          <textarea
+            className="
+            m-2 px-2 block md:w-96 bg-clip-padding m-0 rounded-lg focus:outline-none"
+            rows="3"
+            placeholder="Message"
+          />
           <button
-            className="bg-vert hover:bg-rose hover:text-vert text-vert text-white font-bold m-7 py-2 px-4 rounded-full"
+            className="mt-4 rounded-full bg-transparent border-2 border-solid border-white text-white px-6 py-2"
             type="button"
             id="button"
           >

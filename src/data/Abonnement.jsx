@@ -40,7 +40,7 @@ const AbonnementData = [
   {
     component: "formulaire",
     data: {
-      titre: "Formulaire",
+      titre: "Prendre rendez-vous",
       nom: "",
       prenom: "",
       email: "",
