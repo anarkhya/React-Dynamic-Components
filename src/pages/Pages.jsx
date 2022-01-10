@@ -11,6 +11,7 @@ import ArticleProjet from "../components/ArticleProjet";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 import Objets from "../components/Objets";
+import Formulaire from "../components/Formulaire";
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -26,6 +27,7 @@ const Pages = () => {
       logo: () => <Logo data={data} />,
       footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
+      formulaire: () => <Formulaire data={data} />,
       utilisateur: () => <Utilisateur data={data} />,
       article: () => <Article data={data} />,
       articleProjet: () => <ArticleProjet data={data} />,
