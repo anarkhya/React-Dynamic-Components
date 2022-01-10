@@ -12,7 +12,9 @@ import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 import Objets from "../components/Objets";
 import Contact from "../components/Contact";
+import Concept from "../components/Concept";
 import Map from "../components/Map";
+
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -38,6 +40,7 @@ const Pages = () => {
       echanges: () => <Echanges data={data} />,
       map: () => <Map data={data} />,
       contact: () => <Contact data={data} />,
+      concept: () => <Concept data={data} />,
     };
     return component[type]();
   };

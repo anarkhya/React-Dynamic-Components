@@ -1,5 +1,9 @@
 const concept = [
   {
+    component: "concept",
+    data: {},
+  },
+  {
     component: "article",
     data: {
       classBg:
@@ -25,7 +29,7 @@ const concept = [
         "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-lg md:my-4 ",
       classTitre: "",
       classButton: "",
-      clsPara: "px-8 text-[26px] font-light leading-tight",
+      clsPara: "px-8 text-[24px] font-light leading-tight",
       titre: "",
       paragraphe:
         "“Perçu comme un acte militant, le troc véhicule des valeurs fortes comme l’entraide, le partage, la convivialité, mais il contribue aussi à la lutte contre le gaspillage et la surconsommation.”",
@@ -55,10 +59,24 @@ const concept = [
     },
   },
   {
+    component: "article",
+    data: {
+      classBg:
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-lg md:my-4 ",
+      classTitre: "",
+      classButton: "",
+      clsPara: "px-8 text-[24px] font-light leading-tight",
+      titre: "",
+      paragraphe:
+        "“Selon le quinzième baromètre greenflex-ademe : 86 % des français aimeraient vivre demain dans une société où la consommation prend moins de place dans l’idée de consommer responsable.”",
+      button: false,
+    },
+  },
+  {
     component: "articleProjet",
     data: {
       classContainer:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-b-lg shadow-2xl shadow-vert/25",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert md:rounded-lg shadow-2xl shadow-lg",
       classTitle: "text-h1 font-light",
       classImg: "w-32 rounded-full",
       classParagraph: "",
