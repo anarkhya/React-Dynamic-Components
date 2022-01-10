@@ -1,5 +1,9 @@
 const concept = [
   {
+    component: "concept",
+    data: {},
+  },
+  {
     component: "article",
     data: {
       classBg:
