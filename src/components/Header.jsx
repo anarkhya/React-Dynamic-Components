@@ -25,7 +25,9 @@ const Header = () => {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-center sm:justify-between">
-                <Logo data={HeaderData.logo} />
+                <Link to={HeaderData.menu[0].to}>
+                  <Logo data={HeaderData.logo} />
+                </Link>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-14">
                     {HeaderData.menu.map((item) => (
