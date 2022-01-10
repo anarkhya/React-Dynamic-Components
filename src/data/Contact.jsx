@@ -20,6 +20,21 @@ const contact = [
       cls: "",
     },
   },
+  {
+    component: "articleProjet",
+    data: {
+      classContainer:
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-b-lg shadow-2xl",
+      classTitle: "text-h1 font-light",
+      classImg: "w-32 rounded-full",
+      classParagraph: "",
+      title: "Un lieu de vie, d'échange et de mixité",
+      src: "./assets/images/placeholder.png",
+      alt: "photo",
+      paragraph:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    },
+  },
 ];
 
 export default contact;
