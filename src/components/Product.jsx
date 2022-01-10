@@ -8,7 +8,9 @@ const Product = ({ data }) => {
       <section className="flex flex-col">
         {data.presentation.map((pres) => (
           <div className=" p-8 flex justify-center items-center gap-4 flex-col xl:flex-row">
-            <p className="text-blanc text-justify xl:">{pres.infos}</p>
+            <p className="text-blanc text-justify xl: pl-16 pr-16">
+              {pres.infos}
+            </p>
             <img
               src={pres.src}
               alt={pres.alt}
