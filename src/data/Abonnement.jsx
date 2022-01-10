@@ -40,7 +40,8 @@ const AbonnementData = [
   {
     component: "formulaire",
     data: {
-      name: "test",
+      titre: "Formulaire",
+      name: "",
     },
   },
 ];
