@@ -4,7 +4,7 @@ const Contact = ({ data }) => {
   return (
     <div className="">
       <div className="text-vert bg-gris_clair text-center pb-7">
-        <p className="font-light text-h1 pt-6 ">{data.title}</p>
+        <h1 className="font-light text-h1 pt-6 ">{data.title}</h1>
         <div className="font-regular text-normal">
           <p>{data.name}</p>
           <p>{data.phone}</p>
