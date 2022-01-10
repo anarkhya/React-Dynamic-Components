@@ -41,7 +41,11 @@ const AbonnementData = [
     component: "formulaire",
     data: {
       titre: "Formulaire",
-      name: "",
+      nom: "",
+      prenom: "",
+      email: "",
+      message: "",
+      bouton: true,
     },
   },
 ];

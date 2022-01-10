@@ -8,7 +8,10 @@ const Formulaire = ({ data }) => {
       </div>
       <div className="text-vert flex flex-col mb-4 items-center bg-gris_clair">
         <form className="flex flex-col my-5">
-          <label className="m-2 border-2 border-vert rounded" htmlFor="nom">
+          <label
+            className="m-2 border-2 border-vert rounded caret-rose"
+            htmlFor="nom"
+          >
             <input
               className=""
               type="text"
@@ -23,7 +26,10 @@ const Formulaire = ({ data }) => {
           <label className="m-2 border-vert border-2 rounded" htmlFor="Email">
             <input type="text" name="Email" id="Email" placeholder="Email" />
           </label>
-          <label className="m-2 border-vert border-2 rounded" htmlFor="Message">
+          <label
+            className="m-2 border-vert border-2 rounded resize"
+            htmlFor="Message"
+          >
             <input
               type="text"
               name="Message"
