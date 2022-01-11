@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import HeaderData from "../data/HeaderData";
 import Logo from "./Logo";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Header = () => {
   return (
@@ -24,7 +25,9 @@ const Header = () => {
                   )}
                 </Disclosure.Button>
               </div>
+
               <div className="flex-1 flex items-center justify-center sm:items-center sm:justify-between">
+                <ButtonAdmin />
                 <Link to={HeaderData.menu[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>

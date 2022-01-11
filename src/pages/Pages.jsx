@@ -11,9 +11,12 @@ import ArticleProjet from "../components/ArticleProjet";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 import Objets from "../components/Objets";
+import Formulaire from "../components/Formulaire";
 import Contact from "../components/Contact";
 import Concept from "../components/Concept";
 import Map from "../components/Map";
+import ButtonAdmin from "../components/ButtonAdmin";
+
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
@@ -30,6 +33,7 @@ const Pages = () => {
       logo: () => <Logo data={data} />,
       footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
+      formulaire: () => <Formulaire data={data} />,
       utilisateur: () => <Utilisateur data={data} />,
       article: () => <Article data={data} />,
       articleProjet: () => <ArticleProjet data={data} />,
@@ -40,6 +44,7 @@ const Pages = () => {
       map: () => <Map data={data} />,
       contact: () => <Contact data={data} />,
       concept: () => <Concept data={data} />,
+      buttonAdmin: () => <ButtonAdmin data={data} />,
     };
     return component[type]();
   };

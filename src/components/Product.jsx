@@ -1,10 +1,14 @@
 import React from "react";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
   return (
     <div className="bg-vert">
-      <h1 className="text-center text-h2 text-blanc pt-4 ">{data.title}</h1>
+      <ButtonAdmin />
+      <h1 className="text-center uppercase text-h2 text-blanc pt-4 ">
+        {data.title}
+      </h1>
       <section className="flex flex-col">
         {data.presentation.map((pres) => (
           <div className=" p-8 flex justify-center items-center gap-4 flex-col xl:flex-row">
