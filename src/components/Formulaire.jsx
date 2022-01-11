@@ -3,7 +3,7 @@ import ButtonAdmin from "./ButtonAdmin";
 
 const Formulaire = ({ data }) => {
   return (
-    <div className="p-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-vert text-blanc md:rounded-lg md:my-4 ">
+    <div className="p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc">
       <div className="h-5 w-full flex justify-end">
         <ButtonAdmin />
       </div>
@@ -12,7 +12,7 @@ const Formulaire = ({ data }) => {
         <form className="flex flex-col items-center my-5">
           <label htmlFor="nom">
             <input
-              className="m-2 px-2 border-none md:w-96 rounded-lg focus:outline-none"
+              className="mb-3 px-2 border-none md:w-96 rounded-lg focus:outline-none"
               type="text"
               name="Nom"
               id="nom"
@@ -21,7 +21,7 @@ const Formulaire = ({ data }) => {
           </label>
           <label htmlFor="Prénom">
             <input
-              className="m-2 px-2 border-none md:w-96 rounded-lg focus:outline-none"
+              className="mb-3 px-2 border-none md:w-96 rounded-lg focus:outline-none"
               type="text"
               name="Prénom"
               id="Prénom"
@@ -30,7 +30,7 @@ const Formulaire = ({ data }) => {
           </label>
           <label htmlFor="Email">
             <input
-              className="m-2 px-2 border-none md:w-96 rounded-lg focus:outline-none"
+              className="mb-3 px-2 border-none md:w-96 rounded-lg focus:outline-none"
               type="text"
               name="Email"
               id="Email"
@@ -39,7 +39,7 @@ const Formulaire = ({ data }) => {
           </label>
           <textarea
             className="
-            m-2 px-2 block md:w-96 bg-clip-padding m-0 rounded-lg focus:outline-none"
+            mb-3 px-2 block md:w-96 bg-clip-padding m-0 rounded-lg focus:outline-none"
             rows="3"
             placeholder="Message"
           />

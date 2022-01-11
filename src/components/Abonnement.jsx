@@ -4,16 +4,16 @@ import ButtonAdmin from "./ButtonAdmin";
 const Abonnement = ({ data }) => {
   return (
     <div>
-      <div className="p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl  md:rounded-bl-lg md:rounded-br-lg">
-        <div className="h-5 w-full flex justify-end ">
+      <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert">
+        <div className="text-right w-full">
           <ButtonAdmin />
         </div>
         <h1 className="font-light text-h1">{data.title}</h1>
         <br />
         <br />
-        <div className="">
+        <div className="md:w-1/2">
           {data.details.map((detail) => (
-            <p className="mx-5 font-bold text-h2">
+            <p className="font-bold text-h2">
               {detail.detail}
               <p className="font-regular text-normal">{detail.description1}</p>
               <p className="font-regular text-normal">{detail.description2}</p>
