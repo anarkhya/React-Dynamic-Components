@@ -6,9 +6,7 @@ const ArticleProjet = ({ data }) => {
     <div className="">
       <div className={data.classContainer}>
         <div className="text-right w-full">
-          <div className="text-right w-full">
-            <ButtonAdmin />
-          </div>
+          <ButtonAdmin />
         </div>
         <h1 className={data.classTitle}>{data.title}</h1>
         <img className={data.classImg} src={data.src} alt={data.alt} />
