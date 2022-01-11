@@ -14,7 +14,7 @@ const echanges = [
     component: "article",
     data: {
       classBg:
-        "bg-gris_clair text-center text-vert pl-4 pr-4 pb-4 h-60 flex justify-center flex-col gap-3",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl md:rounded-bl-lg md:rounded-br-lg",
       classTitre: "text-h1 font-light",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Dans la Trocquerie, il est possible de troquer:",
@@ -130,13 +130,14 @@ const echanges = [
   {
     component: "article",
     data: {
-      classBg: "bg-gris_clair flex justify-center flex-col gap-4",
+      classBg:
+        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl ",
       classTitre: "text-h1 text-vert font-light flex justify-center",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Comment ça marche:",
       paragraphe:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo culpa aspernatur libero sint in enim soluta earum facilis, animi sed, neque nemo eveniet ullam laudantium hic nam pariatur. Temporibus?",
-      clsPara: "text-vert text-justify p-8",
+      clsPara: "",
       paragraphe2: true,
       paragraphe2contenu: "",
       paragraphe3: true,
