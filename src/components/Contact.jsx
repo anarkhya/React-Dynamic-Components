@@ -1,9 +1,11 @@
 import React from "react";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Contact = ({ data }) => {
   return (
     <div className="">
       <div className={data.classContainer}>
+        <ButtonAdmin />
         <h1 className={data.classTitle}>{data.title}</h1>
         <div className={data.classInfosList}>
           <div className={data.classInfosListRow}>

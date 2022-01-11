@@ -1,9 +1,11 @@
 import React from "react";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
   return (
     <div className="bg-vert">
+      <ButtonAdmin />
       <h1 className="text-center uppercase text-h2 text-blanc pt-4 ">
         {data.title}
       </h1>

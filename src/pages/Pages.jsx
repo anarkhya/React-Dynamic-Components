@@ -15,6 +15,7 @@ import Formulaire from "../components/Formulaire";
 import Contact from "../components/Contact";
 import Concept from "../components/Concept";
 import Map from "../components/Map";
+import ButtonAdmin from "../components/ButtonAdmin";
 
 // data
 import home from "../data/Home";
@@ -43,6 +44,7 @@ const Pages = () => {
       map: () => <Map data={data} />,
       contact: () => <Contact data={data} />,
       concept: () => <Concept data={data} />,
+      buttonAdmin: () => <ButtonAdmin data={data} />,
     };
     return component[type]();
   };

@@ -1,8 +1,10 @@
 import React from "react";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Article = ({ data }) => {
   return (
     <div className={data.classBg}>
+      <ButtonAdmin />
       <h1 className={data.classTitre}>{data.titre}</h1>
       <p className={data.clsPara}>{data.paragraphe}</p>
       {/* Si il y a du contenu, il s'affiche sinon rien */}
