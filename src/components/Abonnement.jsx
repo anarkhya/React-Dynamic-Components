@@ -3,9 +3,11 @@ import ButtonAdmin from "./ButtonAdmin";
 
 const Abonnement = ({ data }) => {
   return (
-    <>
-      <div className="p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl md:rounded-bl-lg md:rounded-br-lg">
-        <ButtonAdmin />
+    <div>
+      <div className="p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl  md:rounded-bl-lg md:rounded-br-lg">
+        <div className="h-5 w-full flex justify-end ">
+          <ButtonAdmin />
+        </div>
         <h1 className="font-light text-h1">{data.title}</h1>
         <br />
         <br />
@@ -23,7 +25,7 @@ const Abonnement = ({ data }) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
