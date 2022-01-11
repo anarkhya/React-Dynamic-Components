@@ -4,10 +4,12 @@ import ButtonAdmin from "./ButtonAdmin";
 const Echanges = ({ data }) => {
   return (
     // composant categorie
-    <div className="bg-vert text-blanc pl-4 pt-4 pr-4 gap-8 flex flex-col">
-      <ButtonAdmin />
-      <h1 className="text-center pl-20 pr-20">{data.texte}</h1>
-      <p className="mt-4 text-center">{data.sousTexte}</p>
+    <div className="p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc shadow-xl ">
+      <div className="text-right w-full">
+        <ButtonAdmin />
+      </div>
+      <h1 className="">{data.texte}</h1>
+      <p className="">{data.sousTexte}</p>
       <section className="flex justify-around">
         {data.gommettes.map((gommette) => (
           <section>
