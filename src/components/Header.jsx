@@ -13,7 +13,10 @@ const Header = () => {
     >
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 pr-4">
+            <div className="flex justify-end mt-3">
+              <ButtonAdmin />
+            </div>
             <div className="relative flex items-center justify-between h-36">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-vert focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -25,9 +28,7 @@ const Header = () => {
                   )}
                 </Disclosure.Button>
               </div>
-
               <div className="flex-1 flex items-center justify-center sm:items-center sm:justify-between">
-                <ButtonAdmin />
                 <Link to={HeaderData.menu[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>
