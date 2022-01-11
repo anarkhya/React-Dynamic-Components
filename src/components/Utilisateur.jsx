@@ -9,7 +9,7 @@ const Utilisateur = ({ data }) => {
       </div>
       <h1 className={data.classTitre}>{data.titre}</h1>
       {data.textes.map((texte) => (
-        <div>
+        <div className={data.classParagraph}>
           <p>{texte.detail1}</p>
           <p>{texte.detail2}</p>
           <p>{texte.detail3}</p>
