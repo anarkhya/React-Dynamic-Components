@@ -3,12 +3,12 @@ import ButtonAdmin from "./ButtonAdmin";
 
 const Objets = ({ data }) => {
   return (
-    <div className="p-4 gap-3 md:max-w-2xl mx-auto flex flex-col items-center bg-gris_clair text-vert shadow-xl ">
+    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert">
       <div className="text-right w-full">
         <ButtonAdmin />
       </div>
       {data.categorie.map((cat) => (
-        <section className="">
+        <section className="md:w-1/2">
           <h1 className="font-bold text-h2">{cat.appartenance}</h1>
           <p>{cat.cible}</p>
         </section>
