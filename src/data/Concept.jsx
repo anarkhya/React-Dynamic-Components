@@ -7,8 +7,9 @@ const concept = [
     component: "article",
     data: {
       classBg:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert shadow-xl md:rounded-bl-lg md:rounded-br-lg",
+        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       classTitre: "text-h1 font-light",
+      classParagraph: "md:w-1/2",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Concept",
       paragraphe:
@@ -26,10 +27,10 @@ const concept = [
     component: "article",
     data: {
       classBg:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-lg md:my-4 ",
+        "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
       classTitre: "",
       classButton: "",
-      clsPara: "px-8 text-[24px] font-light leading-tight",
+      classParagraph: "md:w-1/2 px-4 text-[28px] font-light leading-tight",
       titre: "",
       paragraphe:
         "“Perçu comme un acte militant, le troc véhicule des valeurs fortes comme l’entraide, le partage, la convivialité, mais il contribue aussi à la lutte contre le gaspillage et la surconsommation.”",
@@ -40,8 +41,9 @@ const concept = [
     component: "utilisateur",
     data: {
       classContainer:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-gris_clair text-vert shadow-xl md:rounded-tl-lg md:rounded-tr-lg",
+        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       classTitre: "text-center text-h1 font-light",
+      classParagraph: "md:w-1/2",
       titre: "Pour qui ?",
       textes: [
         {
@@ -62,10 +64,10 @@ const concept = [
     component: "article",
     data: {
       classBg:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-vert text-blanc md:rounded-lg md:my-4 ",
+        "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
       classTitre: "",
       classButton: "",
-      clsPara: "px-8 text-[24px] font-light leading-tight",
+      classParagraph: "md:w-1/2 px-4 text-[28px] font-light leading-tight",
       titre: "",
       paragraphe:
         "“Selon le quinzième baromètre greenflex-ademe : 86 % des français aimeraient vivre demain dans une société où la consommation prend moins de place dans l’idée de consommer responsable.”",
@@ -76,10 +78,10 @@ const concept = [
     component: "articleProjet",
     data: {
       classContainer:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert md:rounded-lg shadow-2xl shadow-lg",
+        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       classTitle: "text-h1 font-light",
       classImg: "w-32 rounded-full",
-      classParagraph: "",
+      classParagraph: "md:w-1/2",
       title: "Porteuse de projet",
       src: "./assets/images/placeholder.png",
       alt: "photo",
