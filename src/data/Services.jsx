@@ -3,8 +3,9 @@ const services = [
     component: "article",
     data: {
       classBg:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex items-center flex-col bg-gris_clair text-vert",
+        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       classTitre: "text-h1 font-light",
+      classParagraph: "md:w-1/2",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Services",
       paragraphe:
