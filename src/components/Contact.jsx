@@ -5,7 +5,9 @@ const Contact = ({ data }) => {
   return (
     <div className="">
       <div className={data.classContainer}>
-        <ButtonAdmin />
+        <div className="flex justify-end">
+          <ButtonAdmin />
+        </div>
         <h1 className={data.classTitle}>{data.title}</h1>
         <div className={data.classInfosList}>
           <div className={data.classInfosListRow}>

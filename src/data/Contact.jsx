@@ -3,7 +3,7 @@ const contact = [
     component: "contact",
     data: {
       classContainer:
-        "p-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-gris_clair text-vert md:rounded-b-lg shadow-2xl",
+        "p-4 gap-3 md:max-w-2xl mx-auto flex flex-col bg-gris_clair text-vert md:rounded-b-lg shadow-2xl ",
       classTitle: "text-center text-h1 font-light",
       classInfosList: "flex justify-between flex-col md:flex-row",
       classInfosListRow: "flex w-64 md:w-auto",
