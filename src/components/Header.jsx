@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Disclosure
       as="nav"
-      className="border-b-2 border-b-neutral-200 sticky top-0 bg-white"
+      className="border-b-2 border-b-neutral-200 sticky top-0 bg-white shadow-md shadow-vert/20"
     >
       {({ open }) => (
         <>
