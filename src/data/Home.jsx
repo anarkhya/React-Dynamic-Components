@@ -6,8 +6,9 @@ const home = [
       paragraphe:
         "La Trocquerie est une boutique de seconde main sans affichage de prix, qui s’auto renouvelle par les échanges grâce à un système d’abonnement à la journée, au mois ou à l’année.",
       classBg:
-        "flex flex-col items-center justify-center text-vert bg-gris_clair h-96 text-center space-y-10",
+        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       classTitre: "text-center text-h1 font-light",
+      classParagraph: "md:w-1/2",
       button: true,
       buttonContenu: "En savoir plus",
       classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
@@ -23,8 +24,9 @@ const home = [
       titre: "Échangez vos objets dès maintenant",
       paragraphe: "",
       classBg:
-        "flex flex-col items-center justify-center text-white bg-vert h-80 text-center space-y-6",
-      classTitre: "text-center text-h1 font-light max-w-xs",
+        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc",
+      classTitre: "text-center text-h1 font-light",
+      classParagraph: "md:w-1/2",
       button: true,
       buttonContenu: "En savoir plus",
       classButton:
