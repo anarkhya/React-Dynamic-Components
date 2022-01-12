@@ -1,9 +1,12 @@
 import React from "react";
+import Modal from "./Modal";
+import useModal from "./useModal";
 
 const ButtonAdmin = () => {
+  const { isShowing, toggle } = useModal();
   return (
     <div className="">
-      <button type="submit">
+      <button type="submit" onClick={toggle}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -18,6 +21,7 @@ const ButtonAdmin = () => {
           />
         </svg>
       </button>
+      <Modal isShowing={isShowing} hide={toggle} />
     </div>
   );
 };
