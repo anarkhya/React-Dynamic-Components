@@ -1,11 +1,15 @@
 import React from "react";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Objets = ({ data }) => {
   return (
-    <div className="text-center bg-gris_clair h-auto pt-8 pb-8 gap-10">
+    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert">
+      <div className="text-right w-full">
+        <ButtonAdmin />
+      </div>
       {data.categorie.map((cat) => (
-        <section className="text-vert">
-          <h1 className="text-h1">{cat.appartenance}</h1>
+        <section className="md:w-1/2">
+          <h1 className="font-bold text-h2">{cat.appartenance}</h1>
           <p>{cat.cible}</p>
         </section>
       ))}

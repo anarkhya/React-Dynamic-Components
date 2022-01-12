@@ -1,23 +1,29 @@
 import React from "react";
+import ButtonAdmin from "./ButtonAdmin";
 
 const Abonnement = ({ data }) => {
   return (
-    <div className="text-vert bg-gris_clair text-center">
-      <h1 className="font-light text-h1 pt-7 underline decoration-double underline-offset-8">
-        {data.title}
-      </h1>
-      <br />
-      <br />
-      <div className=" border-3">
-        {data.details.map((detail) => (
-          <p className="mx-5 font-bold text-h2">
-            {detail.detail}
-            <p className="font-regular text-normal">{detail.description1}</p>
-            <p className="font-regular text-normal">{detail.description2}</p>
-            <p className="text-mini">{detail.infoDescription1}</p>
-            <br />
-          </p>
-        ))}
+    <div>
+      <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert">
+        <div className="text-right w-full">
+          <ButtonAdmin />
+        </div>
+        <h1 className="font-light text-h1">{data.title}</h1>
+        <br />
+        <br />
+        <div className="md:w-1/2">
+          {data.details.map((detail) => (
+            <p className="font-bold text-h2">
+              {detail.detail}
+              <p className="font-regular text-normal">{detail.description1}</p>
+              <p className="font-regular text-normal">{detail.description2}</p>
+              <p className="text-mini font-regular">
+                {detail.infoDescription1}
+              </p>
+              <br />
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
