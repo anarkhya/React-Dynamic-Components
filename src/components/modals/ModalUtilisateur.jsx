@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 import React from "react";
 import ReactDOM from "react-dom";
+import EditorContainer from "../draftWysiwyg";
 
 const ModalUtilisateur = ({ isShowing, hide }) =>
   isShowing
@@ -31,7 +32,7 @@ const ModalUtilisateur = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>Utilisateur Modal</p>
+              <EditorContainer />
             </div>
           </div>
         </>,

@@ -1,11 +1,27 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import EditorContainer from "../draftWysiwyg";
 
-const ModalAbonnement = ({ isShowing, hide }) =>
-  isShowing
-    ? ReactDOM.createPortal(
+const ModalAbonnement = ({ isShowing, hide }) => {
+  const [titre, setTitre] = useState("");
+  const [info, setInfo] = useState("");
+  const [details, setDetails] = useState([]);
+
+  const onChangeDetails = (value, detail) => {
+    const newDetails = [...details];
+    const index = newDetails.indexOf(detail);
+    newDetails[index] = value;
+    setDetails(newDetails);
+  };
+
+  const addDetails = () => {
+    const newDetails = [...details];
+    newDetails.push("");
+    setDetails(newDetails);
+  };
+  const getModal = () => {
+    if (isShowing) {
+      return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
           <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
@@ -32,15 +48,52 @@ const ModalAbonnement = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p className="text-h2 leading-none">
-                Editeur de contenu (non-fonctionnel)
-              </p>
-              <EditorContainer />
+              <div>
+                <label htmlFor="titre">
+                  Titre
+                  <input
+                    id="titre"
+                    type="text"
+                    value={titre}
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="info">
+                  Info supplémentaire
+                  <input
+                    id="info"
+                    type="text"
+                    value={info}
+                    onChange={(event) => setInfo(event.target.value)}
+                  />
+                </label>
+                <button type="submit" onClick={() => addDetails()}>
+                  Ajouter un détail
+                </button>
+                {details.map((detail) => {
+                  return (
+                    <label htmlFor="detail">
+                      detail
+                      <input
+                        type="text"
+                        value={detail?.detail}
+                        onChange={(event) =>
+                          onChangeDetails(event.target.value, detail)
+                        }
+                      />
+                    </label>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </>,
         document.body
-      )
-    : null;
+      );
+    }
+    return null;
+  };
+  return getModal();
+};
 
 export default ModalAbonnement;
