@@ -1,12 +1,41 @@
-import React from "react";
-import Modal from "./Modal";
-import useModal from "./useModal";
+import React, { useState } from "react";
+import ModalArticle from "./ModalArticle";
+import ModalAbonnement from "./ModalAbonnement";
+import ModalArticleProjet from "./ModalArticleProjet";
+import ModalContact from "./ModalContact";
+import ModalEchanges from "./ModalEchanges";
+import ModalFooter from "./ModalFooter";
+import ModalHeader from "./ModalHeader";
+import ModalObjets from "./ModalObjets";
+import ModalProduct from "./ModalProduct";
+import ModalUtilisateur from "./ModalUtilisateur";
 
-const ButtonAdmin = () => {
-  const { isShowing, toggle } = useModal();
+const ButtonAdminArticle = ({ type }) => {
+  const [modal, setModal] = useState("");
+
+  const toggle = () => {
+    setModal("");
+  };
+  const getModal = () => {
+    const myModal = {
+      article: <ModalArticle isShowing hide={toggle} />,
+      abonnement: <ModalAbonnement isShowing hide={toggle} />,
+      articleProjet: <ModalArticleProjet isShowing hide={toggle} />,
+      contact: <ModalContact isShowing hide={toggle} />,
+      echanges: <ModalEchanges isShowing hide={toggle} />,
+      footer: <ModalFooter isShowing hide={toggle} />,
+      header: <ModalHeader isShowing hide={toggle} />,
+      objets: <ModalObjets isShowing hide={toggle} />,
+      product: <ModalProduct isShowing hide={toggle} />,
+      utilisateur: <ModalUtilisateur isShowing hide={toggle} />,
+    };
+    setModal(myModal[type]);
+  };
+
   return (
     <div className="">
-      <button type="submit" onClick={toggle}>
+      {/* {console.log(modal)} */}
+      <button type="submit" onClick={() => getModal()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -21,9 +50,9 @@ const ButtonAdmin = () => {
           />
         </svg>
       </button>
-      <Modal isShowing={isShowing} hide={toggle} />
+      {modal}
     </div>
   );
 };
 
-export default ButtonAdmin;
+export default ButtonAdminArticle;
