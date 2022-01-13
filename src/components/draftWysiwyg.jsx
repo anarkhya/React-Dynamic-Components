@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { EditorState } from "draft-js";
+import React, { useState } from "react";
+// import { EditorState } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 
 // function uploadImageCallBack(file) {
@@ -23,39 +23,33 @@ import { Editor } from "react-draft-wysiwyg";
 //   );
 // }
 
-class EditorContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      editorState: EditorState.createEmpty(),
-    };
-  }
+// class EditorContainer extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       editorState: EditorState.createEmpty(),
+//     };
+//   }
 
-  onEditorStateChange(editorState) {
-    this.setState({
-      editorState,
-    });
-  }
+function EditorContainer() {
+  const [editorState, setEditorState] = useState("");
 
-  render() {
-    const { editorState } = this.state;
-    return (
-      <div className="editor text-vert mx-auto m-4">
-        <Editor
-          editorState={editorState}
-          onEditorStateChange={this.onEditorStateChange}
-          toolbar={{
-            inline: { inDropdown: true },
-            list: { inDropdown: true },
-            textAlign: { inDropdown: true },
-            link: { inDropdown: true },
-            history: { inDropdown: true },
-            // image: { uploadCallback: uploadImageCallBack, alt: { present: true, mandatory: true } },
-          }}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="editor text-vert mx-auto m-4">
+      <Editor
+        editorState={editorState}
+        onEditorStateChange={setEditorState}
+        toolbar={{
+          inline: { inDropdown: true },
+          list: { inDropdown: true },
+          textAlign: { inDropdown: true },
+          link: { inDropdown: true },
+          history: { inDropdown: true },
+          // image: { uploadCallback: uploadImageCallBack, alt: { present: true, mandatory: true } },
+        }}
+      />
+    </div>
+  );
 }
 
 export default EditorContainer;

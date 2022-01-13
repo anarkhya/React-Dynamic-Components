@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonAdminAbonnement from "./modals/ButtonAdminAbonnement";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Abonnement = ({ data }) => {
   return (
     <div>
       <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert">
         <div className="text-right w-full">
-          <ButtonAdminAbonnement />
+          <ButtonAdmin type="abonnement" />
         </div>
         <h1 className="font-light text-h1">{data.title}</h1>
         <br />

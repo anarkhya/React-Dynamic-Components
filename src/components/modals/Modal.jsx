@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import React from "react";
 import ReactDOM from "react-dom";
-import EditorContainer from "./draftWysiwyg";
+import EditorContainer from "../draftWysiwyg";
 
 const Modal = ({ isShowing, hide }) =>
   isShowing

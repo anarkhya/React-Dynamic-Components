@@ -1,13 +1,13 @@
 import React from "react";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 import FooterData from "../data/FooterData";
-import ButtonAdminFooter from "./modals/ButtonAdminFooter";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Footer = () => {
   return (
     <div className={FooterData.cls}>
       <div className="flex justify-end pr-4 pt-4">
-        <ButtonAdminFooter />
+        <ButtonAdmin type="footer" />
       </div>
       <div className="py-4 flex flex-col items-center md:flex-row md:flex-wrap md:gap-0 text-center text-vert gap-5">
         <div className="md:order-1 md:basis-1/3 list-none">

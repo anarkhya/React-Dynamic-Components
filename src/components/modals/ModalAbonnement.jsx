@@ -1,6 +1,7 @@
 /* eslint-disable indent */
 import React from "react";
 import ReactDOM from "react-dom";
+import EditorContainer from "../draftWysiwyg";
 
 const ModalAbonnement = ({ isShowing, hide }) =>
   isShowing
@@ -31,7 +32,10 @@ const ModalAbonnement = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>Abonnement Modal</p>
+              <p className="text-h2 leading-none">
+                Editeur de contenu (non-fonctionnel)
+              </p>
+              <EditorContainer />
             </div>
           </div>
         </>,

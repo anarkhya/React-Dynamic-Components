@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonAdminEchanges from "./modals/ButtonAdminEchanges";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Echanges = ({ data }) => {
   return (
     // composant categorie
     <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc">
       <div className="text-right w-full">
-        <ButtonAdminEchanges />
+        <ButtonAdmin type="echanges" />
       </div>
       <div className="md:w-1/2">
         <h1 className="">{data.texte}</h1>

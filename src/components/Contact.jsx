@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonAdminContact from "./modals/ButtonAdminContact";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Contact = ({ data }) => {
   return (
     <div className="">
       <div className={data.classContainer}>
-        <div className="flex justify-end">
-          <ButtonAdminContact />
+        <div className="text-right w-full">
+          <ButtonAdmin type="contact" />
         </div>
         <h1 className={data.classTitle}>{data.title}</h1>
         <div className={data.classInfosList}>

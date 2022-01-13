@@ -1,11 +1,11 @@
 import React from "react";
-import ButtonAdminObjets from "./modals/ButtonAdminObjets";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Objets = ({ data }) => {
   return (
     <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert">
       <div className="text-right w-full">
-        <ButtonAdminObjets />
+        <ButtonAdmin type="objets" />
       </div>
       {data.categorie.map((cat) => (
         <section className="md:w-1/2">

@@ -3,7 +3,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import HeaderData from "../data/HeaderData";
 import Logo from "./Logo";
-import ButtonAdminHeader from "./modals/ButtonAdminHeader";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Header = () => {
   return (
@@ -15,7 +15,7 @@ const Header = () => {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 pr-4">
             <div className="flex justify-end mt-3">
-              <ButtonAdminHeader />
+              <ButtonAdmin type="header" />
             </div>
             <div className="relative flex items-center justify-between h-36">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

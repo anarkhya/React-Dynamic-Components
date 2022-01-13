@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonAdminArticleProjet from "./modals/ButtonAdminArticleProjet";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const ArticleProjet = ({ data }) => {
   return (
     <div className="">
       <div className={data.classContainer}>
         <div className="text-right w-full">
-          <ButtonAdminArticleProjet />
+          <ButtonAdmin type="articleProjet" />
         </div>
         <h1 className={data.classTitle}>{data.title}</h1>
         <img className={data.classImg} src={data.src} alt={data.alt} />
