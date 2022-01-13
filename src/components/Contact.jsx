@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonAdmin from "./ButtonAdmin";
+import ButtonAdminContact from "./modals/ButtonAdminContact";
 
 const Contact = ({ data }) => {
   return (
     <div className="">
       <div className={data.classContainer}>
         <div className="flex justify-end">
-          <ButtonAdmin />
+          <ButtonAdminContact />
         </div>
         <h1 className={data.classTitle}>{data.title}</h1>
         <div className={data.classInfosList}>

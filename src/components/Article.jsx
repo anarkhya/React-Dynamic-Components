@@ -1,11 +1,11 @@
 import React from "react";
-import ButtonAdmin from "./ButtonAdmin";
+import ButtonAdminArticle from "./modals/ButtonAdminArticle";
 
 const Article = ({ data }) => {
   return (
     <div className={data.classBg}>
       <div className="text-right w-full">
-        <ButtonAdmin />
+        <ButtonAdminArticle />
       </div>
       <h1 className={data.classTitre}>{data.titre}</h1>
       <p className={data.classParagraph}>{data.paragraphe}</p>

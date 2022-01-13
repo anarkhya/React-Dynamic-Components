@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonAdmin from "./ButtonAdmin";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
