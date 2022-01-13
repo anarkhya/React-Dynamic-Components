@@ -1,8 +1,8 @@
 import React from "react";
-import Modal from "./Modal";
 import useModal from "./useModal";
+import ModalUtilisateur from "./ModalUtilisateur";
 
-const ButtonAdmin = () => {
+const ButtonAdminUtilisateur = () => {
   const { isShowing, toggle } = useModal();
   return (
     <div className="">
@@ -21,9 +21,9 @@ const ButtonAdmin = () => {
           />
         </svg>
       </button>
-      <Modal isShowing={isShowing} hide={toggle} />
+      <ModalUtilisateur isShowing={isShowing} hide={toggle} />
     </div>
   );
 };
 
-export default ButtonAdmin;
+export default ButtonAdminUtilisateur;

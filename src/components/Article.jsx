@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonAdmin from "./ButtonAdmin";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Article = ({ data }) => {
   return (

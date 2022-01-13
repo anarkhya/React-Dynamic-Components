@@ -1,7 +1,7 @@
 import React from "react";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 import FooterData from "../data/FooterData";
-import ButtonAdmin from "./ButtonAdmin";
+import ButtonAdmin from "./modals/ButtonAdmin";
 
 const Footer = () => {
   return (
