@@ -1,12 +1,8 @@
 import React from "react";
-import ButtonAdmin from "./ButtonAdmin";
 
 const Formulaire = ({ data }) => {
   return (
     <div className="p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc">
-      <div className="h-5 w-full flex justify-end">
-        <ButtonAdmin />
-      </div>
       <div className="text-h1 text-center">{data.titre}</div>
       <div className="text-vert flex flex-col mb-4 ">
         <form className="flex flex-col items-center my-5">

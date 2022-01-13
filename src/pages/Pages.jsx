@@ -15,7 +15,7 @@ import Formulaire from "../components/Formulaire";
 import Contact from "../components/Contact";
 import Concept from "../components/Concept";
 import Map from "../components/Map";
-import ButtonAdmin from "../components/ButtonAdmin";
+import ButtonAdmin from "../components/modals/ButtonAdmin";
 
 // data
 import home from "../data/Home";

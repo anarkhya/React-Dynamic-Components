@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = ({ isShowing, hide }) =>
+const ModalEchanges = ({ isShowing, hide }) =>
   isShowing
     ? ReactDOM.createPortal(
         <>
@@ -31,7 +31,7 @@ const Modal = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>Hello, Im a modal.</p>
+              <p>Echanges Modal</p>
             </div>
           </div>
         </>,
@@ -39,4 +39,4 @@ const Modal = ({ isShowing, hide }) =>
       )
     : null;
 
-export default Modal;
+export default ModalEchanges;
