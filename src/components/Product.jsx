@@ -1,12 +1,16 @@
 import React from "react";
+<<<<<<< HEAD
 import ButtonAdmin from "./modals/ButtonAdmin";
+=======
+import ButtonAdminProduct from "./modals/ButtonAdminProduct";
+>>>>>>> 50c1daf6bf664b2f64ed698228e5cd6f971eb45f
 
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
   return (
     <div className="p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc">
       <div className="text-right w-full">
-        <ButtonAdmin />
+        <ButtonAdminProduct />
       </div>
       <h1 className="text-center font-light text-h1">{data.title}</h1>
       <section className="md:w-1/2 flex flex-col gap-3">

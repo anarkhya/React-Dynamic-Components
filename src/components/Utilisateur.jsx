@@ -1,11 +1,15 @@
 import React from "react";
+<<<<<<< HEAD
 import ButtonAdmin from "./modals/ButtonAdmin";
+=======
+import ButtonAdminUtilisateur from "./modals/ButtonAdminUtilisateur";
+>>>>>>> 50c1daf6bf664b2f64ed698228e5cd6f971eb45f
 
 const Utilisateur = ({ data }) => {
   return (
     <div className={data.classContainer}>
       <div className="text-right w-full">
-        <ButtonAdmin />
+        <ButtonAdminUtilisateur />
       </div>
       <h1 className={data.classTitre}>{data.titre}</h1>
       {data.textes.map((texte) => (
