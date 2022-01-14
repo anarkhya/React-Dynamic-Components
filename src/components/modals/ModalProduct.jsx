@@ -1,10 +1,27 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalProduct = ({ isShowing, hide }) =>
-  isShowing
-    ? ReactDOM.createPortal(
+const ModalProduct = ({ isShowing, hide }) => {
+  const [titre, setTitre] = useState("");
+  const [info, setInfo] = useState("");
+  const [images, setImages] = useState([]);
+
+  const onChangeDetails = (value, detail) => {
+    const newDetails = [...images];
+    const index = newDetails.indexOf(detail);
+    newDetails[index] = value;
+    setImages(newDetails);
+  };
+
+  const addDetails = () => {
+    const newDetails = [...images];
+    newDetails.push("");
+    setImages(newDetails);
+  };
+  const getModal = () => {
+    if (isShowing) {
+      return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
           <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
@@ -21,6 +38,40 @@ const ModalProduct = ({ isShowing, hide }) =>
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
+                <label htmlFor="titre">
+                  Titre
+                  <input
+                    id="titre"
+                    type="text"
+                    value={titre}
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="info">
+                  Info supplémentaire
+                  <input
+                    id="info"
+                    type="text"
+                    value={info}
+                    onChange={(event) => setInfo(event.target.value)}
+                  />
+                </label>
+                <button type="button" onClick={() => addDetails()}>
+                  Ajouter une image
+                </button>
+                {images.map((image) => {
+                  return (
+                    <label htmlFor="image">
+                      <input
+                        type="img"
+                        value={image?.image}
+                        onChange={(event) =>
+                          onChangeDetails(event.target.value, image)
+                        }
+                      />
+                    </label>
+                  );
+                })}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -31,12 +82,14 @@ const ModalProduct = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>Product Modal</p>
             </div>
           </div>
         </>,
         document.body
-      )
-    : null;
-
+      );
+    }
+    return null;
+  };
+  return getModal();
+};
 export default ModalProduct;
