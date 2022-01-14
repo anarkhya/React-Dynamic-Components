@@ -52,6 +52,7 @@ const ModalProduct = ({ isShowing, hide }) => {
                 Product - Modification du contenu
               </h1>
               <label htmlFor="titre">
+                Titre
                 <input
                   id="titre"
                   className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
@@ -60,10 +61,11 @@ const ModalProduct = ({ isShowing, hide }) => {
                   onChange={(event) => setTitre(event.target.value)}
                 />
               </label>
-              <label htmlFor="info">
-                Info supplémentaire
+              <label htmlFor="description">
+                Description
                 <input
-                  id="info"
+                  id="description"
+                  className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                   type="text"
                   value={info}
                   onChange={(event) => setInfo(event.target.value)}
@@ -76,6 +78,7 @@ const ModalProduct = ({ isShowing, hide }) => {
                 return (
                   <label htmlFor="image">
                     <input
+                      className="m-2"
                       type="img"
                       value={image?.image}
                       onChange={(event) =>
