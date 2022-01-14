@@ -28,7 +28,7 @@ const ModalObjets = ({ isShowing, hide }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-blanc p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
@@ -42,12 +42,15 @@ const ModalObjets = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+              <h1 className="text-center text-h2 p-2">
+                Objets - Modification du contenu
+              </h1>
               <div>
                 <label htmlFor="sous-titre">
                   Sous-titre
                   <input
                     id="sousTitre"
-                    className="mb-3 ml-3 mr-3 border-2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                     type="text"
                     value={sousTitre}
                     onChange={(event) => setSousTitre(event.target.value)}
@@ -57,7 +60,7 @@ const ModalObjets = ({ isShowing, hide }) => {
                   Cible
                   <input
                     id="cible"
-                    className="mb-3 ml-3 px-2 border-2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                     type="text"
                     value={info}
                     onChange={(event) => setInfo(event.target.value)}
