@@ -1,10 +1,26 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalHeader = ({ isShowing, hide }) =>
-  isShowing
-    ? ReactDOM.createPortal(
+const ModalHeader = ({ isShowing, hide }) => {
+  const [titre, setTitre] = useState("");
+  const [menus, setMenus] = useState([]);
+
+  const onChangeDetails = (value, detail) => {
+    const newDetails = [...menus];
+    const index = newDetails.indexOf(detail);
+    newDetails[index] = value;
+    setMenus(newDetails);
+  };
+
+  const addDetails = () => {
+    const newDetails = [...menus];
+    newDetails.push("");
+    setMenus(newDetails);
+  };
+  const getModal = () => {
+    if (isShowing) {
+      return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
           <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
@@ -31,12 +47,44 @@ const ModalHeader = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>header Modal</p>
+              <div>
+                <label htmlFor="menu">
+                  Noms:
+                  <input
+                    id="titre"
+                    className="mb-3 ml-3 mr-3 border-2 border-vert"
+                    type="text"
+                    value={titre}
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <button type="button" onClick={() => addDetails()}>
+                  Noms
+                </button>
+                {menus.map((menu) => {
+                  return (
+                    <label htmlFor="menu">
+                      Nom
+                      <input
+                        type="text"
+                        value={menu?.menu}
+                        onChange={(event) =>
+                          onChangeDetails(event.target.value, menu)
+                        }
+                      />
+                    </label>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </>,
         document.body
-      )
-    : null;
+      );
+    }
+    return null;
+  };
+  return getModal();
+};
 
 export default ModalHeader;
