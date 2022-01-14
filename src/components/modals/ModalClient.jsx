@@ -2,17 +2,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalUtilisateur = ({ isShowing, hide }) => {
+const ModalClient = ({ isShowing, hide }) => {
   const [titre, setTitre] = useState("");
   const [info, setInfo] = useState("");
-  const [details, setDetails] = useState([]);
 
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setDetails(newDetails);
-  };
   const getModal = () => {
     if (isShowing) {
       return ReactDOM.createPortal(
@@ -43,33 +36,33 @@ const ModalUtilisateur = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2 p-2">
-                Product - Modification du contenu
+                Clients - Modification du contenu
               </h1>
-              <label htmlFor="titre">
-                Titre
-                <input
-                  id="titre"
-                  className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
-                  type="text"
-                  value={titre}
-                  onChange={(event) => setTitre(event.target.value)}
-                />
-              </label>
-              <label htmlFor="description">
-                Description
-                <input
-                  id="description"
-                  className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
-                  type="text"
-                  value={info}
-                  onChange={(event) => setInfo(event.target.value)}
-                />
-              </label>
-              <div>
-                <label htmlFor="toto">
-                  {(event) => onChangeDetails(event.target.value)}
+              {/* // style section interactions utilisateur */}
+              <section className="p-2">
+                <label htmlFor="titre">
+                  Titre
+                  <input
+                    id="titre"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h1"
+                    type="text"
+                    value={titre}
+                    placeholder="titre du bloc"
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
                 </label>
-              </div>
+                <label htmlFor="description">
+                  Description
+                  <textarea
+                    id="description"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    type="text"
+                    value={info}
+                    placeholder="contenu du paragraphe"
+                    onChange={(event) => setInfo(event.target.value)}
+                  />
+                </label>
+              </section>
             </div>
           </div>
         </>,
@@ -80,4 +73,4 @@ const ModalUtilisateur = ({ isShowing, hide }) => {
   };
   return getModal();
 };
-export default ModalUtilisateur;
+export default ModalClient;

@@ -5,14 +5,7 @@ import ReactDOM from "react-dom";
 const ModalObjets = ({ isShowing, hide }) => {
   const [appartenance, setAppartenance] = useState("");
   const [info, setInfo] = useState("");
-  const [details, setDetails] = useState([]);
 
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setDetails(newDetails);
-  };
   const getModal = () => {
     if (isShowing) {
       return ReactDOM.createPortal(
@@ -47,30 +40,27 @@ const ModalObjets = ({ isShowing, hide }) => {
               </h1>
               <div>
                 <label htmlFor="appartenance">
-                  Appartenance
+                  Sous-titre
                   <input
                     id="appartenance"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-bold text-h2"
                     type="text"
                     value={appartenance}
+                    placeholder="sous-titre"
                     onChange={(event) => setAppartenance(event.target.value)}
                   />
                 </label>
                 <label htmlFor="cible">
-                  Cible
+                  Ligne
                   <input
                     id="cible"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
                     type="text"
                     value={info}
+                    placeholder="contenu de la ligne"
                     onChange={(event) => setInfo(event.target.value)}
                   />
                 </label>
-                <div>
-                  <label htmlFor="toto">
-                    {(event) => onChangeDetails(event.target.value)}
-                  </label>
-                </div>
               </div>
             </div>
           </div>

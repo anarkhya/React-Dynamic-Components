@@ -54,17 +54,17 @@ const ModalFooter = ({ isShowing, hide }) => {
               </h1>
               <div>
                 <label htmlFor="contact">
-                  Contact :
+                  Contact
                   <input
                     id="contact"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
                     type="text"
                     value={contact}
                     onChange={(event) => setContact(event.target.value)}
                   />
                 </label>
                 <label htmlFor="address">
-                  Adresse :
+                  Adresse
                   <input
                     id="address"
                     className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none border-vert"
@@ -74,7 +74,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                   />
                 </label>
                 <label htmlFor="horaires">
-                  Horaire :
+                  Horaires
                   <input
                     id="horaires"
                     className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none border-vert"

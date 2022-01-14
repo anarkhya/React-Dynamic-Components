@@ -5,20 +5,7 @@ import ReactDOM from "react-dom";
 const ModalProduct = ({ isShowing, hide }) => {
   const [titre, setTitre] = useState("");
   const [info, setInfo] = useState("");
-  const [images, setImages] = useState([]);
 
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...images];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setImages(newDetails);
-  };
-
-  const addDetails = () => {
-    const newDetails = [...images];
-    newDetails.push("");
-    setImages(newDetails);
-  };
   const getModal = () => {
     if (isShowing) {
       return ReactDOM.createPortal(
@@ -51,43 +38,30 @@ const ModalProduct = ({ isShowing, hide }) => {
               <h1 className="text-center text-h2 p-2">
                 Product - Modification du contenu
               </h1>
-              <label htmlFor="titre">
-                Titre
-                <input
-                  id="titre"
-                  className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
-                  type="text"
-                  value={titre}
-                  onChange={(event) => setTitre(event.target.value)}
-                />
-              </label>
-              <label htmlFor="description">
-                Description
-                <input
-                  id="description"
-                  className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
-                  type="text"
-                  value={info}
-                  onChange={(event) => setInfo(event.target.value)}
-                />
-              </label>
-              <button type="button" onClick={() => addDetails()}>
-                Ajouter une image
-              </button>
-              {images.map((image) => {
-                return (
-                  <label htmlFor="image">
-                    <input
-                      className="m-2"
-                      type="img"
-                      value={image?.image}
-                      onChange={(event) =>
-                        onChangeDetails(event.target.value, image)
-                      }
-                    />
-                  </label>
-                );
-              })}
+              <section className="p-2">
+                <label htmlFor="titre">
+                  Titre
+                  <input
+                    id="titre"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h1"
+                    type="text"
+                    value={titre}
+                    placeholder="titre du bloc"
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="description">
+                  Description
+                  <textarea
+                    id="description"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    type="text"
+                    value={info}
+                    placeholder="contenu du paragraphe"
+                    onChange={(event) => setInfo(event.target.value)}
+                  />
+                </label>
+              </section>
             </div>
           </div>
         </>,

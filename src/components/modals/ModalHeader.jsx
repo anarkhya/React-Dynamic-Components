@@ -4,20 +4,7 @@ import ReactDOM from "react-dom";
 
 const ModalHeader = ({ isShowing, hide }) => {
   const [titre, setTitre] = useState("");
-  const [menus, setMenus] = useState([]);
 
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...menus];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setMenus(newDetails);
-  };
-
-  const addDetails = () => {
-    const newDetails = [...menus];
-    newDetails.push("");
-    setMenus(newDetails);
-  };
   const getModal = () => {
     if (isShowing) {
       return ReactDOM.createPortal(
@@ -51,33 +38,17 @@ const ModalHeader = ({ isShowing, hide }) => {
                 Header - Modification du contenu
               </h1>
               <div>
-                <label htmlFor="menu">
-                  Noms:
+                <label htmlFor="nom" className="text-rose">
+                  En cours
                   <input
-                    id="titre"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
+                    id="nom"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
                     type="text"
                     value={titre}
+                    placeholder="en cours"
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <button type="button" onClick={() => addDetails()}>
-                  Noms
-                </button>
-                {menus.map((menu) => {
-                  return (
-                    <label htmlFor="menu">
-                      Nom
-                      <input
-                        type="text"
-                        value={menu?.menu}
-                        onChange={(event) =>
-                          onChangeDetails(event.target.value, menu)
-                        }
-                      />
-                    </label>
-                  );
-                })}
               </div>
             </div>
           </div>
