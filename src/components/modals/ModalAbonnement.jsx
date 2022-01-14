@@ -22,10 +22,10 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     setDetails2(newDetailsDescription1);
   };
   const onChangeDetailsDescription2 = (value, detail3) => {
-    const newDetailsDescription3 = [...details3];
-    const index = newDetailsDescription3.indexOf(detail3);
-    newDetailsDescription3[index] = value;
-    setDetails3(newDetailsDescription3);
+    const newDetailsDescription2 = [...details3];
+    const index = newDetailsDescription2.indexOf(detail3);
+    newDetailsDescription2[index] = value;
+    setDetails3(newDetailsDescription2);
   };
 
   const addDetailsTitre = () => {
