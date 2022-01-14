@@ -35,7 +35,7 @@ const ModalHeader = ({ isShowing, hide }) => {
             {/* // modal */}
             <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-blanc p-3 rounded text-vert">
               {/* // modal-header */}
-              <div className="flex justify-end">
+              <div className="flex justify-end ">
                 {/* // modal-close-button */}
                 <button
                   type="button"
@@ -48,6 +48,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                 </button>
               </div>
               <div>
+                <h1>Modification</h1>
                 <label htmlFor="menu">
                   Noms:
                   <input
