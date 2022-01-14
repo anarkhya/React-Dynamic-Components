@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const ModalObjets = ({ isShowing, hide }) => {
-  const [sousTitre, setSousTitre] = useState("");
+  const [appartenance, setAppartenance] = useState("");
   const [info, setInfo] = useState("");
   const [details, setDetails] = useState([]);
 
@@ -46,14 +46,14 @@ const ModalObjets = ({ isShowing, hide }) => {
                 Objets - Modification du contenu
               </h1>
               <div>
-                <label htmlFor="sous-titre">
-                  Sous-titre
+                <label htmlFor="appartenance">
+                  Appartenance
                   <input
-                    id="sousTitre"
+                    id="appartenance"
                     className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                     type="text"
-                    value={sousTitre}
-                    onChange={(event) => setSousTitre(event.target.value)}
+                    value={appartenance}
+                    onChange={(event) => setAppartenance(event.target.value)}
                   />
                 </label>
                 <label htmlFor="cible">

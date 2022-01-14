@@ -34,44 +34,10 @@ const ModalProduct = ({ isShowing, hide }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-blanc p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
-                <label htmlFor="titre">
-                  Titre
-                  <input
-                    id="titre"
-                    type="text"
-                    value={titre}
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="info">
-                  Info supplémentaire
-                  <input
-                    id="info"
-                    type="text"
-                    value={info}
-                    onChange={(event) => setInfo(event.target.value)}
-                  />
-                </label>
-                <button type="button" onClick={() => addDetails()}>
-                  Ajouter une image
-                </button>
-                {images.map((image) => {
-                  return (
-                    <label htmlFor="image">
-                      <input
-                        type="img"
-                        value={image?.image}
-                        onChange={(event) =>
-                          onChangeDetails(event.target.value, image)
-                        }
-                      />
-                    </label>
-                  );
-                })}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -82,6 +48,43 @@ const ModalProduct = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+              <h1 className="text-center text-h2 p-2">
+                Product - Modification du contenu
+              </h1>
+              <label htmlFor="titre">
+                <input
+                  id="titre"
+                  className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
+                  type="text"
+                  value={titre}
+                  onChange={(event) => setTitre(event.target.value)}
+                />
+              </label>
+              <label htmlFor="info">
+                Info supplémentaire
+                <input
+                  id="info"
+                  type="text"
+                  value={info}
+                  onChange={(event) => setInfo(event.target.value)}
+                />
+              </label>
+              <button type="button" onClick={() => addDetails()}>
+                Ajouter une image
+              </button>
+              {images.map((image) => {
+                return (
+                  <label htmlFor="image">
+                    <input
+                      type="img"
+                      value={image?.image}
+                      onChange={(event) =>
+                        onChangeDetails(event.target.value, image)
+                      }
+                    />
+                  </label>
+                );
+              })}
             </div>
           </div>
         </>,
