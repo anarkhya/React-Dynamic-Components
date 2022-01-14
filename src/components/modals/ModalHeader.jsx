@@ -33,7 +33,7 @@ const ModalHeader = ({ isShowing, hide }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-blanc p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
               {/* // modal-header */}
               <div className="flex justify-end ">
                 {/* // modal-close-button */}
@@ -47,13 +47,15 @@ const ModalHeader = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+              <h1 className="text-center text-h2 p-2">
+                Header - Modification du contenu
+              </h1>
               <div>
-                <h1>Modification</h1>
                 <label htmlFor="menu">
                   Noms:
                   <input
                     id="titre"
-                    className="mb-3 ml-3 mr-3 border-2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                     type="text"
                     value={titre}
                     onChange={(event) => setTitre(event.target.value)}
