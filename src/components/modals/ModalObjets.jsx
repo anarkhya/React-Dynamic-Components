@@ -47,7 +47,7 @@ const ModalObjets = ({ isShowing, hide }) => {
                   Sous-titre
                   <input
                     id="sousTitre"
-                    className="mb-3 ml-3 mr-3 px-2 border-2"
+                    className="mb-3 ml-3 mr-3 border-2 border-vert"
                     type="text"
                     value={sousTitre}
                     onChange={(event) => setSousTitre(event.target.value)}
@@ -57,7 +57,7 @@ const ModalObjets = ({ isShowing, hide }) => {
                   Cible
                   <input
                     id="cible"
-                    className="mb-3 ml-3 px-2 border-2"
+                    className="mb-3 ml-3 px-2 border-2 border-vert"
                     type="text"
                     value={info}
                     onChange={(event) => setInfo(event.target.value)}
