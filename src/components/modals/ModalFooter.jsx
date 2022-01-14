@@ -35,7 +35,7 @@ const ModalFooter = ({ isShowing, hide }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-blanc p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
@@ -49,15 +49,15 @@ const ModalFooter = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div className="grid place-content-center">
-                <h1 className="mb-5 text-center font-semibold underline underline-offset-4">
-                  Modification :
-                </h1>
+              <h1 className="text-center text-h2 p-2">
+                Footer - Modification du contenu
+              </h1>
+              <div>
                 <label htmlFor="contact">
                   Contact :
                   <input
                     id="contact"
-                    className="mb-3 ml-3 mr-3 border-2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                     type="text"
                     value={contact}
                     onChange={(event) => setContact(event.target.value)}
@@ -67,7 +67,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                   Adresse :
                   <input
                     id="address"
-                    className="mb-3 ml-3 mr-3 border-2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none border-vert"
                     type="text"
                     value={address}
                     onChange={(event) => setAddress(event.target.value)}
@@ -77,7 +77,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                   Horaire :
                   <input
                     id="horaires"
-                    className="mb-3 ml-3 mr-3 border-2 border-vert"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none border-vert"
                     type="text"
                     value={horaires}
                     onChange={(event) => setHoraires(event.target.value)}
