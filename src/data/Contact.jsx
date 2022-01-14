@@ -3,9 +3,9 @@ const contact = [
     component: "contact",
     data: {
       classContainer:
-        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
+        "p-4 md:text-lg gap-3 mx-auto flex flex-col bg-gris_clair text-vert",
       classTitle: "text-center text-h1 font-light",
-      classInfosList: "md:w-1/2 flex justify-between flex-col md:flex-row",
+      classInfosList: "flex justify-around flex-col md:flex-row",
       classInfosListRow: "flex w-64 md:w-auto",
       classIcon: "mr-1 w-6",
       title: "Contact",
