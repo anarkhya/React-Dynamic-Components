@@ -38,26 +38,13 @@ const concept = [
     },
   },
   {
-    component: "utilisateur",
+    component: "client",
     data: {
       classContainer:
         "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      classTitre: "text-center text-h1 font-light",
-      classParagraph: "md:w-1/2",
       titre: "Pour qui ?",
-      textes: [
-        {
-          detail1: "Les familles",
-          detail2: "Les curieux.se",
-          detail3: "Les connaisseur.eusses du système D",
-          detail4: "Les petits budgets",
-          detail5:
-            "Les consommateur.trices qui souhaitent consommer autrement responsable",
-          detail6: "Les écolos",
-          detail7: "Les amateur.trices de seconde main",
-          detail8: "Les minimalistes",
-        },
-      ],
+      description:
+        "Les familles. Les curieux.se. Les connaisseur.eusses du système D. Les petits budgets. Les consommateur.trices qui souhaitent consommer autrement. Les écolos. Les amateur.trices de seconde main. Les minimalistes.",
     },
   },
   {
