@@ -34,7 +34,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-blanc p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
@@ -48,33 +48,39 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+              <h1 className="text-center text-h2 p-2">
+                Abonnements - Modification du contenu
+              </h1>
               <div>
                 <label htmlFor="titre">
                   Titre
                   <input
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
                     id="titre"
                     type="text"
                     value={titre}
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <label htmlFor="info">
-                  Info supplémentaire
+                <label htmlFor="description">
+                  Description
                   <input
-                    id="info"
+                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h2 border-vert"
+                    id="description"
                     type="text"
                     value={info}
                     onChange={(event) => setInfo(event.target.value)}
                   />
                 </label>
-                <button type="submit" onClick={() => addDetails()}>
-                  Ajouter un détail
+                <button type="button" onClick={() => addDetails()}>
+                  Description supplémentaire
                 </button>
                 {details.map((detail) => {
                   return (
                     <label htmlFor="detail">
                       detail
                       <input
+                        className="m-2"
                         type="text"
                         value={detail?.detail}
                         onChange={(event) =>
