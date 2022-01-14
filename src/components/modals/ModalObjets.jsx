@@ -1,10 +1,21 @@
 /* eslint-disable indent */
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalObjets = ({ isShowing, hide }) =>
-  isShowing
-    ? ReactDOM.createPortal(
+const ModalObjets = ({ isShowing, hide }) => {
+  const [sousTitre, setSousTitre] = useState("");
+  const [info, setInfo] = useState("");
+  const [details, setDetails] = useState([]);
+
+  const onChangeDetails = (value, detail) => {
+    const newDetails = [...details];
+    const index = newDetails.indexOf(detail);
+    newDetails[index] = value;
+    setDetails(newDetails);
+  };
+  const getModal = () => {
+    if (isShowing) {
+      return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
           <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
@@ -31,12 +42,42 @@ const ModalObjets = ({ isShowing, hide }) =>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <p>Objets Modal</p>
+              <div>
+                <label htmlFor="sous-titre">
+                  Sous-titre
+                  <input
+                    id="sousTitre"
+                    className="mb-3 ml-3 mr-3 px-2 border-2"
+                    type="text"
+                    value={sousTitre}
+                    onChange={(event) => setSousTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="cible">
+                  Cible
+                  <input
+                    id="cible"
+                    className="mb-3 ml-3 px-2 border-2"
+                    type="text"
+                    value={info}
+                    onChange={(event) => setInfo(event.target.value)}
+                  />
+                </label>
+                <div>
+                  <label htmlFor="toto">
+                    {(event) => onChangeDetails(event.target.value)}
+                  </label>
+                </div>
+              </div>
             </div>
           </div>
         </>,
         document.body
-      )
-    : null;
+      );
+    }
+    return null;
+  };
+  return getModal();
+};
 
 export default ModalObjets;
