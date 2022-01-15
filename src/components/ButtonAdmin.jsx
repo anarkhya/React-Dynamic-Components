@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import ModalArticle from "./ModalArticle";
-import ModalAbonnement from "./ModalAbonnement";
-import ModalArticleProjet from "./ModalArticleProjet";
-import ModalContact from "./ModalContact";
-import ModalEchanges from "./ModalEchanges";
-import ModalFooter from "./ModalFooter";
-import ModalHeader from "./ModalHeader";
-import ModalObjets from "./ModalObjets";
-import ModalProduct from "./ModalProduct";
-import ModalUtilisateur from "./ModalUtilisateur";
+import ModalArticle from "./modals/ModalArticle";
+import ModalAbonnement from "./modals/ModalAbonnement";
+import ModalArticleProjet from "./modals/ModalArticleProjet";
+import ModalContact from "./modals/ModalContact";
+import ModalEchanges from "./modals/ModalEchanges";
+import ModalFooter from "./modals/ModalFooter";
+import ModalHeader from "./modals/ModalHeader";
+import ModalObjets from "./modals/ModalObjets";
+import ModalProduct from "./modals/ModalProduct";
+import ModalClient from "./modals/ModalClient";
 
-const ButtonAdminArticle = ({ type }) => {
+const ButtonAdmin = ({ type }) => {
   const [modal, setModal] = useState("");
 
   const toggle = () => {
@@ -27,7 +27,7 @@ const ButtonAdminArticle = ({ type }) => {
       header: <ModalHeader isShowing hide={toggle} />,
       objets: <ModalObjets isShowing hide={toggle} />,
       product: <ModalProduct isShowing hide={toggle} />,
-      utilisateur: <ModalUtilisateur isShowing hide={toggle} />,
+      client: <ModalClient isShowing hide={toggle} />,
     };
     setModal(myModal[type]);
   };
@@ -55,4 +55,4 @@ const ButtonAdminArticle = ({ type }) => {
   );
 };
 
-export default ButtonAdminArticle;
+export default ButtonAdmin;
