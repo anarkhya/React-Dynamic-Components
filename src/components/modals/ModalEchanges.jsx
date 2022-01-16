@@ -79,7 +79,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
-                    className="my-2 mx-auto rounded-full bg-vert text-white px-6 py-2"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
                     onClick={() => addDetails()}
                   >
                     Ajouter une autre description ?
