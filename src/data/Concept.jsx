@@ -1,16 +1,8 @@
 const concept = [
   {
-    component: "concept",
-    data: {},
-  },
-  {
     component: "article",
     data: {
-      classBg:
-        "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      classTitre: "text-h1 font-light",
-      classParagraph: "md:w-1/2",
-      classButton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       titre: "Concept",
       paragraphe:
         "Une boutique de seconde main, sur l’île de Nantes, qui s'auto renouvelle par les échanges grâce à un système d’abonnement à la journée, au mois ou à l’année.",
@@ -26,10 +18,7 @@ const concept = [
   {
     component: "article",
     data: {
-      classBg:
-        "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
-      classTitre: "",
-      classButton: "",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
       classParagraph: "md:w-1/2 px-4 text-[28px] font-light leading-tight",
       titre: "",
       paragraphe:
