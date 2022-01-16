@@ -40,7 +40,7 @@ const Header = () => {
                         <a
                           key={item.name}
                           href={item.to}
-                          className="text-h2 text-vert hover:text-rose"
+                          className="transition hover:text-rose text-h2 text-vert"
                         >
                           {item.name}
                         </a>
