@@ -1,13 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+
 // components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
-// import Utilisateur from "../components/Utilisateur";
 import Article from "../components/Article";
-import ArticleProjet from "../components/ArticleProjet";
+import ArticleImage from "../components/ArticleImage";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 import Objets from "../components/Objets";
@@ -36,7 +36,7 @@ const Pages = () => {
       abonnement: () => <Abonnement data={data} />,
       formulaire: () => <Formulaire data={data} />,
       article: () => <Article data={data} />,
-      articleProjet: () => <ArticleProjet data={data} />,
+      articleImage: () => <ArticleImage data={data} />,
       product: () => <Product data={data} />,
       categorie: () => <Echanges data={data} />,
       objets: () => <Objets data={data} />,

@@ -3,7 +3,7 @@ import ButtonAdmin from "./ButtonAdmin";
 
 const Client = ({ data }) => {
   return (
-    <div className={data.classContainer}>
+    <div className={data.cls}>
       <div className="text-right w-full">
         <ButtonAdmin type="client" />
       </div>
