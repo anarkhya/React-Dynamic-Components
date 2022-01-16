@@ -56,7 +56,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -67,7 +67,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
                 <label htmlFor="description">
                   Description
                   <textarea
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     id="description"
                     type="text"
                     value={description}
@@ -90,7 +90,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
                     <label htmlFor="description">
                       Description supplémentaire
                       <textarea
-                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                         type="text"
                         placeholder="contenu du paragraphe"
                         value={detail?.detail}
