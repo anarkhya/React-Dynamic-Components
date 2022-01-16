@@ -42,7 +42,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                   En cours
                   <input
                     id="nom"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     type="text"
                     value={titre}
                     placeholder="en cours"

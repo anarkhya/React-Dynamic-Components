@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalArticle from "./modals/ModalArticle";
 import ModalAbonnement from "./modals/ModalAbonnement";
-import ModalArticleProjet from "./modals/ModalArticleProjet";
+import ModalArticleImage from "./modals/ModalArticleImage";
 import ModalContact from "./modals/ModalContact";
 import ModalEchanges from "./modals/ModalEchanges";
 import ModalFooter from "./modals/ModalFooter";
@@ -20,7 +20,7 @@ const ButtonAdmin = ({ type }) => {
     const myModal = {
       article: <ModalArticle isShowing hide={toggle} />,
       abonnement: <ModalAbonnement isShowing hide={toggle} />,
-      articleProjet: <ModalArticleProjet isShowing hide={toggle} />,
+      articleImage: <ModalArticleImage isShowing hide={toggle} />,
       contact: <ModalContact isShowing hide={toggle} />,
       echanges: <ModalEchanges isShowing hide={toggle} />,
       footer: <ModalFooter isShowing hide={toggle} />,
