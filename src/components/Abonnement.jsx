@@ -8,7 +8,7 @@ const Abonnement = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="abonnement" />
         </div>
-        <h1 className="font-light text-h1">{data.title}</h1>
+        <h1 className="font-light text-h1">{data.titre}</h1>
         <br />
         <br />
         <div className="md:w-1/2">

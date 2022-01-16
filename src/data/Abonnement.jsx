@@ -2,7 +2,7 @@ const AbonnementData = [
   {
     component: "abonnement",
     data: {
-      title: "Abonnements",
+      titre: "Abonnements",
       details: [
         {
           id: 1,
@@ -34,7 +34,6 @@ const AbonnementData = [
             "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
         },
       ],
-      cls: "",
     },
   },
   {
