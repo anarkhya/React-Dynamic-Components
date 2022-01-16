@@ -6,7 +6,7 @@ const ArticleImage = ({ data }) => {
     <div className="">
       <div className={data.cls}>
         <div className="text-right w-full">
-          <ButtonAdmin type="articleProjet" />
+          <ButtonAdmin type="articleImage" />
         </div>
         <h1 className="text-h1 font-light">{data.titre}</h1>
         <img className="w-32 rounded-full" src={data.src} alt={data.alt} />

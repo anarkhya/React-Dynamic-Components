@@ -81,7 +81,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -92,7 +92,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <label htmlFor="description">
                   Description
                   <textarea
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     id="description"
                     type="text"
                     value={description}
@@ -116,7 +116,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     <label htmlFor="description">
                       Titre du bloc
                       <input
-                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-bold text-h2"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-bold text-h2"
                         type="text"
                         placeholder="Titre"
                         value={detail?.detail}
@@ -143,7 +143,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     <label htmlFor="detail2">
                       Ligne supplémentaire
                       <input
-                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                         type="text"
                         placeholder="contenu de la ligne"
                         value={detail2?.detail2}
@@ -173,7 +173,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     <label htmlFor="detail2">
                       Autre Ligne supplémentaire
                       <input
-                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                         type="text"
                         placeholder="contenu de la ligne"
                         value={detail3?.detail3}

@@ -57,7 +57,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                   Contact
                   <input
                     id="contact"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     type="text"
                     value={contact}
                     onChange={(event) => setContact(event.target.value)}
@@ -67,7 +67,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                   Adresse
                   <input
                     id="address"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none border-vert"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     type="text"
                     value={address}
                     onChange={(event) => setAddress(event.target.value)}
@@ -77,7 +77,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                   Horaires
                   <input
                     id="horaires"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none border-vert"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     type="text"
                     value={horaires}
                     onChange={(event) => setHoraires(event.target.value)}

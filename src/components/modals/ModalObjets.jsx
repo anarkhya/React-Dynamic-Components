@@ -43,7 +43,7 @@ const ModalObjets = ({ isShowing, hide }) => {
                   Sous-titre
                   <input
                     id="appartenance"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-bold text-h2"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-bold text-h2"
                     type="text"
                     value={appartenance}
                     placeholder="sous-titre"
@@ -54,7 +54,7 @@ const ModalObjets = ({ isShowing, hide }) => {
                   Ligne
                   <input
                     id="cible"
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     type="text"
                     value={info}
                     placeholder="contenu de la ligne"
