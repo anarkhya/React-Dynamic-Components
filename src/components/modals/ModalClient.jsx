@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalProduct = ({ isShowing, hide }) => {
+const ModalClient = ({ isShowing, hide }) => {
   const [titre, setTitre] = useState("");
   const [info, setInfo] = useState("");
 
@@ -36,8 +36,9 @@ const ModalProduct = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2 p-2">
-                Product - Modification du contenu
+                Clients - Modification du contenu
               </h1>
+              {/* // style section interactions utilisateur */}
               <section className="p-2">
                 <label htmlFor="titre">
                   Titre
@@ -72,4 +73,4 @@ const ModalProduct = ({ isShowing, hide }) => {
   };
   return getModal();
 };
-export default ModalProduct;
+export default ModalClient;

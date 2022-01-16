@@ -15,7 +15,7 @@ import Formulaire from "../components/Formulaire";
 import Contact from "../components/Contact";
 import Concept from "../components/Concept";
 import Map from "../components/Map";
-import ButtonAdmin from "../components/modals/ButtonAdmin";
+import ButtonAdmin from "../components/ButtonAdmin";
 import Client from "../components/Client";
 
 // data
@@ -35,7 +35,6 @@ const Pages = () => {
       footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
       formulaire: () => <Formulaire data={data} />,
-      // utilisateur: () => <Utilisateur data={data} />,
       article: () => <Article data={data} />,
       articleProjet: () => <ArticleProjet data={data} />,
       product: () => <Product data={data} />,
