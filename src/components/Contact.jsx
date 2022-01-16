@@ -9,8 +9,8 @@ const Contact = ({ data }) => {
           <ButtonAdmin type="contact" />
         </div>
         <h1 className="text-center text-h1 font-light">{data.title}</h1>
-        <div className="md:w-1/2 flex justify-between flex-col md:flex-row">
-          <div className="flex w-64 md:w-auto">
+        <div className="flex justify-between flex-col md:flex-row">
+          <div className="flex pl-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mr-1 w-6"
@@ -22,7 +22,7 @@ const Contact = ({ data }) => {
             </svg>
             <p>{data.phone}</p>
           </div>
-          <div className="flex w-64 md:w-auto">
+          <div className="flex pl-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mr-1 w-6"
@@ -34,7 +34,7 @@ const Contact = ({ data }) => {
             </svg>
             <p>{data.mail}</p>
           </div>
-          <div className="flex w-64 md:w-auto">
+          <div className="flex pl-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mr-1 w-6"
