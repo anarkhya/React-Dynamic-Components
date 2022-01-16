@@ -2,12 +2,7 @@ const contact = [
   {
     component: "contact",
     data: {
-      classContainer:
-        "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-gris_clair text-vert",
-      classTitle: "text-center text-h1 font-light",
-      classInfosList: "md:w-1/2 flex justify-between flex-col md:flex-row",
-      classInfosListRow: "flex w-64 md:w-auto",
-      classIcon: "mr-1 w-6",
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-gris_clair text-vert",
       title: "Contact",
       srcPhoneIcon: "./assets/images/placeholder.png",
       phone: "06 00 00 00 00",
@@ -18,17 +13,14 @@ const contact = [
     },
   },
   {
-    component: "articleProjet",
+    component: "articleImage",
     data: {
-      classContainer:
-        "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
-      classTitle: "text-h1 font-light",
-      classImg: "w-32",
-      classParagraph: "md:w-1/2",
-      title: "Un lieu de vie, d'échange et de mixité",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
+      clsPara: "md:w-1/2",
+      titre: "Un lieu de vie, d'échange et de mixité",
       src: "./assets/images/placeholder.png",
       alt: "photo",
-      paragraph:
+      description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
   },

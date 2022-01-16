@@ -4,16 +4,16 @@ import ButtonAdmin from "./ButtonAdmin";
 const Contact = ({ data }) => {
   return (
     <div className="">
-      <div className={data.classContainer}>
+      <div className={data.cls}>
         <div className="text-right w-full">
           <ButtonAdmin type="contact" />
         </div>
-        <h1 className={data.classTitle}>{data.title}</h1>
-        <div className={data.classInfosList}>
-          <div className={data.classInfosListRow}>
+        <h1 className="text-center text-h1 font-light">{data.title}</h1>
+        <div className="md:w-1/2 flex justify-between flex-col md:flex-row">
+          <div className="flex w-64 md:w-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={data.classIcon}
+              className="mr-1 w-6"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -22,10 +22,10 @@ const Contact = ({ data }) => {
             </svg>
             <p>{data.phone}</p>
           </div>
-          <div className={data.classInfosListRow}>
+          <div className="flex w-64 md:w-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={data.classIcon}
+              className="mr-1 w-6"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -34,10 +34,10 @@ const Contact = ({ data }) => {
             </svg>
             <p>{data.mail}</p>
           </div>
-          <div className={data.classInfosListRow}>
+          <div className="flex w-64 md:w-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={data.classIcon}
+              className="mr-1 w-6"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
