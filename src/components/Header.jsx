@@ -17,7 +17,7 @@ const Header = () => {
             <div className="flex justify-end mt-3">
               <ButtonAdmin type="header" />
             </div>
-            <div className="relative flex items-center justify-between h-36">
+            <div className="relative flex items-center justify-between pb-2">
               {/* positionnement burger */}
               <div className="absolute inset-y-0 right-0 sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-vert focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -40,7 +40,7 @@ const Header = () => {
                         <a
                           key={item.name}
                           href={item.to}
-                          className="font-bold text-vert hover:text-rose"
+                          className="text-h2 text-vert hover:text-rose"
                         >
                           {item.name}
                         </a>

@@ -7,7 +7,7 @@ const Article = ({ data }) => {
       <div className="text-right w-full">
         <ButtonAdmin type="article" />
       </div>
-      <h1 className="text-h1 font-light">{data.titre}</h1>
+      <h1 className="text-h1 font-light leading-tight">{data.titre}</h1>
       <p className={data.clsPara}>{data.description}</p>
       {/* Si il y a du contenu, il s'affiche sinon rien */}
       {data.description2 ? (
