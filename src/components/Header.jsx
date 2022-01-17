@@ -17,8 +17,9 @@ const Header = () => {
             <div className="flex justify-end mt-3">
               <ButtonAdmin type="header" />
             </div>
-            <div className="relative flex items-center justify-between h-36">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div className="relative flex items-center justify-between pb-2">
+              {/* positionnement burger */}
+              <div className="absolute inset-y-0 right-0 sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-vert focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -28,8 +29,8 @@ const Header = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-center sm:justify-between">
-                <Link to={HeaderData.menus[0].to}>
+              <div className="flex-1 flex items-center pl-4 sm:justify-between">
+                <Link to={HeaderData.menu[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>
                 <div className="hidden sm:block sm:ml-6">
@@ -39,7 +40,7 @@ const Header = () => {
                         <a
                           key={item.name}
                           href={item.to}
-                          className="font-bold text-vert hover:text-rose"
+                          className="transition hover:text-rose text-h2 text-vert"
                         >
                           {item.name}
                         </a>
@@ -52,12 +53,12 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="bg-vert flex flex-col px-2 pt-2 pb-3 space-y-1">
-              {HeaderData.menus.map((item) => (
+            <div className="bg-vert flex flex-col p-4 gap-8">
+              {HeaderData.menu.map((item) => (
                 <Link to={item.to}>
                   <Disclosure.Button
                     key={item.name}
-                    className="font-bold text-blanc"
+                    className="text-h2 text-blanc"
                   >
                     {item.name}
                   </Disclosure.Button>

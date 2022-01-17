@@ -104,7 +104,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
-                    className="my-2 mx-auto rounded-full bg-vert text-white px-6 py-2"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
                     onClick={() => addDetailsTitre()}
                   >
                     Ajouter un autre bloc, son titre ?
@@ -115,7 +115,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     <label htmlFor="description">
                       Titre du bloc
                       <input
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-bold text-h2"
+                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-bold text-h2"
                         type="text"
                         placeholder="Titre"
                         value={detail?.detail}
@@ -131,7 +131,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
-                    className="my-2 mx-auto rounded-full bg-vert text-white px-6 py-2"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
                     onClick={() => addDetailsDescription1()}
                   >
                     Ajouter une première ligne descriptive ?
@@ -142,7 +142,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     <label htmlFor="detail2">
                       Ligne supplémentaire
                       <input
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
                         type="text"
                         placeholder="contenu de la ligne"
                         value={detail2?.detail2}
@@ -161,7 +161,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
-                    className="my-2 mx-auto rounded-full bg-vert text-white px-6 py-2"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
                     onClick={() => addDetailsDescription2()}
                   >
                     Ajouter une seconde ligne descriptive ?
@@ -172,7 +172,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     <label htmlFor="detail2">
                       Autre Ligne supplémentaire
                       <input
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                        className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
                         type="text"
                         placeholder="contenu de la ligne"
                         value={detail3?.detail3}

@@ -4,7 +4,10 @@ import ButtonAdmin from "./ButtonAdmin";
 const ArticleImage = ({ data }) => {
   return (
     <div className="">
-      <div className={data.cls}>
+      <div
+        className={data.cls}
+        style={{ backgroundImage: "url(/assets/images/grid.png)" }}
+      >
         <div className="text-right w-full">
           <ButtonAdmin type="articleImage" />
         </div>
