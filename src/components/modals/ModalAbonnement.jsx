@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Abonnement from "../../data/Abonnement";

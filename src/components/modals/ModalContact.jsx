@@ -45,7 +45,7 @@ const ModalContact = ({ isShowing, hide }) => {
                 <label htmlFor="telephone" className="">
                   Téléphone
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="telephone"
                     type="text"
                     value={telephone}
@@ -56,7 +56,7 @@ const ModalContact = ({ isShowing, hide }) => {
                 <label htmlFor="email" className="">
                   E-mail
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="email"
                     type="text"
                     value={email}
@@ -67,7 +67,7 @@ const ModalContact = ({ isShowing, hide }) => {
                 <label htmlFor="insta">
                   Instagram
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="insta"
                     type="text"
                     value={insta}

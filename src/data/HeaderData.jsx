@@ -1,5 +1,5 @@
 const HeaderData = {
-  menu: [
+  menus: [
     {
       to: "/",
       name: "Accueil",

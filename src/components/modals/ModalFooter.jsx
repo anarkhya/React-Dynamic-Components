@@ -55,7 +55,7 @@ const ModalFooter = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2 p-2">
-                Footer - Modification du contenu
+                Pied de page - Modification du contenu
               </h1>
               <div>
                 <label htmlFor="contact">

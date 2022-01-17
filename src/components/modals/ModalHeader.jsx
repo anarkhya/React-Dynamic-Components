@@ -1,9 +1,17 @@
-/* eslint-disable indent */
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import { useState } from "react/cjs/react.development";
+import HeaderData from "../../data/HeaderData";
 
 const ModalHeader = ({ isShowing, hide }) => {
-  const [titre, setTitre] = useState("");
+  const [data, setData] = useState(HeaderData.menus);
+
+  const updateData = (value, type, obj) => {
+    const newData = [...data];
+    const index = newData.indexOf(obj);
+    newData[index][type] = value;
+    setData(newData);
+  };
 
   const getModal = () => {
     if (isShowing) {
@@ -35,21 +43,52 @@ const ModalHeader = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2 p-2">
-                Header - Modification du contenu
+                En tête - Modification du contenu
               </h1>
               <div>
-                <label htmlFor="nom" className="text-rose">
-                  En cours
+                <label htmlFor="nom" className="">
+                  Image
                   <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder="en cours"
-                    onChange={(event) => setTitre(event.target.value)}
+                    id="file"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="file"
                   />
                 </label>
               </div>
+
+              {data.map((menu) => {
+                <div>{menu.to}</div>;
+                return (
+                  <div>
+                    <label htmlFor="nom" className="">
+                      Nom du menu
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={menu.name}
+                        placeholder=""
+                        onChange={(event) =>
+                          updateData(event.target.value, "name", menu)
+                        }
+                      />
+                    </label>
+                    <label htmlFor="nom" className="">
+                      lien
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={menu.to}
+                        placeholder=""
+                        onChange={(event) =>
+                          updateData(event.target.value, "to", menu)
+                        }
+                      />
+                    </label>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </>,
