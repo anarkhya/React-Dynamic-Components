@@ -61,6 +61,14 @@ const ModalProduct = ({ isShowing, hide }) => {
                     onChange={(event) => setInfo(event.target.value)}
                   />
                 </label>
+                <label htmlFor="nom" className="">
+                  Image
+                  <input
+                    id="file"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="file"
+                  />
+                </label>
               </section>
             </div>
           </div>

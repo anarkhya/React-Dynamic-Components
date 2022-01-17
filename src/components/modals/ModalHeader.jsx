@@ -45,6 +45,16 @@ const ModalHeader = ({ isShowing, hide }) => {
               <h1 className="text-center text-h2 p-2">
                 En tête - Modification du contenu
               </h1>
+              <div>
+                <label htmlFor="nom" className="">
+                  Image
+                  <input
+                    id="file"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="file"
+                  />
+                </label>
+              </div>
 
               {data.map((menu) => {
                 <div>{menu.to}</div>;
@@ -74,14 +84,6 @@ const ModalHeader = ({ isShowing, hide }) => {
                         onChange={(event) =>
                           updateData(event.target.value, "to", menu)
                         }
-                      />
-                    </label>
-                    <label htmlFor="nom" className="">
-                      Image
-                      <input
-                        id="file"
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                        type="file"
                       />
                     </label>
                   </div>
