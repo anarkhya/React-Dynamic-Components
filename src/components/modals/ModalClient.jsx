@@ -1,10 +1,11 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Concept from "../../data/Concept";
 
 const ModalClient = ({ isShowing, hide }) => {
-  const [titre, setTitre] = useState("");
-  const [info, setInfo] = useState("");
+  const [titre, setTitre] = useState(Concept[2].data.titre);
+  const [description, setDescription] = useState(Concept[2].data.description);
 
   const getModal = () => {
     if (isShowing) {
@@ -57,9 +58,9 @@ const ModalClient = ({ isShowing, hide }) => {
                     id="description"
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     type="text"
-                    value={info}
+                    value={description}
                     placeholder="contenu du paragraphe"
-                    onChange={(event) => setInfo(event.target.value)}
+                    onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
               </section>

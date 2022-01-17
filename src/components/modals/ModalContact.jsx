@@ -1,11 +1,12 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Contact from "../../data/Contact";
 
 const ModalContact = ({ isShowing, hide }) => {
-  const [telephone, setTelephone] = useState("");
-  const [email, setEmail] = useState("");
-  const [insta, setInsta] = useState("");
+  const [telephone, setTelephone] = useState(Contact[0].data.phone);
+  const [email, setEmail] = useState(Contact[0].data.mail);
+  const [insta, setInsta] = useState(Contact[0].data.insta);
 
   const getModal = () => {
     if (isShowing) {
