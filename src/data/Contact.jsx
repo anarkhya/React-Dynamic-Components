@@ -4,7 +4,7 @@ const contact = [
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-gris_clair text-vert",
       title: "Contact",
-      srcPhoneIcon: "./assets/images/placeholder.png",
+      srcPhoneIcon: "./assets/icones/icon_phone.svg",
       phone: "06 00 00 00 00",
       srcMailIcon: "./assets/images/placeholder.png",
       mail: "latrocquerie@gmail.com",
