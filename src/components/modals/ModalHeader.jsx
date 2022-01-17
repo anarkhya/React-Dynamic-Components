@@ -1,9 +1,13 @@
-/* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import HeaderData from "../../data/HeaderData";
 
 const ModalHeader = ({ isShowing, hide }) => {
-  const [titre, setTitre] = useState("");
+  const [pageUn, setPageUn] = useState("");
+  const [pageDeux, setPageDeux] = useState("");
+  const [pageTrois, setPageTrois] = useState("");
+  const [pageQuatre, setPageQuatre] = useState("");
+  const [pageCinq, setPageCinq] = useState("");
 
   const getModal = () => {
     if (isShowing) {
@@ -37,74 +41,69 @@ const ModalHeader = ({ isShowing, hide }) => {
               <h1 className="text-center text-h2 p-2">
                 En tête - Modification du contenu
               </h1>
-              <div>
-                <label htmlFor="nom" className="">
-                  Nom de page - 1
-                  <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder=""
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="nom" className="">
-                  Nom de page - 2
-                  <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder=""
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="nom" className="">
-                  Nom de page - 3
-                  <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder=""
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="nom" className="">
-                  Nom de page - 4
-                  <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder=""
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="nom" className="">
-                  Nom de page - 5
-                  <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder=""
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="nom" className="">
-                  Nom de page - 6
-                  <input
-                    id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={titre}
-                    placeholder=""
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-              </div>
+
+              {HeaderData.menus.map((menu) => {
+                <div>{menu.to}</div>;
+                return (
+                  <div>
+                    <label htmlFor="nom" className="">
+                      Nom de page - 1
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={pageUn}
+                        placeholder=""
+                        onChange={(event) => setPageUn(event.target.value)}
+                      />
+                    </label>
+                    <label htmlFor="nom" className="">
+                      Nom de page - 2
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={pageDeux}
+                        placeholder=""
+                        onChange={(event) => setPageDeux(event.target.value)}
+                      />
+                    </label>
+                    <label htmlFor="nom" className="">
+                      Nom de page - 3
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={pageTrois}
+                        placeholder=""
+                        onChange={(event) => setPageTrois(event.target.value)}
+                      />
+                    </label>
+                    <label htmlFor="nom" className="">
+                      Nom de page - 4
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={pageQuatre}
+                        placeholder=""
+                        onChange={(event) => setPageQuatre(event.target.value)}
+                      />
+                    </label>
+                    <label htmlFor="nom" className="">
+                      Nom de page - 5
+                      <input
+                        id="nom"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={pageCinq}
+                        placeholder=""
+                        onChange={(event) => setPageCinq(event.target.value)}
+                      />
+                    </label>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </>,
