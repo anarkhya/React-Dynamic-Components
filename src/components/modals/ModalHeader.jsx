@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import { useState } from "react/cjs/react.development";
 import HeaderData from "../../data/HeaderData";
 
 const ModalHeader = ({ isShowing, hide }) => {
-  const [pageUn, setPageUn] = useState("");
-  const [pageDeux, setPageDeux] = useState("");
-  const [pageTrois, setPageTrois] = useState("");
-  const [pageQuatre, setPageQuatre] = useState("");
-  const [pageCinq, setPageCinq] = useState("");
+  const [data, setData] = useState(HeaderData.menus);
+
+  const updateData = (value, type, obj) => {
+    const newData = [...data];
+    const index = newData.indexOf(obj);
+    newData[index][type] = value;
+    setData(newData);
+  };
 
   const getModal = () => {
     if (isShowing) {
@@ -42,63 +46,42 @@ const ModalHeader = ({ isShowing, hide }) => {
                 En tête - Modification du contenu
               </h1>
 
-              {HeaderData.menus.map((menu) => {
+              {data.map((menu) => {
                 <div>{menu.to}</div>;
                 return (
                   <div>
                     <label htmlFor="nom" className="">
-                      Nom de page - 1
+                      Nom du menu
                       <input
                         id="nom"
                         className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                         type="text"
-                        value={pageUn}
+                        value={menu.name}
                         placeholder=""
-                        onChange={(event) => setPageUn(event.target.value)}
+                        onChange={(event) =>
+                          updateData(event.target.value, "name", menu)
+                        }
                       />
                     </label>
                     <label htmlFor="nom" className="">
-                      Nom de page - 2
+                      lien
                       <input
                         id="nom"
                         className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                         type="text"
-                        value={pageDeux}
+                        value={menu.to}
                         placeholder=""
-                        onChange={(event) => setPageDeux(event.target.value)}
+                        onChange={(event) =>
+                          updateData(event.target.value, "to", menu)
+                        }
                       />
                     </label>
                     <label htmlFor="nom" className="">
-                      Nom de page - 3
+                      Image
                       <input
-                        id="nom"
+                        id="file"
                         className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                        type="text"
-                        value={pageTrois}
-                        placeholder=""
-                        onChange={(event) => setPageTrois(event.target.value)}
-                      />
-                    </label>
-                    <label htmlFor="nom" className="">
-                      Nom de page - 4
-                      <input
-                        id="nom"
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                        type="text"
-                        value={pageQuatre}
-                        placeholder=""
-                        onChange={(event) => setPageQuatre(event.target.value)}
-                      />
-                    </label>
-                    <label htmlFor="nom" className="">
-                      Nom de page - 5
-                      <input
-                        id="nom"
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                        type="text"
-                        value={pageCinq}
-                        placeholder=""
-                        onChange={(event) => setPageCinq(event.target.value)}
+                        type="file"
                       />
                     </label>
                   </div>
