@@ -38,14 +38,69 @@ const ModalHeader = ({ isShowing, hide }) => {
                 En tête - Modification du contenu
               </h1>
               <div>
-                <label htmlFor="nom" className="text-rose">
-                  En cours
+                <label htmlFor="nom" className="">
+                  Nom de page - 1
                   <input
                     id="nom"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="text"
                     value={titre}
-                    placeholder="en cours"
+                    placeholder=""
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="nom" className="">
+                  Nom de page - 2
+                  <input
+                    id="nom"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="text"
+                    value={titre}
+                    placeholder=""
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="nom" className="">
+                  Nom de page - 3
+                  <input
+                    id="nom"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="text"
+                    value={titre}
+                    placeholder=""
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="nom" className="">
+                  Nom de page - 4
+                  <input
+                    id="nom"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="text"
+                    value={titre}
+                    placeholder=""
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="nom" className="">
+                  Nom de page - 5
+                  <input
+                    id="nom"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="text"
+                    value={titre}
+                    placeholder=""
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="nom" className="">
+                  Nom de page - 6
+                  <input
+                    id="nom"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="text"
+                    value={titre}
+                    placeholder=""
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>

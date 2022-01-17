@@ -43,7 +43,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -54,7 +54,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                 <label htmlFor="image" className="text-rose">
                   ?? Import image ??
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="image"
                     type="text"
                     // value={titre}
@@ -64,7 +64,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                 <label htmlFor="description">
                   Description
                   <textarea
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="description"
                     type="text"
                     value={description}

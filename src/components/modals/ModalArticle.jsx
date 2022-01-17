@@ -57,7 +57,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -68,7 +68,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                 <label htmlFor="description">
                   Description
                   <textarea
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="description"
                     type="text"
                     value={description}
@@ -79,7 +79,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                 <label htmlFor="titreBouton">
                   Texte du bouton
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
                     id="titreBouton"
                     type="text"
                     value={titreBouton}
@@ -87,7 +87,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                     onChange={(event) => setTitreBouton(event.target.value)}
                   />
                 </label>
-                <div className="flex items-center w-full">
+                <div className="flex items-center w-full pt-4">
                   <button
                     type="submit"
                     className="my-2 mx-auto rounded-full bg-vert text-white px-6 py-2"
@@ -101,7 +101,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                     <label htmlFor="description">
                       Description supplémentaire
                       <textarea
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
                         type="text"
                         placeholder="contenu du paragraphe"
                         value={detail?.detail}
