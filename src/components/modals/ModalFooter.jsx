@@ -8,12 +8,12 @@ const ModalFooter = ({ isShowing, hide }) => {
   const [horaires, setHoraires] = useState("");
   // const [details, setDetails] = useState([]);
 
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setDetails(newDetails);
-  };
+  // const onChangeDetails = (value, detail) => {
+  //   const newDetails = [...details];
+  //   const index = newDetails.indexOf(detail);
+  //   newDetails[index] = value;
+  //   setDetails(newDetails);
+  // };
 
   // const addDetails = () => {
   //   const newDetails = [...details];
