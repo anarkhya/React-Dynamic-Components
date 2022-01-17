@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-const ModalArticleProjet = ({ isShowing, hide }) => {
+const ModalArticleImage = ({ isShowing, hide }) => {
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
 
@@ -36,14 +36,14 @@ const ModalArticleProjet = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2">
-                ArticleProjet - Modification du contenu
+                ArticleImage - Modification du contenu
               </h1>
               {/* // style section interactions utilisateur */}
               <section className="p-2">
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -54,7 +54,7 @@ const ModalArticleProjet = ({ isShowing, hide }) => {
                 <label htmlFor="image" className="text-rose">
                   ?? Import image ??
                   <input
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     id="image"
                     type="text"
                     // value={titre}
@@ -64,7 +64,7 @@ const ModalArticleProjet = ({ isShowing, hide }) => {
                 <label htmlFor="description">
                   Description
                   <textarea
-                    className="m-2 px-2 w-full rounded focus-within:shadow-xl focus:outline-none"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
                     id="description"
                     type="text"
                     value={description}
@@ -84,4 +84,4 @@ const ModalArticleProjet = ({ isShowing, hide }) => {
   return getModal();
 };
 
-export default ModalArticleProjet;
+export default ModalArticleImage;

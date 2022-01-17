@@ -40,7 +40,7 @@ const Formulaire = ({ data }) => {
             placeholder="Message"
           />
           <button
-            className="mt-4 rounded-full bg-transparent border-2 border-solid border-white text-white px-6 py-2"
+            className="transition hover:bg-rose hover:text-vert hover:border-rose active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-transparent border-2 border-solid border-white text-white px-6 py-2"
             type="button"
             id="button"
           >
