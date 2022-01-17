@@ -3,7 +3,10 @@ import ButtonAdmin from "./ButtonAdmin";
 
 const Client = ({ data }) => {
   return (
-    <div className={data.cls}>
+    <div
+      className={data.cls}
+      style={{ backgroundImage: "url(/assets/images/grid.png)" }}
+    >
       <div className="text-right w-full">
         <ButtonAdmin type="client" />
       </div>
