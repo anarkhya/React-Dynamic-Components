@@ -35,7 +35,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2 p-2">
-                Header - Modification du contenu
+                En tête - Modification du contenu
               </h1>
               <div>
                 <label htmlFor="nom" className="text-rose">
