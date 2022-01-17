@@ -13,7 +13,7 @@ const ArticleImage = ({ data }) => {
         </div>
         <h1 className="text-h1 font-light">{data.titre}</h1>
         <img className="w-32 rounded-full" src={data.src} alt={data.alt} />
-        <p className={data.clsPara}>{data.description}</p>
+        <p className="md:w-1/2">{data.description}</p>
       </div>
     </div>
   );

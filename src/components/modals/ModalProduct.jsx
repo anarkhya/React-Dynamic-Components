@@ -43,7 +43,7 @@ const ModalProduct = ({ isShowing, hide }) => {
                   Titre
                   <input
                     id="titre"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
                     type="text"
                     value={titre}
                     placeholder="titre du bloc"
@@ -54,11 +54,19 @@ const ModalProduct = ({ isShowing, hide }) => {
                   Description
                   <textarea
                     id="description"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="text"
                     value={info}
                     placeholder="contenu du paragraphe"
                     onChange={(event) => setInfo(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="nom" className="">
+                  Image
+                  <input
+                    id="file"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="file"
                   />
                 </label>
               </section>

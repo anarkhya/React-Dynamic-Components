@@ -7,11 +7,9 @@ const concept = [
       titre: "Concept",
       description:
         "Une boutique de seconde main, sur l’île de Nantes, qui s'auto renouvelle par les échanges grâce à un système d’abonnement à la journée, au mois ou à l’année.",
-      description2: true,
-      description2contenu:
+      description2:
         "L'idée est de réduire la surconsommation, faire des économies, développer la solidarité et le partage en adaptant le troc au monde d'aujourd'hui.",
-      description3: true,
-      description3contenu:
+      description3:
         "Ce magasin sans affichage de prix est ouvert à toutes et tous et espère ainsi générer la création d’une véritable mixité sociale. Ce concept s’adresse à chacun.e de manière égale et annule toute possibilité de stigmatisation : le lieu servant d’intermédiaire entre celui qui donne (qui ne sait pas à qui) et celui qui récupère (il ne sait pas qui a donné) tout en se détachant du web.",
       bouton: false,
     },
@@ -51,7 +49,6 @@ const concept = [
     component: "articleImage",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      clsPara: "md:w-1/2",
       titre: "Porteuse de projet",
       src: "./assets/images/placeholder.png",
       alt: "photo",

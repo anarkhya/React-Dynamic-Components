@@ -1,11 +1,16 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import FooterData from "../../data/FooterData";
 
 const ModalFooter = ({ isShowing, hide }) => {
-  const [contact, setContact] = useState("");
-  const [address, setAddress] = useState("");
-  const [horaires, setHoraires] = useState("");
+  const [mail, setMail] = useState(FooterData.contact[0].mail);
+  const [phone, setPhone] = useState(FooterData.contact[1].phone);
+  const [adresse, setAdresse] = useState(FooterData.adresse);
+  const [horaires1, setHoraires1] = useState(FooterData.horaires[0].horaire);
+  const [horaires2, setHoraires2] = useState(FooterData.horaires[1].horaire);
+  const [horaires3, setHoraires3] = useState(FooterData.horaires[2].horaire);
+  const [horaires4, setHoraires4] = useState(FooterData.horaires[3].horaire);
   // const [details, setDetails] = useState([]);
 
   // const onChangeDetails = (value, detail) => {
@@ -50,37 +55,77 @@ const ModalFooter = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2 p-2">
-                Footer - Modification du contenu
+                Pied de page - Modification du contenu
               </h1>
               <div>
                 <label htmlFor="contact">
-                  Contact
+                  Mail
                   <input
                     id="contact"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
                     type="text"
-                    value={contact}
-                    onChange={(event) => setContact(event.target.value)}
+                    value={mail}
+                    onChange={(event) => setMail(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="contact">
+                  Téléphone
+                  <input
+                    id="contact"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={phone}
+                    onChange={(event) => setPhone(event.target.value)}
                   />
                 </label>
                 <label htmlFor="address">
                   Adresse
                   <input
                     id="address"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
                     type="text"
-                    value={address}
-                    onChange={(event) => setAddress(event.target.value)}
+                    value={adresse}
+                    onChange={(event) => setAdresse(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="horaires1">
+                  Jour 1
+                  <input
+                    id="horaires1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={horaires1}
+                    onChange={(event) => setHoraires1(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="horaires2">
+                  Jour 2
+                  <input
+                    id="horaires2"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={horaires2}
+                    onChange={(event) => setHoraires2(event.target.value)}
                   />
                 </label>
                 <label htmlFor="horaires">
-                  Horaires
+                  Jour 3
                   <input
                     id="horaires"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded m-2 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
                     type="text"
-                    value={horaires}
-                    onChange={(event) => setHoraires(event.target.value)}
+                    value={horaires3}
+                    onChange={(event) => setHoraires3(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="horaires">
+                  Jour 4
+                  <input
+                    id="horaires"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={horaires4}
+                    onChange={(event) => setHoraires4(event.target.value)}
                   />
                 </label>
               </div>

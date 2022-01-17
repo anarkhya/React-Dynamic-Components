@@ -35,7 +35,7 @@ const Header = () => {
                 </Link>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-14">
-                    {HeaderData.menu.map((item) => (
+                    {HeaderData.menus.map((item) => (
                       <Link to={item.to}>
                         <a
                           key={item.name}
