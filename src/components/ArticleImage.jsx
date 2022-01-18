@@ -20,7 +20,7 @@ const ArticleImage = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="articleImage" />
         </div>
-        <h1 className="text-h1 font-light">{data.titre}</h1>
+        <h1 className="uppercase text-h1 font-light">{data.titre}</h1>
         <img className="w-32 rounded-full" src={data.src} alt={data.alt} />
         <p className="md:w-1/2">{data.description}</p>
       </div>

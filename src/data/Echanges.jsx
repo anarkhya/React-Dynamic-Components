@@ -1,10 +1,13 @@
 const echanges = [
   /*
-  1 - exemples d'objets
-  2 - types d'objets
-  3 - présentation troc
-  4 - présentation troc 2
+  Dans la Trocquerie, il est possible de troquer:
+  exemples d'objets
+  types d'objets
+  présentation troc
+  Comment ça marche:
   */
+
+  // Dans la Trocquerie, il est possible de troquer:
   {
     component: "article",
     data: {
@@ -20,10 +23,11 @@ const echanges = [
     },
   },
 
-  // 1 - exemples d'objets
+  // exemples d'objets
   {
     component: "product",
     data: {
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
       titre: "Les différents produits échangeables:",
       presentation: [
         {
@@ -31,23 +35,22 @@ const echanges = [
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
           src: "./assets/images/placeholder-sm.png",
           alt: "Image représentant un produit que l'on peut trocquer",
-          cls: "product",
         },
         {
           infos:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
           src: "./assets/images/placeholder-sm.png",
           alt: "Image représentant un produit que l'on peut trocquer",
-          cls: "",
         },
       ],
     },
   },
 
-  // 2 - types d'objets
+  // types d'objets
   {
     component: "objets",
     data: {
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-gris_clair text-vert",
       categorie: [
         {
           id: 1,
@@ -68,10 +71,11 @@ const echanges = [
       ],
     },
   },
-  // 3 - présentation troc
+  // présentation troc
   {
     component: "categorie",
     data: {
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
       texte:
         "La valeur des objets n'est pas la même pour tout le monde. La valeur du produit dans la Trocquerie est considérée différement de son prix d'achat. L'idée est de privilégier l'éthique et se détacher de la valeur monétaire et aussi sentimentale de ceux-ci.",
       sousTexte: "Les échanges sont catégorisés par un système de gommettes:",
@@ -115,7 +119,7 @@ const echanges = [
       more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
     },
   },
-  // 4 - présentation troc 2
+  // Comment ça marche:
   {
     component: "article",
     data: {

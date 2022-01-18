@@ -10,7 +10,7 @@ import React from "react";
 const Formulaire = ({ data }) => {
   return (
     <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc">
-      <div className="text-h1 text-center">{data.titre}</div>
+      <h1 className="uppercase text-h1 text-center">{data.titre}</h1>
       <div className="text-vert flex flex-col mb-4 ">
         <form className="flex flex-col items-center my-5">
           <label htmlFor="nom">

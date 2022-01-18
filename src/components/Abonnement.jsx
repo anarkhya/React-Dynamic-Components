@@ -20,12 +20,12 @@ const Abonnement = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="abonnement" />
         </div>
-        <h1 className="font-light text-h1">{data.titre}</h1>
+        <h1 className="uppercase font-light text-h1">{data.titre}</h1>
         <br />
         <br />
         <div className="md:w-1/2">
           {data.details.map((detail) => (
-            <p className="font-bold text-h2">
+            <p className="uppercase font-bold text-h2">
               {detail.detail}
               <p className="font-regular text-normal">{detail.description1}</p>
               <p className="font-regular text-normal">{detail.description2}</p>

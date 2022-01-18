@@ -9,7 +9,9 @@ const Concept = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="concept" />
         </div>
-        <h1 className="text-center text-h1 font-light">{data.title}</h1>
+        <h1 className="uppercase text-center text-h1 font-light">
+          {data.title}
+        </h1>
         <p className="md:w-1/2 px-4 text-[28px] font-light leading-tight">
           {data.description}
         </p>
