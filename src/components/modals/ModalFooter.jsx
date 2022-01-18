@@ -131,6 +131,20 @@ const ModalFooter = ({ isShowing, hide }) => {
                     onChange={(event) => setHoraires4(event.target.value)}
                   />
                 </label>
+                <div className="flex justify-around mt-5 mb-3">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </div>
               </div>
             </div>
           </div>
