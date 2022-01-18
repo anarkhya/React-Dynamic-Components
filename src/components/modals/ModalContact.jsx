@@ -4,11 +4,13 @@ import ReactDOM from "react-dom";
 import Contact from "../../data/Contact";
 
 const ModalContact = ({ isShowing, hide }) => {
+  /** state qui est en lien avec la data de contact pour l'afficher */
   const [telephone, setTelephone] = useState(Contact[0].data.phone);
   const [email, setEmail] = useState(Contact[0].data.mail);
   const [insta, setInsta] = useState(Contact[0].data.insta);
 
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>

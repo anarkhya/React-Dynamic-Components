@@ -20,6 +20,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
     setDetails(newDetails);
   };
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -38,6 +39,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"

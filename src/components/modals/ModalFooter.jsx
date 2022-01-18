@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import FooterData from "../../data/FooterData";
 
 const ModalFooter = ({ isShowing, hide }) => {
+  /** state qui est en lien avec la data de footer pour l'afficher */
   const [mail, setMail] = useState(FooterData.contact[0].mail);
   const [phone, setPhone] = useState(FooterData.contact[1].phone);
   const [adresse, setAdresse] = useState(FooterData.adresse);
@@ -24,7 +25,9 @@ const ModalFooter = ({ isShowing, hide }) => {
   //   newDetails.push("");
   //   setDetails(newDetails);
   // };
+
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -43,6 +46,7 @@ const ModalFooter = ({ isShowing, hide }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"

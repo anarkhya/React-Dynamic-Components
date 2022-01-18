@@ -4,6 +4,7 @@ import { useState } from "react/cjs/react.development";
 import HeaderData from "../../data/HeaderData";
 
 const ModalHeader = ({ isShowing, hide }) => {
+  /** state qui est en lien avec la data de header pour l'afficher */
   const [data, setData] = useState(HeaderData.menus);
 
   const updateData = (value, type, obj) => {
@@ -12,7 +13,9 @@ const ModalHeader = ({ isShowing, hide }) => {
     newData[index][type] = value;
     setData(newData);
   };
+  /** const qui contient le bouton cliquable pour afficher le modal */
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -31,6 +34,7 @@ const ModalHeader = ({ isShowing, hide }) => {
               {/* // modal-header */}
               <div className="flex justify-end ">
                 {/* // modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -41,6 +45,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+              {/* contenu global du modal */}
               <h1 className="text-center text-h2 p-2">
                 En tête - Modification du contenu
               </h1>
@@ -54,7 +59,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                   />
                 </label>
               </div>
-
+              {/* map sur la data de header */}
               {data.map((menu) => {
                 <div>{menu.to}</div>;
                 return (
