@@ -22,7 +22,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
     setDetails(newDetails);
   };
   const getModal = () => {
-    /** isShowing est le petit logo pour ouvrir le modal */
+    /** isShowing affiche le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>

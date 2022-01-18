@@ -8,7 +8,7 @@ const ModalProduct = ({ isShowing, hide }) => {
   const [info, setInfo] = useState("");
 
   const getModal = () => {
-    /** isShowing est le petit logo pour ouvrir le modal */
+    /** isShowing affiche le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
