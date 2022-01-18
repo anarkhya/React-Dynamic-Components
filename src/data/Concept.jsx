@@ -1,9 +1,9 @@
 const concept = [
   /*
   1 - présentation concept
-  2 - citation
+  2 - citation 1
   3 - cible client
-  4 - citation
+  4 - citation 2
   5 - présentation fondatrice
   */
 
@@ -23,16 +23,14 @@ const concept = [
       bouton: false,
     },
   },
-  // 2 - citation
+  // 2 - citation 1
   {
-    component: "article",
+    component: "concept",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
-      clsPara: "md:w-1/2 px-4 text-[28px] font-light leading-tight",
       titre: "",
       description:
         "“Perçu comme un acte militant, le troc véhicule des valeurs fortes comme l’entraide, le partage, la convivialité, mais il contribue aussi à la lutte contre le gaspillage et la surconsommation.”",
-      bouton: false,
     },
   },
   // 3 - cible client
@@ -45,16 +43,14 @@ const concept = [
         "Les familles. Les curieux.se. Les connaisseur.eusses du système D. Les petits budgets. Les consommateur.trices qui souhaitent consommer autrement. Les écolos. Les amateur.trices de seconde main. Les minimalistes.",
     },
   },
-  // 4 - citation
+  // 4 - citation 2
   {
-    component: "article",
+    component: "concept",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc",
-      clsPara: "md:w-1/2 px-4 text-[28px] font-light leading-tight",
       titre: "",
       description:
         "“Selon le quinzième baromètre greenflex-ademe : 86 % des français aimeraient vivre demain dans une société où la consommation prend moins de place dans l’idée de consommer responsable.”",
-      bouton: false,
     },
   },
   // 5 - présentation fondatrice

@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
-// import iconPhone from "../../public/assets/icones/icon_phone.svg";
 
 const Contact = ({ data }) => {
   return (
