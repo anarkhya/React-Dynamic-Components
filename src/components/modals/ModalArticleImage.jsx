@@ -54,14 +54,12 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <label htmlFor="image" className="text-rose">
-                  ?? Import image ??
+                <label htmlFor="nom" className="">
+                  Image
                   <input
+                    id="file"
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    id="image"
-                    type="text"
-                    // value={titre}
-                    // onChange={(event) => setTitre(event.target.value)}
+                    type="file"
                   />
                 </label>
                 <label htmlFor="description">
