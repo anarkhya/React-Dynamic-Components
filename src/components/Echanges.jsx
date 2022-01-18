@@ -1,6 +1,15 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * data se trouvant dans data/Echanges
+ * @return {*}
+ * Map sur les gommettes pour classer les produits par categorie de prix
+ * bouton Admin joint
+ */
 const Echanges = ({ data }) => {
   return (
     // composant categorie

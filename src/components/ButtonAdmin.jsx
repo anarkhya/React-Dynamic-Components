@@ -10,6 +10,12 @@ import ModalObjets from "./modals/ModalObjets";
 import ModalProduct from "./modals/ModalProduct";
 import ModalClient from "./modals/ModalClient";
 
+/**
+ *
+ *
+ * @param {*} { type: objet }
+ * @return {*} un bouton d'administration sur chaque modal appartenant à différents component
+ */
 const ButtonAdmin = ({ type }) => {
   const [modal, setModal] = useState("");
 
