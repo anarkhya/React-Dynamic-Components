@@ -30,7 +30,7 @@ const Header = () => {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center pl-4 sm:justify-between">
-                <Link to={HeaderData.menu[0].to}>
+                <Link to={HeaderData.menus[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>
                 <div className="hidden sm:block sm:ml-6">
@@ -54,7 +54,7 @@ const Header = () => {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="bg-vert flex flex-col p-4 gap-8">
-              {HeaderData.menu.map((item) => (
+              {HeaderData.menus.map((item) => (
                 <Link to={item.to}>
                   <Disclosure.Button
                     key={item.name}

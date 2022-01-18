@@ -12,7 +12,6 @@ const ModalHeader = ({ isShowing, hide }) => {
     newData[index][type] = value;
     setData(newData);
   };
-
   const getModal = () => {
     if (isShowing) {
       return ReactDOM.createPortal(
