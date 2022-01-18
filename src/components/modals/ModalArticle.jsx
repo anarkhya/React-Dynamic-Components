@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const ModalArticle = ({ isShowing, hide }) => {
+  /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
   const [titreBouton, setTitreBouton] = useState("");
   const [details, setDetails] = useState([]);
 
+  /** copie du tableau details */
   const onChangeDetails = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);
@@ -21,6 +23,7 @@ const ModalArticle = ({ isShowing, hide }) => {
     setDetails(newDetails);
   };
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -39,6 +42,7 @@ const ModalArticle = ({ isShowing, hide }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -96,6 +100,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                     Ajouter une autre description ?
                   </button>
                 </div>
+                {/* map sur la data de concept */}
                 {details.map((detail) => {
                   return (
                     <label htmlFor="description">

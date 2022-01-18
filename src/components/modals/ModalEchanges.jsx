@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const ModalEchanges = ({ isShowing, hide }) => {
+  /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
   const [details, setDetails] = useState([]);
 
+  /** copie du tableau details */
   const onChangeDetails = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);

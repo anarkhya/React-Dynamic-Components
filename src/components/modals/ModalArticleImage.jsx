@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const ModalArticleImage = ({ isShowing, hide }) => {
+  /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
 
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -25,6 +27,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Abonnement from "../../data/Abonnement";
 
 const ModalAbonnement = ({ isShowing, hide }) => {
+  /** state qui est en lien avec la data de abonnements pour l'afficher */
   const [grandTitre, setGrandTitre] = useState(Abonnement[0].data.titre);
   const [titre, setTitre] = useState(Abonnement[0].data.details[0].detail);
   const [description1, setDescription1] = useState(
@@ -15,6 +16,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
   const [detailsDesc1, setDEtailsDesc1] = useState([]);
   const [details3, setDetails3] = useState([]);
 
+  /** copie du tableau details */
   const onChangeDetailsTitre = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);
@@ -46,6 +48,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
   };
 
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -64,6 +67,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
