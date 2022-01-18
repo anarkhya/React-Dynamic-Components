@@ -1,4 +1,5 @@
 const HeaderData = {
+  // liens de navigation + logo
   menus: [
     {
       to: "/",

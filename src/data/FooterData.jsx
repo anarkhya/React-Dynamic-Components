@@ -1,4 +1,5 @@
 const footer = {
+  // infos boutiques (mail, tel, adresse, horaires) + copyright
   titreContact: "Contact",
   contact: [
     { id: 1, mail: "latrocquerie@gmail.com" },

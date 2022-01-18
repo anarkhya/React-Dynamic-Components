@@ -1,4 +1,10 @@
 const AbonnementData = [
+  /*
+  1 - formules d'abonnement
+  2 - formulaire rdv
+  */
+
+  // 1 - formules d'abonnement
   {
     component: "abonnement",
     data: {
@@ -36,6 +42,7 @@ const AbonnementData = [
       ],
     },
   },
+  // 2 - formulaire rdv
   {
     component: "formulaire",
     data: {

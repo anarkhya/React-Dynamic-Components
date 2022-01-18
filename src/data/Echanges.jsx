@@ -1,4 +1,10 @@
 const echanges = [
+  /*
+  1 - exemples d'objets
+  2 - types d'objets
+  3 - présentation troc
+  4 - présentation troc 2
+  */
   {
     component: "article",
     data: {
@@ -14,7 +20,7 @@ const echanges = [
     },
   },
 
-  // DIFFERENTS PRODUITS
+  // 1 - exemples d'objets
   {
     component: "product",
     data: {
@@ -38,7 +44,7 @@ const echanges = [
     },
   },
 
-  // // LES TYPES D'OBJETS
+  // 2 - types d'objets
   {
     component: "objets",
     data: {
@@ -62,9 +68,7 @@ const echanges = [
       ],
     },
   },
-
-  // CATEGORIES
-
+  // 3 - présentation troc
   {
     component: "categorie",
     data: {
@@ -111,9 +115,7 @@ const echanges = [
       more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
     },
   },
-
-  // FONCTIONNEMENT
-
+  // 4 - présentation troc 2
   {
     component: "article",
     data: {
