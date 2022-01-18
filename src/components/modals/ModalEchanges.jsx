@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const ModalEchanges = ({ isShowing, hide }) => {
+  /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState("");
   const [description, setDescription] = useState("");
   const [details, setDetails] = useState([]);
 
+  /** copie du tableau details */
   const onChangeDetails = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);
@@ -20,6 +22,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
     setDetails(newDetails);
   };
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -38,6 +41,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -101,6 +105,20 @@ const ModalEchanges = ({ isShowing, hide }) => {
                     </label>
                   );
                 })}
+                <div className="flex justify-around mt-5 mb-3">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </div>
               </section>
             </div>
           </div>

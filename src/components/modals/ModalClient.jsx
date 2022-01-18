@@ -4,10 +4,12 @@ import ReactDOM from "react-dom";
 import Concept from "../../data/Concept";
 
 const ModalClient = ({ isShowing, hide }) => {
+  /** state qui est en lien avec la data de concept pour l'afficher */
   const [titre, setTitre] = useState(Concept[2].data.titre);
   const [description, setDescription] = useState(Concept[2].data.description);
 
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -26,6 +28,7 @@ const ModalClient = ({ isShowing, hide }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -63,6 +66,20 @@ const ModalClient = ({ isShowing, hide }) => {
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
+                <div className="flex justify-around mt-5 mb-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </div>
               </section>
             </div>
           </div>

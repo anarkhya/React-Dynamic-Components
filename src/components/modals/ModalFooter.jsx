@@ -1,9 +1,9 @@
-/* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import FooterData from "../../data/FooterData";
 
 const ModalFooter = ({ isShowing, hide }) => {
+  /** state qui est en lien avec la data de footer pour l'afficher */
   const [mail, setMail] = useState(FooterData.contact[0].mail);
   const [phone, setPhone] = useState(FooterData.contact[1].phone);
   const [adresse, setAdresse] = useState(FooterData.adresse);
@@ -25,7 +25,9 @@ const ModalFooter = ({ isShowing, hide }) => {
   //   newDetails.push("");
   //   setDetails(newDetails);
   // };
+
   const getModal = () => {
+    /** isShowing est le petit logo pour ouvrir le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -44,6 +46,7 @@ const ModalFooter = ({ isShowing, hide }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
+                {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -128,6 +131,20 @@ const ModalFooter = ({ isShowing, hide }) => {
                     onChange={(event) => setHoraires4(event.target.value)}
                   />
                 </label>
+                <div className="flex justify-around mt-5 mb-3">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </div>
               </div>
             </div>
           </div>
