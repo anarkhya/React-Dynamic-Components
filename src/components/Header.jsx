@@ -5,6 +5,15 @@ import HeaderData from "../data/HeaderData";
 import Logo from "./Logo";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ * NavBar version desktopet mobile
+ *
+ * @return {*}
+ * Importation de Disclosure pour Ouvrir/fermer le burger en responsive
+ * Ternaire pour passer en responsive
+ * Map pour afficher tous les menus
+ * Bouton d'admin joint
+ */
 const Header = () => {
   return (
     <Disclosure

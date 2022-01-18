@@ -1,6 +1,15 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * data se trouvant dans data/Abonnement
+ * Map sur les différents abonnements
+ * Bouton admin joint
+ * @return {*}
+ */
 const Abonnement = ({ data }) => {
   return (
     <div>

@@ -1,6 +1,13 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * data se trouvant dans data/Echanges
+ * @return {*} un component article sans image avec un ternaire pour afficher ou non les différentes description et bouton
+ */
 const Article = ({ data }) => {
   return (
     <div

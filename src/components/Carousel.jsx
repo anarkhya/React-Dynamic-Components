@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ *
+ *
+ * @return {*} Carousel sur différents images proposées par la Trocquerie
+ */
 const Carousel = () => {
   return (
     <div>

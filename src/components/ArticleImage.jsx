@@ -1,6 +1,15 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * data se trouvant dans data/Concept
+ * un component article avec incrustation d'une image
+ * bouton admin joint
+ * @return {*}
+ */
 const ArticleImage = ({ data }) => {
   return (
     <div className="">
