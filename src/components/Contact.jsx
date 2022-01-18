@@ -18,8 +18,10 @@ const Contact = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="contact" />
         </div>
-        <h1 className="text-center text-h1 font-light">{data.title}</h1>
-        <div className="flex justify-between flex-col md:flex-row">
+        <h1 className="uppercase text-center text-h1 font-light">
+          {data.title}
+        </h1>
+        <div className="flex justify-between flex-col md:flex-row bg-gris_clair rounded text-vert py-2 pr-4">
           <div className="flex pl-4">
             <img
               className="mr-1 w-6"

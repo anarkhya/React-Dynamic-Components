@@ -14,14 +14,14 @@ const Echanges = ({ data }) => {
   return (
     // composant categorie
     <div
-      className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc"
+      className={data.cls}
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
         <ButtonAdmin type="echanges" />
       </div>
       <div className="md:w-1/2">
-        <h1 className="">{data.texte}</h1>
+        <h1 className="uppercase">{data.texte}</h1>
         <p className="">{data.sousTexte}</p>
         <section className="p-4 flex justify-around">
           {data.gommettes.map((gommette) => (
