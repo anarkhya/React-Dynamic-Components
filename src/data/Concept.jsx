@@ -1,4 +1,13 @@
 const concept = [
+  /*
+  1 - présentation concept
+  2 - citation
+  3 - cible client
+  4 - citation
+  5 - présentation fondatrice
+  */
+
+  // présentation du concept
   {
     component: "article",
     data: {
@@ -14,6 +23,7 @@ const concept = [
       bouton: false,
     },
   },
+  // 2 - citation
   {
     component: "article",
     data: {
@@ -25,6 +35,7 @@ const concept = [
       bouton: false,
     },
   },
+  // 3 - cible client
   {
     component: "client",
     data: {
@@ -34,6 +45,7 @@ const concept = [
         "Les familles. Les curieux.se. Les connaisseur.eusses du système D. Les petits budgets. Les consommateur.trices qui souhaitent consommer autrement. Les écolos. Les amateur.trices de seconde main. Les minimalistes.",
     },
   },
+  // 4 - citation
   {
     component: "article",
     data: {
@@ -45,6 +57,7 @@ const concept = [
       bouton: false,
     },
   },
+  // 5 - présentation fondatrice
   {
     component: "articleImage",
     data: {

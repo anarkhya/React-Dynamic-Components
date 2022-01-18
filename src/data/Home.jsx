@@ -1,4 +1,5 @@
 const home = [
+  // présentation concept, avec bouton
   {
     component: "article",
     data: {
@@ -17,6 +18,7 @@ const home = [
       boutonContenu: "En savoir plus",
     },
   },
+  // présentation concept 2, avec bouton
   {
     component: "article",
     data: {
