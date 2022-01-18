@@ -1,6 +1,14 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ *  * Data se trouvant dans data/echanges
+ * @return {*} Composant objets qui regroupe chaque objets présentés à la Trocquerie classés par catégorie via un map
+ * Bouton d'admin joint
+ */
 const Objets = ({ data }) => {
   return (
     <div

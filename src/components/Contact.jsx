@@ -2,9 +2,16 @@ import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 // import iconPhone from "../../public/assets/icones/icon_phone.svg";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * @return {*} les différents moyens de contact, n° de tel, reseaux sociaux, mail etc
+ * Bouton admin joint
+ */
 const Contact = ({ data }) => {
   return (
-    <div className="">
+    <div>
       <div
         className={data.cls}
         style={{ backgroundImage: "url(/assets/images/grid.png)" }}

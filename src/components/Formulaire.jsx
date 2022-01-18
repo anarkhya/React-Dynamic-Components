@@ -1,8 +1,15 @@
 import React from "react";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * @return {*} data se trouvant dans data/Contact
+ * Formulaire de contact
+ */
 const Formulaire = ({ data }) => {
   return (
-    <div className="p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc">
+    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc">
       <div className="text-h1 text-center">{data.titre}</div>
       <div className="text-vert flex flex-col mb-4 ">
         <form className="flex flex-col items-center my-5">

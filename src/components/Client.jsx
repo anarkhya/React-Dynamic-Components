@@ -1,6 +1,14 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * data se trouvant dans data/Concept
+ * affiche les différents clients de la Trocquerie
+ * @return {*}
+ */
 const Client = ({ data }) => {
   return (
     <div

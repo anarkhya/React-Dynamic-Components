@@ -1,5 +1,12 @@
 import React from "react";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * Data se trouvant dans data/contact
+ * @return {*} Composant affichant une map qui cible le lieu de la Trocquerie
+ */
 const Map = ({ data }) => {
   return (
     <div className="">
