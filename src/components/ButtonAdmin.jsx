@@ -9,6 +9,7 @@ import ModalHeader from "./modals/ModalHeader";
 import ModalObjets from "./modals/ModalObjets";
 import ModalProduct from "./modals/ModalProduct";
 import ModalClient from "./modals/ModalClient";
+import ModalConcept from "./modals/ModalConcept";
 
 /**
  *
@@ -34,6 +35,7 @@ const ButtonAdmin = ({ type }) => {
       objets: <ModalObjets isShowing hide={toggle} />,
       product: <ModalProduct isShowing hide={toggle} />,
       client: <ModalClient isShowing hide={toggle} />,
+      concept: <ModalConcept isShowing hide={toggle} />,
     };
     setModal(myModal[type]);
   };
