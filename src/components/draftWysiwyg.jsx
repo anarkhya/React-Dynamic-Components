@@ -2,6 +2,11 @@ import React, { useState } from "react";
 // import { EditorState } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 
+/**
+ *
+ *
+ * @return {*} un state
+ */
 function EditorContainer() {
   const [editorState, setEditorState] = useState("");
 

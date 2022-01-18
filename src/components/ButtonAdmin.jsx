@@ -9,7 +9,15 @@ import ModalHeader from "./modals/ModalHeader";
 import ModalObjets from "./modals/ModalObjets";
 import ModalProduct from "./modals/ModalProduct";
 import ModalClient from "./modals/ModalClient";
+import ModalConcept from "./modals/ModalConcept";
+import ModalNewComponent from "./modals/ModalNewComponent";
 
+/**
+ *
+ *
+ * @param {*} { type: objet }
+ * @return {*} un bouton d'administration sur chaque modal appartenant à différents component
+ */
 const ButtonAdmin = ({ type }) => {
   const [modal, setModal] = useState("");
 
@@ -28,6 +36,8 @@ const ButtonAdmin = ({ type }) => {
       objets: <ModalObjets isShowing hide={toggle} />,
       product: <ModalProduct isShowing hide={toggle} />,
       client: <ModalClient isShowing hide={toggle} />,
+      concept: <ModalConcept isShowing hide={toggle} />,
+      newComponent: <ModalNewComponent isShowing hide={toggle} />,
     };
     setModal(myModal[type]);
   };

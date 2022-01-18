@@ -1,4 +1,11 @@
 const contact = [
+  /*
+  1 - infos de contact
+  2 - à propos du lieu
+  3 - google maps interactive
+  */
+
+  // 1 - infos de contact
   {
     component: "contact",
     data: {
@@ -12,6 +19,7 @@ const contact = [
       insta: "latrocquerie",
     },
   },
+  // 2 - à propos du lieu
   {
     component: "articleImage",
     data: {
@@ -24,6 +32,7 @@ const contact = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
   },
+  // 3 - google maps interactive
   {
     component: "map",
     data: {
@@ -32,15 +41,6 @@ const contact = [
       url: "https://www.google.fr/maps/place/23+Rue+Petite+Biesse,+44200+Nantes/@47.2040916,-1.5497807,17z/data=!3m1!4b1!4m5!3m4!1s0x4805eeb2ca34b1a3:0x4b40e35d971d0c93!8m2!3d47.204088!4d-1.547592",
     },
   },
-  // {
-  //   component: "map",
-  //   data: {
-  //     src: "./assets/images/mapPetiteBiesse.png",
-  //     alt: "map",
-  //     url: "https://www.google.fr/maps/place/23+Rue+Petite+Biesse,+44200+Nantes/@47.2040916,-1.5497807,17z/data=!3m1!4b1!4m5!3m4!1s0x4805eeb2ca34b1a3:0x4b40e35d971d0c93!8m2!3d47.204088!4d-1.547592",
-  //     cls: "",
-  //   },
-  // },
 ];
 
 export default contact;

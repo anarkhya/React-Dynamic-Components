@@ -3,6 +3,14 @@ import { LocationMarkerIcon } from "@heroicons/react/solid";
 import FooterData from "../data/FooterData";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @return {*}
+ * data se trouvant dans data/FooterData
+ * Map sur les horaires
+ * Bouton Admin joint
+ */
 const Footer = () => {
   return (
     <div className={FooterData.cls}>

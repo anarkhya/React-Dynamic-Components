@@ -1,11 +1,19 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
 
+/**
+ *
+ *
+ * @param {*} { data }
+ * Data se trouvant dans data/echanges
+ * @return {*} Le composant regroupant les produits que présentent la Trocquerie
+ *  * Bouton d'admin joint
+ */
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
   return (
     <div
-      className="p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-vert text-blanc"
+      className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc"
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
