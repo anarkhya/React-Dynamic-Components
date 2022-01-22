@@ -10,7 +10,7 @@ const ModalContact = ({ isShowing, hide }) => {
   const [insta, setInsta] = useState(Contact[0].data.insta);
 
   const getModal = () => {
-    /** isShowing est le petit logo pour ouvrir le modal */
+    /** isShowing affiche le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
@@ -77,7 +77,7 @@ const ModalContact = ({ isShowing, hide }) => {
                     onChange={(event) => setInsta(event.target.value)}
                   />
                 </label>
-                <div className="flex justify-around mt-5">
+                <div className="flex justify-around mt-5 mb-2">
                   <button
                     className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
                     type="button"

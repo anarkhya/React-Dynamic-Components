@@ -15,7 +15,7 @@ const ModalHeader = ({ isShowing, hide }) => {
   };
   /** const qui contient le bouton cliquable pour afficher le modal */
   const getModal = () => {
-    /** isShowing est le petit logo pour ouvrir le modal */
+    /** isShowing affiche le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>
