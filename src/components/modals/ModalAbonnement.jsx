@@ -46,6 +46,11 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     newDetails3.push("");
     setDetails3(newDetails3);
   };
+  // const deleteDetails = () => {
+  //   const newDetails = [...details];
+  //   newDetails.push("");
+  //   setDetails(newDetails);
+  // };
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -86,7 +91,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full font-light text-h1"
+                    className="uppercase transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full font-light text-h1"
                     id="titre"
                     type="text"
                     value={grandTitre}
@@ -189,15 +194,15 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
                     onClick={() => addDetails()}
                   >
                     Ajouter un autre bloc
                   </button>
                 </div>
-                <div className="flex justify-around mt-5">
+                <div className="flex justify-between mt-5">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
                   >
                     Supprimer
