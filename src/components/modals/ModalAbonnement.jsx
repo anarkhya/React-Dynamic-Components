@@ -46,11 +46,11 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     newDetails3.push("");
     setDetails3(newDetails3);
   };
-  const deleteDetails = () => {
-    const newDetails = [...details];
-    newDetails.push("");
-    setDetails(newDetails);
-  };
+  // const deleteDetails = () => {
+  //   const newDetails = [...details];
+  //   newDetails.push("");
+  //   setDetails(newDetails);
+  // };
 
   const getModal = () => {
     /** isShowing est le petit logo pour ouvrir le modal */
