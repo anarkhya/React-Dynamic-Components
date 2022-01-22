@@ -21,7 +21,7 @@ const ArticleImage = ({ data }) => {
           <ButtonAdmin type="articleImage" />
         </div>
         <h1 className="uppercase text-h1 font-light">{data.titre}</h1>
-        <img className="w-32 rounded-full" src={data.src} alt={data.alt} />
+        <img className="w-32" src={data.src} alt={data.alt} />
         <p className="md:w-1/2">{data.description}</p>
       </div>
     </div>
