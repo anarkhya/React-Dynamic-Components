@@ -47,9 +47,8 @@ const Formulaire = ({ data }) => {
             placeholder="Message"
           />
           <button
-            className="transition hover:bg-rose hover:text-vert hover:border-rose active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-transparent border-2 border-solid border-white text-white px-6 py-2"
+            className="transition hover:bg-rose hover:text-vert hover:border-rose active:-skew-y-6 active:translate-y-1 shadow-blanc/30 shadow-[10px_10px_0px_0px] active:shadow-blanc/20 bg-vert border-blanc border-2 text-blanc px-6 py-2 text-normal mt-5"
             type="button"
-            id="button"
           >
             Envoyer
           </button>

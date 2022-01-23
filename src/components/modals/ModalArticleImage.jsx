@@ -8,7 +8,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
   const [description, setDescription] = useState("");
 
   const getModal = () => {
-    /** isShowing est le petit logo pour ouvrir le modal */
+    /** isShowing affiche le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>

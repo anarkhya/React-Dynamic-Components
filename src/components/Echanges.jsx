@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
+import "../effects.css";
 
 /**
  *
@@ -21,12 +22,19 @@ const Echanges = ({ data }) => {
         <ButtonAdmin type="echanges" />
       </div>
       <div className="md:w-1/2">
-        <h1 className="uppercase">{data.texte}</h1>
-        <p className="">{data.sousTexte}</p>
-        <section className="p-4 flex justify-around">
+        <p className="">{data.texte}</p>
+        <h2 className="text-center mt-4">{data.sousTexte}</h2>
+        <section className="flex justify-center gap-4 mt-4">
           {data.gommettes.map((gommette) => (
             <section>
-              <h1>{gommette.color}</h1>
+              <p className=" ">
+                {gommette.color}
+                <img
+                  className="blob w-16 h-16"
+                  src={gommette.src}
+                  alt={gommette.alt}
+                />
+              </p>
             </section>
           ))}
         </section>
