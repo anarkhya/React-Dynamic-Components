@@ -9,7 +9,7 @@ const ModalClient = ({ isShowing, hide }) => {
   const [description, setDescription] = useState(Concept[2].data.description);
 
   const getModal = () => {
-    /** isShowing est le petit logo pour ouvrir le modal */
+    /** isShowing affiche le modal */
     if (isShowing) {
       return ReactDOM.createPortal(
         <>

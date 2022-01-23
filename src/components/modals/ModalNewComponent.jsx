@@ -1,12 +1,9 @@
 /* eslint-disable indent */
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 // import Concept from "../../data/Concept";
 
 const ModalNewComponent = ({ isShowing, hide }) => {
-  const [titre, setTitre] = useState("");
-  const [description, setDescription] = useState("");
-
   const getModal = () => {
     if (isShowing) {
       return ReactDOM.createPortal(
@@ -40,30 +37,6 @@ const ModalNewComponent = ({ isShowing, hide }) => {
                 Nouveau Bloc - Modification du contenu
               </h1>
               {/* // style section interactions utilisateur */}
-              <section className="p-2">
-                <label htmlFor="titre">
-                  Titre
-                  <input
-                    id="titre"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
-                    type="text"
-                    value={titre}
-                    placeholder="titre du bloc"
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="description">
-                  Description
-                  <textarea
-                    id="description"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={description}
-                    placeholder="contenu du paragraphe"
-                    onChange={(event) => setDescription(event.target.value)}
-                  />
-                </label>
-              </section>
             </div>
           </div>
         </>,

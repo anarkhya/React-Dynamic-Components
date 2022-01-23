@@ -22,12 +22,12 @@ const Product = ({ data }) => {
       <h1 className="uppercase text-center font-light text-h1">{data.title}</h1>
       <section className="md:w-1/2 flex flex-col gap-3">
         {data.presentation.map((pres) => (
-          <div className=" flex justify-center items-center gap-3 flex-col md:flex-row">
-            <p className="md:pr-4">{pres.infos}</p>
+          <div className=" flex justify-center gap-3 my-2 flex-col md:flex-row">
+            <p className="text-normal md:pr-4">{pres.infos}</p>
             <img
               src={pres.src}
               alt={pres.alt}
-              className="w-28 h-auto mx-auto md:w-96"
+              className="mx-auto my-2 w-72 md:w-52"
             />
           </div>
         ))}
