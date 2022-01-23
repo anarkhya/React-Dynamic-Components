@@ -5,9 +5,9 @@ import Contact from "../../data/Contact";
 
 const ModalContact = ({ isShowing, hide }) => {
   /** state qui est en lien avec la data de contact pour l'afficher */
-  const [telephone, setTelephone] = useState(Contact[0].data.phone);
-  const [email, setEmail] = useState(Contact[0].data.mail);
-  const [insta, setInsta] = useState(Contact[0].data.insta);
+  const [telephone, setTelephone] = useState(Contact[3].data.phone);
+  const [email, setEmail] = useState(Contact[3].data.mail);
+  const [insta, setInsta] = useState(Contact[3].data.insta);
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -51,35 +51,13 @@ const ModalContact = ({ isShowing, hide }) => {
                     id="telephone"
                     type="text"
                     value={telephone}
-                    placeholder="00 00 00 00 00"
+                    placeholder=""
                     onChange={(event) => setTelephone(event.target.value)}
                   />
                 </label>
-                <label htmlFor="email" className="">
-                  E-mail
-                  <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    id="email"
-                    type="text"
-                    value={email}
-                    placeholder="exemple@mail.com"
-                    onChange={(event) => setEmail(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="insta">
-                  Instagram
-                  <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    id="insta"
-                    type="text"
-                    value={insta}
-                    placeholder="nom du compte"
-                    onChange={(event) => setInsta(event.target.value)}
-                  />
-                </label>
-                <div className="flex justify-around mt-5 mb-2">
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
                   >
                     Supprimer
@@ -90,7 +68,57 @@ const ModalContact = ({ isShowing, hide }) => {
                   >
                     Valider
                   </button>
-                </div>
+                </section>
+                <label htmlFor="email" className="">
+                  E-mail
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="email"
+                    type="text"
+                    value={email}
+                    placeholder=""
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
+                <label htmlFor="insta">
+                  Instagram
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="insta"
+                    type="text"
+                    value={insta}
+                    placeholder=""
+                    onChange={(event) => setInsta(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
               </section>
             </div>
           </div>

@@ -1,11 +1,18 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Echanges from "../../data/Echanges";
 
 const ModalProduct = ({ isShowing, hide }) => {
   /** state pour changer ou non la valeur des inputs */
-  const [titre, setTitre] = useState("");
-  const [info, setInfo] = useState("");
+  const [data, setData] = useState(Echanges[1].data.presentation);
+
+  const updateData = (value, type, obj) => {
+    const newData = [...data];
+    const index = newData.indexOf(obj);
+    newData[index][type] = value;
+    setData(newData);
+  };
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -42,52 +49,56 @@ const ModalProduct = ({ isShowing, hide }) => {
               <h1 className="text-center text-h2 p-2">
                 Product - Modification du contenu
               </h1>
-              <section className="p-2">
-                <label htmlFor="titre">
-                  Titre
-                  <input
-                    id="titre"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
-                    type="text"
-                    value={titre}
-                    placeholder="titre du bloc"
-                    onChange={(event) => setTitre(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="description">
-                  Description
-                  <textarea
-                    id="description"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="text"
-                    value={info}
-                    placeholder="contenu du paragraphe"
-                    onChange={(event) => setInfo(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="nom" className="">
-                  Image
-                  <input
-                    id="file"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="file"
-                  />
-                </label>
-                <div className="flex justify-around mt-5">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </div>
-              </section>
+              {data.map((item) => {
+                return (
+                  <div>
+                    <label htmlFor="infos" className="">
+                      infos - paragraphe
+                      <textarea
+                        id="infos"
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        rows="4"
+                        value={item.infos}
+                        placeholder=""
+                        onChange={(event) =>
+                          updateData(event.target.value, "infos", item)
+                        }
+                      />
+                    </label>
+                    <p className="">
+                      image actuelle
+                      <img
+                        className="w-52 mt-2 mb-4"
+                        src={item.src}
+                        alt={item.alt}
+                      />
+                    </p>
+                    <label htmlFor="nom" className="">
+                      nouvelle image
+                      <input
+                        id="file"
+                        className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="file"
+                      />
+                    </label>
+                    <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                      <button
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                        type="button"
+                      >
+                        Supprimer
+                      </button>
+                      <button
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                        type="button"
+                      >
+                        Valider
+                      </button>
+                    </section>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </>,

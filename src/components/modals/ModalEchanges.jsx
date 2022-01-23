@@ -1,26 +1,40 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Echanges from "../../data/Echanges";
+import "../../effects.css";
 
 const ModalEchanges = ({ isShowing, hide }) => {
   /** state pour changer ou non la valeur des inputs */
-  const [titre, setTitre] = useState("");
-  const [description, setDescription] = useState("");
-  const [details, setDetails] = useState([]);
+  const [texte, setTexte] = useState(Echanges[3].data.texte);
+  const [sousTexte, setSousTexte] = useState(Echanges[3].data.sousTexte);
+
+  const [data, setData] = useState(Echanges[3].data.gommettes);
+  console.log(setData);
+
+  // const updateData = (value, type, obj) => {
+  //   const newData = [...data];
+  //   const index = newData.indexOf(obj);
+  //   newData[index][type] = value;
+  //   setData(newData);
+  // };
+
+  const [infos, setInfos] = useState(Echanges[3].data.infos);
 
   /** copie du tableau details */
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setDetails(newDetails);
-  };
+  // const onChangeDetails = (value, detail) => {
+  //   const newDetails = [...details];
+  //   const index = newDetails.indexOf(detail);
+  //   newDetails[index] = value;
+  //   setDetails(newDetails);
+  // };
 
-  const addDetails = () => {
-    const newDetails = [...details];
-    newDetails.push("");
-    setDetails(newDetails);
-  };
+  // const addDetails = () => {
+  //   const newDetails = [...details];
+  //   newDetails.push("");
+  //   setDetails(newDetails);
+  // };
+
   const getModal = () => {
     /** isShowing affiche le modal */
     if (isShowing) {
@@ -53,33 +67,111 @@ const ModalEchanges = ({ isShowing, hide }) => {
                 </button>
               </div>
               <h1 className="text-center text-h2">
-                Abonnement - Modification du contenu
+                Echanges - Modification du contenu
               </h1>
               {/* // style section interactions utilisateur */}
               <section className="p-2">
                 <label htmlFor="titre" className="">
-                  Titre
-                  <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
+                  infos
+                  <textarea
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="titre"
+                    rows="5"
                     type="text"
-                    value={titre}
+                    value={texte}
                     placeholder="titre du bloc"
-                    onChange={(event) => setTitre(event.target.value)}
+                    onChange={(event) => setTexte(event.target.value)}
                   />
                 </label>
                 <label htmlFor="description">
-                  Description
-                  <textarea
+                  sousTexte
+                  <input
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="description"
                     type="text"
-                    value={description}
+                    value={sousTexte}
                     placeholder="contenu du paragraphe"
-                    onChange={(event) => setDescription(event.target.value)}
+                    onChange={(event) => setSousTexte(event.target.value)}
                   />
                 </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
 
+                {data.map((item) => {
+                  return (
+                    <div>
+                      <p className="">
+                        gommette actuelle
+                        <img
+                          className="blob w-16 h-16"
+                          src={item.src}
+                          alt={item.alt}
+                        />
+                      </p>
+                      <label htmlFor="nom" className="">
+                        nouvelle gommette
+                        <input
+                          id="file"
+                          className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                          type="file"
+                        />
+                      </label>
+                      <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                        <button
+                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                          type="button"
+                        >
+                          Supprimer
+                        </button>
+                        <button
+                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                          type="button"
+                        >
+                          Valider
+                        </button>
+                      </section>
+                    </div>
+                  );
+                })}
+                <label htmlFor="titre" className="">
+                  Texte
+                  <textarea
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="titre"
+                    rows="3"
+                    type="text"
+                    value={infos}
+                    placeholder="titre du bloc"
+                    onChange={(event) => setInfos(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
+                {/* 
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
@@ -88,8 +180,8 @@ const ModalEchanges = ({ isShowing, hide }) => {
                   >
                     Ajouter une autre description ?
                   </button>
-                </div>
-                {details.map((detail) => {
+                </div> */}
+                {/* {details.map((detail) => {
                   return (
                     <label htmlFor="description">
                       Description supplémentaire
@@ -104,21 +196,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
                       />
                     </label>
                   );
-                })}
-                <div className="flex justify-around mt-5 mb-3">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </div>
+                })} */}
               </section>
             </div>
           </div>

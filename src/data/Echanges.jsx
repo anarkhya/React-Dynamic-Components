@@ -33,13 +33,13 @@ const echanges = [
         {
           infos:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
-          src: "./assets/images/placeholder-sm.png",
+          src: "./assets/images/pexels-mathilde-langevin-10897821.jpg",
           alt: "Image représentant un produit que l'on peut trocquer",
         },
         {
           infos:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
-          src: "./assets/images/placeholder-sm.png",
+            "Excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. fugiat ullam quam, dolore. Eos dicta iure assumenda eveniet?",
+          src: "./assets/images/pexels-mark-vegera-1089425.jpg",
           alt: "Image représentant un produit que l'on peut trocquer",
         },
       ],
@@ -82,41 +82,50 @@ const echanges = [
       gommettes: [
         {
           id: 1,
-          color: "bleu",
+          color: "",
+          src: "./assets/images/gommette-bleu.png",
+          alt: "gommette colorée",
         },
         {
           id: 2,
-          color: "rose",
+          color: "",
+          src: "./assets/images/gommette-rose.png",
+          alt: "gommette colorée",
         },
         {
           id: 3,
-          color: "jaune",
+          color: "",
+          src: "./assets/images/gommette-jaune.png",
+          alt: "gommette colorée",
         },
         {
           id: 4,
-          color: "vert",
+          color: "",
+          src: "./assets/images/gommette-vert.png",
+          alt: "gommette colorée",
         },
       ],
       principe: [
-        {
-          id: 1,
-          color: "bleu = bleu",
-        },
-        {
-          id: 2,
-          color: "rose = rose",
-        },
-        {
-          id: 3,
-          color: "jaune = jaune",
-        },
-        {
-          id: 4,
-          color: "vert = vert",
-        },
+        // {
+        //   id: 1,
+        //   color: "bleu = bleu",
+        // },
+        // {
+        //   id: 2,
+        //   color: "rose = rose",
+        // },
+        // {
+        //   id: 3,
+        //   color: "jaune = jaune",
+        // },
+        // {
+        //   id: 4,
+        //   color: "vert = vert",
+        // },
       ],
-      infos: "Il est également possible de combiner des couleurs",
-      more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
+      infos:
+        "Il est également possible de combiner des couleurs (de nombreuses combinaisons possibles à retrouver en boutique)",
+      more: "",
     },
   },
   // Comment ça marche:
@@ -128,7 +137,7 @@ const echanges = [
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Comment ça marche:",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo culpa aspernatur libero sint in enim soluta earum facilis, animi sed, neque nemo eveniet ullam laudantium hic nam pariatur. Temporibus?",
+        "Faire le tri chez soi. Venir à la boutique ou prendre rendez-vous. Amenez les pièces à échanger. Choisir les nouveaux articles. Repartir avec les produits choisis.",
       description2: true,
       description2contenu: "",
       description3: true,

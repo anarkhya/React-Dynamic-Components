@@ -7,10 +7,17 @@ const ModalFooter = ({ isShowing, hide }) => {
   const [mail, setMail] = useState(FooterData.contact[0].mail);
   const [phone, setPhone] = useState(FooterData.contact[1].phone);
   const [adresse, setAdresse] = useState(FooterData.adresse);
-  const [horaires1, setHoraires1] = useState(FooterData.horaires[0].horaire);
-  const [horaires2, setHoraires2] = useState(FooterData.horaires[1].horaire);
-  const [horaires3, setHoraires3] = useState(FooterData.horaires[2].horaire);
-  const [horaires4, setHoraires4] = useState(FooterData.horaires[3].horaire);
+  const [copyright, setCopyright] = useState(FooterData.copyright);
+
+  const [dataHoraires, setDataHoraires] = useState(FooterData.horaires);
+
+  const updateDataHoraires = (value, type, obj) => {
+    const newData = [...dataHoraires];
+    const index = newData.indexOf(obj);
+    newData[index][type] = value;
+    setDataHoraires(newData);
+  };
+
   // const [details, setDetails] = useState([]);
 
   // const onChangeDetails = (value, detail) => {
@@ -60,6 +67,46 @@ const ModalFooter = ({ isShowing, hide }) => {
               <h1 className="text-center text-h2 p-2">
                 Pied de page - Modification du contenu
               </h1>
+
+              {dataHoraires.map((item) => {
+                return (
+                  <div>
+                    <label htmlFor="1" className="">
+                      horaire du jour
+                      <input
+                        id=""
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        type="text"
+                        value={item.horaire}
+                        placeholder=""
+                        onChange={(event) =>
+                          updateDataHoraires(
+                            event.target.value,
+                            "horaire",
+                            item
+                          )
+                        }
+                      />
+                    </label>
+
+                    <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                      <button
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                        type="button"
+                      >
+                        Supprimer
+                      </button>
+                      <button
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                        type="button"
+                      >
+                        Valider
+                      </button>
+                    </section>
+                  </div>
+                );
+              })}
+
               <div>
                 <label htmlFor="contact">
                   Mail
@@ -71,69 +118,9 @@ const ModalFooter = ({ isShowing, hide }) => {
                     onChange={(event) => setMail(event.target.value)}
                   />
                 </label>
-                <label htmlFor="contact">
-                  Téléphone
-                  <input
-                    id="contact"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                    type="text"
-                    value={phone}
-                    onChange={(event) => setPhone(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="address">
-                  Adresse
-                  <input
-                    id="address"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                    type="text"
-                    value={adresse}
-                    onChange={(event) => setAdresse(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="horaires1">
-                  Jour 1
-                  <input
-                    id="horaires1"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                    type="text"
-                    value={horaires1}
-                    onChange={(event) => setHoraires1(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="horaires2">
-                  Jour 2
-                  <input
-                    id="horaires2"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                    type="text"
-                    value={horaires2}
-                    onChange={(event) => setHoraires2(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="horaires">
-                  Jour 3
-                  <input
-                    id="horaires"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                    type="text"
-                    value={horaires3}
-                    onChange={(event) => setHoraires3(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="horaires">
-                  Jour 4
-                  <input
-                    id="horaires"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                    type="text"
-                    value={horaires4}
-                    onChange={(event) => setHoraires4(event.target.value)}
-                  />
-                </label>
-                <div className="flex justify-around mt-5 mb-3">
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
                   >
                     Supprimer
@@ -144,7 +131,79 @@ const ModalFooter = ({ isShowing, hide }) => {
                   >
                     Valider
                   </button>
-                </div>
+                </section>
+                <label htmlFor="contact">
+                  Téléphone
+                  <input
+                    id="contact"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={phone}
+                    onChange={(event) => setPhone(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
+                <label htmlFor="address">
+                  Adresse
+                  <input
+                    id="address"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={adresse}
+                    onChange={(event) => setAdresse(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
+                <label htmlFor="1">
+                  Copyright
+                  <input
+                    id="1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                    type="text"
+                    value={copyright}
+                    onChange={(event) => setCopyright(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
               </div>
             </div>
           </div>
