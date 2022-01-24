@@ -63,13 +63,32 @@ const contact = [
     component: "contact",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
-      title: "Contact",
+      titre: "Contact",
+      nom: "Agathe Violain",
       srcPhoneIcon: "./assets/icones/icon_phone.svg",
-      phone: "06 00 00 00 00",
+      telephone: "06 79 21 42 19",
       srcMailIcon: "./assets/icones/icon_mail.svg",
       mail: "latrocquerie@gmail.com",
-      srcInstaIcon: "./assets/icones/icon_insta.svg",
-      insta: "latrocquerie",
+      reseaux: [
+        {
+          src: "./assets/icones/instagram.svg",
+          alt: "Instagram de la Trocquerie",
+          url: "https://www.instagram.com/latrocquerie/",
+          insta: "La Trocquerie",
+        },
+        {
+          src: "./assets/icones/iconFacebook.svg",
+          alt: "Facebook de la Trocquerie",
+          url: "https://www.facebook.com/latrocquerie.nantes",
+          facebook: "La Trocquerie",
+        },
+        {
+          src: "./assets/icones/iconLinkedin.svg",
+          alt: "LinkedIn de la Trocquerie",
+          url: "https://www.linkedin.com/company/latrocquerie/",
+          linkedin: "La Trocquerie",
+        },
+      ],
     },
   },
 ];

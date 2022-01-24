@@ -20,18 +20,10 @@ const Article = ({ data }) => {
       <h1 className="uppercase text-h1 font-light leading-tight">
         {data.titre}
       </h1>
-      <p className={data.clsPara}>{data.description}</p>
-      {/* Si il y a du contenu, il s'affiche sinon rien */}
-      {data.description2 ? (
-        <p className={data.clsPara}>{data.description2contenu}</p>
-      ) : (
-        ""
-      )}
-      {data.description3 ? (
-        <p className={data.clsPara}>{data.description3contenu}</p>
-      ) : (
-        ""
-      )}
+      <p className="md:m-auto">{data.description}</p>
+      <p className="md:m-auto">{data.description2}</p>
+      <p className="md:m-auto">{data.description3}</p>
+
       {data.bouton ? (
         <button className={data.clsBouton} type="submit">
           En savoir plus
