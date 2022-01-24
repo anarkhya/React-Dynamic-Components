@@ -9,6 +9,9 @@ const services = [
       titre: "Location",
       description:
         "service de location d’appareil mutualisé (perceuse, appareil à raclette, boule à facettes)",
+      description2: "",
+      description3: "",
+      url: "",
       bouton: false,
     },
   },
@@ -22,6 +25,9 @@ const services = [
       titre: "Conciergerie",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
+      description2: "",
+      description3: "",
+      url: "",
       bouton: false,
     },
   },
@@ -35,6 +41,9 @@ const services = [
       titre: "Panier bio",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
+      description2: "",
+      description3: "",
+      url: "",
       bouton: false,
     },
   },

@@ -20,14 +20,16 @@ const Article = ({ data }) => {
       <h1 className="uppercase text-h1 font-light leading-tight">
         {data.titre}
       </h1>
-      <p className="md:m-auto">{data.description}</p>
-      <p className="md:m-auto">{data.description2}</p>
-      <p className="md:m-auto">{data.description3}</p>
+      <p className="md:w-1/2">{data.description}</p>
+      <p className="md:w-1/2">{data.description2}</p>
+      <p className="md:w-1/2">{data.description3}</p>
 
       {data.bouton ? (
-        <button className={data.clsBouton} type="submit">
-          En savoir plus
-        </button>
+        <a href={data.url}>
+          <button className={data.clsBouton} type="submit">
+            En savoir plus
+          </button>
+        </a>
       ) : (
         ""
       )}
