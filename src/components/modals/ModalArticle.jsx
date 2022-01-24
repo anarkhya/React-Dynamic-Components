@@ -7,6 +7,7 @@ const ModalArticle = ({ isShowing, hide }) => {
   /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState(Home[0].data.titre);
   const [description, setDescription] = useState(Home[0].data.description);
+  const [hasBouton, setHasBouton] = useState(Home[0].data.bouton);
   const [titreBouton, setTitreBouton] = useState(Home[0].data.boutonContenu);
   const [details, setDetails] = useState([]);
 
@@ -83,6 +84,19 @@ const ModalArticle = ({ isShowing, hide }) => {
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
+                <div className="flex flex-col">
+                  <label htmlFor="b">
+                    Présence de bouton ?
+                    <input
+                      className="m-2 w-5 h-5 mb-4"
+                      id="b"
+                      type="checkbox"
+                      value={hasBouton}
+                      placeholder="texte"
+                      onChange={(event) => setHasBouton(event.target.value)}
+                    />
+                  </label>
+                </div>
                 <label htmlFor="titreBouton">
                   Texte du bouton
                   <input
