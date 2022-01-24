@@ -34,7 +34,7 @@ const Abonnement = ({ data }) => {
                 {detail.description2}
               </p>
               <p className="normal-case text-mini font-regular">
-                {detail.infoDescription1}
+                {detail.description}
               </p>
               <br />
             </p>
