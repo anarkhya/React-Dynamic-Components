@@ -45,7 +45,7 @@ const Echanges = ({ data }) => {
           </section>
         ))}
         <div className="p-4">
-          <p>{data.infos}</p>
+          <p className="text-center">{data.infos}</p>
           <p className="text-xs text-center mt-7">{data.more}</p>
         </div>
       </div>

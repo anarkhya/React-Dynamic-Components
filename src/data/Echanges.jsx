@@ -122,8 +122,7 @@ const echanges = [
         //   color: "vert = vert",
         // },
       ],
-      infos:
-        "Il est également possible de combiner des couleurs (de nombreuses combinaisons possibles à retrouver en boutique)",
+      infos: "Il est également possible de combiner des couleurs ",
       more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
     },
   },
