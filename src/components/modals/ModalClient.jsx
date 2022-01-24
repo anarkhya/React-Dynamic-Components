@@ -61,14 +61,15 @@ const ModalClient = ({ isShowing, hide }) => {
                     id="description"
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="text"
+                    rows="4"
                     value={description}
                     placeholder="contenu du paragraphe"
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
-                <div className="flex justify-around mt-5 mb-2">
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
                   >
                     Supprimer
@@ -79,7 +80,7 @@ const ModalClient = ({ isShowing, hide }) => {
                   >
                     Valider
                   </button>
-                </div>
+                </section>
               </section>
             </div>
           </div>

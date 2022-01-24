@@ -1,11 +1,12 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Concept from "../../data/Concept";
 
 const ModalArticleImage = ({ isShowing, hide }) => {
   /** state pour changer ou non la valeur des inputs */
-  const [titre, setTitre] = useState("");
-  const [description, setDescription] = useState("");
+  const [titre, setTitre] = useState(Concept[4].data.titre);
+  const [description, setDescription] = useState(Concept[4].data.description);
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -46,7 +47,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full uppercase font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -54,11 +55,19 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
+                <p className="">
+                  image actuelle
+                  <img
+                    className="w-32 mt-2 mb-4"
+                    src={Concept[4].data.src}
+                    alt={Concept[4].data.alt}
+                  />
+                </p>
                 <label htmlFor="nom" className="">
-                  Image
+                  Nouvelle image
                   <input
                     id="file"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="file"
                   />
                 </label>
@@ -68,14 +77,15 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="description"
                     type="text"
+                    rows="5"
                     value={description}
                     placeholder="contenu du paragraphe"
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
-                <div className="flex justify-around mt-5">
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
                   >
                     Supprimer
@@ -86,7 +96,7 @@ const ModalArticleImage = ({ isShowing, hide }) => {
                   >
                     Valider
                   </button>
-                </div>
+                </section>
               </section>
             </div>
           </div>
