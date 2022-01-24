@@ -7,7 +7,7 @@ const ModalArticle = ({ isShowing, hide }) => {
   /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState(Home[0].data.titre);
   const [description, setDescription] = useState(Home[0].data.description);
-  const [titreBouton, setTitreBouton] = useState("");
+  const [titreBouton, setTitreBouton] = useState(Home[0].data.boutonContenu);
   const [details, setDetails] = useState([]);
 
   /** copie du tableau details */

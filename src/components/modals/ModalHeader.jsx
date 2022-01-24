@@ -50,11 +50,19 @@ const ModalHeader = ({ isShowing, hide }) => {
                 En tête - Modification du contenu
               </h1>
               <div>
+                <p className="">
+                  logo actuel
+                  <img
+                    className="w-32 mt-2 mb-4"
+                    src={HeaderData.logo.src}
+                    alt={HeaderData.logo.alt}
+                  />
+                </p>
                 <label htmlFor="nom" className="">
-                  Image
+                  nouveau logo
                   <input
                     id="file"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="file"
                   />
                 </label>
@@ -90,9 +98,9 @@ const ModalHeader = ({ isShowing, hide }) => {
                         }
                       />
                     </label>
-                    <div className="flex justify-around mt-2 mb-4">
+                    <section className="flex flex-row-reverse my-2 gap-4 px-2">
                       <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                         type="button"
                       >
                         Supprimer
@@ -103,7 +111,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                       >
                         Valider
                       </button>
-                    </div>
+                    </section>
                   </div>
                 );
               })}
