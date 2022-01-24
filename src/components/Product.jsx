@@ -23,7 +23,7 @@ const Product = ({ data }) => {
       <section className="md:w-1/2 flex flex-col gap-3">
         {data.presentation.map((pres) => (
           <div className=" flex justify-center gap-3 my-2 flex-col md:flex-row">
-            <p className="text-normal md:pr-4">{pres.infos}</p>
+            <p className=" md:pr-4">{pres.infos}</p>
             <img
               src={pres.src}
               alt={pres.alt}
