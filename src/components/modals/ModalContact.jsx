@@ -115,7 +115,7 @@ const ModalContact = ({ isShowing, hide }) => {
                           value={item.url}
                           placeholder=""
                           onChange={(event) =>
-                            updateData(event.target.value, "name", item)
+                            updateData(event.target.value, "url", item)
                           }
                         />
                       </label>

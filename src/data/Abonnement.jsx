@@ -9,6 +9,8 @@ const AbonnementData = [
     component: "abonnement",
     data: {
       titre: "Abonnements",
+      description:
+        "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
       details: [
         {
           id: 1,
@@ -34,10 +36,6 @@ const AbonnementData = [
           detail: "Abonnement solidaire* Prix libre",
           description1:
             "Prix libre choix de la durée et de la somme *bénéficiaires du RSA, étudiant.es, chomeur.ses, ...",
-        },
-        {
-          description:
-            "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
         },
       ],
     },
