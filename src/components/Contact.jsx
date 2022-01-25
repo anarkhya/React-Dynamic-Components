@@ -19,8 +19,9 @@ const Contact = ({ data }) => {
           <ButtonAdmin type="contact" />
         </div>
         <h1 className="uppercase text-center text-h1 font-light">
-          {data.title}
+          {data.titre}
         </h1>
+        <p className="font-light">{data.nom}</p>
         <div className="flex justify-between flex-col md:flex-row bg-gris_clair rounded text-vert py-2 pr-4">
           <div className="flex pl-4">
             <img
@@ -28,19 +29,23 @@ const Contact = ({ data }) => {
               src={data.srcPhoneIcon}
               alt="phone icon"
             />
-            <p>{data.phone}</p>
+            <p>{data.telephone}</p>
           </div>
           <div className="flex pl-4">
             <img className="mr-1 w-6" src={data.srcMailIcon} alt="mail icon" />
             <p>{data.mail}</p>
           </div>
-          <div className="flex pl-4">
-            <img
-              className="mr-1 w-6"
-              src={data.srcInstaIcon}
-              alt="instagram icon"
-            />
-            <p>{data.insta}</p>
+          {/* Appelle de chaque reseau individuellement avec l'index */}
+          <div className="flex pl-4 h-auto flex-row justify-center">
+            <a href={data.reseaux[0].url} target="_blank" rel="noreferrer">
+              <img src={data.reseaux[0].src} alt={data.reseaux[0].alt} />
+            </a>
+            <a href={data.reseaux[1].url} target="_blank" rel="noreferrer">
+              <img src={data.reseaux[1].src} alt={data.reseaux[1].alt} />
+            </a>
+            <a href={data.reseaux[2].url} target="_blank" rel="noreferrer">
+              <img src={data.reseaux[2].src} alt={data.reseaux[2].alt} />
+            </a>
           </div>
         </div>
       </div>

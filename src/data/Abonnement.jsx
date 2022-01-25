@@ -36,7 +36,7 @@ const AbonnementData = [
             "Prix libre choix de la durée et de la somme *bénéficiaires du RSA, étudiant.es, chomeur.ses, ...",
         },
         {
-          infoDescription1:
+          description:
             "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
         },
       ],
