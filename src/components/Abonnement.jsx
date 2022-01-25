@@ -27,11 +27,18 @@ const Abonnement = ({ data }) => {
           {data.details.map((detail) => (
             <p className="uppercase font-bold text-h2">
               {detail.detail}
+<<<<<<< HEAD
               <p className="normal-case font-regular text-normal">
                 {detail.description1}
               </p>
               <p className="normal-case font-regular text-normal">
                 {detail.description2}
+=======
+              <p className="normal-case font-regular">{detail.description1}</p>
+              <p className="normal-case font-regular">{detail.description2}</p>
+              <p className="normal-case text-mini font-regular">
+                {detail.description}
+>>>>>>> e90a2a92b900cc97fc5aac5148a60a64221f51f5
               </p>
               <br />
             </p>

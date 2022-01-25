@@ -38,13 +38,25 @@ const Contact = ({ data }) => {
           {/* Appelle de chaque reseau individuellement avec l'index */}
           <div className="flex pl-4 h-auto flex-row justify-center">
             <a href={data.reseaux[0].url} target="_blank" rel="noreferrer">
-              <img src={data.reseaux[0].src} alt={data.reseaux[0].alt} />
+              <img
+                className="transition hover:bg-rose rounded active:translate-y-1"
+                src={data.reseaux[0].src}
+                alt={data.reseaux[0].alt}
+              />
             </a>
             <a href={data.reseaux[1].url} target="_blank" rel="noreferrer">
-              <img src={data.reseaux[1].src} alt={data.reseaux[1].alt} />
+              <img
+                className="transition hover:bg-rose rounded active:translate-y-1"
+                src={data.reseaux[1].src}
+                alt={data.reseaux[1].alt}
+              />
             </a>
             <a href={data.reseaux[2].url} target="_blank" rel="noreferrer">
-              <img src={data.reseaux[2].src} alt={data.reseaux[2].alt} />
+              <img
+                className="transition hover:bg-rose rounded active:translate-y-1"
+                src={data.reseaux[2].src}
+                alt={data.reseaux[2].alt}
+              />
             </a>
           </div>
         </div>

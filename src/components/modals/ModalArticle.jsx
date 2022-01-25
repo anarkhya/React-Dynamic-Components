@@ -116,7 +116,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                     type="button"
                   >
                     Valider
@@ -160,7 +160,7 @@ const ModalArticle = ({ isShowing, hide }) => {
 
                 <div className="flex flex-row-reverse mt-16 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                     type="button"
                     onClick={() => addDetails()}
                   >
