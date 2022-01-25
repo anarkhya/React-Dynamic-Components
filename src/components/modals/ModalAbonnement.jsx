@@ -17,6 +17,14 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     newData[index][type] = value;
     setData(newData);
   };
+  /* suppression ciblée du bon index */
+  const deleteData = (value, type, obj) => {
+    const newData = [...data];
+    const index = newData.indexOf(obj);
+    newData[index][type] = value;
+    newData.splice(index, 1);
+    setData(newData);
+  };
 
   /* affiche user input dans nouveau bloc */
   const [details, setDetails] = useState([]);
@@ -93,6 +101,8 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 <button
                   className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                   type="button"
+                  //  delete => string vide
+                  onClick={() => setGrandTitre("")}
                 >
                   Supprimer
                 </button>
@@ -148,8 +158,11 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                     </label>
                     <section className="flex flex-row-reverse my-2 gap-4 px-2">
                       <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                         type="button"
+                        onClick={(event) =>
+                          deleteData(event.target.value, "", item)
+                        }
                       >
                         Supprimer
                       </button>
