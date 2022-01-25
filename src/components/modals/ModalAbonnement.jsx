@@ -3,13 +3,14 @@ import ReactDOM from "react-dom";
 import Abonnement from "../../data/Abonnement";
 
 const ModalAbonnement = ({ isShowing, hide }) => {
-  /** state qui est en lien avec la data de abonnements pour l'afficher */
+  /* states affichent data */
   const [grandTitre, setGrandTitre] = useState(Abonnement[0].data.titre);
   const [data, setData] = useState(Abonnement[0].data.details);
   const [description, setDescription] = useState(
     Abonnement[0].data.description
   );
 
+  /* affiche user input */
   const updateData = (value, type, obj) => {
     const newData = [...data];
     const index = newData.indexOf(obj);
@@ -17,9 +18,9 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     setData(newData);
   };
 
+  /* affiche user input dans nouveau bloc */
   const [details, setDetails] = useState([]);
 
-  /** copie du tableau details */
   const onChangeDetails = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);
@@ -27,16 +28,19 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     setDetails(newDetails);
   };
 
+  /* ajoute nouveau bloc - push */
   const addDetails = () => {
     const newDetails = [...details];
     newDetails.push("");
     setDetails(newDetails);
   };
-  // const deleteDetails = () => {
-  //   const newDetails = [...details];
-  //   newDetails.push("");
-  //   setDetails(newDetails);
-  // };
+
+  /* retire dernier bloc ajouté - pop */
+  const deleteDetails = () => {
+    const newDetails = [...details];
+    newDetails.pop("");
+    setDetails(newDetails);
+  };
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -233,15 +237,24 @@ const ModalAbonnement = ({ isShowing, hide }) => {
               </div>
 
               {/* //////////////////////////        déclencheur du map des éléments d'un nouveau bloc */}
-              <div className="flex items-center w-full">
+              <section className="flex justify-center mt-8 my-2 gap-4 px-2">
                 <button
                   type="submit"
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2   mx-auto my-2"
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
                   onClick={() => addDetails()}
                 >
                   Ajouter un autre bloc
                 </button>
-              </div>
+
+                {/* //////////////////////////        retire le dernier bloc ajouté */}
+                <button
+                  type="submit"
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 my-2"
+                  onClick={() => deleteDetails()}
+                >
+                  Retirer dernier bloc
+                </button>
+              </section>
             </div>
           </div>
         </>,
