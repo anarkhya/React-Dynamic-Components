@@ -17,7 +17,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
     newData[index][type] = value;
     setData(newData);
   };
-  /* suppression ciblée du bon index */
+  /* suppression ciblée avec le bon index */
   const deleteData = (value, type, obj) => {
     const newData = [...data];
     const index = newData.indexOf(obj);
@@ -44,9 +44,18 @@ const ModalAbonnement = ({ isShowing, hide }) => {
   };
 
   /* retire dernier bloc ajouté - pop */
-  const deleteDetails = () => {
+  // const deleteDetails = () => {
+  //   const newDetails = [...details];
+  //   newDetails.pop("");
+  //   setDetails(newDetails);
+  // };
+
+  /* tentative de suppression du bloc ciblé avec le bon index */
+  const deleteDetails = (value, obj) => {
     const newDetails = [...details];
-    newDetails.pop("");
+    const index = newDetails.indexOf(obj);
+    newDetails[index] = value;
+    newDetails.splice(index, 1);
     setDetails(newDetails);
   };
 
@@ -234,6 +243,9 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         <button
                           className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                           type="button"
+                          onClick={(event) =>
+                            deleteDetails(event.target.value, "", detail)
+                          }
                         >
                           Supprimer
                         </button>
@@ -260,13 +272,13 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                 </button>
 
                 {/* //////////////////////////        retire le dernier bloc ajouté */}
-                <button
+                {/* <button
                   type="submit"
                   className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 my-2"
                   onClick={() => deleteDetails()}
                 >
                   Retirer dernier bloc
-                </button>
+                </button> */}
               </section>
             </div>
           </div>

@@ -8,7 +8,8 @@ const ModalArticle = ({ isShowing, hide }) => {
   const [titre, setTitre] = useState(Home[0].data.titre);
   const [description, setDescription] = useState(Home[0].data.description);
   const [hasBouton, setHasBouton] = useState(Home[0].data.bouton);
-  const [titreBouton, setTitreBouton] = useState(Home[0].data.boutonContenu);
+  // const [titreBouton, setTitreBouton] = useState(Home[0].data.boutonContenu);
+  const [urlBouton, setUrlBouton] = useState(Home[0].data.url);
 
   /* affiche user input dans nouveau bloc */
   const [details, setDetails] = useState([]);
@@ -106,7 +107,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                     />
                   </label>
                 </div>
-                <label htmlFor="titreBouton">
+                {/* <label htmlFor="titreBouton">
                   Texte du bouton
                   <input
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
@@ -115,6 +116,17 @@ const ModalArticle = ({ isShowing, hide }) => {
                     value={titreBouton}
                     placeholder="texte"
                     onChange={(event) => setTitreBouton(event.target.value)}
+                  />
+                </label> */}
+                <label htmlFor="btn-url">
+                  Lien du bouton
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
+                    id="btn-url"
+                    type="text"
+                    value={urlBouton}
+                    placeholder="texte"
+                    onChange={(event) => setUrlBouton(event.target.value)}
                   />
                 </label>
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
