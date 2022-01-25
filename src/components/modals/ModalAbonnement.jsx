@@ -114,7 +114,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         value={item.detail}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "name", item)
+                          updateData(event.target.value, "detail", item)
                         }
                       />
                     </label>
@@ -127,7 +127,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         value={item.description1}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "to", item)
+                          updateData(event.target.value, "description1", item)
                         }
                       />
                     </label>
@@ -140,7 +140,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         value={item.description2}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "to", item)
+                          updateData(event.target.value, "description2", item)
                         }
                       />
                     </label>
