@@ -31,7 +31,14 @@ const Footer = () => {
         </div>
         <p className="md:order-2 md:basis-1/3 flex justify-center items-center gap-1">
           <LocationMarkerIcon className="h-5" />
-          {FooterData.adresse}
+          <a
+            className="transition hover:underline hover:decoration-2 active:translate-y-1"
+            href="https://www.google.com/maps?ll=47.204088,-1.547592&z=14&t=m&hl=fr&gl=FR&mapclient=embed&q=23+Rue+Petite+Biesse+44200+Nantes"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {FooterData.adresse}
+          </a>
         </p>
         <p className="md:order-last md:basis-full text-mini">
           {FooterData.copyright}
