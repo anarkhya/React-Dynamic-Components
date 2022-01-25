@@ -22,12 +22,12 @@ const Echanges = ({ data }) => {
         <ButtonAdmin type="echanges" />
       </div>
       <div className="md:w-1/2">
-        <p className="">{data.texte}</p>
-        <h2 className="text-center mt-4">{data.sousTexte}</h2>
+        <p className="">{data.description}</p>
+        <h2 className="text-center mt-4">{data.titre}</h2>
         <section className="flex justify-center gap-4 mt-4">
           {data.gommettes.map((gommette) => (
             <section>
-              <p className=" ">
+              <p>
                 {gommette.color}
                 <img
                   className="blob w-16 h-16"
@@ -45,8 +45,8 @@ const Echanges = ({ data }) => {
           </section>
         ))}
         <div className="p-4">
-          <p>{data.infos}</p>
-          <p>{data.more}</p>
+          <p className="text-center">{data.infos}</p>
+          <p className="text-xs text-center mt-7">{data.more}</p>
         </div>
       </div>
     </div>

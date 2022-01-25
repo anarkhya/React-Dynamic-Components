@@ -15,10 +15,9 @@ const echanges = [
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Dans la Trocquerie, il est possible de troquer:",
       description: "¡ Uniquement des objets en bon état !",
-      description2: true,
-      description2contenu: "",
-      description3: false,
-      description3contenu: "",
+      description2: "",
+      description3: "",
+      url: "",
       bouton: false,
     },
   },
@@ -76,9 +75,9 @@ const echanges = [
     component: "categorie",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
-      texte:
+      description:
         "La valeur des objets n'est pas la même pour tout le monde. La valeur du produit dans la Trocquerie est considérée différement de son prix d'achat. L'idée est de privilégier l'éthique et se détacher de la valeur monétaire et aussi sentimentale de ceux-ci.",
-      sousTexte: "Les échanges sont catégorisés par un système de gommettes:",
+      titre: "Les échanges sont catégorisés par un système de gommettes:",
       gommettes: [
         {
           id: 1,
@@ -123,9 +122,8 @@ const echanges = [
         //   color: "vert = vert",
         // },
       ],
-      infos:
-        "Il est également possible de combiner des couleurs (de nombreuses combinaisons possibles à retrouver en boutique)",
-      more: "",
+      infos: "Il est également possible de combiner des couleurs ",
+      more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
     },
   },
   // Comment ça marche:
@@ -138,10 +136,9 @@ const echanges = [
       titre: "Comment ça marche:",
       description:
         "Faire le tri chez soi. Venir à la boutique ou prendre rendez-vous. Amenez les pièces à échanger. Choisir les nouveaux articles. Repartir avec les produits choisis.",
-      description2: true,
-      description2contenu: "",
-      description3: true,
-      description3contenu: "",
+      description2: "",
+      description3: "",
+      url: "",
       bouton: false,
     },
   },
