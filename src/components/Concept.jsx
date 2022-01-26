@@ -7,7 +7,7 @@ const Concept = ({ data }) => {
     <div className="">
       <div className={data.cls}>
         <div className="text-right w-full">
-          <ButtonAdmin type="concept" />
+          <ButtonAdmin type="concept" data={data} />
         </div>
         <h1 className="uppercase text-center text-h1 font-light">
           {data.title}

@@ -18,7 +18,7 @@ const Abonnement = ({ data }) => {
         style={{ backgroundImage: "url(/assets/images/grid.png)" }}
       >
         <div className="text-right w-full">
-          <ButtonAdmin type="abonnement" />
+          <ButtonAdmin type="abonnement" data={data} />
         </div>
         <h1 className="uppercase font-light text-h1">{data.titre}</h1>
         <br />

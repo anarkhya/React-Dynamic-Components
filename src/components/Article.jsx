@@ -15,7 +15,7 @@ const Article = ({ data }) => {
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
-        <ButtonAdmin type="article" />
+        <ButtonAdmin type="article" data={data} />
       </div>
       <h1 className="uppercase text-h1 font-light leading-tight">
         {data.titre}
