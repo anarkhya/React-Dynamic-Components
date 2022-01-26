@@ -6,8 +6,8 @@ import "../../effects.css";
 
 const ModalEchanges = ({ isShowing, hide }) => {
   /** state pour changer ou non la valeur des inputs */
-  const [texte, setTexte] = useState(Echanges[3].data.texte);
-  const [sousTexte, setSousTexte] = useState(Echanges[3].data.sousTexte);
+  const [description, setDescription] = useState(Echanges[3].data.description);
+  const [titre, setTitre] = useState(Echanges[3].data.titre);
 
   const [data, setData] = useState(Echanges[3].data.gommettes);
   console.log(setData);
@@ -20,6 +20,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
   // };
 
   const [infos, setInfos] = useState(Echanges[3].data.infos);
+  const [more, setMore] = useState(Echanges[3].data.more);
 
   /** copie du tableau details */
   // const onChangeDetails = (value, detail) => {
@@ -72,37 +73,37 @@ const ModalEchanges = ({ isShowing, hide }) => {
               {/* // style section interactions utilisateur */}
               <section className="p-2">
                 <label htmlFor="titre" className="">
-                  infos
+                  paragraphe
                   <textarea
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="titre"
                     rows="5"
                     type="text"
-                    value={texte}
+                    value={description}
                     placeholder="titre du bloc"
-                    onChange={(event) => setTexte(event.target.value)}
+                    onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
                 <label htmlFor="description">
-                  sousTexte
+                  ligne
                   <input
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="description"
                     type="text"
-                    value={sousTexte}
+                    value={titre}
                     placeholder="contenu du paragraphe"
-                    onChange={(event) => setSousTexte(event.target.value)}
+                    onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
                     type="button"
                   >
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                     type="button"
                   >
                     Valider
@@ -130,13 +131,13 @@ const ModalEchanges = ({ isShowing, hide }) => {
                       </label>
                       <section className="flex flex-row-reverse my-2 gap-4 px-2">
                         <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
                           type="button"
                         >
                           Supprimer
                         </button>
                         <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                           type="button"
                         >
                           Valider
@@ -157,15 +158,27 @@ const ModalEchanges = ({ isShowing, hide }) => {
                     onChange={(event) => setInfos(event.target.value)}
                   />
                 </label>
+                <label htmlFor="titre" className="">
+                  mini texte
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="titre"
+                    rows="3"
+                    type="text"
+                    value={more}
+                    placeholder="titre du bloc"
+                    onChange={(event) => setMore(event.target.value)}
+                  />
+                </label>
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
                     type="button"
                   >
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                     type="button"
                   >
                     Valider
@@ -175,7 +188,7 @@ const ModalEchanges = ({ isShowing, hide }) => {
                 <div className="flex items-center w-full">
                   <button
                     type="submit"
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2   mx-auto my-2"
                     onClick={() => addDetails()}
                   >
                     Ajouter une autre description ?

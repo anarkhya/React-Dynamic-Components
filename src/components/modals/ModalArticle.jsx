@@ -1,15 +1,19 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Home from "../../data/Home";
 
 const ModalArticle = ({ isShowing, hide }) => {
-  /** state pour changer ou non la valeur des inputs */
-  const [titre, setTitre] = useState("");
-  const [description, setDescription] = useState("");
-  const [titreBouton, setTitreBouton] = useState("");
+  /* states affichent data actuelle || user input */
+  const [titre, setTitre] = useState(Home[0].data.titre);
+  const [description, setDescription] = useState(Home[0].data.description);
+  const [hasBouton, setHasBouton] = useState(Home[0].data.bouton);
+  // const [titreBouton, setTitreBouton] = useState(Home[0].data.boutonContenu);
+  const [urlBouton, setUrlBouton] = useState(Home[0].data.url);
+
+  /* affiche user input dans nouveau bloc */
   const [details, setDetails] = useState([]);
 
-  /** copie du tableau details */
   const onChangeDetails = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);
@@ -17,11 +21,20 @@ const ModalArticle = ({ isShowing, hide }) => {
     setDetails(newDetails);
   };
 
+  /* ajoute nouveau bloc - push */
   const addDetails = () => {
     const newDetails = [...details];
     newDetails.push("");
     setDetails(newDetails);
   };
+
+  /* retire dernier bloc ajouté - pop */
+  const deleteDetails = () => {
+    const newDetails = [...details];
+    newDetails.pop("");
+    setDetails(newDetails);
+  };
+
   const getModal = () => {
     /** isShowing affiche le modal */
     if (isShowing) {
@@ -61,7 +74,7 @@ const ModalArticle = ({ isShowing, hide }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full uppercase font-light text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -69,58 +82,12 @@ const ModalArticle = ({ isShowing, hide }) => {
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <label htmlFor="description">
-                  Description
-                  <textarea
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    id="description"
-                    type="text"
-                    value={description}
-                    placeholder="contenu du paragraphe"
-                    onChange={(event) => setDescription(event.target.value)}
-                  />
-                </label>
-                <label htmlFor="titreBouton">
-                  Texte du bouton
-                  <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
-                    id="titreBouton"
-                    type="text"
-                    value={titreBouton}
-                    placeholder="texte"
-                    onChange={(event) => setTitreBouton(event.target.value)}
-                  />
-                </label>
-                <div className="flex items-center w-full pt-4">
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    type="submit"
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2 text-normal mx-auto my-2"
-                    onClick={() => addDetails()}
-                  >
-                    Ajouter une autre description ?
-                  </button>
-                </div>
-                {/* map sur la data de concept */}
-                {details.map((detail) => {
-                  return (
-                    <label htmlFor="description">
-                      Description supplémentaire
-                      <textarea
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
-                        type="text"
-                        placeholder="contenu du paragraphe"
-                        value={detail?.detail}
-                        onChange={(event) =>
-                          onChangeDetails(event.target.value, detail)
-                        }
-                      />
-                    </label>
-                  );
-                })}
-                <div className="flex justify-around mt-7">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
+                    //  delete => string vide
+                    onClick={() => setTitre("")}
                   >
                     Supprimer
                   </button>
@@ -130,7 +97,143 @@ const ModalArticle = ({ isShowing, hide }) => {
                   >
                     Valider
                   </button>
+                </section>
+                <label htmlFor="description">
+                  Description
+                  <textarea
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="description"
+                    type="text"
+                    rows="4"
+                    value={description}
+                    placeholder="contenu du paragraphe"
+                    onChange={(event) => setDescription(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                    //  delete => string vide
+                    onClick={() => setDescription("")}
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
+                <div className="flex flex-col">
+                  <label htmlFor="b">
+                    Présence de bouton ?
+                    <input
+                      className="m-2 w-5 h-5 mb-4"
+                      id="b"
+                      type="checkbox"
+                      value={hasBouton}
+                      placeholder="texte"
+                      onChange={(event) => setHasBouton(event.target.value)}
+                    />
+                  </label>
                 </div>
+                {/* <label htmlFor="titreBouton">
+                  Texte du bouton
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
+                    id="titreBouton"
+                    type="text"
+                    value={titreBouton}
+                    placeholder="texte"
+                    onChange={(event) => setTitreBouton(event.target.value)}
+                  />
+                </label> */}
+                <label htmlFor="btn-url">
+                  Lien du bouton
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
+                    id="btn-url"
+                    type="text"
+                    value={urlBouton}
+                    placeholder="texte"
+                    onChange={(event) => setUrlBouton(event.target.value)}
+                  />
+                </label>
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
+                    type="button"
+                  >
+                    Valider
+                  </button>
+                </section>
+                <div className="mx-auto my-8 border-b-2 border-vert w-1/2" />
+
+                {/* ////////////////////////////      map l'ajout des éléments d'un nouveau bloc */}
+                <div className="">
+                  {details.map((detail) => {
+                    return (
+                      <div className="p-2 my-2 border-2 border-vert rounded">
+                        <label htmlFor="description">
+                          paragraphe supplémentaire
+                          <textarea
+                            className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
+                            type="text"
+                            rows="5"
+                            placeholder="paragraphe"
+                            value={detail?.description}
+                            onChange={(event) =>
+                              onChangeDetails(event.target.value, detail)
+                            }
+                          />
+                        </label>
+
+                        <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                          {/* <button
+                            className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                            type="button"
+                          >
+                            Supprimer
+                          </button> */}
+                          <button
+                            className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                            type="button"
+                          >
+                            Valider
+                          </button>
+                        </section>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* //////////////////////////        déclencheur du map des éléments d'un nouveau bloc */}
+                <section className="flex justify-center mt-8 my-2 gap-4 px-2">
+                  <button
+                    type="submit"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
+                    onClick={() => addDetails()}
+                  >
+                    Ajouter un paragraphe
+                  </button>
+
+                  {/* //////////////////////////        retire le dernier bloc ajouté */}
+                  <button
+                    type="submit"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 my-2"
+                    onClick={() => deleteDetails()}
+                  >
+                    Retirer dernier paragraphe
+                  </button>
+                </section>
               </section>
             </div>
           </div>

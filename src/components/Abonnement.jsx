@@ -33,12 +33,12 @@ const Abonnement = ({ data }) => {
               <p className="normal-case font-regular text-normal">
                 {detail.description2}
               </p>
-              <p className="normal-case text-mini font-regular">
-                {detail.description}
-              </p>
               <br />
             </p>
           ))}
+          <p className="normal-case text-mini font-regular">
+            {data.description}
+          </p>
         </div>
       </div>
     </div>

@@ -5,9 +5,17 @@ import Contact from "../../data/Contact";
 
 const ModalContact = ({ isShowing, hide }) => {
   /** state qui est en lien avec la data de contact pour l'afficher */
-  const [telephone, setTelephone] = useState(Contact[3].data.phone);
+  const [telephone, setTelephone] = useState(Contact[3].data.telephone);
   const [email, setEmail] = useState(Contact[3].data.mail);
-  const [insta, setInsta] = useState(Contact[3].data.insta);
+
+  const [data, setData] = useState(Contact[3].data.reseaux);
+
+  const updateData = (value, type, obj) => {
+    const newData = [...data];
+    const index = newData.indexOf(obj);
+    newData[index][type] = value;
+    setData(newData);
+  };
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -57,13 +65,13 @@ const ModalContact = ({ isShowing, hide }) => {
                 </label>
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
                     type="button"
                   >
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                     type="button"
                   >
                     Valider
@@ -82,43 +90,52 @@ const ModalContact = ({ isShowing, hide }) => {
                 </label>
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
                     type="button"
                   >
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
                     type="button"
                   >
                     Valider
                   </button>
                 </section>
-                <label htmlFor="insta">
-                  Instagram
-                  <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    id="insta"
-                    type="text"
-                    value={insta}
-                    placeholder=""
-                    onChange={(event) => setInsta(event.target.value)}
-                  />
-                </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
+
+                {data.map((item) => {
+                  return (
+                    <div>
+                      <label htmlFor="1" className="">
+                        réseau social
+                        <input
+                          id="1"
+                          className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                          type="text"
+                          value={item.url}
+                          placeholder=""
+                          onChange={(event) =>
+                            updateData(event.target.value, "url", item)
+                          }
+                        />
+                      </label>
+                      <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                        <button
+                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                          type="button"
+                        >
+                          Supprimer
+                        </button>
+                        <button
+                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                          type="button"
+                        >
+                          Valider
+                        </button>
+                      </section>
+                    </div>
+                  );
+                })}
               </section>
             </div>
           </div>
