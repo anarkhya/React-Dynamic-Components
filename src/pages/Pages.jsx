@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // components
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
 import Article from "../components/Article";
@@ -33,9 +31,7 @@ const Pages = () => {
 
   const getComponent = (type, data) => {
     const component = {
-      header: () => <Header data={data} />,
       logo: () => <Logo data={data} />,
-      footer: () => <Footer data={data} />,
       abonnement: () => <Abonnement data={data} />,
       formulaire: () => <Formulaire data={data} />,
       article: () => <Article data={data} />,
@@ -60,6 +56,7 @@ const Pages = () => {
     //   echanges,
     //   contact,
     // };
+    // ancienne connexion avec la base de données statique
 
     const res = page.components.map((comp) =>
       getComponent(comp.component, comp.data)
@@ -67,15 +64,14 @@ const Pages = () => {
     return res;
   };
 
-  // Connection avec la base de donnée
+  // Connexion avec la base de donnée
   useEffect(() => {
     const pageRequest = pages || "accueil";
-    fetch(`http://localhost:8000/api/${pageRequest}`) // `http://localhost:8000/${id_pages}`
+    fetch(`http://localhost:8000/api/pages/${pageRequest}`) // `http://localhost:8000/${id_pages}`
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setPage(data);
       });
   }, [pages]);
