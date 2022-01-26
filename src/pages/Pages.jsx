@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // components
@@ -18,16 +18,19 @@ import Map from "../components/Map";
 import ButtonAdmin from "../components/ButtonAdmin";
 import Client from "../components/Client";
 
-// data
-import home from "../data/Home";
-import concept from "../data/Concept";
-import abonnement from "../data/Abonnement";
-import services from "../data/Services";
-import echanges from "../data/Echanges";
-import contact from "../data/Contact";
+// // data
+// import home from "../data/Home";
+// import concept from "../data/Concept";
+// import abonnement from "../data/Abonnement";
+// import services from "../data/Services";
+// import echanges from "../data/Echanges";
+// import contact from "../data/Contact";
 
 const Pages = () => {
+  const [page, setPage] = useState(null);
+
   const { pages } = useParams();
+
   const getComponent = (type, data) => {
     const component = {
       header: () => <Header data={data} />,
@@ -50,21 +53,33 @@ const Pages = () => {
     return component[type]();
   };
   const createComponent = () => {
-    const DetailsPages = {
-      concept,
-      abonnement,
-      services,
-      echanges,
-      contact,
-    };
-    const DetailsComp = DetailsPages[pages] || home;
+    // const DetailsPages = {
+    //   concept,
+    //   abonnement,
+    //   services,
+    //   echanges,
+    //   contact,
+    // };
 
-    const res = DetailsComp.map((comp) =>
+    const res = page.components.map((comp) =>
       getComponent(comp.component, comp.data)
     );
     return res;
   };
-  return <div>{createComponent()}</div>;
+
+  // Connection avec la base de donnée
+  useEffect(() => {
+    const pageRequest = pages || "accueil";
+    fetch(`http://localhost:8000/api/${pageRequest}`) // `http://localhost:8000/${id_pages}`
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setPage(data);
+      });
+  }, [pages]);
+  return <div>{page && <div>{createComponent()}</div>}</div>;
 };
 
 export default Pages;
