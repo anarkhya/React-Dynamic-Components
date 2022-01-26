@@ -4,8 +4,8 @@ import ModalAbonnement from "./modals/ModalAbonnement";
 import ModalArticleImage from "./modals/ModalArticleImage";
 import ModalContact from "./modals/ModalContact";
 import ModalEchanges from "./modals/ModalEchanges";
-import ModalFooter from "./modals/ModalFooter";
-import ModalHeader from "./modals/ModalHeader";
+// import ModalFooter from "./modals/ModalFooter";
+// import ModalHeader from "./modals/ModalHeader";
 import ModalObjets from "./modals/ModalObjets";
 import ModalProduct from "./modals/ModalProduct";
 import ModalClient from "./modals/ModalClient";
@@ -34,16 +34,32 @@ const ButtonNewsComponent = () => {
         />
       ),
       articleImage: <ModalArticleImage isShowing hide={toggle} data={{}} />,
-      contact: <ModalContact isShowing hide={toggle} data={{}} />,
-      echanges: <ModalEchanges isShowing hide={toggle} data={{}} />,
-      footer: <ModalFooter isShowing hide={toggle} data={{}} />,
-      header: (
-        <ModalHeader
+      contact: (
+        <ModalContact
           isShowing
           hide={toggle}
-          HeaderData={{ menus: [{ to: "", name: "" }] }}
+          data={{
+            reseaux: [{ src: "", alt: "", url: "" }],
+          }}
         />
       ),
+      echanges: (
+        <ModalEchanges
+          isShowing
+          hide={toggle}
+          data={{
+            gommettes: [{ src: "", alt: "" }],
+          }}
+        />
+      ),
+      // footer: <ModalFooter isShowing hide={toggle} data={{}} />,
+      // header: (
+      //   <ModalHeader
+      //     isShowing
+      //     hide={toggle}
+      //     HeaderData={{ menus: [{ to: "", name: "" }] }}
+      //   />
+      // ),
       objets: (
         <ModalObjets
           isShowing
@@ -65,13 +81,20 @@ const ButtonNewsComponent = () => {
     setModal(myModal[type]);
   };
   return (
-    <div className="mx-auto my-2 flex items-center place-content-center bg-vert rounded w-8 h-8">
-      <select onChange={(e) => getModal(e.target.value)}>
-        <option value="article">Article</option>
+    <div className="flex justify-center">
+      <select
+        className="transition mt-4 text-vert rounded h-8 border-[#0ff] border-2 cursor-pointer px-2 active:translate-y-1"
+        onChange={(e) => getModal(e.target.value)}
+      >
         <option value="abonnement">Abonnement</option>
+        <option value="article">Article</option>
+        <option value="articleImage">Article avec Image</option>
+        <option value="client">Client</option>
+        <option value="concept">Concept</option>
+        <option value="contact">Contact</option>
+        <option value="echanges">Echanges</option>
         <option value="product">Produits échangeables</option>
         <option value="objets">Objets</option>
-        <option value="header">Tếte de page</option>
       </select>
       {modal}
     </div>

@@ -56,9 +56,9 @@ const ModalConcept = ({ isShowing, hide, data }) => {
                   Description
                   <textarea
                     id="description"
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full text-[28px] font-light leading-tight"
                     type="text"
-                    rows="4"
+                    rows="7"
                     value={description}
                     placeholder="contenu du paragraphe"
                     onChange={(event) => setDescription(event.target.value)}
