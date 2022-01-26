@@ -100,7 +100,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
                         value={menu.name}
                         placeholder=""
                         onChange={(event) =>
-                          updateLogo(event.target.value, "name", menu)
+                          updateHeader(event.target.value, "name", menu)
                         }
                       />
                     </label>
