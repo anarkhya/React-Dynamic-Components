@@ -24,7 +24,7 @@ const Header = () => {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 pr-4">
             <div className="flex justify-end mt-3">
-              <ButtonAdmin type="header" />
+              <ButtonAdmin type="header" HeaderData={HeaderData} />
             </div>
             <div className="relative flex items-center justify-between pb-2">
               {/* positionnement burger */}

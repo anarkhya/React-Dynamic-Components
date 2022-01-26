@@ -1,18 +1,45 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Echanges from "../../data/Echanges";
 
-const ModalObjets = ({ isShowing, hide }) => {
+const ModalObjets = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
 
-  const [data, setData] = useState(Echanges[2].data.categorie);
+  const [categorie, setCategorie] = useState(data.categorie);
 
-  const updateData = (value, type, obj) => {
-    const newData = [...data];
-    const index = newData.indexOf(obj);
-    newData[index][type] = value;
-    setData(newData);
+  /* affiche user input */
+  const updateCategorie = (value, type, obj) => {
+    const newCategorie = [...categorie];
+    const index = newCategorie.indexOf(obj);
+    newCategorie[index][type] = value;
+    setCategorie(newCategorie);
+  };
+  // /* suppression ciblée avec le bon index */
+  const deleteDetail = (obj) => {
+    const newDetails = [...categorie];
+    const index = newDetails.indexOf(obj);
+    newDetails.splice(index, 1);
+    setCategorie(newDetails);
+  };
+
+  /* ajoute nouveau bloc - push */
+  const addDetails = () => {
+    const newDetails = [...categorie];
+    newDetails.push({ appartenance: "", cible: "" });
+    setCategorie(newDetails);
+  };
+
+  const onUpdateComponent = () => {
+    console.log({
+      categorie,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      categorie,
+    });
+    hide();
   };
 
   const getModal = () => {
@@ -51,7 +78,7 @@ const ModalObjets = ({ isShowing, hide }) => {
                 Objets - Modification du contenu
               </h1>
 
-              {data.map((item) => {
+              {categorie.map((item) => {
                 return (
                   <div>
                     <label htmlFor="1" className="">
@@ -63,7 +90,11 @@ const ModalObjets = ({ isShowing, hide }) => {
                         value={item.appartenance}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "appartenance", item)
+                          updateCategorie(
+                            event.target.value,
+                            "appartenance",
+                            item
+                          )
                         }
                       />
                     </label>
@@ -76,28 +107,48 @@ const ModalObjets = ({ isShowing, hide }) => {
                         value={item.cible}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "cible", item)
+                          updateCategorie(event.target.value, "cible", item)
                         }
                       />
                     </label>
-
                     <section className="flex flex-row-reverse my-2 gap-4 px-2">
                       <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                         type="button"
+                        onClick={() => deleteDetail(item)}
                       >
                         Supprimer
-                      </button>
-                      <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                        type="button"
-                      >
-                        Valider
                       </button>
                     </section>
                   </div>
                 );
               })}
+              <section className="flex justify-center mt-8 my-2 gap-4 px-2 mb-8">
+                <button
+                  type="submit"
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
+                  onClick={() => addDetails()}
+                >
+                  Ajouter un autre bloc
+                </button>
+              </section>
+              <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  type="button"
+                  //  delete => string vide
+                  onClick={() => onDeleteComponent()}
+                >
+                  Supprimer
+                </button>
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  type="button"
+                  onClick={() => onUpdateComponent()}
+                >
+                  Valider
+                </button>
+              </section>
             </div>
           </div>
         </>,

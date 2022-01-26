@@ -1,17 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { useState } from "react/cjs/react.development";
-import HeaderData from "../../data/HeaderData";
 
-const ModalHeader = ({ isShowing, hide }) => {
+const ModalHeader = ({ isShowing, hide, HeaderData }) => {
   /** state qui est en lien avec la data de header pour l'afficher */
-  const [data, setData] = useState(HeaderData.menus);
+  const [menus, setHeader] = useState(HeaderData.menus);
+  // const [logo, setLogo] = useState(HeaderData.logo);
 
-  const updateData = (value, type, obj) => {
-    const newData = [...data];
-    const index = newData.indexOf(obj);
-    newData[index][type] = value;
-    setData(newData);
+  const updateHeader = (value, type, obj) => {
+    const newHeader = [...menus];
+    const index = newHeader.indexOf(obj);
+    newHeader[index][type] = value;
+    setHeader(newHeader);
+  };
+  // const updateLogo = (value, type, obj) => {
+  //   const newLogo = { logo };
+  //   const index = newLogo.indexOf(obj);
+  //   newLogo[index][type] = value;
+  //   setLogo(newLogo);
+  // };
+
+  const onUpdateComponent = () => {
+    console.log({
+      menus,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      menus,
+    });
+    hide();
   };
   /** const qui contient le bouton cliquable pour afficher le modal */
   const getModal = () => {
@@ -68,7 +87,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                 </label>
               </div>
               {/* map sur la data de header */}
-              {data.map((menu) => {
+              {menus.map((menu) => {
                 <div>{menu.to}</div>;
                 return (
                   <div>
@@ -81,7 +100,7 @@ const ModalHeader = ({ isShowing, hide }) => {
                         value={menu.name}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "name", menu)
+                          updateHeader(event.target.value, "name", menu)
                         }
                       />
                     </label>
@@ -94,27 +113,30 @@ const ModalHeader = ({ isShowing, hide }) => {
                         value={menu.to}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "to", menu)
+                          updateHeader(event.target.value, "to", menu)
                         }
                       />
                     </label>
-                    <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                      <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                        type="button"
-                      >
-                        Supprimer
-                      </button>
-                      <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                        type="button"
-                      >
-                        Valider
-                      </button>
-                    </section>
                   </div>
                 );
               })}
+              <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  type="button"
+                  //  delete => string vide
+                  onClick={() => onDeleteComponent()}
+                >
+                  Supprimer
+                </button>
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  type="button"
+                  onClick={() => onUpdateComponent()}
+                >
+                  Valider
+                </button>
+              </section>
             </div>
           </div>
         </>,

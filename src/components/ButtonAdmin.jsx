@@ -11,6 +11,7 @@ import ModalProduct from "./modals/ModalProduct";
 import ModalClient from "./modals/ModalClient";
 import ModalConcept from "./modals/ModalConcept";
 import ModalNewComponent from "./modals/ModalNewComponent";
+import HeaderData from "../data/HeaderData";
 
 /**
  *
@@ -32,7 +33,7 @@ const ButtonAdmin = ({ type, data }) => {
       contact: <ModalContact isShowing hide={toggle} data={data} />,
       echanges: <ModalEchanges isShowing hide={toggle} data={data} />,
       footer: <ModalFooter isShowing hide={toggle} data={data} />,
-      header: <ModalHeader isShowing hide={toggle} data={data} />,
+      header: <ModalHeader isShowing hide={toggle} HeaderData={HeaderData} />,
       objets: <ModalObjets isShowing hide={toggle} data={data} />,
       product: <ModalProduct isShowing hide={toggle} data={data} />,
       client: <ModalClient isShowing hide={toggle} data={data} />,
