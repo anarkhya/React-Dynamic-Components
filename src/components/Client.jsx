@@ -16,7 +16,7 @@ const Client = ({ data }) => {
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
-        <ButtonAdmin type="client" />
+        <ButtonAdmin type="client" data={data} />
       </div>
       <h1 className="uppercase text-center text-h1 font-light">{data.titre}</h1>
       <p className="md:w-1/2">{data.description}</p>

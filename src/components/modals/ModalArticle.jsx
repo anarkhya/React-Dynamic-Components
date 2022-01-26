@@ -7,30 +7,27 @@ const ModalArticle = ({ isShowing, hide, data }) => {
   const [titre, setTitre] = useState(data.titre);
   const [description, setDescription] = useState(data.description);
   const [hasBouton, setHasBouton] = useState(data.bouton);
-  // const [titreBouton, setTitreBouton] = useState(.data.boutonContenu);
   const [urlBouton, setUrlBouton] = useState(data.url);
-
-  /* affiche user input dans nouveau bloc */
   const [details, setDetails] = useState([]);
 
+  /* affiche user input dans nouveau bloc */
   const onChangeDetails = (value, detail) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(detail);
     newDetails[index] = value;
     setDetails(newDetails);
   };
-
+  /* suppression ciblée avec le bon index - splice */
+  const deleteDetail = (obj) => {
+    const newDetails = [...details];
+    const index = newDetails.indexOf(obj);
+    newDetails.splice(index, 1);
+    setDetails(newDetails);
+  };
   /* ajoute nouveau bloc - push */
   const addDetails = () => {
     const newDetails = [...details];
-    newDetails.push("");
-    setDetails(newDetails);
-  };
-
-  /* retire dernier bloc ajouté - pop */
-  const deleteDetails = () => {
-    const newDetails = [...details];
-    newDetails.pop("");
+    newDetails.push({});
     setDetails(newDetails);
   };
 
@@ -81,22 +78,6 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                    type="button"
-                    //  delete => string vide
-                    onClick={() => setTitre("")}
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
                 <label htmlFor="description">
                   Description
                   <textarea
@@ -109,22 +90,6 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                    type="button"
-                    //  delete => string vide
-                    onClick={() => setDescription("")}
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
                 <div className="flex flex-col">
                   <label htmlFor="b">
                     Présence de bouton ?
@@ -138,17 +103,6 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     />
                   </label>
                 </div>
-                {/* <label htmlFor="titreBouton">
-                  Texte du bouton
-                  <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-2 px-2 w-full"
-                    id="titreBouton"
-                    type="text"
-                    value={titreBouton}
-                    placeholder="texte"
-                    onChange={(event) => setTitreBouton(event.target.value)}
-                  />
-                </label> */}
                 <label htmlFor="btn-url">
                   Lien du bouton
                   <input
@@ -160,20 +114,6 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     onChange={(event) => setUrlBouton(event.target.value)}
                   />
                 </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
                 <div className="mx-auto my-8 border-b-2 border-vert w-1/2" />
 
                 {/* ////////////////////////////      map l'ajout des éléments d'un nouveau bloc */}
@@ -196,17 +136,12 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                         </label>
 
                         <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                          {/* <button
+                          <button
                             className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                             type="button"
+                            onClick={() => deleteDetail()}
                           >
                             Supprimer
-                          </button> */}
-                          <button
-                            className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                            type="button"
-                          >
-                            Valider
                           </button>
                         </section>
                       </div>
@@ -221,16 +156,7 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
                     onClick={() => addDetails()}
                   >
-                    Ajouter un paragraphe
-                  </button>
-
-                  {/* //////////////////////////        retire le dernier bloc ajouté */}
-                  <button
-                    type="submit"
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 my-2"
-                    onClick={() => deleteDetails()}
-                  >
-                    Retirer dernier paragraphe
+                    Ajouter un autre bloc
                   </button>
                 </section>
               </section>
