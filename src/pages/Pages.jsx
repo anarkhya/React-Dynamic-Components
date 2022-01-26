@@ -17,6 +17,7 @@ import Concept from "../components/Concept";
 import Map from "../components/Map";
 import ButtonAdmin from "../components/ButtonAdmin";
 import Client from "../components/Client";
+import ButtonNewsComponent from "../components/ButtonNewsComponent";
 
 // data
 import home from "../data/Home";
@@ -64,7 +65,12 @@ const Pages = () => {
     );
     return res;
   };
-  return <div>{createComponent()}</div>;
+  return (
+    <div>
+      {createComponent()}
+      <ButtonNewsComponent />
+    </div>
+  );
 };
 
 export default Pages;

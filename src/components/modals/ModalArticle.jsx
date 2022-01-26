@@ -1,15 +1,14 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Home from "../../data/Home";
 
-const ModalArticle = ({ isShowing, hide }) => {
+const ModalArticle = ({ isShowing, hide, data }) => {
   /* states affichent data actuelle || user input */
-  const [titre, setTitre] = useState(Home[0].data.titre);
-  const [description, setDescription] = useState(Home[0].data.description);
-  const [hasBouton, setHasBouton] = useState(Home[0].data.bouton);
-  // const [titreBouton, setTitreBouton] = useState(Home[0].data.boutonContenu);
-  const [urlBouton, setUrlBouton] = useState(Home[0].data.url);
+  const [titre, setTitre] = useState(data.titre);
+  const [description, setDescription] = useState(data.description);
+  const [hasBouton, setHasBouton] = useState(data.bouton);
+  // const [titreBouton, setTitreBouton] = useState(.data.boutonContenu);
+  const [urlBouton, setUrlBouton] = useState(data.url);
 
   /* affiche user input dans nouveau bloc */
   const [details, setDetails] = useState([]);
