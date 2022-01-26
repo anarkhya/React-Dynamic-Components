@@ -16,7 +16,7 @@ const Objets = ({ data }) => {
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
-        <ButtonAdmin type="objets" />
+        <ButtonAdmin type="objets" data={data} />
       </div>
       {data.categorie.map((cat) => (
         <section className="md:w-1/2">
