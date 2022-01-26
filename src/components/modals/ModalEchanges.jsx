@@ -1,40 +1,44 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Echanges from "../../data/Echanges";
 import "../../effects.css";
 
-const ModalEchanges = ({ isShowing, hide }) => {
+const ModalEchanges = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
-  const [description, setDescription] = useState(Echanges[3].data.description);
-  const [titre, setTitre] = useState(Echanges[3].data.titre);
+  const [titre, setTitre] = useState(data.titre);
+  const [description, setDescription] = useState(data.description);
+  const [gommettes, setGommettes] = useState(data.gommettes);
+  const [infos, setInfos] = useState(data.infos);
+  const [more, setMore] = useState(data.more);
 
-  const [data, setData] = useState(Echanges[3].data.gommettes);
-  console.log(setData);
+  const updateGommettes = (value, type, obj) => {
+    const newGommettes = [...gommettes];
+    const index = newGommettes.indexOf(obj);
+    newGommettes[index][type] = value;
+    setGommettes(newGommettes);
+  };
+  console.log(updateGommettes);
 
-  // const updateData = (value, type, obj) => {
-  //   const newData = [...data];
-  //   const index = newData.indexOf(obj);
-  //   newData[index][type] = value;
-  //   setData(newData);
-  // };
-
-  const [infos, setInfos] = useState(Echanges[3].data.infos);
-  const [more, setMore] = useState(Echanges[3].data.more);
-
-  /** copie du tableau details */
-  // const onChangeDetails = (value, detail) => {
-  //   const newDetails = [...details];
-  //   const index = newDetails.indexOf(detail);
-  //   newDetails[index] = value;
-  //   setDetails(newDetails);
-  // };
-
-  // const addDetails = () => {
-  //   const newDetails = [...details];
-  //   newDetails.push("");
-  //   setDetails(newDetails);
-  // };
+  const onUpdateComponent = () => {
+    console.log({
+      titre,
+      description,
+      gommettes,
+      infos,
+      more,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      titre,
+      description,
+      gommettes,
+      infos,
+      more,
+    });
+    hide();
+  };
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -95,22 +99,8 @@ const ModalEchanges = ({ isShowing, hide }) => {
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
 
-                {data.map((item) => {
+                {gommettes.map((item) => {
                   return (
                     <div>
                       <p className="">
@@ -129,20 +119,6 @@ const ModalEchanges = ({ isShowing, hide }) => {
                           type="file"
                         />
                       </label>
-                      <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                        <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
-                          type="button"
-                        >
-                          Supprimer
-                        </button>
-                        <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                          type="button"
-                        >
-                          Valider
-                        </button>
-                      </section>
                     </div>
                   );
                 })}
@@ -170,46 +146,24 @@ const ModalEchanges = ({ isShowing, hide }) => {
                     onChange={(event) => setMore(event.target.value)}
                   />
                 </label>
+                {/* ////////////////////////////// boutons de validation et suppression */}
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
+                    //  delete => string vide
+                    onClick={() => onDeleteComponent()}
                   >
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
                     type="button"
+                    onClick={() => onUpdateComponent()}
                   >
                     Valider
                   </button>
                 </section>
-                {/* 
-                <div className="flex items-center w-full">
-                  <button
-                    type="submit"
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-3 active:translate-y-1 active:shadow-vert/25 shadow-lg shadow-vert/50 rounded-full bg-vert text-white px-6 py-2   mx-auto my-2"
-                    onClick={() => addDetails()}
-                  >
-                    Ajouter une autre description ?
-                  </button>
-                </div> */}
-                {/* {details.map((detail) => {
-                  return (
-                    <label htmlFor="description">
-                      Description supplémentaire
-                      <textarea
-                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                        type="text"
-                        placeholder="contenu du paragraphe"
-                        value={detail?.detail}
-                        onChange={(event) =>
-                          onChangeDetails(event.target.value, detail)
-                        }
-                      />
-                    </label>
-                  );
-                })} */}
               </section>
             </div>
           </div>

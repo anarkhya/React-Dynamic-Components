@@ -6,29 +6,32 @@ const ModalArticle = ({ isShowing, hide, data }) => {
   /* states affichent data actuelle || user input */
   const [titre, setTitre] = useState(data.titre);
   const [description, setDescription] = useState(data.description);
+  const [description2, setDescription2] = useState(data.description2);
+  const [description3, setDescription3] = useState(data.description3);
   const [hasBouton, setHasBouton] = useState(data.bouton);
   const [urlBouton, setUrlBouton] = useState(data.url);
-  const [details, setDetails] = useState([]);
 
-  /* affiche user input dans nouveau bloc */
-  const onChangeDetails = (value, detail) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
-    setDetails(newDetails);
+  const onUpdateComponent = () => {
+    console.log({
+      titre,
+      description,
+      description2,
+      description3,
+      hasBouton,
+      urlBouton,
+    });
+    hide();
   };
-  /* suppression ciblée avec le bon index - splice */
-  const deleteDetail = (obj) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(obj);
-    newDetails.splice(index, 1);
-    setDetails(newDetails);
-  };
-  /* ajoute nouveau bloc - push */
-  const addDetails = () => {
-    const newDetails = [...details];
-    newDetails.push({});
-    setDetails(newDetails);
+  const onDeleteComponent = () => {
+    console.log({
+      titre,
+      description,
+      description2,
+      description3,
+      hasBouton,
+      urlBouton,
+    });
+    hide();
   };
 
   const getModal = () => {
@@ -79,7 +82,7 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                   />
                 </label>
                 <label htmlFor="description">
-                  Description
+                  Paragraphe
                   <textarea
                     className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     id="description"
@@ -88,6 +91,30 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     value={description}
                     placeholder="contenu du paragraphe"
                     onChange={(event) => setDescription(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="description">
+                  2nd paragraphe
+                  <textarea
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="description"
+                    type="text"
+                    rows="4"
+                    value={description2}
+                    placeholder="contenu du deuxième paragraphe"
+                    onChange={(event) => setDescription2(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="description">
+                  3eme paragraphe
+                  <textarea
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="description"
+                    type="text"
+                    rows="4"
+                    value={description3}
+                    placeholder="contenu du troisième paragraphe"
+                    onChange={(event) => setDescription3(event.target.value)}
                   />
                 </label>
                 <div className="flex flex-col">
@@ -110,55 +137,28 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     id="btn-url"
                     type="text"
                     value={urlBouton}
-                    placeholder="texte"
+                    placeholder="/nom du menu, exemple: /concept pour lien vers page concept"
                     onChange={(event) => setUrlBouton(event.target.value)}
                   />
                 </label>
-                <div className="mx-auto my-8 border-b-2 border-vert w-1/2" />
-
-                {/* ////////////////////////////      map l'ajout des éléments d'un nouveau bloc */}
-                <div className="">
-                  {details.map((detail) => {
-                    return (
-                      <div className="p-2 my-2 border-2 border-vert rounded">
-                        <label htmlFor="description">
-                          paragraphe supplémentaire
-                          <textarea
-                            className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                            type="text"
-                            rows="5"
-                            placeholder="paragraphe"
-                            value={detail?.description}
-                            onChange={(event) =>
-                              onChangeDetails(event.target.value, detail)
-                            }
-                          />
-                        </label>
-
-                        <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                          <button
-                            className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                            type="button"
-                            onClick={() => deleteDetail()}
-                          >
-                            Supprimer
-                          </button>
-                        </section>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* //////////////////////////        déclencheur du map des éléments d'un nouveau bloc */}
-                <section className="flex justify-center mt-8 my-2 gap-4 px-2">
-                  <button
-                    type="submit"
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
-                    onClick={() => addDetails()}
-                  >
-                    Ajouter un autre bloc
-                  </button>
-                </section>
+              </section>
+              {/* ////////////////////////////// boutons de validation et suppression */}
+              <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  type="button"
+                  //  delete => string vide
+                  onClick={() => onDeleteComponent()}
+                >
+                  Supprimer
+                </button>
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  type="button"
+                  onClick={() => onUpdateComponent()}
+                >
+                  Valider
+                </button>
               </section>
             </div>
           </div>

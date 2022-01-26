@@ -1,12 +1,26 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Concept from "../../data/Concept";
 
-const ModalClient = ({ isShowing, hide }) => {
+const ModalClient = ({ isShowing, hide, data }) => {
   /** state qui est en lien avec la data de concept pour l'afficher */
-  const [titre, setTitre] = useState(Concept[2].data.titre);
-  const [description, setDescription] = useState(Concept[2].data.description);
+  const [titre, setTitre] = useState(data.titre);
+  const [description, setDescription] = useState(data.description);
+
+  const onUpdateComponent = () => {
+    console.log({
+      titre,
+      description,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      titre,
+      description,
+    });
+    hide();
+  };
 
   const getModal = () => {
     /** isShowing affiche le modal */
@@ -67,16 +81,20 @@ const ModalClient = ({ isShowing, hide }) => {
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
+                {/* ////////////////////////////// boutons de validation et suppression */}
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
                     className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
+                    //  delete => string vide
+                    onClick={() => onDeleteComponent()}
                   >
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
                     type="button"
+                    onClick={() => onUpdateComponent()}
                   >
                     Valider
                   </button>
