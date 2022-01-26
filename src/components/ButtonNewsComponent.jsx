@@ -37,7 +37,13 @@ const ButtonNewsComponent = () => {
       contact: <ModalContact isShowing hide={toggle} data={{}} />,
       echanges: <ModalEchanges isShowing hide={toggle} data={{}} />,
       footer: <ModalFooter isShowing hide={toggle} data={{}} />,
-      header: <ModalHeader isShowing hide={toggle} data={{}} />,
+      header: (
+        <ModalHeader
+          isShowing
+          hide={toggle}
+          HeaderData={{ menus: [{ to: "", name: "" }] }}
+        />
+      ),
       objets: (
         <ModalObjets
           isShowing
@@ -65,6 +71,7 @@ const ButtonNewsComponent = () => {
         <option value="abonnement">Abonnement</option>
         <option value="product">Produits échangeables</option>
         <option value="objets">Objets</option>
+        <option value="header">Tếte de page</option>
       </select>
       {modal}
     </div>
