@@ -51,6 +51,7 @@ const ButtonNewsComponent = () => {
       <select onChange={(e) => getModal(e.target.value)}>
         <option value="article">article</option>
         <option value="abonnement">abonnement</option>
+        <option value="product">product</option>
       </select>
       {modal}
     </div>

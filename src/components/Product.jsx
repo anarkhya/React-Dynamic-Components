@@ -17,7 +17,7 @@ const Product = ({ data }) => {
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
-        <ButtonAdmin type="product" />
+        <ButtonAdmin type="product" data={data} />
       </div>
       <h1 className="uppercase text-center font-light text-h1">{data.titre}</h1>
       <section className="md:w-1/2 flex flex-col gap-3 mt-10">

@@ -1,18 +1,44 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Echanges from "../../data/Echanges";
 
-const ModalProduct = ({ isShowing, hide }) => {
+const ModalProduct = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
-  const [titre, setTitre] = useState(Echanges[1].data.titre);
-  const [data, setData] = useState(Echanges[1].data.presentation);
+  const [titre, setTitre] = useState(data.titre);
+  const [presentation, setPresentation] = useState(data.presentation);
 
-  const updateData = (value, type, obj) => {
-    const newData = [...data];
-    const index = newData.indexOf(obj);
-    newData[index][type] = value;
-    setData(newData);
+  const updateDetail = (value, type, obj) => {
+    const newPresentation = [...presentation];
+    const index = newPresentation.indexOf(obj);
+    newPresentation[index][type] = value;
+    setPresentation(newPresentation);
+  };
+  const deleteDetail = (obj) => {
+    const newPresentation = [...presentation];
+    const index = newPresentation.indexOf(obj);
+    newPresentation.splice(index, 1);
+    setPresentation(newPresentation);
+  };
+  /* ajoute nouveau bloc - push */
+  const addPresentation = () => {
+    const newPresentation = [...presentation];
+    newPresentation.push({ infos: "", src: "" });
+    setPresentation(newPresentation);
+  };
+
+  const onUpdateComponent = () => {
+    console.log({
+      // titre,
+      presentation,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      // titre,
+      presentation,
+    });
+    hide();
   };
 
   const getModal = () => {
@@ -48,7 +74,7 @@ const ModalProduct = ({ isShowing, hide }) => {
               </div>
               {/* contenu global du modal qui se trouve dans la page échanges */}
               <h1 className="text-center text-h2 p-2">
-                Product - Modification du contenu
+                Produits échangeables - Modification du contenu
               </h1>
               <label htmlFor="titre" className="">
                 Titre
@@ -61,22 +87,7 @@ const ModalProduct = ({ isShowing, hide }) => {
                   onChange={(event) => setTitre(event.target.value)}
                 />
               </label>
-              <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                  type="button"
-                >
-                  Supprimer
-                </button>
-                <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                  type="button"
-                >
-                  Valider
-                </button>
-              </section>
-
-              {data.map((item) => {
+              {presentation.map((item) => {
                 return (
                   <div>
                     <label htmlFor="infos" className="">
@@ -89,7 +100,7 @@ const ModalProduct = ({ isShowing, hide }) => {
                         value={item.infos}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "infos", item)
+                          updateDetail(event.target.value, "infos", item)
                         }
                       />
                     </label>
@@ -111,21 +122,42 @@ const ModalProduct = ({ isShowing, hide }) => {
                     </label>
                     <section className="flex flex-row-reverse my-2 gap-4 px-2">
                       <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
+                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                         type="button"
+                        onClick={() => deleteDetail(item)}
                       >
                         Supprimer
-                      </button>
-                      <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                        type="button"
-                      >
-                        Valider
                       </button>
                     </section>
                   </div>
                 );
               })}
+              <section className="flex justify-center mt-8 my-2 gap-4 px-2 mb-8">
+                <button
+                  type="submit"
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
+                  onClick={() => addPresentation()}
+                >
+                  Ajouter un autre bloc
+                </button>
+              </section>
+              <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  type="button"
+                  // delete => string vide
+                  onClick={() => onDeleteComponent()}
+                >
+                  Supprimer
+                </button>
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  type="button"
+                  onClick={() => onUpdateComponent()}
+                >
+                  Valider
+                </button>
+              </section>
             </div>
           </div>
         </>,
@@ -136,4 +168,5 @@ const ModalProduct = ({ isShowing, hide }) => {
   };
   return getModal();
 };
+
 export default ModalProduct;
