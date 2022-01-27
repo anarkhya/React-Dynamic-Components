@@ -112,24 +112,6 @@ const echanges = [
           alt: "gommette colorée",
         },
       ],
-      principe: [
-        // {
-        //   id: 1,
-        //   color: "bleu = bleu",
-        // },
-        // {
-        //   id: 2,
-        //   color: "rose = rose",
-        // },
-        // {
-        //   id: 3,
-        //   color: "jaune = jaune",
-        // },
-        // {
-        //   id: 4,
-        //   color: "vert = vert",
-        // },
-      ],
       infos: "Il est également possible de combiner des couleurs ",
       more: "(de nombreuses combinaisons possibles à retrouver en boutique)",
     },

@@ -12,7 +12,6 @@ import "../effects.css";
  * bouton Admin joint
  */
 const Echanges = ({ data }) => {
-  console.log(data.details);
   return (
     // composant categorie
     <div
@@ -28,7 +27,7 @@ const Echanges = ({ data }) => {
         <section className="flex justify-center gap-4 mt-4">
           {data.details.map((gommette) => (
             <section>
-              <div>
+              <div key={gommette.id}>
                 <img
                   className="blob w-16 h-16"
                   src={gommette.src}
@@ -39,11 +38,11 @@ const Echanges = ({ data }) => {
           ))}
         </section>
 
-        {data.principe.map((princ) => (
+        {/* {data.principe.map((princ) => (
           <section className="p-1 flex flex-row justify-around">
             {princ.color}
           </section>
-        ))}
+        ))} */}
         <div className="p-4">
           <p className="text-center">{data.infos}</p>
           <p className="text-xs text-center mt-7">{data.more}</p>
