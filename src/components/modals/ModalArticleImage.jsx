@@ -6,6 +6,7 @@ import Concept from "../../data/Concept";
 const ModalArticleImage = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState(data.titre);
+  const [alt, setAlt] = useState(data.alt);
   const [description, setDescription] = useState(data.description);
 
   const onUpdateComponent = () => {
@@ -83,6 +84,17 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                     id="file"
                     className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="file"
+                  />
+                </label>
+                <label htmlFor="description">
+                  Balise alt pour accessibilité
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="description"
+                    type="text"
+                    value={alt}
+                    placeholder="décrire succintement l'image, ex: paysage avec plage et palmiers"
+                    onChange={(event) => setAlt(event.target.value)}
                   />
                 </label>
                 <label htmlFor="description">

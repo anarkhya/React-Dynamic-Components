@@ -6,6 +6,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
   const [titre, setTitre] = useState(data.titre);
   const [presentation, setPresentation] = useState(data.presentation);
+  const [alt, setAlt] = useState(data.presentation.alt);
 
   const updateDetail = (value, type, obj) => {
     const newPresentation = [...presentation];
@@ -118,6 +119,17 @@ const ModalProduct = ({ isShowing, hide, data }) => {
                         id="file"
                         className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                         type="file"
+                      />
+                    </label>
+                    <label htmlFor="description">
+                      Balise alt pour accessibilité
+                      <input
+                        className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        id="description"
+                        type="text"
+                        value={alt}
+                        placeholder="décrire succintement l'image, ex: paysage avec plage et palmiers"
+                        onChange={(event) => setAlt(event.target.value)}
                       />
                     </label>
                     <section className="flex flex-row-reverse my-2 gap-4 px-2">

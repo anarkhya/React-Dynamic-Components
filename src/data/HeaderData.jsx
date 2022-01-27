@@ -28,7 +28,7 @@ const HeaderData = {
   ],
   logo: {
     src: "../../assets/images/logo.png",
-    alt: "Logo de l'entreprise de la trocquerie, échange d'objets sur abonnement",
+    alt: "Logo de la trocquerie",
     to: "",
   },
 };
