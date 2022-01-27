@@ -1,12 +1,14 @@
 const contact = [
   /*
-  à propos du lieu 1
-  à propos du lieu 2
-  google map interactive
+à propos du lieu 1
+à propos du lieu 2
+google map interactive
   infos de contact
   */
 
   // à propos du lieu 1
+
+  // bloc_order 1
   {
     component: "articleImage",
     data: {
@@ -20,6 +22,8 @@ const contact = [
     },
   },
   // à propos du lieu 2
+  // bloc_order 2
+
   {
     component: "objets",
     data: {
@@ -51,6 +55,7 @@ const contact = [
     },
   },
   // google map interactive
+
   {
     component: "map",
     data: {
@@ -59,6 +64,8 @@ const contact = [
     },
   },
   // infos de contact
+  // bloc_order 3
+
   {
     component: "contact",
     data: {

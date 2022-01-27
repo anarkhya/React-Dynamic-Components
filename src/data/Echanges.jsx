@@ -8,6 +8,8 @@ const echanges = [
   */
 
   // Dans la Trocquerie, il est possible de troquer:
+  // bloc_order 1
+
   {
     component: "article",
     data: {
@@ -23,6 +25,8 @@ const echanges = [
   },
 
   // exemples d'objets
+  // bloc_order 2
+
   {
     component: "product",
     data: {
@@ -46,6 +50,8 @@ const echanges = [
   },
 
   // types d'objets
+  // bloc_order 3
+
   {
     component: "objets",
     data: {
@@ -71,6 +77,8 @@ const echanges = [
     },
   },
   // présentation troc
+  // bloc_order 4
+
   {
     component: "categorie",
     data: {
@@ -127,6 +135,8 @@ const echanges = [
     },
   },
   // Comment ça marche:
+  // bloc_order 5
+
   {
     component: "article",
     data: {

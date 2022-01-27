@@ -7,7 +7,7 @@ import React from "react";
  * Data se trouvant dans data/contact
  * @return {*} Composant affichant une map qui cible le lieu de la Trocquerie
  */
-const Map = ({ data }) => {
+const Maps = ({ data }) => {
   return (
     <div
       className="bg-gris_clair"
@@ -24,4 +24,4 @@ const Map = ({ data }) => {
   );
 };
 
-export default Map;
+export default Maps;

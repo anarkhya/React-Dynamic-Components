@@ -2,18 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // components
-import Logo from "../components/Logo";
+// import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
 import Article from "../components/Article";
 import ArticleImage from "../components/ArticleImage";
 import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 import Objets from "../components/Objets";
-import Formulaire from "../components/Formulaire";
 import Contact from "../components/Contact";
 import Concept from "../components/Concept";
-import Map from "../components/Map";
-import ButtonAdmin from "../components/ButtonAdmin";
 import Client from "../components/Client";
 
 // // data
@@ -25,26 +22,25 @@ import Client from "../components/Client";
 // import contact from "../data/Contact";
 
 const Pages = () => {
-  const [page, setPage] = useState(null);
+  const [page, setPage] = useState({
+    components: [],
+  });
 
   const { pages } = useParams();
 
   const getComponent = (type, data) => {
     const component = {
-      logo: () => <Logo data={data} />,
-      abonnement: () => <Abonnement data={data} />,
-      formulaire: () => <Formulaire data={data} />,
-      article: () => <Article data={data} />,
-      articleImage: () => <ArticleImage data={data} />,
-      product: () => <Product data={data} />,
-      categorie: () => <Echanges data={data} />,
-      objets: () => <Objets data={data} />,
-      echanges: () => <Echanges data={data} />,
-      map: () => <Map data={data} />,
-      contact: () => <Contact data={data} />,
-      concept: () => <Concept data={data} />,
-      buttonAdmin: () => <ButtonAdmin data={data} />,
-      client: () => <Client data={data} />,
+      // logo: () => <Logo data={data} key={data.id_contact}/>,
+      abonnement: () => <Abonnement data={data} key={data.bloc_order} />,
+      article: () => <Article data={data} key={data.bloc_order} />,
+      articleImage: () => <ArticleImage data={data} key={data.bloc_order} />,
+      product: () => <Product data={data} key={data.bloc_order} />,
+      categorie: () => <Echanges data={data} key={data.bloc_order} />,
+      objets: () => <Objets data={data} key={data.bloc_order} />,
+      echanges: () => <Echanges data={data} key={data.bloc_order} />,
+      contact: () => <Contact data={data} key={data.bloc_order} />,
+      concept: () => <Concept data={data} key={data.bloc_order} />,
+      client: () => <Client data={data} key={data.bloc_order} />,
     };
     return component[type]();
   };
@@ -72,6 +68,7 @@ const Pages = () => {
         return res.json();
       })
       .then((data) => {
+        console.log(data);
         setPage(data);
       });
   }, [pages]);

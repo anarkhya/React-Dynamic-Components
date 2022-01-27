@@ -12,6 +12,7 @@ import "../effects.css";
  * bouton Admin joint
  */
 const Echanges = ({ data }) => {
+  console.log(data.details);
   return (
     // composant categorie
     <div
@@ -25,16 +26,15 @@ const Echanges = ({ data }) => {
         <p className="">{data.description}</p>
         <h2 className="text-center mt-4">{data.titre}</h2>
         <section className="flex justify-center gap-4 mt-4">
-          {data.gommettes.map((gommette) => (
+          {data.details.map((gommette) => (
             <section>
-              <p>
-                {gommette.color}
+              <div>
                 <img
                   className="blob w-16 h-16"
                   src={gommette.src}
                   alt={gommette.alt}
                 />
-              </p>
+              </div>
             </section>
           ))}
         </section>
