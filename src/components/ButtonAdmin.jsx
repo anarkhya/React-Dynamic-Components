@@ -20,7 +20,7 @@ import HeaderData from "../data/HeaderData";
  * @return {*} un bouton d'administration sur chaque modal appartenant à différents component
  */
 const ButtonAdmin = ({ type, data }) => {
-  const [modal, setModal] = useState("");
+  const [modal, setModal] = useState(false);
 
   const toggle = () => {
     setModal("");

@@ -14,14 +14,13 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
     newDetails[index][type] = value;
     setDetails(newDetails);
   };
-  // /* suppression ciblée avec le bon index */
+  /* suppression ciblée avec le bon index - splice */
   const deleteDetail = (obj) => {
     const newDetails = [...details];
     const index = newDetails.indexOf(obj);
     newDetails.splice(index, 1);
     setDetails(newDetails);
   };
-
   /* ajoute nouveau bloc - push */
   const addDetails = () => {
     const newDetails = [...details];
@@ -148,13 +147,15 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
                   </div>
                 );
               })}
-              <button
-                type="submit"
-                className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
-                onClick={() => addDetails()}
-              >
-                Ajouter un autre bloc
-              </button>
+              <section className="flex justify-center mt-8 my-2 gap-4 px-2">
+                <button
+                  type="submit"
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
+                  onClick={() => addDetails()}
+                >
+                  Ajouter un autre bloc
+                </button>
+              </section>
               <label htmlFor="titre" className="">
                 ligne
                 <input
@@ -166,6 +167,7 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
                   onChange={(event) => setDescription(event.target.value)}
                 />
               </label>
+              {/* ////////////////////////////// boutons de validation et suppression */}
               <section className="flex flex-row-reverse my-2 gap-4 px-2">
                 <button
                   className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"

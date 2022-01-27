@@ -16,7 +16,7 @@ const Contact = ({ data }) => {
         style={{ backgroundImage: "url(/assets/images/grid.png)" }}
       >
         <div className="text-right w-full">
-          <ButtonAdmin type="contact" />
+          <ButtonAdmin type="contact" data={data} />
         </div>
         <h1 className="uppercase text-center text-h1 font-light">
           {data.titre}

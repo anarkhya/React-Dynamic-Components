@@ -1,20 +1,41 @@
 /* eslint-disable indent */
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Contact from "../../data/Contact";
 
-const ModalContact = ({ isShowing, hide }) => {
+const ModalContact = ({ isShowing, hide, data }) => {
   /** state qui est en lien avec la data de contact pour l'afficher */
-  const [telephone, setTelephone] = useState(Contact[3].data.telephone);
-  const [email, setEmail] = useState(Contact[3].data.mail);
+  const [titre, setTitre] = useState(data.titre);
+  const [nom, setNom] = useState(data.nom);
+  const [telephone, setTelephone] = useState(data.telephone);
+  const [email, setEmail] = useState(data.mail);
+  const [reseaux, setReseaux] = useState(data.reseaux);
 
-  const [data, setData] = useState(Contact[3].data.reseaux);
+  /* affiche user input */
+  const updateReseaux = (value, type, obj) => {
+    const newReseaux = [...reseaux];
+    const index = newReseaux.indexOf(obj);
+    newReseaux[index][type] = value;
+    setReseaux(newReseaux);
+  };
 
-  const updateData = (value, type, obj) => {
-    const newData = [...data];
-    const index = newData.indexOf(obj);
-    newData[index][type] = value;
-    setData(newData);
+  const onUpdateComponent = () => {
+    console.log({
+      titre,
+      nom,
+      telephone,
+      email,
+      reseaux,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      titre,
+      nom,
+      telephone,
+      email,
+    });
+    hide();
   };
 
   const getModal = () => {
@@ -52,6 +73,28 @@ const ModalContact = ({ isShowing, hide }) => {
               </h1>
               {/* // style section interactions utilisateur */}
               <section className="p-2">
+                <label htmlFor="titre">
+                  Titre
+                  <input
+                    id="titre"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full font-light text-h1"
+                    type="text"
+                    value={titre}
+                    placeholder="titre du bloc"
+                    onChange={(event) => setTitre(event.target.value)}
+                  />
+                </label>
+                <label htmlFor="titre">
+                  Nom
+                  <input
+                    id="titre"
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    type="text"
+                    value={nom}
+                    placeholder="titre du bloc"
+                    onChange={(event) => setNom(event.target.value)}
+                  />
+                </label>
                 <label htmlFor="telephone" className="">
                   Téléphone
                   <input
@@ -63,20 +106,6 @@ const ModalContact = ({ isShowing, hide }) => {
                     onChange={(event) => setTelephone(event.target.value)}
                   />
                 </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
                 <label htmlFor="email" className="">
                   E-mail
                   <input
@@ -88,22 +117,8 @@ const ModalContact = ({ isShowing, hide }) => {
                     onChange={(event) => setEmail(event.target.value)}
                   />
                 </label>
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Supprimer
-                  </button>
-                  <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                    type="button"
-                  >
-                    Valider
-                  </button>
-                </section>
 
-                {data.map((item) => {
+                {reseaux.map((item) => {
                   return (
                     <div>
                       <label htmlFor="1" className="">
@@ -115,27 +130,31 @@ const ModalContact = ({ isShowing, hide }) => {
                           value={item.url}
                           placeholder=""
                           onChange={(event) =>
-                            updateData(event.target.value, "url", item)
+                            updateReseaux(event.target.value, "url", item)
                           }
                         />
                       </label>
-                      <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                        <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                          type="button"
-                        >
-                          Supprimer
-                        </button>
-                        <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                          type="button"
-                        >
-                          Valider
-                        </button>
-                      </section>
                     </div>
                   );
                 })}
+                {/* ////////////////////////////// boutons de validation et suppression */}
+                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    type="button"
+                    //  delete => string vide
+                    onClick={() => onDeleteComponent()}
+                  >
+                    Supprimer
+                  </button>
+                  <button
+                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    type="button"
+                    onClick={() => onUpdateComponent()}
+                  >
+                    Valider
+                  </button>
+                </section>
               </section>
             </div>
           </div>
