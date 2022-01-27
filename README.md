@@ -1,4 +1,34 @@
 <div id="top"></div>
+
+<div align="center">
+    <a href="https://github.com/LaTrocquerie/">
+      <img src="https://media-exp1.licdn.com/dms/image/C560BAQF8nIJur7AkEQ/company-logo_200_200/0/1640808785801?e=1651104000&v=beta&t=cSlnP-y34a6_pqty16jNo0y9bvDo7klw0Py9q0uK9R8" alt="Logo">
+    </a>
+</div>
+
+
+## La Trocquerie
+
+Student Project (Front/Back) featuring a custom Content Managing System built with ReactJS through usage of dynamic components, made for Agathe Violain and her physical shop.
+
+
+## Tech Stack
+
+**Client:** React, TailwindCSS<br>
+**Server:** Node, Express
+
+
+## Authors
+
+- [@François C.](https://github.com/Francois-Chatelier)
+- [@Maxime B.](https://github.com/maxime-baillon)
+- [@Greg N.](https://github.com/anarkhya)
+- [@Victor P.](https://github.com/VictorPagnier)
+
+<p align="right"><a href="#top">⏫</a></p>
+
+
+</div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -19,31 +49,12 @@
 -->
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://media-exp1.licdn.com/dms/image/C560BAQF8nIJur7AkEQ/company-logo_200_200/0/1640808785801?e=1651104000&v=beta&t=cSlnP-y34a6_pqty16jNo0y9bvDo7klw0Py9q0uK9R8" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">La Trocquerie</h3>
-
-  <p align="center">
-    Une boutique de seconde main sur L'ïle de Nantes qui s'auto renouvelle par un système d'échange.
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</div>
 
 
 
-<!-- TABLE OF CONTENTS -->
+
+
+<!-- TABLE OF CONTENTS 
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -69,7 +80,6 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## À propos du projet
 
 [![Product Name Screen Shot][product-screenshot]](Rajouter l'URL de la Trocquerie ici)
@@ -94,7 +104,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 
 
-<!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -130,7 +140,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 
 
-<!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -141,7 +151,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-<!-- ROADMAP -->
+
 ## Roadmap
 
 - [x] Add Changelog
@@ -158,7 +168,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 
 
-<!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -176,7 +186,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -185,7 +195,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- CONTACT -->
+
 ## Contact
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
@@ -196,7 +206,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 
 
-<!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
