@@ -37,12 +37,6 @@ const Echanges = ({ data }) => {
             </section>
           ))}
         </section>
-
-        {/* {data.principe.map((princ) => (
-          <section className="p-1 flex flex-row justify-around">
-            {princ.color}
-          </section>
-        ))} */}
         <div className="p-4">
           <p className="text-center">{data.infos}</p>
           <p className="text-xs text-center mt-7">{data.more}</p>
