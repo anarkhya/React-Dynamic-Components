@@ -8,6 +8,7 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
   const [titre, setTitre] = useState(data.titre);
   const [description, setDescription] = useState(data.description);
   const [gommettes, setGommettes] = useState(data.gommettes);
+  const [alt, setAlt] = useState(data.gommettes.alt);
   const [infos, setInfos] = useState(data.infos);
   const [more, setMore] = useState(data.more);
 
@@ -117,6 +118,17 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
                           id="file"
                           className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                           type="file"
+                        />
+                      </label>
+                      <label htmlFor="description">
+                        Balise alt pour accessibilité
+                        <input
+                          className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                          id="description"
+                          type="text"
+                          value={alt}
+                          placeholder="décrire succintement l'image, ex: paysage avec plage et palmiers"
+                          onChange={(event) => setAlt(event.target.value)}
                         />
                       </label>
                     </div>

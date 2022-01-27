@@ -5,6 +5,7 @@ import { useState } from "react/cjs/react.development";
 const ModalHeader = ({ isShowing, hide, HeaderData }) => {
   /** state qui est en lien avec la data de header pour l'afficher */
   const [menus, setHeader] = useState(HeaderData.menus);
+  const [alt, setAlt] = useState(HeaderData.logo.alt);
   // const [logo, setLogo] = useState(HeaderData.logo);
 
   const updateHeader = (value, type, obj) => {
@@ -83,6 +84,17 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
                     id="file"
                     className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="file"
+                  />
+                </label>
+                <label htmlFor="description">
+                  Balise alt pour accessibilité
+                  <input
+                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    id="description"
+                    type="text"
+                    value={alt}
+                    placeholder="décrire succintement l'image, ex: paysage avec plage et palmiers"
+                    onChange={(event) => setAlt(event.target.value)}
                   />
                 </label>
               </div>
