@@ -76,7 +76,7 @@
 
 Le projet de La Trocquerie a été créé par Agathe Violain, l'idée étant de pouvoir échanger des objets sous forme de troc, et ce grâce à un abonnement à la journée, au mois ou à l'année.
 
-Use the `BLANK_README.md` to get started.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,14 +86,9 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [TailwindCss](https://tailwindcss.com/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
