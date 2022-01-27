@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Concept from "../../data/Concept";
+import ImageUpload from "../ImageUpload";
 
 const ModalArticleImage = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
@@ -77,14 +78,8 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                     alt={Concept[4].data.alt}
                   />
                 </p>
-                <label htmlFor="nom" className="">
-                  Nouvelle image
-                  <input
-                    id="file"
-                    className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
-                    type="file"
-                  />
-                </label>
+                Nouvelle image
+                <ImageUpload />
                 <label htmlFor="description">
                   Description
                   <textarea
