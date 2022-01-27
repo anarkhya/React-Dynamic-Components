@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const ModalConcept = ({ isShowing, hide, data }) => {
+  const [cls, setCls] = useState(data.cls);
   const [description, setDescription] = useState(data.description);
 
   const onUpdateComponent = () => {
@@ -52,6 +53,16 @@ const ModalConcept = ({ isShowing, hide, data }) => {
               </h1>
               {/* // style section interactions utilisateur */}
               <section className="p-2">
+                <label className="flex flex-col" htmlFor="b">
+                  Arrière-plan vert ?
+                  <input
+                    className="w-5 h-5 my-2"
+                    id="b"
+                    type="checkbox"
+                    value={cls}
+                    onChange={(event) => setCls(event.target.value)}
+                  />
+                </label>
                 <label htmlFor="description">
                   Description
                   <textarea

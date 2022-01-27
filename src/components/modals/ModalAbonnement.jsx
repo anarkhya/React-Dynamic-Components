@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 const ModalAbonnement = ({ isShowing, hide, data }) => {
   /* states affichent data */
+  const [cls, setCls] = useState(data.cls);
   const [titre, setTitre] = useState(data.titre);
   const [details, setDetails] = useState(data.details);
   const [description, setDescription] = useState(data.description);
@@ -81,6 +82,16 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
               </h1>
 
               {/* ////////////////////////////////      permet modifications éléments actuels par admin */}
+              <label className="flex flex-col" htmlFor="b">
+                Arrière-plan vert ?
+                <input
+                  className="w-5 h-5 my-2"
+                  id="b"
+                  type="checkbox"
+                  value={cls}
+                  onChange={(event) => setCls(event.target.value)}
+                />
+              </label>
               <label htmlFor="titre" className="">
                 Titre
                 <input
