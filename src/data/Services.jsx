@@ -1,5 +1,6 @@
 const services = [
   // location
+  // bloc_order 1
   {
     component: "article",
     data: {
@@ -16,6 +17,8 @@ const services = [
     },
   },
   // conciergerie
+  // bloc_order 2
+
   {
     component: "article",
     data: {
@@ -32,6 +35,8 @@ const services = [
     },
   },
   // panier bio
+  // bloc_order 3
+
   {
     component: "article",
     data: {
