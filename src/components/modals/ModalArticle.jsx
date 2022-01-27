@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 
 const ModalArticle = ({ isShowing, hide, data }) => {
   /* states affichent data actuelle || user input */
+  const [cls, setCls] = useState(data.cls);
   const [titre, setTitre] = useState(data.titre);
   const [description, setDescription] = useState(data.description);
   const [description2, setDescription2] = useState(data.description2);
@@ -70,6 +71,16 @@ const ModalArticle = ({ isShowing, hide, data }) => {
               </h1>
               {/* // style section interactions utilisateur */}
               <section className="p-2">
+                <label className="flex flex-col" htmlFor="b">
+                  Arrière-plan vert ?
+                  <input
+                    className="w-5 h-5 my-2"
+                    id="b"
+                    type="checkbox"
+                    value={cls}
+                    onChange={(event) => setCls(event.target.value)}
+                  />
+                </label>
                 <label htmlFor="titre" className="">
                   Titre
                   <input

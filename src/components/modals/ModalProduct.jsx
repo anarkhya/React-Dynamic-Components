@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 
 const ModalProduct = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
+  const [cls, setCls] = useState(data.cls);
   const [titre, setTitre] = useState(data.titre);
   const [presentation, setPresentation] = useState(data.presentation);
   const [alt, setAlt] = useState(data.presentation.alt);
@@ -77,6 +78,16 @@ const ModalProduct = ({ isShowing, hide, data }) => {
               <h1 className="text-center text-h2 p-2">
                 Produits échangeables - Modification du contenu
               </h1>
+              <label className="flex flex-col" htmlFor="b">
+                Arrière-plan vert ?
+                <input
+                  className="w-5 h-5 my-2"
+                  id="b"
+                  type="checkbox"
+                  value={cls}
+                  onChange={(event) => setCls(event.target.value)}
+                />
+              </label>
               <label htmlFor="titre" className="">
                 Titre
                 <input

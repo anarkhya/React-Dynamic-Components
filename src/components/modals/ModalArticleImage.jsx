@@ -6,6 +6,7 @@ import ImageUpload from "../ImageUpload";
 
 const ModalArticleImage = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
+  const [cls, setCls] = useState(data.cls);
   const [titre, setTitre] = useState(data.titre);
   const [alt, setAlt] = useState(data.alt);
   const [description, setDescription] = useState(data.description);
@@ -60,6 +61,16 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
               </h1>
               {/* // style section interactions utilisateur */}
               <section className="p-2">
+                <label className="flex flex-col" htmlFor="b">
+                  Arrière-plan vert ?
+                  <input
+                    className="w-5 h-5 my-2"
+                    id="b"
+                    type="checkbox"
+                    value={cls}
+                    onChange={(event) => setCls(event.target.value)}
+                  />
+                </label>
                 <label htmlFor="titre" className="">
                   Titre
                   <input
