@@ -14,7 +14,7 @@ const Abonnement = ({ data }) => {
   return (
     <div>
       <div
-        className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert"
+        className={data.cls}
         style={{ backgroundImage: "url(/assets/images/grid.png)" }}
       >
         <div className="text-right w-full">

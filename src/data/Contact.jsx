@@ -11,7 +11,6 @@ const contact = [
     component: "articleImage",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-gris_clair text-vert",
-      clsPara: "md:w-1/2",
       titre: "Un lieu de vie, d'échange et de mixité",
       src: "./assets/images/placeholder.png",
       alt: "photo",
