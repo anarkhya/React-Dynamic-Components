@@ -5,9 +5,11 @@ const AbonnementData = [
   */
 
   // 1 - formules d'abonnement
+  // bloc_order 1
   {
     component: "abonnement",
     data: {
+      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       titre: "Abonnements",
       description:
         "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
@@ -41,6 +43,8 @@ const AbonnementData = [
     },
   },
   // 2 - formulaire rdv
+  // bloc_order 2
+
   {
     component: "formulaire",
     data: {

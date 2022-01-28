@@ -1,10 +1,10 @@
 const services = [
   // location
+  // bloc_order 1
   {
     component: "article",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      clsPara: "md:w-1/2",
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Location",
       description:
@@ -16,11 +16,12 @@ const services = [
     },
   },
   // conciergerie
+  // bloc_order 2
+
   {
     component: "article",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-gris_clair",
-      clsPara: "md:w-1/2",
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Conciergerie",
       description:
@@ -32,11 +33,12 @@ const services = [
     },
   },
   // panier bio
+  // bloc_order 3
+
   {
     component: "article",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      clsPara: "md:w-1/2",
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Panier bio",
       description:

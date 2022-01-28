@@ -1,17 +1,18 @@
 const contact = [
   /*
-  à propos du lieu 1
-  à propos du lieu 2
-  google map interactive
+à propos du lieu 1
+à propos du lieu 2
+google map interactive
   infos de contact
   */
 
   // à propos du lieu 1
+
+  // bloc_order 1
   {
     component: "articleImage",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-gris_clair text-vert",
-      clsPara: "md:w-1/2",
       titre: "Un lieu de vie, d'échange et de mixité",
       src: "./assets/images/placeholder.png",
       alt: "photo",
@@ -20,6 +21,8 @@ const contact = [
     },
   },
   // à propos du lieu 2
+  // bloc_order 2
+
   {
     component: "objets",
     data: {
@@ -51,10 +54,13 @@ const contact = [
     },
   },
   // google map interactive
+
   {
     component: "map",
   },
   // infos de contact
+  // bloc_order 3
+
   {
     component: "contact",
     data: {
@@ -65,6 +71,7 @@ const contact = [
       telephone: "06 79 21 42 19",
       srcMailIcon: "./assets/icones/icon_mail.svg",
       mail: "latrocquerie@gmail.com",
+      adresse: "23 rue Petite-Biesse - quartier île de Nantes",
       reseaux: [
         {
           src: "./assets/icones/instagram.svg",
@@ -84,6 +91,13 @@ const contact = [
           url: "https://www.linkedin.com/company/latrocquerie/",
           linkedin: "La Trocquerie",
         },
+      ],
+      titreHoraires: "Horaires d'ouverture",
+      horaires: [
+        { id: 1, horaire: "Mercredi 10h30 - 19h00" },
+        { id: 2, horaire: "Jeudi 10h30 - 19h00" },
+        { id: 3, horaire: "Vendredi 10h30 - 19h00" },
+        { id: 4, horaire: "Samedi 10h30 - 19h00" },
       ],
     },
   },
