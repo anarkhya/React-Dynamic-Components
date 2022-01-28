@@ -60,7 +60,7 @@ const Pages = () => {
     return res;
   };
 
-  // Connexion avec la base de donnée
+  // Connexion avec la base de donnée pour fetch sur chaque composant de page
   useEffect(() => {
     const pageRequest = pages || "accueil";
     fetch(`http://localhost:8000/api/pages/${pageRequest}`) // `http://localhost:8000/${id_pages}`
