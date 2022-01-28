@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // components
-// import Logo from "../components/Logo";
 import Abonnement from "../components/Abonnement";
 import Article from "../components/Article";
 import ArticleImage from "../components/ArticleImage";
@@ -14,14 +13,6 @@ import Concept from "../components/Concept";
 import Client from "../components/Client";
 import ButtonNewsComponent from "../components/ButtonNewsComponent";
 
-// // data
-// import home from "../data/Home";
-// import concept from "../data/Concept";
-// import abonnement from "../data/Abonnement";
-// import services from "../data/Services";
-// import echanges from "../data/Echanges";
-// import contact from "../data/Contact";
-
 const Pages = () => {
   const [page, setPage] = useState({
     components: [],
@@ -31,7 +22,6 @@ const Pages = () => {
 
   const getComponent = (type, data) => {
     const component = {
-      // logo: () => <Logo data={data} key={data.id_contact}/>,
       abonnement: () => <Abonnement data={data} key={data.bloc_order} />,
       article: () => <Article data={data} key={data.bloc_order} />,
       articleImage: () => <ArticleImage data={data} key={data.bloc_order} />,
@@ -46,15 +36,6 @@ const Pages = () => {
     return component[type]();
   };
   const createComponent = () => {
-    // const DetailsPages = {
-    //   concept,
-    //   abonnement,
-    //   services,
-    //   echanges,
-    //   contact,
-    // };
-    // ancienne connexion avec la base de données statique
-
     const res = page.components.map((comp) =>
       getComponent(comp.component, comp.data)
     );
@@ -69,7 +50,6 @@ const Pages = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setPage(data);
       });
   }, [pages]);
