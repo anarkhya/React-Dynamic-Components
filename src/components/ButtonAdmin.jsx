@@ -11,6 +11,7 @@ import ModalProduct from "./modals/ModalProduct";
 import ModalClient from "./modals/ModalClient";
 import ModalConcept from "./modals/ModalConcept";
 import ModalNewComponent from "./modals/ModalNewComponent";
+import HeaderData from "../data/HeaderData";
 
 /**
  *
@@ -18,26 +19,26 @@ import ModalNewComponent from "./modals/ModalNewComponent";
  * @param {*} { type: objet }
  * @return {*} un bouton d'administration sur chaque modal appartenant à différents component
  */
-const ButtonAdmin = ({ type }) => {
-  const [modal, setModal] = useState("");
+const ButtonAdmin = ({ type, data }) => {
+  const [modal, setModal] = useState(false);
 
   const toggle = () => {
     setModal("");
   };
   const getModal = () => {
     const myModal = {
-      article: <ModalArticle isShowing hide={toggle} />,
-      abonnement: <ModalAbonnement isShowing hide={toggle} />,
-      articleImage: <ModalArticleImage isShowing hide={toggle} />,
-      contact: <ModalContact isShowing hide={toggle} />,
-      echanges: <ModalEchanges isShowing hide={toggle} />,
-      footer: <ModalFooter isShowing hide={toggle} />,
-      header: <ModalHeader isShowing hide={toggle} />,
-      objets: <ModalObjets isShowing hide={toggle} />,
-      product: <ModalProduct isShowing hide={toggle} />,
-      client: <ModalClient isShowing hide={toggle} />,
-      concept: <ModalConcept isShowing hide={toggle} />,
-      newComponent: <ModalNewComponent isShowing hide={toggle} />,
+      article: <ModalArticle isShowing hide={toggle} data={data} />,
+      abonnement: <ModalAbonnement isShowing hide={toggle} data={data} />,
+      articleImage: <ModalArticleImage isShowing hide={toggle} data={data} />,
+      contact: <ModalContact isShowing hide={toggle} data={data} />,
+      echanges: <ModalEchanges isShowing hide={toggle} data={data} />,
+      footer: <ModalFooter isShowing hide={toggle} data={data} />,
+      header: <ModalHeader isShowing hide={toggle} HeaderData={HeaderData} />,
+      objets: <ModalObjets isShowing hide={toggle} data={data} />,
+      product: <ModalProduct isShowing hide={toggle} data={data} />,
+      client: <ModalClient isShowing hide={toggle} data={data} />,
+      concept: <ModalConcept isShowing hide={toggle} data={data} />,
+      newComponent: <ModalNewComponent isShowing hide={toggle} data={data} />,
     };
     setModal(myModal[type]);
   };

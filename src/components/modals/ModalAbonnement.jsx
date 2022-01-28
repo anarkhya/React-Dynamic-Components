@@ -1,62 +1,49 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Abonnement from "../../data/Abonnement";
 
-const ModalAbonnement = ({ isShowing, hide }) => {
+const ModalAbonnement = ({ isShowing, hide, data }) => {
   /* states affichent data */
-  const [grandTitre, setGrandTitre] = useState(Abonnement[0].data.titre);
-  const [data, setData] = useState(Abonnement[0].data.details);
-  const [description, setDescription] = useState(
-    Abonnement[0].data.description
-  );
+  const [cls, setCls] = useState(data.cls);
+  const [titre, setTitre] = useState(data.titre);
+  const [details, setDetails] = useState(data.details);
+  const [description, setDescription] = useState(data.description);
 
   /* affiche user input */
-  const updateData = (value, type, obj) => {
-    const newData = [...data];
-    const index = newData.indexOf(obj);
-    newData[index][type] = value;
-    setData(newData);
-  };
-  /* suppression ciblée avec le bon index */
-  const deleteData = (value, type, obj) => {
-    const newData = [...data];
-    const index = newData.indexOf(obj);
-    newData[index][type] = value;
-    newData.splice(index, 1);
-    setData(newData);
-  };
-
-  /* affiche user input dans nouveau bloc */
-  const [details, setDetails] = useState([]);
-
-  const onChangeDetails = (value, detail) => {
+  const updateDetail = (value, type, obj) => {
     const newDetails = [...details];
-    const index = newDetails.indexOf(detail);
-    newDetails[index] = value;
+    const index = newDetails.indexOf(obj);
+    newDetails[index][type] = value;
     setDetails(newDetails);
   };
-
+  /* suppression ciblée avec le bon index - splice */
+  const deleteDetail = (obj) => {
+    const newDetails = [...details];
+    const index = newDetails.indexOf(obj);
+    newDetails.splice(index, 1);
+    setDetails(newDetails);
+  };
   /* ajoute nouveau bloc - push */
   const addDetails = () => {
     const newDetails = [...details];
-    newDetails.push("");
+    newDetails.push({ detail: "", description1: "", description2: "" });
     setDetails(newDetails);
   };
 
-  /* retire dernier bloc ajouté - pop */
-  // const deleteDetails = () => {
-  //   const newDetails = [...details];
-  //   newDetails.pop("");
-  //   setDetails(newDetails);
-  // };
-
-  /* tentative de suppression du bloc ciblé avec le bon index */
-  const deleteDetails = (value, obj) => {
-    const newDetails = [...details];
-    const index = newDetails.indexOf(obj);
-    newDetails[index] = value;
-    newDetails.splice(index, 1);
-    setDetails(newDetails);
+  const onUpdateComponent = () => {
+    console.log({
+      titre,
+      details,
+      description,
+    });
+    hide();
+  };
+  const onDeleteComponent = () => {
+    console.log({
+      titre,
+      details,
+      description,
+    });
+    hide();
   };
 
   const getModal = () => {
@@ -95,35 +82,29 @@ const ModalAbonnement = ({ isShowing, hide }) => {
               </h1>
 
               {/* ////////////////////////////////      permet modifications éléments actuels par admin */}
+              <label className="flex flex-col" htmlFor="b">
+                Arrière-plan vert ?
+                <input
+                  className="w-5 h-5 my-2"
+                  id="b"
+                  type="checkbox"
+                  value={cls}
+                  onChange={(event) => setCls(event.target.value)}
+                />
+              </label>
               <label htmlFor="titre" className="">
                 Titre
                 <input
                   className="uppercase transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full font-light text-h1"
                   id="titre"
                   type="text"
-                  value={grandTitre}
+                  value={titre}
                   placeholder="Titre"
-                  onChange={(event) => setGrandTitre(event.target.value)}
+                  onChange={(event) => setTitre(event.target.value)}
                 />
               </label>
-              <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                  type="button"
-                  //  delete => string vide
-                  onClick={() => setGrandTitre("")}
-                >
-                  Supprimer
-                </button>
-                <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                  type="button"
-                >
-                  Valider
-                </button>
-              </section>
 
-              {data.map((item) => {
+              {details.map((item) => {
                 return (
                   <div>
                     <label htmlFor="nom" className="">
@@ -135,7 +116,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         value={item.detail}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "detail", item)
+                          updateDetail(event.target.value, "detail", item)
                         }
                       />
                     </label>
@@ -148,7 +129,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         value={item.description1}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "description1", item)
+                          updateDetail(event.target.value, "description1", item)
                         }
                       />
                     </label>
@@ -161,7 +142,7 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                         value={item.description2}
                         placeholder=""
                         onChange={(event) =>
-                          updateData(event.target.value, "description2", item)
+                          updateDetail(event.target.value, "description2", item)
                         }
                       />
                     </label>
@@ -169,23 +150,23 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                       <button
                         className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                         type="button"
-                        onClick={(event) =>
-                          deleteData(event.target.value, "", item)
-                        }
+                        onClick={() => deleteDetail(item)}
                       >
                         Supprimer
-                      </button>
-                      <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2  "
-                        type="button"
-                      >
-                        Valider
                       </button>
                     </section>
                   </div>
                 );
               })}
-
+              <section className="flex justify-center mt-8 my-2 gap-4 px-2">
+                <button
+                  type="submit"
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
+                  onClick={() => addDetails()}
+                >
+                  Ajouter un autre bloc
+                </button>
+              </section>
               <label htmlFor="titre" className="">
                 ligne
                 <input
@@ -197,88 +178,23 @@ const ModalAbonnement = ({ isShowing, hide }) => {
                   onChange={(event) => setDescription(event.target.value)}
                 />
               </label>
-
-              {/* ////////////////////////////      map l'ajout des éléments d'un nouveau bloc */}
-              <div className="">
-                {details.map((detail) => {
-                  return (
-                    <div className="p-2 my-2 border-2 border-vert rounded">
-                      <label htmlFor="description">
-                        Ligne en gras
-                        <input
-                          className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full font-bold text-h2"
-                          type="text"
-                          placeholder="Ligne en gras"
-                          value={detail?.detail}
-                          onChange={(event) =>
-                            onChangeDetails(event.target.value, detail)
-                          }
-                        />
-                      </label>
-                      <label htmlFor="detailDesc1">
-                        Ligne supplémentaire 1
-                        <input
-                          className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                          type="text"
-                          placeholder="contenu de la ligne 1"
-                          value={detail?.description1}
-                          onChange={(event) =>
-                            onChangeDetails(event.target.value, detail)
-                          }
-                        />
-                      </label>
-                      <label htmlFor="detailDesc1">
-                        Ligne supplémentaire 2
-                        <input
-                          className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded my-2 px-2 w-full"
-                          type="text"
-                          placeholder="contenu de la ligne 2"
-                          value={detail?.description2}
-                          onChange={(event) =>
-                            onChangeDetails(event.target.value, detail)
-                          }
-                        />
-                      </label>
-                      <section className="flex flex-row-reverse my-2 gap-4 px-2">
-                        <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
-                          type="button"
-                          onClick={(event) =>
-                            deleteDetails(event.target.value, "", detail)
-                          }
-                        >
-                          Supprimer
-                        </button>
-                        <button
-                          className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
-                          type="button"
-                        >
-                          Valider
-                        </button>
-                      </section>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* //////////////////////////        déclencheur du map des éléments d'un nouveau bloc */}
-              <section className="flex justify-center mt-8 my-2 gap-4 px-2">
+              {/* ////////////////////////////// boutons de validation et suppression */}
+              <section className="flex flex-row-reverse my-2 gap-4 px-2">
                 <button
-                  type="submit"
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
-                  onClick={() => addDetails()}
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  type="button"
+                  //  delete => string vide
+                  onClick={() => onDeleteComponent()}
                 >
-                  Ajouter un autre bloc
+                  Supprimer
                 </button>
-
-                {/* //////////////////////////        retire le dernier bloc ajouté */}
-                {/* <button
-                  type="submit"
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 my-2"
-                  onClick={() => deleteDetails()}
+                <button
+                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  type="button"
+                  onClick={() => onUpdateComponent()}
                 >
-                  Retirer dernier bloc
-                </button> */}
+                  Valider
+                </button>
               </section>
             </div>
           </div>

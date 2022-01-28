@@ -91,25 +91,25 @@ const echanges = [
           id: 1,
           color: "",
           src: "./assets/images/gommette-bleu.png",
-          alt: "gommette colorée",
+          alt: "gommette bleu",
         },
         {
           id: 2,
           color: "",
           src: "./assets/images/gommette-rose.png",
-          alt: "gommette colorée",
+          alt: "gommette rose",
         },
         {
           id: 3,
           color: "",
           src: "./assets/images/gommette-jaune.png",
-          alt: "gommette colorée",
+          alt: "gommette jaune",
         },
         {
           id: 4,
           color: "",
           src: "./assets/images/gommette-vert.png",
-          alt: "gommette colorée",
+          alt: "gommette vert",
         },
       ],
       infos: "Il est également possible de combiner des couleurs ",
@@ -123,7 +123,6 @@ const echanges = [
     component: "article",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      clsPara: "md:w-1/2",
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
       titre: "Comment ça marche:",
       description:

@@ -19,7 +19,7 @@ const Echanges = ({ data }) => {
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
-        <ButtonAdmin type="echanges" />
+        <ButtonAdmin type="echanges" data={data} />
       </div>
       <div className="md:w-1/2">
         <p className="">{data.description}</p>

@@ -12,6 +12,7 @@ import Objets from "../components/Objets";
 import Contact from "../components/Contact";
 import Concept from "../components/Concept";
 import Client from "../components/Client";
+import ButtonNewsComponent from "../components/ButtonNewsComponent";
 
 // // data
 // import home from "../data/Home";
@@ -72,7 +73,12 @@ const Pages = () => {
         setPage(data);
       });
   }, [pages]);
-  return <div>{page && <div>{createComponent()}</div>}</div>;
+  return (
+    <div>
+      {page && <div>{createComponent()}</div>}
+      <ButtonNewsComponent />
+    </div>
+  );
 };
 
 export default Pages;
