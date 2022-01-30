@@ -11,12 +11,10 @@ import ButtonAdmin from "./ButtonAdmin";
  * @return {*}
  */
 const Abonnement = ({ data }) => {
-  let css = "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col pb-8 ";
-  css += data.cls === 1 ? "bg-gris_clair text-vert" : "bg-vert text-blanc";
   return (
     <div>
       <div
-        className={css}
+        className={data.cls}
         style={{ backgroundImage: "url(/assets/images/grid.png)" }}
       >
         <div className="text-right w-full">

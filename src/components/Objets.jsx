@@ -12,13 +12,13 @@ import ButtonAdmin from "./ButtonAdmin";
 const Objets = ({ data }) => {
   return (
     <div
-      className="p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-gris_clair text-vert"
+      className={data.cls}
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <div className="text-right w-full">
         <ButtonAdmin type="objets" data={data} />
       </div>
-      {data.details.map((cat) => (
+      {data.categorie.map((cat) => (
         <section className="md:w-1/2">
           <h1 className="uppercase font-bold text-h2">{cat.appartenance}</h1>
           <p>{cat.cible}</p>
