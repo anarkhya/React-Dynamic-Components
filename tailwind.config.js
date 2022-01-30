@@ -9,7 +9,7 @@ module.exports = {
         vert: "#275852",
       },
       fontFamily: {
-        sans: ["Signika", "sans-serif"],
+        sans: ["Amatic\\ SC", "cursive"],
       },
       fontWeight: {
         light: 300,

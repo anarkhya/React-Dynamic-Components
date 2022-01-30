@@ -48,12 +48,10 @@ const ButtonAdmin = ({ type, data }) => {
     };
     setModal(myModal[type]);
   };
-
+  console.log(getModal);
   return (
     <div className="">
-      {/* {console.log(modal)} */}
-      {/* {modal ? ( */}
-      <button type="submit" onClick={() => getModal()}>
+      {/* <button type="submit" onClick={() => getModal()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -67,11 +65,7 @@ const ButtonAdmin = ({ type, data }) => {
             clipRule="evenodd"
           />
         </svg>
-      </button>
-      {/* ) : (
-        ""
-      )}
-      {modal} */}
+      </button> */}
       {modal}
     </div>
   );

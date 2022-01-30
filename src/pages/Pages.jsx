@@ -17,13 +17,12 @@ import Concept from "../components/Concept";
 import Map from "../components/Map";
 import ButtonAdmin from "../components/ButtonAdmin";
 import Client from "../components/Client";
-import ButtonNewsComponent from "../components/ButtonNewsComponent";
+// import ButtonNewsComponent from "../components/ButtonNewsComponent";
 
 // data
 import home from "../data/Home";
 import concept from "../data/Concept";
 import abonnement from "../data/Abonnement";
-import services from "../data/Services";
 import echanges from "../data/Echanges";
 import contact from "../data/Contact";
 
@@ -54,7 +53,6 @@ const Pages = () => {
     const DetailsPages = {
       concept,
       abonnement,
-      services,
       echanges,
       contact,
     };
@@ -68,7 +66,7 @@ const Pages = () => {
   return (
     <div>
       {createComponent()}
-      <ButtonNewsComponent />
+      {/* <ButtonNewsComponent /> */}
     </div>
   );
 };

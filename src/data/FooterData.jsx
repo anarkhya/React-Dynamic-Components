@@ -2,11 +2,11 @@ const footer = {
   // infos boutiques (mail, tel, adresse, horaires) + copyright
   titreContact: "Contact",
   contact: [
-    { id: 1, mail: "latrocquerie@gmail.com" },
+    { id: 1, mail: "example@gmail.com" },
     { id: 2, phone: "06 00 00 00 00" },
   ],
-  adresse: "23 rue Petite-Biesse - quartier île de Nantes",
-  copyright: "© 2022 LaTrocquerie - Tous droits réservés",
+  adresse: "777 rue Placeholders",
+  copyright: "© 2022 Tous droits réservés",
   titreHoraires: "Horaires d'ouverture",
   horaires: [
     { id: 1, horaire: "Mercredi 10h30 - 19h00" },
