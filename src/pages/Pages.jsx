@@ -18,6 +18,7 @@ import Map from "../components/Map";
 import ButtonAdmin from "../components/ButtonAdmin";
 import Client from "../components/Client";
 // import ButtonNewsComponent from "../components/ButtonNewsComponent";
+import Slideshow from "../components/Slideshow";
 
 // data
 import home from "../data/Home";
@@ -46,6 +47,7 @@ const Pages = () => {
       concept: () => <Concept data={data} />,
       buttonAdmin: () => <ButtonAdmin data={data} />,
       client: () => <Client data={data} />,
+      slideshow: () => <Slideshow />,
     };
     return component[type]();
   };

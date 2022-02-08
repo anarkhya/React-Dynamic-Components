@@ -10,6 +10,9 @@ google map interactive
 
   // bloc_order 1
   {
+    component: "slideshow",
+  },
+  {
     component: "articleImage",
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-gris_clair text-vert",
@@ -17,7 +20,7 @@ google map interactive
       src: "./assets/images/placeholder.png",
       alt: "photo",
       description:
-        "Quartier d’accueil et d’échanges depuis des décennies, la rue Biesse est riche de ses habitant.es et de ses commerçant.es. La trocquerie permettra d'amorcer une nouvelle dynamique et manière innovante de consommer pour ses habitant.es et tous.tes les nantais.es.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   },
   // à propos du lieu 2
@@ -30,25 +33,21 @@ google map interactive
       categorie: [
         {
           id: 1,
-          appartenance: "INITIATION AU TROC",
-          cible: "pour les enfants, les entreprises, les associations, ...",
+          appartenance: "Lorem",
+          cible:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
           id: 2,
-          appartenance: "ÉVÉNEMENT TROC SPÉCIFIQUE",
+          appartenance: "Lorem",
           cible:
-            "plantes, vinyles, vêtements de saison, vêtements enfant et puériculture, ...",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
           id: 3,
-          appartenance: "ACTIVITÉ POUR LES ABONNEMENTS 1 AN",
-          cible: "lecture, troc d’une sélection unique, ...",
-        },
-        {
-          id: 4,
-          appartenance: "LIEU DE SERVICE",
+          appartenance: "Lorem",
           cible:
-            "service de location d’appareil mutualisé (perceuse, appareil à raclette, boule à facettes) panier bio, service de conciergerie, ...",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
       ],
     },

@@ -46,26 +46,8 @@ const Footer = () => {
         </p>
         <div className="md:order-last md:basis-full flex flex-col md:flex-row md:justify-center text-mini opacity-50  ">
           Développé par
-          <a
-            className="px-2 underline"
-            href="https://github.com/Francois-Chatelier"
-          >
-            François C.
-          </a>
-          <a
-            className="px-2  underline"
-            href="https://github.com/maxime-baillon"
-          >
-            Maxime B.
-          </a>
-          <a className="px-2  underline" href="https://github.com/anarkhya">
-            Greg N.
-          </a>
-          <a
-            className="px-2  underline"
-            href="https://github.com/VictorPagnier"
-          >
-            Victor P.
+          <a className="px-2 underline" href="https://wikipedia.fr">
+            hello world
           </a>
           <div className="">
             <Link to="/mentions-legales" target="_blank">

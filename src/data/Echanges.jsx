@@ -15,7 +15,8 @@ const echanges = [
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
       clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
-      titre: "Dans la Trocquerie, il est possible de troquer:",
+      titre:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       description: "¡ Uniquement des objets en bon état !",
       description2: "",
       description3: "",
@@ -84,8 +85,7 @@ const echanges = [
     data: {
       cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
       description:
-        "La valeur des objets n'est pas la même pour tout le monde. La valeur du produit dans la Trocquerie est considérée différement de son prix d'achat. L'idée est de privilégier l'éthique et se détacher de la valeur monétaire et aussi sentimentale de ceux-ci.",
-      titre: "Les échanges sont catégorisés par un système de gommettes:",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       gommettes: [
         {
           id: 1,
