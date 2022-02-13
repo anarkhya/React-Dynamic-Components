@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ButtonAdmin from "./ButtonAdmin";
+import Headline1 from "./Headline1";
 
 /**
  *
@@ -14,22 +16,20 @@ const Article = ({ data }) => {
       className={data.cls}
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
-      <div className="text-right w-full">
+      <div className="w-full text-right">
         <ButtonAdmin type="article" data={data} />
       </div>
-      <h1 className="uppercase text-h1 font-light leading-tight">
-        {data.titre}
-      </h1>
+      <Headline1 data={data} />
       <p className="md:w-1/2">{data.description}</p>
       <p className="md:w-1/2">{data.description2}</p>
       <p className="md:w-1/2">{data.description3}</p>
 
       {data.bouton ? (
-        <a href={data.url}>
+        <Link to={data.url}>
           <button className={data.clsBouton} type="submit">
             En savoir plus
           </button>
-        </a>
+        </Link>
       ) : (
         ""
       )}

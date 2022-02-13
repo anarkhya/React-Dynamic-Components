@@ -15,7 +15,7 @@ google map interactive
   {
     component: "articleImage",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-gris_clair text-vert",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-primary text-secondary",
       titre: "Un lieu de vie, d'échange et de mixité",
       src: "./assets/images/placeholder.png",
       alt: "photo",
@@ -29,7 +29,7 @@ google map interactive
   {
     component: "objets",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-dark",
       categorie: [
         {
           id: 1,
@@ -63,7 +63,7 @@ google map interactive
   {
     component: "contact",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-dark",
       titre: "Contact",
       nom: "lorem",
       srcPhoneIcon: "./assets/icones/icon_phone.svg",
@@ -71,26 +71,6 @@ google map interactive
       srcMailIcon: "./assets/icones/icon_mail.svg",
       mail: "example@gmail.com",
       adresse: "777 rue Placeholders",
-      reseaux: [
-        {
-          src: "./assets/icones/instagram.svg",
-          alt: "Instagram",
-          url: "",
-          insta: "",
-        },
-        {
-          src: "./assets/icones/iconFacebook.svg",
-          alt: "Facebook",
-          url: "",
-          facebook: "",
-        },
-        {
-          src: "./assets/icones/iconLinkedin.svg",
-          alt: "LinkedIn",
-          url: "",
-          linkedin: "",
-        },
-      ],
       titreHoraires: "Horaires d'ouverture",
       horaires: [
         { id: 1, horaire: "Mercredi 10h30 - 19h00" },

@@ -20,21 +20,16 @@ const Abonnement = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="abonnement" data={data} />
         </div>
-        <h1 className="uppercase font-light text-h1">{data.titre}</h1>
+        <h1 className="uppercase font-headlines text-h1">{data.titre}</h1>
         <br />
         <br />
         <div className="md:w-1/2">
           {data.details.map((detail) => (
-            <p className="uppercase font-bold text-h2">
-              {detail.detail}
-              <p className="normal-case font-regular text-normal">
-                {detail.description1}
-              </p>
-              <p className="normal-case font-regular text-normal">
-                {detail.description2}
-              </p>
-              <br />
-            </p>
+            <div>
+              <p className="font-bold">{detail.detail}</p>
+              <p>{detail.description1}</p>
+              <p>{detail.description2}</p>
+            </div>
           ))}
           <p className="normal-case text-mini font-regular">
             {data.description}

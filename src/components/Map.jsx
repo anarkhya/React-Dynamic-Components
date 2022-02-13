@@ -4,7 +4,7 @@ import React from "react";
 const Map = () => {
   return (
     <div
-      className="bg-gris_clair"
+      className="bg-primary"
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
       <iframe

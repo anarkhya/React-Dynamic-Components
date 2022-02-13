@@ -40,7 +40,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
       return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
-          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
+          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-secondary opacity-70" />
           {/* // modal-wrapper */}
           <div
             className="fixed top-0 left-0 z-1050 w-full h-full overflow-x-hidden overflow-y-auto"
@@ -50,7 +50,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-primary p-3 rounded text-secondary">
               {/* // modal-header */}
               <div className="flex justify-end ">
                 {/* // modal-close-button */}
@@ -82,7 +82,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
                   nouveau logo
                   <input
                     id="file"
-                    className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    className="transition bg-dark hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                     type="file"
                   />
                 </label>
@@ -134,7 +134,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
               })}
               <section className="flex flex-row-reverse my-2 gap-4 px-2">
                 <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                   type="button"
                   //  delete => string vide
                   onClick={() => onDeleteComponent()}
@@ -142,7 +142,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
                   Supprimer
                 </button>
                 <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-secondary/40 shadow-[10px_10px_0px_0px] shadow-secondary/50 bg-secondary text-white px-6 py-2 text-normal"
                   type="button"
                   onClick={() => onUpdateComponent()}
                 >

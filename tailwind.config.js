@@ -3,13 +3,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blanc: "#FFF",
-        gris_clair: "#EEE",
-        rose: "#f7c2d4",
-        vert: "#275852",
+        dark: "#333",
+        primary: "#dde",
+        accent: "#f08",
+        secondary: "#76a",
       },
       fontFamily: {
-        sans: ["Amatic\\ SC", "cursive"],
+        sans: ["Ubuntu", "sans-serif"],
+        headlines: ["zergei", "cursive"],
       },
       fontWeight: {
         light: 300,
@@ -19,8 +20,8 @@ module.exports = {
       },
       fontSize: {
         mini: "12px",
-        normal: "16px",
-        h2: "18px",
+        normal: "18px",
+        h2: "24px",
         h1: "36px",
       },
     },

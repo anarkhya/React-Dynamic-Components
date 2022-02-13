@@ -22,7 +22,7 @@ const HeaderData = {
     },
   ],
   logo: {
-    src: "../../assets/images/placeholder.png",
+    src: "../../assets/images/logoipsum.svg",
     alt: "Logo",
     to: "",
   },

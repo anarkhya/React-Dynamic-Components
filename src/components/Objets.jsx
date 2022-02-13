@@ -20,7 +20,7 @@ const Objets = ({ data }) => {
       </div>
       {data.categorie.map((cat) => (
         <section className="md:w-1/2">
-          <h1 className="uppercase font-bold text-h2">{cat.appartenance}</h1>
+          <h2 className="font-bold">{cat.appartenance}</h2>
           <p>{cat.cible}</p>
         </section>
       ))}

@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
+import Headline1 from "./Headline1";
 
 /**
  *
@@ -20,7 +21,7 @@ const ArticleImage = ({ data }) => {
         <div className="text-right w-full">
           <ButtonAdmin type="articleImage" data={data} />
         </div>
-        <h1 className="uppercase text-h1 font-light">{data.titre}</h1>
+        <Headline1 data={data} />
         <img className="w-32" src={data.src} alt={data.alt} />
         <p className="md:w-1/2">{data.description}</p>
       </div>

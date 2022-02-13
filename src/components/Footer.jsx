@@ -14,49 +14,91 @@ import ButtonAdmin from "./ButtonAdmin";
  */
 const Footer = () => {
   return (
-    <div className={FooterData.cls}>
-      <div className="flex justify-end pr-4 pt-4">
+    <footer className={FooterData.cls}>
+      <div className="flex justify-end pt-4 pr-4">
         <ButtonAdmin type="footer" />
       </div>
-      <div className="py-4 flex flex-col items-center md:flex-row md:flex-wrap md:gap-0 text-center text-vert gap-5">
-        <div className="md:order-1 md:basis-1/3 list-none">
-          <h2 className="text-h2 font-bold">{FooterData.titreContact}</h2>
+      <section className="flex flex-col items-center gap-5 py-4 md:flex-row md:place-content-around md:gap-0">
+        <div className="list-none md:flex md:flex-col md:place-content-center">
+          <h2 className="text-h2 font-headlines">{FooterData.titreContact}</h2>
           <li>{FooterData.contact[0].mail}</li>
           <li>{FooterData.contact[1].phone}</li>
+
+          <li>
+            <a
+              href={FooterData.reseaux[0].url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="inline transition rounded hover:bg-accent active:translate-y-1"
+                src={FooterData.reseaux[0].src}
+                alt={FooterData.reseaux[0].alt}
+              />
+            </a>
+            <a
+              href={FooterData.reseaux[1].url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="inline transition rounded hover:bg-accent active:translate-y-1"
+                src={FooterData.reseaux[1].src}
+                alt={FooterData.reseaux[1].alt}
+              />
+            </a>
+            <a
+              href={FooterData.reseaux[2].url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="inline transition rounded hover:bg-accent active:translate-y-1"
+                src={FooterData.reseaux[2].src}
+                alt={FooterData.reseaux[2].alt}
+              />
+            </a>
+          </li>
         </div>
-        <div className="md:order-3 md:basis-1/3 list-none">
-          <h2 className="text-h2 font-bold">{FooterData.titreHoraires}</h2>
+        <div className="list-none md:flex md:flex-col md:place-content-center md:order-last">
+          <h2 className="text-h2 font-headlines">{FooterData.titreHoraires}</h2>
           {FooterData.horaires.map((horaire) => (
             <li key={horaire.id}>{horaire.horaire}</li>
           ))}
         </div>
-        <p className="md:order-2 md:basis-1/3 flex justify-center items-center gap-1">
+        <div className="md:flex md:items-center">
           <LocationMarkerIcon className="h-5" />
           <a
-            className="transition hover:underline hover:decoration-2 active:translate-y-1"
+            className="underline transition hover:no-underline active:translate-y-1"
             href="https://www.google.com/maps?ll=47.204088,-1.547592&z=14&t=m&hl=fr&gl=FR&mapclient=embed&q=23+Rue+Petite+Biesse+44200+Nantes"
             target="_blank"
             rel="noreferrer"
           >
             {FooterData.adresse}
           </a>
-        </p>
-        <p className="md:order-last md:basis-full text-mini">
-          {FooterData.copyright}
-        </p>
-        <div className="md:order-last md:basis-full flex flex-col md:flex-row md:justify-center text-mini opacity-50  ">
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center text-mini ">
+        <p>{FooterData.copyright}</p>
+        <p>
           Développé par
-          <a className="px-2 underline" href="https://wikipedia.fr">
+          <a
+            className="px-1 underline transition hover:no-underline active:translate-y-1"
+            href="https://wikipedia.fr"
+            target="_blank"
+            rel="noreferrer"
+          >
             hello world
           </a>
-          <div className="">
-            <Link to="/mentions-legales" target="_blank">
-              Mentions légales
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+        </p>
+        <p className="opacity-50">
+          <Link to="/mentions-legales" target="_blank" rel="noreferrer">
+            Mentions légales
+          </Link>
+        </p>
+      </section>
+    </footer>
   );
 };
 

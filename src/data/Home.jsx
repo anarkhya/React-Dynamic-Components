@@ -5,9 +5,9 @@ const home = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert pb-8",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary pb-8",
       clsBouton:
-        "transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 ",
+        "transition ease-in rounded-md rounded-bl-3xl rounded-tr-3xl border-white border-2 hover:border-accent hover:bg-accent -skew-y-6 active:translate-y-1 hover:shadow-accent/40 shadow-white hover:shadow-[8px_8px_40px_5px] bg-secondary text-white px-6 py-2 ",
       titre: "Chaque objet a une histoire",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -24,9 +24,9 @@ const home = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc pb-8",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-8",
       clsBouton:
-        "transition hover:bg-rose hover:text-vert hover:border-rose active:-skew-y-6 active:translate-y-1 shadow-blanc/30 shadow-[10px_10px_0px_0px] active:shadow-blanc/20 bg-vert border-blanc border-2 text-blanc px-6 py-2 text-normal mt-5",
+        "transition ease-in rounded-md rounded-bl-3xl rounded-tr-3xl border-white border-2 hover:border-accent hover:bg-accent -skew-y-6 active:translate-y-1 hover:shadow-accent/40 shadow-white hover:shadow-[8px_8px_40px_5px] bg-secondary text-white px-6 py-2 ",
       titre: "Échangez vos objets dès maintenant",
       description: "",
       description2: "",

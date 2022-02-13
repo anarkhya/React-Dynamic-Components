@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Concept from "../../data/Concept";
-import ImageUpload from "../ImageUpload";
 
 const ModalArticleImage = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
@@ -32,7 +31,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
       return ReactDOM.createPortal(
         <>
           {/* // style modal-overlay */}
-          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
+          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-secondary opacity-70" />
           {/* // style modal-wrapper */}
           <div
             className="fixed top-0 left-0 z-1050 w-full h-full overflow-x-hidden overflow-y-auto"
@@ -42,7 +41,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
             role="dialog"
           >
             {/* // style modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-primary p-3 rounded text-secondary">
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* bouton croix pour fermer le modal */}
@@ -62,7 +61,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
               {/* // style section interactions utilisateur */}
               <section className="p-2">
                 <label className="flex flex-col" htmlFor="b">
-                  Arrière-plan vert ?
+                  Arrière-plan secondary ?
                   <input
                     className="w-5 h-5 my-2"
                     id="b"
@@ -91,7 +90,6 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                   />
                 </p>
                 Nouvelle image
-                <ImageUpload />
                 <label htmlFor="description">
                   Balise alt pour accessibilité
                   <input
@@ -118,7 +116,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                 {/* ////////////////////////////// boutons de validation et suppression */}
                 <section className="flex flex-row-reverse my-2 gap-4 px-2">
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"
                     //  delete => string vide
                     onClick={() => onDeleteComponent()}
@@ -126,7 +124,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                     Supprimer
                   </button>
                   <button
-                    className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                    className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-secondary/40 shadow-[10px_10px_0px_0px] shadow-secondary/50 bg-secondary text-white px-6 py-2 text-normal"
                     type="button"
                     onClick={() => onUpdateComponent()}
                   >
