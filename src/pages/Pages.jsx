@@ -12,7 +12,6 @@ import Product from "../components/Product";
 import Echanges from "../components/Echanges";
 import Objets from "../components/Objets";
 import Formulaire from "../components/Formulaire";
-import Contact from "../components/Contact";
 import Concept from "../components/Concept";
 import Map from "../components/Map";
 import ButtonAdmin from "../components/ButtonAdmin";
@@ -43,7 +42,6 @@ const Pages = () => {
       objets: () => <Objets data={data} />,
       echanges: () => <Echanges data={data} />,
       map: () => <Map data={data} />,
-      contact: () => <Contact data={data} />,
       concept: () => <Concept data={data} />,
       buttonAdmin: () => <ButtonAdmin data={data} />,
       client: () => <Client data={data} />,

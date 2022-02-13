@@ -19,47 +19,6 @@ const Footer = () => {
         <ButtonAdmin type="footer" />
       </div>
       <section className="flex flex-col items-center gap-5 py-4 md:flex-row md:place-content-around md:gap-0">
-        <div className="list-none md:flex md:flex-col md:place-content-center">
-          <h2 className="text-h2 font-headlines">{FooterData.titreContact}</h2>
-          <li>{FooterData.contact[0].mail}</li>
-          <li>{FooterData.contact[1].phone}</li>
-
-          <li>
-            <a
-              href={FooterData.reseaux[0].url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="inline transition rounded hover:bg-accent active:translate-y-1"
-                src={FooterData.reseaux[0].src}
-                alt={FooterData.reseaux[0].alt}
-              />
-            </a>
-            <a
-              href={FooterData.reseaux[1].url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="inline transition rounded hover:bg-accent active:translate-y-1"
-                src={FooterData.reseaux[1].src}
-                alt={FooterData.reseaux[1].alt}
-              />
-            </a>
-            <a
-              href={FooterData.reseaux[2].url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="inline transition rounded hover:bg-accent active:translate-y-1"
-                src={FooterData.reseaux[2].src}
-                alt={FooterData.reseaux[2].alt}
-              />
-            </a>
-          </li>
-        </div>
         <div className="list-none md:flex md:flex-col md:place-content-center md:order-last">
           <h2 className="text-h2 font-headlines">{FooterData.titreHoraires}</h2>
           {FooterData.horaires.map((horaire) => (

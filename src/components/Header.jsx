@@ -56,6 +56,20 @@ const Header = () => {
                     ))}
                   </div>
                 </div>
+                <div className="flex gap-2">
+                  {HeaderData.networks.map((network) => (
+                    <span key={network.id}>
+                      <a href={network.url}>
+                        <img
+                          className="inline h-7"
+                          src={network.src}
+                          alt={network.alt}
+                        />
+                      </a>
+                      {network.text}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
