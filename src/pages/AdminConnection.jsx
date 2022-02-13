@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 const AdminConnection = () => {
   return (
-    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-dark">
-      <h1 className="uppercase text-h1 text-center mt-5">Authentification</h1>
-      <div className="text-secondary mb-4 mt-2">
+    <div className="flex flex-col items-center gap-3 p-4 mx-auto md:text-lg bg-secondary text-dark">
+      <h1 className="mt-5 text-center uppercase text-h1">Authentification</h1>
+      <div className="mt-2 mb-4 text-secondary">
         <Link to="/testtest">
           <form className="flex flex-col items-center">
             <label htmlFor="identifiant">
               Identifiant
               <input
-                className="mb-3 px-2 mt-2 border-none md:w-96 flex items-center rounded focus:outline-none"
+                className="flex items-center px-2 mt-2 mb-3 border-none rounded md:w-96 focus:outline-none"
                 type="text"
                 id="nom"
                 placeholder="Identifiant"
@@ -20,7 +20,7 @@ const AdminConnection = () => {
             <label htmlFor="mdp">
               Mot de passe
               <input
-                className="mb-3 px-2 border-none md:w-96 flex items-center rounded focus:outline-none"
+                className="flex items-center px-2 mb-3 border-none rounded md:w-96 focus:outline-none"
                 type="text"
                 id="mdp"
                 placeholder="Mot de passe"

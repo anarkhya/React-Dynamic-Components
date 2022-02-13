@@ -9,23 +9,23 @@ const ModalNewComponent = ({ isShowing, hide }) => {
       return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
-          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-secondary opacity-70" />
+          <div className="fixed top-0 left-0 w-screen h-screen z-1040 bg-secondary opacity-70" />
           {/* // modal-wrapper */}
           <div
-            className="fixed top-0 left-0 z-1050 w-full h-full overflow-x-hidden overflow-y-auto"
+            className="fixed top-0 left-0 w-full h-full overflow-x-hidden overflow-y-auto z-1050"
             aria-modal
             aria-hidden
             tabIndex={-1}
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-primary p-3 rounded text-secondary">
+            <div className="relative max-w-screen-sm p-3 mx-auto rounded z-100 m-14 bg-primary text-secondary">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
                 <button
                   type="button"
-                  className="text-h1 leading-none"
+                  className="leading-none text-h1"
                   data-dismiss="modal"
                   aria-label="Close"
                   onClick={hide}
@@ -33,7 +33,7 @@ const ModalNewComponent = ({ isShowing, hide }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <h1 className="text-center text-h2 p-2">
+              <h1 className="p-2 text-center text-h2">
                 Nouveau Bloc - Modification du contenu
               </h1>
               {/* // style section interactions utilisateur */}

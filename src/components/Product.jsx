@@ -17,13 +17,13 @@ const Product = ({ data }) => {
       className={data.cls}
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
-      <div className="text-right w-full">
+      <div className="w-full text-right">
         <ButtonAdmin type="product" data={data} />
       </div>
       <Headline1 data={data} />
-      <section className="md:w-1/2 flex flex-col gap-3 mt-10">
+      <section className="flex flex-col gap-3 mt-10 md:w-1/2">
         {data.presentation.map((pres) => (
-          <div className=" flex justify-center gap-3 my-2 flex-col md:flex-row">
+          <div className="flex flex-col justify-center gap-3 my-2  md:flex-row">
             <p className=" md:pr-4">{pres.infos}</p>
             <img
               src={pres.src}

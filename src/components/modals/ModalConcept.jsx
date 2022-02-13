@@ -24,23 +24,23 @@ const ModalConcept = ({ isShowing, hide, data }) => {
       return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
-          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-secondary opacity-70" />
+          <div className="fixed top-0 left-0 w-screen h-screen z-1040 bg-secondary opacity-70" />
           {/* // modal-wrapper */}
           <div
-            className="fixed top-0 left-0 z-1050 w-full h-full overflow-x-hidden overflow-y-auto"
+            className="fixed top-0 left-0 w-full h-full overflow-x-hidden overflow-y-auto z-1050"
             aria-modal
             aria-hidden
             tabIndex={-1}
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-primary p-3 rounded text-secondary">
+            <div className="relative max-w-screen-sm p-3 mx-auto rounded z-100 m-14 bg-primary text-secondary">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
                 <button
                   type="button"
-                  className="text-h1 leading-none"
+                  className="leading-none text-h1"
                   data-dismiss="modal"
                   aria-label="Close"
                   onClick={hide}
@@ -48,7 +48,7 @@ const ModalConcept = ({ isShowing, hide, data }) => {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <h1 className="text-center text-h2 p-2">
+              <h1 className="p-2 text-center text-h2">
                 Concept - Modification du contenu
               </h1>
               {/* // style section interactions utilisateur */}
@@ -76,7 +76,7 @@ const ModalConcept = ({ isShowing, hide, data }) => {
                   />
                 </label>
                 {/* ////////////////////////////// boutons de validation et suppression */}
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                <section className="flex flex-row-reverse gap-4 px-2 my-2">
                   <button
                     className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"

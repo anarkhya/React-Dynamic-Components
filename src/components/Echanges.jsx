@@ -18,19 +18,19 @@ const Echanges = ({ data }) => {
       className={data.cls}
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
-      <div className="text-right w-full">
+      <div className="w-full text-right">
         <ButtonAdmin type="echanges" data={data} />
       </div>
       <div className="md:w-1/2">
         <p className="">{data.description}</p>
-        <h2 className="text-center mt-4">{data.titre}</h2>
+        <h2 className="mt-4 text-center">{data.titre}</h2>
         <section className="flex justify-center gap-4 mt-4">
           {data.gommettes.map((gommette) => (
             <section>
               <p>
                 {gommette.color}
                 <img
-                  className="blob w-16 h-16"
+                  className="w-16 h-16 blob"
                   src={gommette.src}
                   alt={gommette.alt}
                 />

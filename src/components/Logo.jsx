@@ -10,7 +10,7 @@ import React from "react";
 const Logo = ({ data }) => {
   return (
     <div>
-      <img className="h-16 pl-2" src={data.src} alt={data.alt} />
+      <img className="h-16" src={data.src} alt={data.alt} />
     </div>
   );
 };

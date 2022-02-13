@@ -22,7 +22,7 @@ const Header = () => {
     >
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl">
+          <div className="px-4">
             <div className="flex justify-end">
               <ButtonAdmin type="header" HeaderData={HeaderData} />
             </div>

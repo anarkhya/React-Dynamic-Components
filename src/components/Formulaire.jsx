@@ -9,13 +9,13 @@ import React from "react";
  */
 const Formulaire = ({ data }) => {
   return (
-    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-dark">
-      <h1 className="uppercase text-h1 text-center">{data.titre}</h1>
-      <div className="text-secondary flex flex-col mb-4 ">
+    <div className="flex flex-col items-center gap-3 p-4 mx-auto md:text-lg bg-secondary text-dark">
+      <h1 className="text-center uppercase text-h1">{data.titre}</h1>
+      <div className="flex flex-col mb-4 text-secondary ">
         <form className="flex flex-col items-center my-5">
           <label htmlFor="nom">
             <input
-              className="mb-3 px-2 border-none md:w-96 rounded focus:outline-none"
+              className="px-2 mb-3 border-none rounded md:w-96 focus:outline-none"
               type="text"
               name="Nom"
               id="nom"
@@ -24,7 +24,7 @@ const Formulaire = ({ data }) => {
           </label>
           <label htmlFor="Prénom">
             <input
-              className="mb-3 px-2 border-none md:w-96 rounded focus:outline-none"
+              className="px-2 mb-3 border-none rounded md:w-96 focus:outline-none"
               type="text"
               name="Prénom"
               id="Prénom"
@@ -33,7 +33,7 @@ const Formulaire = ({ data }) => {
           </label>
           <label htmlFor="Email">
             <input
-              className="mb-3 px-2 border-none md:w-96 rounded focus:outline-none"
+              className="px-2 mb-3 border-none rounded md:w-96 focus:outline-none"
               type="text"
               name="Email"
               id="Email"
@@ -41,8 +41,7 @@ const Formulaire = ({ data }) => {
             />
           </label>
           <textarea
-            className="
-            mb-3 px-2 block md:w-96 bg-clip-padding m-0 rounded focus:outline-none"
+            className="block px-2 m-0 mb-3 rounded  md:w-96 bg-clip-padding focus:outline-none"
             rows="3"
             placeholder="Message"
           />

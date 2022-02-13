@@ -31,23 +31,23 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
       return ReactDOM.createPortal(
         <>
           {/* // style modal-overlay */}
-          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-secondary opacity-70" />
+          <div className="fixed top-0 left-0 w-screen h-screen z-1040 bg-secondary opacity-70" />
           {/* // style modal-wrapper */}
           <div
-            className="fixed top-0 left-0 z-1050 w-full h-full overflow-x-hidden overflow-y-auto"
+            className="fixed top-0 left-0 w-full h-full overflow-x-hidden overflow-y-auto z-1050"
             aria-modal
             aria-hidden
             tabIndex={-1}
             role="dialog"
           >
             {/* // style modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-primary p-3 rounded text-secondary">
+            <div className="relative max-w-screen-sm p-3 mx-auto rounded z-100 m-14 bg-primary text-secondary">
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* bouton croix pour fermer le modal */}
                 <button
                   type="button"
-                  className="text-h1 leading-none"
+                  className="leading-none text-h1"
                   data-dismiss="modal"
                   aria-label="Close"
                   onClick={hide}
@@ -73,7 +73,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                 <label htmlFor="titre" className="">
                   Titre
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full uppercase font-light text-h1"
+                    className="w-full px-2 mt-2 mb-4 font-light uppercase transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
                     id="titre"
                     type="text"
                     value={titre}
@@ -93,7 +93,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                 <label htmlFor="description">
                   Balise alt pour accessibilité
                   <input
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
                     id="description"
                     type="text"
                     value={alt}
@@ -104,7 +104,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                 <label htmlFor="description">
                   Description
                   <textarea
-                    className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                    className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
                     id="description"
                     type="text"
                     rows="5"
@@ -114,7 +114,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                   />
                 </label>
                 {/* ////////////////////////////// boutons de validation et suppression */}
-                <section className="flex flex-row-reverse my-2 gap-4 px-2">
+                <section className="flex flex-row-reverse gap-4 px-2 my-2">
                   <button
                     className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                     type="button"

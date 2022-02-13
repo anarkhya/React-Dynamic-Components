@@ -48,11 +48,11 @@ const ButtonAdmin = ({ type, data }) => {
     setModal(myModal[type]);
   };
   return (
-    <div className="md:block hidden ">
+    <div className="hidden md:block ">
       <button type="submit" onClick={() => getModal()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
+          className="w-5 h-5"
           viewBox="0 0 20 20"
           fill="#fff"
         >

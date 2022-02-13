@@ -13,25 +13,25 @@ const Contact = ({ data }) => {
   return (
     <div>
       <div
-        className="p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-dark"
+        className="flex flex-col items-center gap-3 p-4 mx-auto md:text-lg bg-secondary text-dark"
         style={{ backgroundImage: "url(/assets/images/grid.png)" }}
       >
-        <div className="text-right w-full">
+        <div className="w-full text-right">
           <ButtonAdmin type="contact" data={data} />
         </div>
         <Headline1 data={data} />
         <p className="font-light">{data.nom}</p>
-        <div className="flex justify-between flex-col md:flex-row bg-primary rounded text-secondary py-2 pr-4">
+        <div className="flex flex-col justify-between py-2 pr-4 rounded md:flex-row bg-primary text-secondary">
           <div className="flex pl-4">
             <img
-              className="mr-1 w-6"
+              className="w-6 mr-1"
               src={data.srcPhoneIcon}
               alt="phone icon"
             />
             <p>{data.telephone}</p>
           </div>
           <div className="flex pl-4">
-            <img className="mr-1 w-6" src={data.srcMailIcon} alt="mail icon" />
+            <img className="w-6 mr-1" src={data.srcMailIcon} alt="mail icon" />
             <p>{data.mail}</p>
           </div>
         </div>

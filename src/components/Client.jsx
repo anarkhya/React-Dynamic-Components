@@ -12,13 +12,13 @@ import ButtonAdmin from "./ButtonAdmin";
 const Client = ({ data }) => {
   return (
     <div
-      className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary"
+      className="flex flex-col items-center gap-3 p-4 mx-auto md:text-lg bg-primary text-secondary"
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
     >
-      <div className="text-right w-full">
+      <div className="w-full text-right">
         <ButtonAdmin type="client" data={data} />
       </div>
-      <h1 className="uppercase text-center text-h1 font-light">{data.titre}</h1>
+      <h1 className="font-light text-center uppercase text-h1">{data.titre}</h1>
       <p className="md:w-1/2">{data.description}</p>
     </div>
   );
