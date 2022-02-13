@@ -1,22 +1,20 @@
 <div id="top"></div>
 
 <div align="center">
-    <a href="https://github.com/LaTrocquerie/">
-      <img src="https://media-exp1.licdn.com/dms/image/C560BAQF8nIJur7AkEQ/company-logo_200_200/0/1640808785801?e=1651104000&v=beta&t=cSlnP-y34a6_pqty16jNo0y9bvDo7klw0Py9q0uK9R8" alt="Logo">
+    <a href="">
+      <img src="" alt="Logo">
     </a>
 </div>
 
 
 ## La Trocquerie
 
-Student Project (Front/Back) featuring a custom Content Managing System built with ReactJS through usage of dynamic components, made for Agathe Violain and her physical shop.
+Student Project (Front) featuring a custom Content Managing System built with ReactJS through usage of dynamic components.
 
 
 ## Tech Stack
 
-**Client:** React, TailwindCSS<br>
-**Server:** Node, Express
-
+React, TailwindCSS<br>
 
 ## Authors
 
