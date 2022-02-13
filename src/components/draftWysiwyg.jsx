@@ -11,7 +11,7 @@ function EditorContainer() {
   const [editorState, setEditorState] = useState("");
 
   return (
-    <div className="editor text-vert mx-auto m-4">
+    <div className="editor text-secondary mx-auto m-4">
       <Editor
         editorState={editorState}
         onEditorStateChange={setEditorState}

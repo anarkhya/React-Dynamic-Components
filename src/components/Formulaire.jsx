@@ -9,9 +9,9 @@ import React from "react";
  */
 const Formulaire = ({ data }) => {
   return (
-    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-vert text-blanc">
+    <div className="p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-dark">
       <h1 className="uppercase text-h1 text-center">{data.titre}</h1>
-      <div className="text-vert flex flex-col mb-4 ">
+      <div className="text-secondary flex flex-col mb-4 ">
         <form className="flex flex-col items-center my-5">
           <label htmlFor="nom">
             <input
@@ -47,7 +47,7 @@ const Formulaire = ({ data }) => {
             placeholder="Message"
           />
           <button
-            className="transition hover:bg-rose hover:text-vert hover:border-rose active:-skew-y-6 active:translate-y-1 shadow-blanc/30 shadow-[10px_10px_0px_0px] active:shadow-blanc/20 bg-vert border-blanc border-2 text-blanc px-6 py-2 mt-5"
+            className="transition hover:bg-accent hover:text-secondary hover:border-accent active:-skew-y-6 active:translate-y-1 shadow-dark/30 shadow-[10px_10px_0px_0px] active:shadow-dark/20 bg-secondary border-dark border-2 text-dark px-6 py-2 mt-5"
             type="button"
           >
             Envoyer

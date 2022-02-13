@@ -31,7 +31,6 @@ const ButtonAdmin = ({ type, data }) => {
     setModal("");
   };
   const getModal = () => {
-    console.log(getModal);
     const myModal = {
       article: <ModalArticle isShowing hide={toggle} data={data} />,
       abonnement: <ModalAbonnement isShowing hide={toggle} data={data} />,
@@ -48,17 +47,14 @@ const ButtonAdmin = ({ type, data }) => {
     };
     setModal(myModal[type]);
   };
-
   return (
-    <div className="">
-      {/* {console.log(modal)} */}
-      {/* {modal ? ( */}
+    <div className="md:block hidden ">
       <button type="submit" onClick={() => getModal()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
           viewBox="0 0 20 20"
-          fill="#0ff"
+          fill="#fff"
         >
           <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
           <path
@@ -68,10 +64,6 @@ const ButtonAdmin = ({ type, data }) => {
           />
         </svg>
       </button>
-      {/* ) : (
-        ""
-      )}
-      {modal} */}
       {modal}
     </div>
   );

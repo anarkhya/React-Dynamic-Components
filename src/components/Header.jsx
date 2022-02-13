@@ -18,41 +18,40 @@ const Header = () => {
   return (
     <Disclosure
       as="nav"
-      className="border-b-2 border-b-neutral-200 sticky top-0 bg-white shadow-md shadow-vert/20"
+      className="sticky top-0 z-50 border-b-2 shadow-xl border-b-secondary bg-dark shadow-secondary/50"
     >
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 pr-4">
-            <div className="flex justify-end mt-3">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex justify-end">
               <ButtonAdmin type="header" HeaderData={HeaderData} />
             </div>
             <div className="relative flex items-center justify-between pb-2">
               {/* positionnement burger */}
               <div className="absolute inset-y-0 right-0 sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-vert focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XIcon className="block w-6 h-6" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <MenuIcon className="block w-6 h-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center pl-4 sm:justify-between">
+              <div className="flex items-center flex-1 sm:justify-between">
                 <Link to={HeaderData.menus[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>
                 <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-14">
+                  <div className="flex gap-8">
                     {HeaderData.menus.map((item) => (
                       <Link to={item.to}>
-                        <a
+                        <p
                           key={item.name}
-                          href={item.to}
-                          className="transition hover:text-rose text-h2 text-vert"
+                          className="leading-8 transition ease-in active:translate-y-1 hover:text-accent text-h2 font-headlines text-secondary"
                         >
                           {item.name}
-                        </a>
+                        </p>
                       </Link>
                     ))}
                   </div>
@@ -62,12 +61,12 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="bg-vert flex flex-col p-4 gap-8">
+            <div className="flex flex-col gap-8 p-4 bg-secondary">
               {HeaderData.menus.map((item) => (
                 <Link to={item.to}>
                   <Disclosure.Button
                     key={item.name}
-                    className="text-h2 text-blanc"
+                    className="text-h2 text-dark"
                   >
                     {item.name}
                   </Disclosure.Button>

@@ -49,7 +49,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
       return ReactDOM.createPortal(
         <>
           {/* // modal-overlay */}
-          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-vert opacity-70" />
+          <div className="fixed top-0 left-0 z-1040 w-screen h-screen bg-secondary opacity-70" />
           {/* // modal-wrapper */}
           <div
             className="fixed top-0 left-0 z-1050 w-full h-full overflow-x-hidden overflow-y-auto"
@@ -59,7 +59,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
             role="dialog"
           >
             {/* // modal */}
-            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-gris_clair p-3 rounded text-vert">
+            <div className="z-100 max-w-screen-sm m-14 mx-auto relative bg-primary p-3 rounded text-secondary">
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
@@ -79,7 +79,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
                 Produits échangeables - Modification du contenu
               </h1>
               <label className="flex flex-col" htmlFor="b">
-                Arrière-plan vert ?
+                Arrière-plan secondary ?
                 <input
                   className="w-5 h-5 my-2"
                   id="b"
@@ -128,7 +128,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
                       nouvelle image
                       <input
                         id="file"
-                        className="transition bg-blanc hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
+                        className="transition bg-dark hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                         type="file"
                       />
                     </label>
@@ -145,7 +145,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
                     </label>
                     <section className="flex flex-row-reverse my-2 gap-4 px-2">
                       <button
-                        className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                        className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                         type="button"
                         onClick={() => deleteDetail(item)}
                       >
@@ -158,7 +158,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
               <section className="flex justify-center mt-8 my-2 gap-4 px-2 mb-8">
                 <button
                   type="submit"
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 my-2"
+                  className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-secondary/40 shadow-[10px_10px_0px_0px] shadow-secondary/50 bg-secondary text-white px-6 py-2 my-2"
                   onClick={() => addPresentation()}
                 >
                   Ajouter un autre bloc
@@ -166,7 +166,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
               </section>
               <section className="flex flex-row-reverse my-2 gap-4 px-2">
                 <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
+                  className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-[#813]/40 shadow-[10px_10px_0px_0px] shadow-[#813]/50 bg-[#813] text-white px-6 py-2 text-normal"
                   type="button"
                   // delete => string vide
                   onClick={() => onDeleteComponent()}
@@ -174,7 +174,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
                   Supprimer
                 </button>
                 <button
-                  className="transition hover:bg-rose hover:text-vert active:-skew-y-6 active:translate-y-1 active:shadow-vert/40 shadow-[10px_10px_0px_0px] shadow-vert/50 bg-vert text-white px-6 py-2 text-normal"
+                  className="transition hover:bg-accent hover:text-secondary active:-skew-y-6 active:translate-y-1 active:shadow-secondary/40 shadow-[10px_10px_0px_0px] shadow-secondary/50 bg-secondary text-white px-6 py-2 text-normal"
                   type="button"
                   onClick={() => onUpdateComponent()}
                 >

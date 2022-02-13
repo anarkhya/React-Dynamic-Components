@@ -13,9 +13,9 @@ const echanges = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
-      titre: "Dans la Trocquerie, il est possible de troquer:",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      clsBouton: "rounded-full bg-secondary text-white px-6 py-2 text-sm",
+      titre: "Lorem ipsum dolor sit amet",
       description: "¡ Uniquement des objets en bon état !",
       description2: "",
       description3: "",
@@ -30,7 +30,7 @@ const echanges = [
   {
     component: "product",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
       titre: "Les différents produits échangeables:",
       presentation: [
         {
@@ -55,7 +55,7 @@ const echanges = [
   {
     component: "objets",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-gris_clair text-vert",
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-primary text-secondary",
       categorie: [
         {
           id: 1,
@@ -82,10 +82,9 @@ const echanges = [
   {
     component: "categorie",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-vert text-blanc",
+      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
       description:
-        "La valeur des objets n'est pas la même pour tout le monde. La valeur du produit dans la Trocquerie est considérée différement de son prix d'achat. L'idée est de privilégier l'éthique et se détacher de la valeur monétaire et aussi sentimentale de ceux-ci.",
-      titre: "Les échanges sont catégorisés par un système de gommettes:",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       gommettes: [
         {
           id: 1,
@@ -109,7 +108,7 @@ const echanges = [
           id: 4,
           color: "",
           src: "./assets/images/gommette-vert.png",
-          alt: "gommette vert",
+          alt: "gommette verte",
         },
       ],
       infos: "Il est également possible de combiner des couleurs ",
@@ -122,8 +121,8 @@ const echanges = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-gris_clair text-vert",
-      clsBouton: "rounded-full bg-vert text-white px-6 py-2 text-sm",
+      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      clsBouton: "rounded-full bg-secondary text-white px-6 py-2 text-sm",
       titre: "Comment ça marche:",
       description:
         "Faire le tri chez soi. Venir à la boutique ou prendre rendez-vous. Amenez les pièces à échanger. Choisir les nouveaux articles. Repartir avec les produits choisis.",
