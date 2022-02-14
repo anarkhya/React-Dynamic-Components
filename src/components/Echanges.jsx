@@ -26,7 +26,7 @@ const Echanges = ({ data }) => {
         <h2 className="mt-4 text-center">{data.titre}</h2>
         <section className="flex justify-center gap-4 mt-4">
           {data.gommettes.map((gommette) => (
-            <section>
+            <section key={gommette.id}>
               <p>
                 {gommette.color}
                 <img

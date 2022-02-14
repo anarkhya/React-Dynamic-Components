@@ -25,7 +25,7 @@ const Abonnement = ({ data }) => {
         <br />
         <div className="md:w-1/2">
           {data.details.map((detail) => (
-            <div>
+            <div key={detail.id}>
               <p className="font-bold">{detail.detail}</p>
               <p>{detail.description1}</p>
               <p>{detail.description2}</p>

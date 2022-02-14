@@ -34,12 +34,14 @@ const echanges = [
       titre: "Les différents produits échangeables:",
       presentation: [
         {
+          id: 1,
           infos:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sapiente, fugiat ullam quam, dolore at animi excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. Eos dicta iure assumenda eveniet?",
           src: "./assets/images/pexels-mathilde-langevin-10897821.jpg",
           alt: "Image représentant un produit que l'on peut trocquer",
         },
         {
+          id: 2,
           infos:
             "Excepturi eaque eligendi nostrum quod laboriosam, eius architecto repellat. fugiat ullam quam, dolore. Eos dicta iure assumenda eveniet?",
           src: "./assets/images/pexels-mark-vegera-1089425.jpg",
