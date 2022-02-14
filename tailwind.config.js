@@ -5,8 +5,8 @@ module.exports = {
       colors: {
         dark: "#333",
         primary: "#dde",
-        accent: "#f08",
-        secondary: "#76a",
+        accent: "#f06",
+        secondary: "#87b",
       },
       fontFamily: {
         sans: ["Ubuntu", "sans-serif"],

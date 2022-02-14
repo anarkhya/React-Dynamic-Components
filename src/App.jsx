@@ -8,7 +8,7 @@ import MentionsLegales from "./pages/MentionsLegales";
 
 function App() {
   return (
-    <div>
+    <div className="bg-primary">
       <BrowserRouter>
         <Header />
         <Routes>

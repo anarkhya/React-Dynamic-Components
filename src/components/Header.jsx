@@ -18,12 +18,12 @@ const Header = () => {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-50 border-b-2 shadow-xl border-b-secondary bg-dark shadow-secondary/50"
+      className="sticky top-0 z-50 rounded-bl-[100%] rounded-br-[20%] shadow-md shadow-secondary/50 bg-dark"
     >
       {({ open }) => (
         <>
           <div className="px-4">
-            <div className="flex justify-end">
+            <div className="flex justify-end hidden">
               <ButtonAdmin type="header" HeaderData={HeaderData} />
             </div>
             <div className="relative flex items-center justify-between pb-2">
@@ -38,37 +38,37 @@ const Header = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex items-center flex-1 sm:justify-between">
+              <div className="pl-16">
                 <Link to={HeaderData.menus[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex gap-8">
-                    {HeaderData.menus.map((item) => (
-                      <Link to={item.to}>
-                        <p
-                          key={item.name}
-                          className="leading-8 transition ease-in active:translate-y-1 hover:text-accent text-h2 font-headlines text-secondary"
-                        >
-                          {item.name}
-                        </p>
-                      </Link>
+              </div>
+              <div className="hidden md:block md:ml-6">
+                <div className="flex gap-4 row-reverse">
+                  {HeaderData.menus.map((item) => (
+                    <Link to={item.to}>
+                      <p
+                        key={item.name}
+                        className="leading-8 hover:underline  hover:underline-offset-2 hover:decoration-accent hover:decoration-2 active:translate-y-1 text-h2 font-headlines text-secondary drop-shadow-[2px_0px_3px_rgba(0,0,0,0.6)]"
+                      >
+                        {item.name}
+                      </p>
+                    </Link>
+                  ))}
+                  <div className="flex gap-4">
+                    {HeaderData.networks.map((network) => (
+                      <span key={network.id}>
+                        <a href={network.url}>
+                          <img
+                            className="inline h-6 transition border-b-2 rounded hover:outline-offset-2 hover:outline hover:outline-2 hover:outline-accent active:translate-y-1 drop-shadow-[2px_0px_3px_rgba(0,0,0,0.6)]"
+                            src={network.src}
+                            alt={network.alt}
+                          />
+                        </a>
+                        {network.text}
+                      </span>
                     ))}
                   </div>
-                </div>
-                <div className="flex gap-2">
-                  {HeaderData.networks.map((network) => (
-                    <span key={network.id}>
-                      <a href={network.url}>
-                        <img
-                          className="inline h-7"
-                          src={network.src}
-                          alt={network.alt}
-                        />
-                      </a>
-                      {network.text}
-                    </span>
-                  ))}
                 </div>
               </div>
             </div>

@@ -15,10 +15,10 @@ import ButtonAdmin from "./ButtonAdmin";
 const Footer = () => {
   return (
     <footer className={FooterData.cls}>
-      <div className="flex justify-end pt-4 pr-4">
+      <div className="flex justify-end pt-2 pr-2">
         <ButtonAdmin type="footer" />
       </div>
-      <section className="flex flex-col items-center gap-5 py-4 md:flex-row md:place-content-around md:gap-0">
+      <section className="flex flex-col items-center gap-5 md:flex-row md:place-content-around md:gap-0">
         <div className="list-none md:flex md:flex-col md:place-content-center md:order-last">
           <h2 className="text-h2 font-headlines">{FooterData.titreHoraires}</h2>
           {FooterData.horaires.map((horaire) => (
