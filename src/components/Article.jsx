@@ -25,8 +25,8 @@ const Article = ({ data }) => {
       <p className="md:w-1/2">{data.description2}</p>
       <p className="md:w-1/2">{data.description3}</p>
 
-      {data.button ? (
-        <Link to={data.url}>
+      {data.hasButton ? (
+        <Link to={data.buttonUrl}>
           <ButtonMore data={data} />
         </Link>
       ) : (
