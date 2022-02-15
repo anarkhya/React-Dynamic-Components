@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ButtonAdmin from "./ButtonAdmin";
 import Headline1 from "./Headline1";
+import ButtonMore from "./ButtonMore";
 
 /**
  *
@@ -24,11 +25,9 @@ const Article = ({ data }) => {
       <p className="md:w-1/2">{data.description2}</p>
       <p className="md:w-1/2">{data.description3}</p>
 
-      {data.bouton ? (
+      {data.button ? (
         <Link to={data.url}>
-          <button className={data.clsBouton} type="submit">
-            En savoir plus
-          </button>
+          <ButtonMore data={data} />
         </Link>
       ) : (
         ""
