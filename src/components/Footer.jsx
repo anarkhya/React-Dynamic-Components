@@ -5,12 +5,8 @@ import FooterData from "../data/FooterData";
 import ButtonAdmin from "./ButtonAdmin";
 
 /**
- *
- *
  * @return {*}
  * data se trouvant dans data/FooterData
- * Map sur les horaires
- * Bouton Admin joint
  */
 const Footer = () => {
   return (
@@ -38,17 +34,17 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center text-mini ">
-        <p>{FooterData.copyright}</p>
+      <section className="flex flex-col items-center md:flex-row md:justify-between md:p-2 text-mini ">
+        <p className="opacity-50">{FooterData.copyright}</p>
         <p>
-          Développé par
+          Made by
           <a
             className="px-1 underline transition hover:no-underline active:translate-y-1"
-            href="https://wikipedia.fr"
+            href={FooterData.developerUrl}
             target="_blank"
             rel="noreferrer"
           >
-            hello world
+            {FooterData.developer}
           </a>
         </p>
         <p className="opacity-50">
