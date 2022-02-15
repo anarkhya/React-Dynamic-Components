@@ -67,7 +67,7 @@ const Header = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel>
             <div className="flex flex-col h-screen gap-6 p-4 pt-8 bg-dark">
               {HeaderData.menus.map((item) => (
                 <Link to={item.to} key={item.name}>
