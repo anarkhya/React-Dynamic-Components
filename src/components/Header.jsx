@@ -54,8 +54,8 @@ const Header = () => {
                   ))}
                   <div className="flex gap-4">
                     {HeaderData.networks.map((network) => (
-                      <span key={network.id}>
-                        <a href={network.url}>
+                      <span key={network.alt}>
+                        <a href={network.url} target="_blank" rel="noreferrer">
                           <img
                             className="inline h-6 transition border-b-2 rounded hover:outline-offset-2 hover:outline hover:outline-2 hover:outline-accent active:translate-y-1 drop-shadow-[2px_0px_3px_rgba(0,0,0,0.6)]"
                             src={network.src}
@@ -72,10 +72,10 @@ const Header = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="flex flex-col gap-8 p-4 bg-secondary">
+            <div className="flex flex-col h-screen gap-6 p-4 pt-8 bg-dark">
               {HeaderData.menus.map((item) => (
                 <Link to={item.to} key={item.name}>
-                  <Disclosure.Button className="text-h2 text-dark">
+                  <Disclosure.Button className="leading-8 text-secondary text-h2 font-headlines active:underline active:underline-offset-2 active:decoration-accent active:decoration-2">
                     {item.name}
                   </Disclosure.Button>
                 </Link>

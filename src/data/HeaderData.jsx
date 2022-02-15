@@ -1,20 +1,9 @@
 const HeaderData = {
-  networks: [
-    {
-      id: 1,
-      src: "./assets/icones/icon_linkedin.svg",
-      alt: "LinkedIn",
-      url: "",
-      text: "",
-    },
-    {
-      id: 2,
-      src: "./assets/icones/icon_github.svg",
-      alt: "Github",
-      url: "",
-      text: "",
-    },
-  ],
+  logo: {
+    src: "../../assets/images/logoipsum.svg",
+    alt: "Logo",
+    to: "",
+  },
   menus: [
     {
       to: "/",
@@ -37,11 +26,20 @@ const HeaderData = {
       name: "Contact",
     },
   ],
-  logo: {
-    src: "../../assets/images/logoipsum.svg",
-    alt: "Logo",
-    to: "",
-  },
+  networks: [
+    {
+      src: "./assets/icones/icon_linkedin.svg",
+      alt: "LinkedIn",
+      url: "https://wikipedia.fr",
+      text: "",
+    },
+    {
+      src: "./assets/icones/icon_github.svg",
+      alt: "Github",
+      url: "https://wikipedia.fr",
+      text: "",
+    },
+  ],
 };
 
 export default HeaderData;
