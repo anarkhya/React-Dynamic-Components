@@ -22,9 +22,9 @@ const Header = () => {
           <div className="flex justify-end hidden">
             <ButtonAdmin type="header" HeaderData={HeaderData} />
           </div>
-          <div className="relative flex flex-row items-center px-2 h-10 md:h-12">
+          <div className="relative flex flex-row items-center px-2 h-10 lg:h-12">
             {/* /////////////////////////////////////                           burger */}
-            <div className="absolute inset-y-1 right-1 md:hidden">
+            <div className="absolute inset-y-1 right-1 lg:hidden">
               <Disclosure.Button className=" text-secondary focus:outline-none">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
@@ -41,7 +41,7 @@ const Header = () => {
               </Link>
             </div>
             {/* /////////////////////////////////////////                       links */}
-            <div className="hidden md:flex basis-1/2 gap-4 justify-center">
+            <div className="hidden lg:flex basis-1/2 gap-4 justify-center">
               {HeaderData.menus.map((item) => (
                 <Link to={item.to} key={item.name}>
                   <p className="leading-8 transition hover:underline hover:underline-offset-2 hover:decoration-accent hover:decoration-2 active:translate-y-1 text-h2 font-headlines text-secondary ">
@@ -51,7 +51,7 @@ const Header = () => {
               ))}
             </div>
             {/* /////////////////////////////////////////                       social icons */}
-            <div className="flex w-full mr-10 md:mr-0 gap-2 md:basis-1/4 justify-end">
+            <div className="flex w-full mr-10 lg:mr-0 gap-2 lg:basis-1/4 justify-end">
               {HeaderData.networks.map((network) => (
                 <div key={network.alt}>
                   <a href={network.url} target="_blank" rel="noreferrer">

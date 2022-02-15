@@ -21,7 +21,7 @@ const Echanges = ({ data }) => {
       <div className="w-full text-right">
         <ButtonAdmin type="echanges" data={data} />
       </div>
-      <div className="md:w-1/2">
+      <div className="lg:w-1/2">
         <p className="">{data.description}</p>
         <h2 className="mt-4 text-center">{data.titre}</h2>
         <section className="flex justify-center gap-4 mt-4">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AdminConnection = () => {
   return (
-    <div className="flex flex-col items-center gap-3 p-4 mx-auto md:text-lg bg-secondary text-dark">
+    <div className="flex flex-col items-center gap-3 p-4 mx-auto lg:text-lg bg-secondary text-dark">
       <h1 className="mt-5 text-center uppercase text-h1">Authentification</h1>
       <div className="mt-2 mb-4 text-secondary">
         <Link to="/testtest">
@@ -11,7 +11,7 @@ const AdminConnection = () => {
             <label htmlFor="identifiant">
               Identifiant
               <input
-                className="flex items-center px-2 mt-2 mb-3 border-none rounded md:w-96 focus:outline-none"
+                className="flex items-center px-2 mt-2 mb-3 border-none rounded lg:w-96 focus:outline-none"
                 type="text"
                 id="nom"
                 placeholder="Identifiant"
@@ -20,7 +20,7 @@ const AdminConnection = () => {
             <label htmlFor="mdp">
               Mot de passe
               <input
-                className="flex items-center px-2 mb-3 border-none rounded md:w-96 focus:outline-none"
+                className="flex items-center px-2 mb-3 border-none rounded lg:w-96 focus:outline-none"
                 type="text"
                 id="mdp"
                 placeholder="Mot de passe"

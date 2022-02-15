@@ -9,7 +9,7 @@ const AbonnementData = [
   {
     component: "abonnement",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
       titre: "Abonnements",
       description:
         "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",

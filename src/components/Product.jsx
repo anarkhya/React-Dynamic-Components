@@ -21,17 +21,17 @@ const Product = ({ data }) => {
         <ButtonAdmin type="product" data={data} />
       </div>
       <Headline1 data={data} />
-      <section className="flex flex-col gap-3 mt-10 md:w-1/2">
+      <section className="flex flex-col gap-3 mt-10 lg:w-1/2">
         {data.presentation.map((pres) => (
           <div
             key={pres.id}
-            className="flex flex-col justify-center gap-3 my-2 md:flex-row"
+            className="flex flex-col justify-center gap-3 my-2 lg:flex-row"
           >
-            <p className=" md:pr-4">{pres.infos}</p>
+            <p className=" lg:pr-4">{pres.infos}</p>
             <img
               src={pres.src}
               alt={pres.alt}
-              className="mx-auto my-2 w-72 md:w-52"
+              className="mx-auto my-2 w-72 lg:w-52"
             />
           </div>
         ))}

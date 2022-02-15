@@ -19,7 +19,7 @@ const Objets = ({ data }) => {
         <ButtonAdmin type="objets" data={data} />
       </div>
       {data.categorie.map((cat) => (
-        <section className="md:w-1/2" key={cat.id}>
+        <section className="lg:w-1/2" key={cat.id}>
           <h2 className="font-bold">{cat.appartenance}</h2>
           <p>{cat.cible}</p>
         </section>

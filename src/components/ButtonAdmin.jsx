@@ -48,7 +48,7 @@ const ButtonAdmin = ({ type, data }) => {
     setModal(myModal[type]);
   };
   return (
-    <div className="hidden md:block ">
+    <div className="hidden lg:block ">
       <button type="submit" onClick={() => getModal()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

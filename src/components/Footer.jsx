@@ -14,14 +14,14 @@ const Footer = () => {
       <div className="flex justify-end pt-2 pr-2">
         <ButtonAdmin type="footer" />
       </div>
-      <section className="flex flex-col items-center gap-5 md:flex-row md:place-content-around md:gap-0">
-        <div className="list-none md:flex md:flex-col md:place-content-center md:order-last">
+      <section className="flex flex-col items-center gap-5 lg:flex-row lg:place-content-around lg:gap-0">
+        <div className="list-none lg:flex lg:flex-col lg:place-content-center lg:order-last">
           <h2 className="text-h2 font-headlines">{FooterData.titreHoraires}</h2>
           {FooterData.horaires.map((horaire) => (
             <li key={horaire.id}>{horaire.horaire}</li>
           ))}
         </div>
-        <div className="md:flex md:items-center">
+        <div className="lg:flex lg:items-center">
           <LocationMarkerIcon className="h-5" />
           <a
             className="underline transition hover:no-underline active:translate-y-1"
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="flex flex-col items-center md:flex-row md:justify-between md:p-2 text-mini ">
+      <section className="flex flex-col items-center lg:flex-row lg:justify-between lg:p-2 text-mini ">
         <p className="opacity-50">{FooterData.copyright}</p>
         <p>
           Made by

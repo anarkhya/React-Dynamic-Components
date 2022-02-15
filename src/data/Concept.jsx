@@ -13,8 +13,8 @@ const concept = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
-      clsPara: "md:w-1/2",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      clsPara: "lg:w-1/2",
       titre: "Concept",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -31,7 +31,7 @@ const concept = [
   {
     component: "concept",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
       titre: "",
       description:
         "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”",
@@ -43,7 +43,7 @@ const concept = [
   {
     component: "client",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
       titre: "Pour qui ?",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -55,7 +55,7 @@ const concept = [
   {
     component: "concept",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
       titre: "",
       description:
         "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
@@ -67,7 +67,7 @@ const concept = [
   {
     component: "articleImage",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
       titre: "Porteuse de projet",
       src: "./assets/images/placeholder.png",
       alt: "photo",

@@ -23,7 +23,7 @@ const ArticleImage = ({ data }) => {
         </div>
         <Headline1 data={data} />
         <img className="w-32" src={data.src} alt={data.alt} />
-        <p className="md:w-1/2">{data.description}</p>
+        <p className="lg:w-1/2">{data.description}</p>
       </div>
     </div>
   );

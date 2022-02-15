@@ -5,7 +5,7 @@ const home = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-8",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-8",
       title: "Chaque objet a une histoire",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -22,7 +22,7 @@ const home = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary pb-8",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary pb-8",
       title: "Échangez vos objets dès maintenant",
       description: "",
       description2: "",

@@ -13,7 +13,7 @@ const echanges = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
       clsBouton: "rounded-full bg-secondary text-white px-6 py-2 text-sm",
       titre: "Lorem ipsum dolor sit amet",
       description: "¡ Uniquement des objets en bon état !",
@@ -30,7 +30,7 @@ const echanges = [
   {
     component: "product",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
+      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
       titre: "Les différents produits échangeables:",
       presentation: [
         {
@@ -57,7 +57,7 @@ const echanges = [
   {
     component: "objets",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-primary text-secondary",
+      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-primary text-secondary",
       categorie: [
         {
           id: 1,
@@ -84,7 +84,7 @@ const echanges = [
   {
     component: "categorie",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
+      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       gommettes: [
@@ -123,7 +123,7 @@ const echanges = [
   {
     component: "article",
     data: {
-      cls: "p-4 md:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
       clsBouton: "rounded-full bg-secondary text-white px-6 py-2 text-sm",
       titre: "Comment ça marche:",
       description:

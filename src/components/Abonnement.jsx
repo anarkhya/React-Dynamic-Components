@@ -23,7 +23,7 @@ const Abonnement = ({ data }) => {
         <h1 className="uppercase font-headlines text-h1">{data.titre}</h1>
         <br />
         <br />
-        <div className="md:w-1/2">
+        <div className="lg:w-1/2">
           {data.details.map((detail) => (
             <div key={detail.id}>
               <p className="font-bold">{detail.detail}</p>

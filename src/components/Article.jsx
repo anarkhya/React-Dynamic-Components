@@ -21,9 +21,9 @@ const Article = ({ data }) => {
         <ButtonAdmin type="article" data={data} />
       </div>
       <Headline1 data={data} />
-      <p className="md:w-1/2">{data.description}</p>
-      <p className="md:w-1/2">{data.description2}</p>
-      <p className="md:w-1/2">{data.description3}</p>
+      <p className="lg:w-1/2">{data.description}</p>
+      <p className="lg:w-1/2">{data.description2}</p>
+      <p className="lg:w-1/2">{data.description3}</p>
 
       {data.hasButton ? (
         <Link to={data.buttonUrl}>
