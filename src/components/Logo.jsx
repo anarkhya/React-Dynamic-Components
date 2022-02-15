@@ -11,7 +11,7 @@ const Logo = () => {
   return (
     <div>
       <svg
-        className="h-16 drop-shadow-[0px_1px_1px_rgba(0,0,0,0.85)]"
+        className="h-12 md:h-16 mt-4 drop-shadow-[0px_1px_1px_rgba(0,0,0,0.5)] active:translate-y-1 transition"
         id="logo-54"
         viewBox="0 0 170 41"
         fill="none"

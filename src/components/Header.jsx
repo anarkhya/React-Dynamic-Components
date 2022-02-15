@@ -6,7 +6,6 @@ import Logo from "./Logo";
 import ButtonAdmin from "./ButtonAdmin";
 
 /**
- * NavBar version desktop et mobile
  *
  * @return {*}
  * Importation de Disclosure pour Ouvrir/fermer le burger en responsive
@@ -18,7 +17,7 @@ const Header = () => {
   return (
     <Disclosure
       as="nav"
-      className="sticky top-0 z-50 rounded-bl-[100%] rounded-br-[20%] shadow-lg shadow-dark/50 bg-dark"
+      className="sticky top-0 z-50 shadow-lg shadow-dark/50 bg-dark"
     >
       {({ open }) => (
         <>
@@ -26,47 +25,48 @@ const Header = () => {
             <div className="flex justify-end hidden">
               <ButtonAdmin type="header" HeaderData={HeaderData} />
             </div>
-            <div className="relative flex items-center justify-between p-2">
-              {/* positionnement burger */}
-              <div className="absolute inset-y-0 right-0 sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-secondary focus:outline-none">
+            <div className="relative flex flex-row items-center px-2 h-10 md:h-12">
+              {/* /////////////////////////////////////                           burger */}
+              <div className="absolute inset-y-1 right-1 md:hidden">
+                <Disclosure.Button className=" text-secondary focus:outline-none">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block w-6 h-6" aria-hidden="true" />
+                    <XIcon className="block w-8 h-8" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block w-6 h-6" aria-hidden="true" />
+                    <MenuIcon className="block w-8 h-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="h-12">
+              {/* /////////////////////////////////////////                       logo */}
+              <div className="mb-4 basis-1/4">
                 <Link to={HeaderData.menus[0].to}>
                   <Logo data={HeaderData.logo} />
                 </Link>
               </div>
-              <div className="hidden md:block md:ml-6">
-                <div className="flex gap-4 row-reverse">
-                  {HeaderData.menus.map((item) => (
-                    <Link to={item.to} key={item.name}>
-                      <p className="leading-8 transition hover:underline hover:underline-offset-2 hover:decoration-accent hover:decoration-2 active:translate-y-1 text-h2 font-headlines text-secondary drop-shadow-[2px_0px_3px_rgba(0,0,0,0.6)]">
-                        {item.name}
-                      </p>
-                    </Link>
-                  ))}
-                  <div className="flex gap-4">
-                    {HeaderData.networks.map((network) => (
-                      <span key={network.alt}>
-                        <a href={network.url} target="_blank" rel="noreferrer">
-                          <img
-                            className="inline h-6 transition border-b-2 rounded hover:outline-offset-2 hover:outline hover:outline-2 hover:outline-accent active:translate-y-1 drop-shadow-[2px_0px_3px_rgba(0,0,0,0.6)]"
-                            src={network.src}
-                            alt={network.alt}
-                          />
-                        </a>
-                        {network.text}
-                      </span>
-                    ))}
+              {/* /////////////////////////////////////////                       links */}
+              <div className="hidden md:flex basis-1/2 gap-4 justify-center">
+                {HeaderData.menus.map((item) => (
+                  <Link to={item.to} key={item.name}>
+                    <p className="leading-8 transition hover:underline hover:underline-offset-2 hover:decoration-accent hover:decoration-2 active:translate-y-1 text-h2 font-headlines text-secondary ">
+                      {item.name}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+              {/* /////////////////////////////////////////                       social icons */}
+              <div className="flex w-full mr-10 md:mr-0 gap-2 md:basis-1/4 justify-end">
+                {HeaderData.networks.map((network) => (
+                  <div key={network.alt}>
+                    <a href={network.url} target="_blank" rel="noreferrer">
+                      <img
+                        className="inline h-6 transition border-b-2 rounded hover:outline-offset-2 hover:outline hover:outline-2 hover:outline-accent active:translate-y-1"
+                        src={network.src}
+                        alt={network.alt}
+                      />
+                    </a>
+                    {network.text}
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
