@@ -8,10 +8,8 @@ import ButtonAdmin from "./ButtonAdmin";
 /**
  *
  * @return {*}
- * Importation de Disclosure pour Ouvrir/fermer le burger en responsive
- * Ternaire pour passer en responsive
- * Map pour afficher tous les menus
- * Bouton d'admin joint
+ * Disclosure: handles burger display behavior
+ * Logo, Links and social icons mapping
  */
 const Header = () => {
   return (
@@ -21,53 +19,51 @@ const Header = () => {
     >
       {({ open }) => (
         <>
-          <div className="">
-            <div className="flex justify-end hidden">
-              <ButtonAdmin type="header" HeaderData={HeaderData} />
+          <div className="flex justify-end hidden">
+            <ButtonAdmin type="header" HeaderData={HeaderData} />
+          </div>
+          <div className="relative flex flex-row items-center px-2 h-10 md:h-12">
+            {/* /////////////////////////////////////                           burger */}
+            <div className="absolute inset-y-1 right-1 md:hidden">
+              <Disclosure.Button className=" text-secondary focus:outline-none">
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <XIcon className="block w-8 h-8" aria-hidden="true" />
+                ) : (
+                  <MenuIcon className="block w-8 h-8" aria-hidden="true" />
+                )}
+              </Disclosure.Button>
             </div>
-            <div className="relative flex flex-row items-center px-2 h-10 md:h-12">
-              {/* /////////////////////////////////////                           burger */}
-              <div className="absolute inset-y-1 right-1 md:hidden">
-                <Disclosure.Button className=" text-secondary focus:outline-none">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XIcon className="block w-8 h-8" aria-hidden="true" />
-                  ) : (
-                    <MenuIcon className="block w-8 h-8" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-              {/* /////////////////////////////////////////                       logo */}
-              <div className="mb-4 basis-1/4">
-                <Link to={HeaderData.menus[0].to}>
-                  <Logo data={HeaderData.logo} />
+            {/* /////////////////////////////////////////                       logo */}
+            <div className="mb-4 basis-1/4">
+              <Link to={HeaderData.menus[0].to}>
+                <Logo data={HeaderData.logo} />
+              </Link>
+            </div>
+            {/* /////////////////////////////////////////                       links */}
+            <div className="hidden md:flex basis-1/2 gap-4 justify-center">
+              {HeaderData.menus.map((item) => (
+                <Link to={item.to} key={item.name}>
+                  <p className="leading-8 transition hover:underline hover:underline-offset-2 hover:decoration-accent hover:decoration-2 active:translate-y-1 text-h2 font-headlines text-secondary ">
+                    {item.name}
+                  </p>
                 </Link>
-              </div>
-              {/* /////////////////////////////////////////                       links */}
-              <div className="hidden md:flex basis-1/2 gap-4 justify-center">
-                {HeaderData.menus.map((item) => (
-                  <Link to={item.to} key={item.name}>
-                    <p className="leading-8 transition hover:underline hover:underline-offset-2 hover:decoration-accent hover:decoration-2 active:translate-y-1 text-h2 font-headlines text-secondary ">
-                      {item.name}
-                    </p>
-                  </Link>
-                ))}
-              </div>
-              {/* /////////////////////////////////////////                       social icons */}
-              <div className="flex w-full mr-10 md:mr-0 gap-2 md:basis-1/4 justify-end">
-                {HeaderData.networks.map((network) => (
-                  <div key={network.alt}>
-                    <a href={network.url} target="_blank" rel="noreferrer">
-                      <img
-                        className="inline h-6 transition border-b-2 rounded hover:outline-offset-2 hover:outline hover:outline-2 hover:outline-accent active:translate-y-1"
-                        src={network.src}
-                        alt={network.alt}
-                      />
-                    </a>
-                    {network.text}
-                  </div>
-                ))}
-              </div>
+              ))}
+            </div>
+            {/* /////////////////////////////////////////                       social icons */}
+            <div className="flex w-full mr-10 md:mr-0 gap-2 md:basis-1/4 justify-end">
+              {HeaderData.networks.map((network) => (
+                <div key={network.alt}>
+                  <a href={network.url} target="_blank" rel="noreferrer">
+                    <img
+                      className="inline h-6 transition border-b-2 rounded hover:outline-offset-2 hover:outline hover:outline-2 hover:outline-accent active:translate-y-1"
+                      src={network.src}
+                      alt={network.alt}
+                    />
+                  </a>
+                  {network.text}
+                </div>
+              ))}
             </div>
           </div>
 
