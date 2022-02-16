@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 const ModalContact = ({ isShowing, hide, data }) => {
   /** state qui est en lien avec la data de contact pour l'afficher */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
+  const [title, setTitre] = useState(data.title);
   const [nom, setNom] = useState(data.nom);
   const [telephone, setTelephone] = useState(data.telephone);
   const [email, setEmail] = useState(data.mail);
@@ -21,7 +21,7 @@ const ModalContact = ({ isShowing, hide, data }) => {
 
   const onUpdateComponent = () => {
     console.log({
-      titre,
+      title,
       nom,
       telephone,
       email,
@@ -31,7 +31,7 @@ const ModalContact = ({ isShowing, hide, data }) => {
   };
   const onDeleteComponent = () => {
     console.log({
-      titre,
+      title,
       nom,
       telephone,
       email,
@@ -84,25 +84,25 @@ const ModalContact = ({ isShowing, hide, data }) => {
                     onChange={(event) => setCls(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre">
-                  Titre
+                <label htmlFor="title">
+                  title
                   <input
-                    id="titre"
+                    id="title"
                     className="w-full px-2 mt-2 mb-4 font-light transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
                     type="text"
-                    value={titre}
-                    placeholder="titre du bloc"
+                    value={title}
+                    placeholder="title du bloc"
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre">
+                <label htmlFor="title">
                   Nom
                   <input
-                    id="titre"
+                    id="title"
                     className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
                     type="text"
                     value={nom}
-                    placeholder="titre du bloc"
+                    placeholder="title du bloc"
                     onChange={(event) => setNom(event.target.value)}
                   />
                 </label>

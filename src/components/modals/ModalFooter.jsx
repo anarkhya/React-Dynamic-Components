@@ -53,7 +53,7 @@ const ModalFooter = ({ isShowing, hide }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"

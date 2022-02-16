@@ -8,7 +8,7 @@ import Headline1 from "./Headline1";
  * @param {*} { data }
  * Data se trouvant dans data/echanges
  * @return {*} Le composant regroupant les produits que présentent la Trocquerie
- *  * Bouton d'admin joint
+ *  * button d'admin joint
  */
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
@@ -22,7 +22,7 @@ const Product = ({ data }) => {
       </div>
       <Headline1 data={data} />
       <section className="flex flex-col gap-3 mt-10 lg:w-1/2">
-        {data.presentation.map((pres) => (
+        {data.products.map((pres) => (
           <div
             key={pres.id}
             className="flex flex-col justify-center gap-3 my-2 lg:flex-row"

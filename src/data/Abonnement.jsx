@@ -10,9 +10,8 @@ const AbonnementData = [
     component: "abonnement",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
-      titre: "Abonnements",
-      description:
-        "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
+      title: "Abonnements",
+
       details: [
         {
           id: 1,
@@ -40,6 +39,8 @@ const AbonnementData = [
             "Prix libre choix de la durée et de la somme *bénéficiaires du RSA, étudiant.es, chomeur.ses, ...",
         },
       ],
+      miniText:
+        "Chaque abonnement est nominatif et individuel. Paiement en espèces ou par CB.",
     },
   },
   // 2 - formulaire rdv
@@ -48,12 +49,13 @@ const AbonnementData = [
   {
     component: "formulaire",
     data: {
-      titre: "Prendre rendez-vous",
-      nom: "",
-      prenom: "",
+      title: "Prendre rendez-vous",
+      lastName: "",
+      firstName: "",
       email: "",
       message: "",
-      bouton: true,
+      button: true,
+      buttonText: "Send",
     },
   },
 ];

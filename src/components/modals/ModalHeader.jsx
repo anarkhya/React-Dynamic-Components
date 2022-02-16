@@ -33,7 +33,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
     });
     hide();
   };
-  /** const qui contient le bouton cliquable pour afficher le modal */
+  /** const qui contient le button cliquable pour afficher le modal */
   const getModal = () => {
     /** isShowing affiche le modal */
     if (isShowing) {
@@ -54,7 +54,7 @@ const ModalHeader = ({ isShowing, hide, HeaderData }) => {
               {/* // modal-header */}
               <div className="flex justify-end ">
                 {/* // modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"

@@ -2,7 +2,7 @@ const concept = [
   /*
   1 - présentation concept
   2 - citation 1
-  3 - cible client
+  3 - paragraph client
   4 - citation 2
   5 - présentation fondatrice
   */
@@ -15,14 +15,14 @@ const concept = [
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
       clsPara: "lg:w-1/2",
-      titre: "Concept",
+      title: "Concept",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       description2:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet",
       description3:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-      bouton: false,
+      hasButton: false,
     },
   },
   // bloc_order 2
@@ -32,19 +32,19 @@ const concept = [
     component: "concept",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
-      titre: "",
+      title: "",
       description:
         "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”",
     },
   },
-  // 3 - cible client
+  // 3 - paragraph client
   // bloc_order 3
 
   {
     component: "client",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
-      titre: "Pour qui ?",
+      title: "Pour qui ?",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     },
@@ -56,7 +56,7 @@ const concept = [
     component: "concept",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
-      titre: "",
+      title: "",
       description:
         "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
     },
@@ -68,7 +68,7 @@ const concept = [
     component: "articleImage",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
-      titre: "Porteuse de projet",
+      title: "Porteuse de projet",
       src: "./assets/images/placeholder.png",
       alt: "photo",
       caption: "",

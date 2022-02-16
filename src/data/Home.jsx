@@ -1,5 +1,5 @@
 const home = [
-  // présentation concept, avec bouton
+  // présentation concept, avec button
   // bloc_order 1
 
   {
@@ -16,7 +16,7 @@ const home = [
       buttonText: "More...",
     },
   },
-  // présentation concept 2, avec bouton
+  // présentation concept 2, avec button
   // bloc_order 2
 
   {

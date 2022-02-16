@@ -8,7 +8,7 @@ import Headline1 from "./Headline1";
  * @param {*} { data }
  * data se trouvant dans data/Concept
  * un component article avec incrustation d'une image
- * bouton admin joint
+ * button admin joint
  * @return {*}
  */
 const ArticleImage = ({ data }) => {

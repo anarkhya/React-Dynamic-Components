@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 const ModalAbonnement = ({ isShowing, hide, data }) => {
   /* states affichent data */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
+  const [title, setTitre] = useState(data.title);
   const [details, setDetails] = useState(data.details);
   const [description, setDescription] = useState(data.description);
 
@@ -31,7 +31,7 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
 
   const onUpdateComponent = () => {
     console.log({
-      titre,
+      title,
       details,
       description,
     });
@@ -39,7 +39,7 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
   };
   const onDeleteComponent = () => {
     console.log({
-      titre,
+      title,
       details,
       description,
     });
@@ -66,7 +66,7 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"
@@ -92,14 +92,14 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
                   onChange={(event) => setCls(event.target.value)}
                 />
               </label>
-              <label htmlFor="titre" className="">
-                Titre
+              <label htmlFor="title" className="">
+                title
                 <input
                   className="w-full px-2 my-2 font-light uppercase transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
-                  id="titre"
+                  id="title"
                   type="text"
-                  value={titre}
-                  placeholder="Titre"
+                  value={title}
+                  placeholder="title"
                   onChange={(event) => setTitre(event.target.value)}
                 />
               </label>
@@ -167,14 +167,14 @@ const ModalAbonnement = ({ isShowing, hide, data }) => {
                   Ajouter un autre bloc
                 </button>
               </section>
-              <label htmlFor="titre" className="">
+              <label htmlFor="title" className="">
                 ligne
                 <input
                   className="w-full px-2 my-2 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
-                  id="titre"
+                  id="title"
                   type="text"
                   value={description}
-                  placeholder="Titre"
+                  placeholder="title"
                   onChange={(event) => setDescription(event.target.value)}
                 />
               </label>

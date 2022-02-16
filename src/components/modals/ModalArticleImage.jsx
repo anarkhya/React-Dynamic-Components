@@ -6,20 +6,20 @@ import Concept from "../../data/Concept";
 const ModalArticleImage = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
+  const [title, setTitre] = useState(data.title);
   const [alt, setAlt] = useState(data.alt);
   const [description, setDescription] = useState(data.description);
 
   const onUpdateComponent = () => {
     console.log({
-      titre,
+      title,
       description,
     });
     hide();
   };
   const onDeleteComponent = () => {
     console.log({
-      titre,
+      title,
       description,
     });
     hide();
@@ -44,7 +44,7 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
             <div className="relative max-w-screen-sm p-3 mx-auto rounded z-100 m-14 bg-primary text-secondary">
               {/* // style modal-header */}
               <div className="flex justify-end">
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"
@@ -70,14 +70,14 @@ const ModalArticleImage = ({ isShowing, hide, data }) => {
                     onChange={(event) => setCls(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre" className="">
-                  Titre
+                <label htmlFor="title" className="">
+                  title
                   <input
                     className="w-full px-2 mt-2 mb-4 font-light uppercase transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
-                    id="titre"
+                    id="title"
                     type="text"
-                    value={titre}
-                    placeholder="titre du bloc"
+                    value={title}
+                    placeholder="title du bloc"
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>

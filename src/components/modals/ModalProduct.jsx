@@ -5,40 +5,40 @@ import ReactDOM from "react-dom";
 const ModalProduct = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
-  const [presentation, setPresentation] = useState(data.presentation);
-  const [alt, setAlt] = useState(data.presentation.alt);
+  const [title, setTitre] = useState(data.title);
+  const [products, setPresentation] = useState(data.products);
+  const [alt, setAlt] = useState(data.products.alt);
 
   const updateDetail = (value, type, obj) => {
-    const newPresentation = [...presentation];
+    const newPresentation = [...products];
     const index = newPresentation.indexOf(obj);
     newPresentation[index][type] = value;
     setPresentation(newPresentation);
   };
   const deleteDetail = (obj) => {
-    const newPresentation = [...presentation];
+    const newPresentation = [...products];
     const index = newPresentation.indexOf(obj);
     newPresentation.splice(index, 1);
     setPresentation(newPresentation);
   };
   /* ajoute nouveau bloc - push */
   const addPresentation = () => {
-    const newPresentation = [...presentation];
+    const newPresentation = [...products];
     newPresentation.push({ infos: "", src: "" });
     setPresentation(newPresentation);
   };
 
   const onUpdateComponent = () => {
     console.log({
-      // titre,
-      presentation,
+      // title,
+      products,
     });
     hide();
   };
   const onDeleteComponent = () => {
     console.log({
-      // titre,
-      presentation,
+      // title,
+      products,
     });
     hide();
   };
@@ -63,7 +63,7 @@ const ModalProduct = ({ isShowing, hide, data }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"
@@ -88,18 +88,18 @@ const ModalProduct = ({ isShowing, hide, data }) => {
                   onChange={(event) => setCls(event.target.value)}
                 />
               </label>
-              <label htmlFor="titre" className="">
-                Titre
+              <label htmlFor="title" className="">
+                title
                 <input
                   className="w-full px-2 mt-2 mb-4 font-light uppercase transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
-                  id="titre"
+                  id="title"
                   type="text"
-                  value={titre}
-                  placeholder="titre du bloc"
+                  value={title}
+                  placeholder="title du bloc"
                   onChange={(event) => setTitre(event.target.value)}
                 />
               </label>
-              {presentation.map((item) => {
+              {products.map((item) => {
                 return (
                   <div>
                     <label htmlFor="infos" className="">

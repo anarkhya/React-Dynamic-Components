@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ButtonAdmin from "./ButtonAdmin";
 import Headline1 from "./Headline1";
-import ButtonMore from "./ButtonMore";
+import Button from "./Button";
 
 /**
  *
  *
  * @param {*} { data }
  * data se trouvant dans data/Echanges
- * @return {*} un component article sans image avec un ternaire pour afficher ou non les différentes description et bouton
+ * @return {*} un component article sans image avec un ternaire pour afficher ou non les différentes description et button
  */
 const Article = ({ data }) => {
   return (
@@ -27,7 +27,7 @@ const Article = ({ data }) => {
 
       {data.hasButton ? (
         <Link to={data.buttonUrl}>
-          <ButtonMore data={data} />
+          <Button data={data} />
         </Link>
       ) : (
         ""

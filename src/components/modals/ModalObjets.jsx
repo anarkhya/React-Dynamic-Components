@@ -5,18 +5,18 @@ import ReactDOM from "react-dom";
 const ModalObjets = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
   const [cls, setCls] = useState(data.cls);
-  const [categorie, setCategorie] = useState(data.categorie);
+  const [category, setCategorie] = useState(data.category);
 
   /* affiche user input */
   const updateCategorie = (value, type, obj) => {
-    const newCategorie = [...categorie];
+    const newCategorie = [...category];
     const index = newCategorie.indexOf(obj);
     newCategorie[index][type] = value;
     setCategorie(newCategorie);
   };
   // /* suppression ciblée avec le bon index */
   const deleteDetail = (obj) => {
-    const newDetails = [...categorie];
+    const newDetails = [...category];
     const index = newDetails.indexOf(obj);
     newDetails.splice(index, 1);
     setCategorie(newDetails);
@@ -24,20 +24,20 @@ const ModalObjets = ({ isShowing, hide, data }) => {
 
   /* ajoute nouveau bloc - push */
   const addDetails = () => {
-    const newDetails = [...categorie];
-    newDetails.push({ appartenance: "", cible: "" });
+    const newDetails = [...category];
+    newDetails.push({ title: "", paragraph: "" });
     setCategorie(newDetails);
   };
 
   const onUpdateComponent = () => {
     console.log({
-      categorie,
+      category,
     });
     hide();
   };
   const onDeleteComponent = () => {
     console.log({
-      categorie,
+      category,
     });
     hide();
   };
@@ -62,7 +62,7 @@ const ModalObjets = ({ isShowing, hide, data }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="text-h1 leading-none"
@@ -87,23 +87,19 @@ const ModalObjets = ({ isShowing, hide, data }) => {
                   onChange={(event) => setCls(event.target.value)}
                 />
               </label>
-              {categorie.map((item) => {
+              {category.map((item) => {
                 return (
                   <div>
                     <label htmlFor="1" className="">
-                      titre
+                      title
                       <input
                         id=""
                         className="transition uppercase text-h2 font-bold hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                         type="text"
-                        value={item.appartenance}
+                        value={item.title}
                         placeholder=""
                         onChange={(event) =>
-                          updateCategorie(
-                            event.target.value,
-                            "appartenance",
-                            item
-                          )
+                          updateCategorie(event.target.value, "title", item)
                         }
                       />
                     </label>
@@ -113,10 +109,10 @@ const ModalObjets = ({ isShowing, hide, data }) => {
                         id=""
                         className="transition hover:shadow-xl focus-within:shadow-xl focus:outline-none rounded mt-2 mb-4 px-2 w-full"
                         type="text"
-                        value={item.cible}
+                        value={item.paragraph}
                         placeholder=""
                         onChange={(event) =>
-                          updateCategorie(event.target.value, "cible", item)
+                          updateCategorie(event.target.value, "paragraph", item)
                         }
                       />
                     </label>

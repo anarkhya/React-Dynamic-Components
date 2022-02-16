@@ -17,7 +17,7 @@ import HeaderData from "../data/HeaderData";
  *
  *
  * @param {*} { type: objet }
- * @return {*} un bouton d'administration sur chaque modal appartenant à différents component
+ * @return {*} un button d'administration sur chaque modal appartenant à différents component
  */
 const ButtonAdmin = ({ type, data }) => {
   const [modal, setModal] = useState("");

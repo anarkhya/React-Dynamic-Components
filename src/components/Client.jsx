@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
+import Headline1 from "./Headline1";
 
 /**
  *
@@ -18,7 +19,7 @@ const Client = ({ data }) => {
       <div className="w-full text-right">
         <ButtonAdmin type="client" data={data} />
       </div>
-      <h1 className="font-light text-center uppercase text-h1">{data.titre}</h1>
+      <Headline1 data={data} />
       <p className="lg:w-1/2">{data.description}</p>
     </div>
   );

@@ -1,26 +1,23 @@
 const echanges = [
   /*
-  Dans la Trocquerie, il est possible de troquer:
   exemples d'objets
   types d'objets
   présentation troc
   Comment ça marche:
   */
 
-  // Dans la Trocquerie, il est possible de troquer:
   // bloc_order 1
 
   {
     component: "article",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
-      clsBouton: "rounded-full bg-secondary text-white px-6 py-2 text-sm",
-      titre: "Lorem ipsum dolor sit amet",
+      title: "Lorem ipsum dolor sit amet",
       description: "¡ Uniquement des objets en bon état !",
       description2: "",
       description3: "",
-      url: "",
-      bouton: false,
+      buttonUrl: "",
+      hasButton: false,
     },
   },
 
@@ -31,8 +28,8 @@ const echanges = [
     component: "product",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
-      titre: "Les différents produits échangeables:",
-      presentation: [
+      title: "Les différents produits échangeables:",
+      products: [
         {
           id: 1,
           infos:
@@ -58,21 +55,22 @@ const echanges = [
     component: "objets",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-primary text-secondary",
-      categorie: [
+      category: [
         {
           id: 1,
-          appartenance: "Vêtements",
-          cible: "Femme ~ Homme ~ Enfant ~ Accessoire ~ Chaussures ...",
+          title: "Vêtements",
+          paragraph: "Femme ~ Homme ~ Enfant ~ Accessoire ~ Chaussures ...",
         },
         {
           id: 2,
-          appartenance: "Maison",
-          cible: "Petit mobilier ~ Vaisselle ~ Décoration ~ Puériculture ... ",
+          title: "Maison",
+          paragraph:
+            "Petit mobilier ~ Vaisselle ~ Décoration ~ Puériculture ... ",
         },
         {
           id: 3,
-          appartenance: "Culture & loisirs",
-          cible:
+          title: "Culture & loisirs",
+          paragraph:
             "Livre ~ Jeu ~ CD/K7 ~ vinyle ~ Jeu vidéo ~ Univers sport ... ",
         },
       ],
@@ -82,7 +80,7 @@ const echanges = [
   // bloc_order 4
 
   {
-    component: "categorie",
+    component: "category",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
       description:
@@ -124,14 +122,13 @@ const echanges = [
     component: "article",
     data: {
       cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
-      clsBouton: "rounded-full bg-secondary text-white px-6 py-2 text-sm",
-      titre: "Comment ça marche:",
+      title: "Comment ça marche:",
       description:
         "Faire le tri chez soi. Venir à la boutique ou prendre rendez-vous. Amenez les pièces à échanger. Choisir les nouveaux articles. Repartir avec les produits choisis.",
       description2: "",
       description3: "",
-      url: "",
-      bouton: false,
+      buttonUrl: "",
+      hasButton: false,
     },
   },
 ];

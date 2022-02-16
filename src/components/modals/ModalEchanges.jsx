@@ -6,7 +6,7 @@ import "../../effects.css";
 const ModalEchanges = ({ isShowing, hide, data }) => {
   /** state pour changer ou non la valeur des inputs */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
+  const [title, setTitre] = useState(data.title);
   const [description, setDescription] = useState(data.description);
   const [gommettes, setGommettes] = useState(data.gommettes);
   const [alt, setAlt] = useState(data.gommettes.alt);
@@ -23,7 +23,7 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
 
   const onUpdateComponent = () => {
     console.log({
-      titre,
+      title,
       description,
       gommettes,
       infos,
@@ -33,7 +33,7 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
   };
   const onDeleteComponent = () => {
     console.log({
-      titre,
+      title,
       description,
       gommettes,
       infos,
@@ -62,7 +62,7 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"
@@ -88,15 +88,15 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
                     onChange={(event) => setCls(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre" className="">
+                <label htmlFor="title" className="">
                   paragraphe
                   <textarea
                     className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
-                    id="titre"
+                    id="title"
                     rows="5"
                     type="text"
                     value={description}
-                    placeholder="titre du bloc"
+                    placeholder="title du bloc"
                     onChange={(event) => setDescription(event.target.value)}
                   />
                 </label>
@@ -106,7 +106,7 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
                     className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
                     id="description"
                     type="text"
-                    value={titre}
+                    value={title}
                     placeholder="contenu du paragraphe"
                     onChange={(event) => setTitre(event.target.value)}
                   />
@@ -145,27 +145,27 @@ const ModalEchanges = ({ isShowing, hide, data }) => {
                     </div>
                   );
                 })}
-                <label htmlFor="titre" className="">
+                <label htmlFor="title" className="">
                   Texte
                   <textarea
                     className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
-                    id="titre"
+                    id="title"
                     rows="3"
                     type="text"
                     value={infos}
-                    placeholder="titre du bloc"
+                    placeholder="title du bloc"
                     onChange={(event) => setInfos(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre" className="">
+                <label htmlFor="title" className="">
                   mini texte
                   <input
                     className="w-full px-2 mt-2 mb-4 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
-                    id="titre"
+                    id="title"
                     rows="3"
                     type="text"
                     value={more}
-                    placeholder="titre du bloc"
+                    placeholder="title du bloc"
                     onChange={(event) => setMore(event.target.value)}
                   />
                 </label>

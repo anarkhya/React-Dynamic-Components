@@ -5,19 +5,19 @@ import ReactDOM from "react-dom";
 const ModalClient = ({ isShowing, hide, data }) => {
   /** state qui est en lien avec la data de concept pour l'afficher */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
+  const [title, setTitre] = useState(data.title);
   const [description, setDescription] = useState(data.description);
 
   const onUpdateComponent = () => {
     console.log({
-      titre,
+      title,
       description,
     });
     hide();
   };
   const onDeleteComponent = () => {
     console.log({
-      titre,
+      title,
       description,
     });
     hide();
@@ -43,7 +43,7 @@ const ModalClient = ({ isShowing, hide, data }) => {
               {/* // modal-header */}
               <div className="flex justify-end">
                 {/* // modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"
@@ -69,14 +69,14 @@ const ModalClient = ({ isShowing, hide, data }) => {
                     onChange={(event) => setCls(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre">
-                  Titre
+                <label htmlFor="title">
+                  title
                   <input
-                    id="titre"
+                    id="title"
                     className="w-full px-2 mt-2 mb-4 font-light transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
                     type="text"
-                    value={titre}
-                    placeholder="titre du bloc"
+                    value={title}
+                    placeholder="title du bloc"
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>

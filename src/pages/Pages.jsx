@@ -38,7 +38,7 @@ const Pages = () => {
       article: () => <Article data={data} />,
       articleImage: () => <ArticleImage data={data} />,
       product: () => <Product data={data} />,
-      categorie: () => <Echanges data={data} />,
+      category: () => <Echanges data={data} />,
       objets: () => <Objets data={data} />,
       echanges: () => <Echanges data={data} />,
       map: () => <Map data={data} />,

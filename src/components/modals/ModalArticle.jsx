@@ -5,16 +5,16 @@ import ReactDOM from "react-dom";
 const ModalArticle = ({ isShowing, hide, data }) => {
   /* states affichent data actuelle || user input */
   const [cls, setCls] = useState(data.cls);
-  const [titre, setTitre] = useState(data.titre);
+  const [title, setTitre] = useState(data.title);
   const [description, setDescription] = useState(data.description);
   const [description2, setDescription2] = useState(data.description2);
   const [description3, setDescription3] = useState(data.description3);
-  const [hasBouton, setHasBouton] = useState(data.bouton);
+  const [hasBouton, setHasBouton] = useState(data.button);
   const [urlBouton, setUrlBouton] = useState(data.url);
 
   const onUpdateComponent = () => {
     console.log({
-      titre,
+      title,
       description,
       description2,
       description3,
@@ -25,7 +25,7 @@ const ModalArticle = ({ isShowing, hide, data }) => {
   };
   const onDeleteComponent = () => {
     console.log({
-      titre,
+      title,
       description,
       description2,
       description3,
@@ -55,7 +55,7 @@ const ModalArticle = ({ isShowing, hide, data }) => {
               {/* // style modal-header */}
               <div className="flex justify-end">
                 {/* // style modal-close-button */}
-                {/* bouton croix pour fermer le modal */}
+                {/* button croix pour fermer le modal */}
                 <button
                   type="button"
                   className="leading-none text-h1"
@@ -81,14 +81,14 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                     onChange={(event) => setCls(event.target.value)}
                   />
                 </label>
-                <label htmlFor="titre" className="">
-                  Titre
+                <label htmlFor="title" className="">
+                  title
                   <input
                     className="w-full px-2 mt-2 mb-4 font-light uppercase transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none text-h1"
-                    id="titre"
+                    id="title"
                     type="text"
-                    value={titre}
-                    placeholder="titre du bloc"
+                    value={title}
+                    placeholder="title du bloc"
                     onChange={(event) => setTitre(event.target.value)}
                   />
                 </label>
@@ -130,7 +130,7 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                 </label>
                 <div className="flex flex-col">
                   <label htmlFor="b">
-                    Présence de bouton ?
+                    Présence de button ?
                     <input
                       className="w-5 h-5 m-2 mb-4"
                       id="b"
@@ -142,7 +142,7 @@ const ModalArticle = ({ isShowing, hide, data }) => {
                   </label>
                 </div>
                 <label htmlFor="btn-url">
-                  Lien du bouton
+                  Lien du button
                   <input
                     className="w-full px-2 mt-2 mb-2 transition rounded hover:shadow-xl focus-within:shadow-xl focus:outline-none"
                     id="btn-url"

@@ -27,7 +27,7 @@ const ButtonNewsComponent = () => {
           isShowing
           hide={toggle}
           data={{
-            titre: "",
+            title: "",
             details: [{ detail: "", description1: "", description2: "" }],
             description: "",
           }}
@@ -64,14 +64,14 @@ const ButtonNewsComponent = () => {
         <ModalObjets
           isShowing
           hide={toggle}
-          data={{ categorie: [{ appartenance: "", cible: "" }] }}
+          data={{ category: [{ title: "", paragraph: "" }] }}
         />
       ),
       product: (
         <ModalProduct
           isShowing
           hide={toggle}
-          data={{ presentation: [{ info: "", src: "" }] }}
+          data={{ products: [{ info: "", src: "" }] }}
         />
       ),
       client: <ModalClient isShowing hide={toggle} data={{}} />,

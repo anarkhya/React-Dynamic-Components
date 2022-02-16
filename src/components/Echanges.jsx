@@ -8,12 +8,12 @@ import "../effects.css";
  * @param {*} { data }
  * data se trouvant dans data/Echanges
  * @return {*}
- * Map sur les gommettes pour classer les produits par categorie de prix
- * bouton Admin joint
+ * Map sur les gommettes pour classer les produits par category de prix
+ * button Admin joint
  */
 const Echanges = ({ data }) => {
   return (
-    // composant categorie
+    // composant category
     <div
       className={data.cls}
       style={{ backgroundImage: "url(/assets/images/grid.png)" }}
@@ -23,7 +23,7 @@ const Echanges = ({ data }) => {
       </div>
       <div className="lg:w-1/2">
         <p className="">{data.description}</p>
-        <h2 className="mt-4 text-center">{data.titre}</h2>
+        <h2 className="mt-4 text-center">{data.title}</h2>
         <section className="flex justify-center gap-4 mt-4">
           {data.gommettes.map((gommette) => (
             <section key={gommette.id}>

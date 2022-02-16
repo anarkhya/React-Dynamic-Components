@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonAdmin from "./ButtonAdmin";
+import Headline1 from "./Headline1";
 
 const Concept = ({ data }) => {
   // composant concept utlisé pour afficher les 2 citations dans page concept
@@ -9,9 +10,7 @@ const Concept = ({ data }) => {
         <div className="w-full text-right">
           <ButtonAdmin type="concept" data={data} />
         </div>
-        <h1 className="font-light text-center uppercase text-h1">
-          {data.title}
-        </h1>
+        <Headline1 data={data} />
         <p className="lg:w-1/2 px-4 text-[28px] font-light leading-tight">
           {data.description}
         </p>
