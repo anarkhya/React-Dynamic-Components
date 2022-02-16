@@ -12,28 +12,28 @@ const Formulaire = ({ data }) => {
   return (
     <div className="flex flex-col lg:text-lg items-center p-4 bg-secondary text-white">
       <Headline1 data={data} />
-      <form className="flex flex-col items-center gap-1 py-4 text-secondary">
-        <label htmlFor="nom">
+      <form className="flex flex-col items-center gap-3 py-4">
+        <label htmlFor="firstName">
           <input
-            className="px-2 mb-3 border-none rounded lg:w-96 focus:outline-none"
+            className="hover:border-b-accent px-2 py-1 bg-dark border-b-2 border-b-primary rounded lg:w-96 outline-none"
             type="text"
-            name="Nom"
-            id="nom"
-            placeholder="Nom"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
           />
         </label>
-        <label htmlFor="Prénom">
+        <label htmlFor="lastName">
           <input
-            className="px-2 mb-3 border-none rounded lg:w-96 focus:outline-none"
+            className="hover:border-b-accent px-2 py-1 bg-dark border-b-2 border-b-primary rounded lg:w-96 outline-none"
             type="text"
-            name="Prénom"
-            id="Prénom"
-            placeholder="Prénom"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
           />
         </label>
         <label htmlFor="Email">
           <input
-            className="px-2 mb-3 border-none rounded lg:w-96 focus:outline-none"
+            className=" hover:border-b-accent px-2 py-1 bg-dark border-b-2 border-b-primary rounded lg:w-96 outline-none"
             type="text"
             name="Email"
             id="Email"
@@ -41,7 +41,7 @@ const Formulaire = ({ data }) => {
           />
         </label>
         <textarea
-          className="block px-2 m-0 mb-3 rounded  lg:w-96 bg-clip-padding focus:outline-none"
+          className="bg-clip-padding hover:border-b-accent px-2 py-1 bg-dark border-b-2 border-b-primary rounded lg:w-96 outline-none"
           rows="3"
           placeholder="Message"
         />
