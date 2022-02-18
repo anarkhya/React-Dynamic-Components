@@ -7,3 +7,8 @@
   font-family: "zergei";
   src: url("../public/fonts/zergei-eye-fs.ttf");
 }
+
+@font-face {
+  font-family: "simply";
+  src: url("../public/fonts/SimplySans-Book.ttf");
+}

@@ -9,7 +9,7 @@ module.exports = {
         secondary: "#87b",
       },
       fontFamily: {
-        sans: ["Ubuntu", "sans-serif"],
+        sans: ["simply", "sans-serif"],
         headlines: ["zergei", "cursive"],
       },
       fontWeight: {
