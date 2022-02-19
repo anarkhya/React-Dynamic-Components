@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="lg:flex lg:items-center">
           <LocationMarkerIcon className="h-5" />
           <a
-            className="underline transition hover:no-underline active:translate-y-1"
+            className="underline transition underline-offset-2 hover:decoration-accent decoration-1 decoration-ternary active:translate-y-1"
             href="https://www.google.com/maps?ll=47.204088,-1.547592&z=14&t=m&hl=fr&gl=FR&mapclient=embed&q=23+Rue+Petite+Biesse+44200+Nantes"
             target="_blank"
             rel="noreferrer"
@@ -37,9 +37,9 @@ const Footer = () => {
       <section className="flex flex-col items-center lg:flex-row lg:justify-between lg:p-2 text-mini ">
         <p className="opacity-50">{FooterData.copyright}</p>
         <p>
-          Made by
+          Made with 🕹️ by
           <a
-            className="px-1 underline transition hover:no-underline active:translate-y-1"
+            className="px-1 underline transition underline-offset-2 hover:decoration-accent decoration-1 decoration-ternary active:translate-y-1"
             href={FooterData.developerUrl}
             target="_blank"
             rel="noreferrer"

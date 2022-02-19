@@ -13,13 +13,13 @@ const concept = [
   {
     component: "article",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-[30%] lg:pb-[10px]",
       clsPara: "lg:w-1/2",
       title: "Concept",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..",
       description2:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       description3:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       hasButton: false,
@@ -29,12 +29,12 @@ const concept = [
 
   // 2 - citation 1
   {
-    component: "concept",
+    component: "article",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
+      cls: "quoty lg:text-lg gap-3 mx-auto flex items-center flex-col text-secondary   mx-[5vw] my-8",
       title: "",
       description:
-        "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”",
+        "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ”",
     },
   },
   // 3 - paragraph client
@@ -43,7 +43,7 @@ const concept = [
   {
     component: "client",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-accent text-white pb-[30%] lg:pb-[10px]",
       title: "Pour qui ?",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -53,9 +53,9 @@ const concept = [
   // bloc_order 4
 
   {
-    component: "concept",
+    component: "article",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-secondary text-dark",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col text-secondary pb-8",
       title: "",
       description:
         "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
@@ -67,7 +67,7 @@ const concept = [
   {
     component: "articleImage",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-accent text-white pb-[30%] lg:pb-[10px]",
       title: "Porteuse de projet",
       src: "./assets/images/placeholder.png",
       alt: "photo",

@@ -11,7 +11,7 @@ const echanges = [
   {
     component: "article",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-[30%] lg:pb-[30px]",
       title: "Lorem ipsum dolor sit amet",
       description: "¡ Uniquement des objets en bon état !",
       description2: "",
@@ -27,7 +27,7 @@ const echanges = [
   {
     component: "product",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col text-secondary pb-[30%] lg:pb-8",
       title: "Les différents produits échangeables:",
       products: [
         {
@@ -54,7 +54,7 @@ const echanges = [
   {
     component: "objets",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-[30%] lg:pb-[10px]",
       category: [
         {
           id: 1,
@@ -82,7 +82,7 @@ const echanges = [
   {
     component: "category",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-white",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col text-secondary pb-[30%] lg:pb-8",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       gommettes: [
@@ -121,7 +121,7 @@ const echanges = [
   {
     component: "article",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-[30%] lg:pb-[10px]",
       title: "Comment ça marche:",
       description:
         "Faire le tri chez soi. Venir à la boutique ou prendre rendez-vous. Amenez les pièces à échanger. Choisir les nouveaux articles. Repartir avec les produits choisis.",

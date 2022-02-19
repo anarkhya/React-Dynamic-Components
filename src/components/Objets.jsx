@@ -11,10 +11,7 @@ import ButtonAdmin from "./ButtonAdmin";
  */
 const Objets = ({ data }) => {
   return (
-    <div
-      className={data.cls}
-      style={{ backgroundImage: "url(/assets/images/grid.png)" }}
-    >
+    <div className={data.cls}>
       <div className="w-full text-right">
         <ButtonAdmin type="objets" data={data} />
       </div>

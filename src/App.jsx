@@ -8,7 +8,10 @@ import MentionsLegales from "./pages/MentionsLegales";
 
 function App() {
   return (
-    <div className="bg-primary">
+    <div
+      className="bg-primary"
+      style={{ backgroundImage: "url(/assets/images/grid.png)" }}
+    >
       <BrowserRouter>
         <Header />
         <Routes>

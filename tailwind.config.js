@@ -4,13 +4,14 @@ module.exports = {
     extend: {
       colors: {
         dark: "#333",
-        primary: "#dde",
-        accent: "#f06",
+        primary: "#faf6ed",
         secondary: "#87b",
+        ternary: "#0aa",
+        accent: "#f06",
       },
       fontFamily: {
         sans: ["simply", "sans-serif"],
-        headlines: ["zergei", "cursive"],
+        headlines: ["zergei", "sans-serif"],
       },
       fontWeight: {
         light: 300,

@@ -12,7 +12,7 @@ const contact = [
   {
     component: "articleImage",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-[30%] lg:pb-[30px] mt-16",
       title: "Un lieu de vie, d'échange et de mixité",
       src: "./assets/images/placeholder.png",
       alt: "photo",
@@ -24,7 +24,7 @@ const contact = [
   {
     component: "objets",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto  flex items-center flex-col bg-secondary text-dark",
+      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col text-secondary pb-[30%] lg:pb-8",
       category: [
         {
           id: 1,

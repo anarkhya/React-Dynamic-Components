@@ -2,6 +2,30 @@
   border-radius: 40% 90% 40% 90% / 40% 90% 40% 90%;
 }
 
+.chisel {
+  background: #87b; /* fallback */
+  background:
+    linear-gradient(45deg, transparent 16vw, #87b 10px),
+    linear-gradient(315deg, transparent -2px, #87b 1px),
+    linear-gradient(225deg, transparent 16vw, #87b 1px),
+    linear-gradient(135deg, transparent -2px, #87b 1px);
+  background-position: bottom left, bottom right, top right, top left;
+  background-size: 51% 80%;
+  background-repeat: no-repeat;
+}
+
+.quoty {
+  background: #87b; /* fallback */
+  background:
+    linear-gradient(45deg, transparent 6px, #87b 2px),
+    linear-gradient(315deg, transparent 6px, #87b 2px),
+    linear-gradient(225deg, transparent 6px, #87b 2px),
+    linear-gradient(135deg, transparent 6px, #87b 2px);
+  background-position: bottom left, bottom right, top right, top left;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
 /* Slideshow */
 .each-slide > div {
   display: flex;
@@ -18,6 +42,17 @@
   text-align: center;
 }
 
+.react-slideshow-container button.nav.default-nav,
+.react-slideshow-container button.nav.default-nav:hover,
+.react-slideshow-container button.nav.default-nav:focus {
+  background: none;
+  padding: 5px;
+}
+
 .react-slideshow-container button.default-nav svg {
-  fill: rgb(73, 73, 73);
+  fill: #0aa;
+}
+
+.react-slideshow-container button.default-nav svg:hover {
+  fill: #f06;
 }

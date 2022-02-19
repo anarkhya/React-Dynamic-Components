@@ -14,10 +14,7 @@ import "../effects.css";
 const Echanges = ({ data }) => {
   return (
     // composant category
-    <div
-      className={data.cls}
-      style={{ backgroundImage: "url(/assets/images/grid.png)" }}
-    >
+    <div className={data.cls}>
       <div className="w-full text-right">
         <ButtonAdmin type="echanges" data={data} />
       </div>

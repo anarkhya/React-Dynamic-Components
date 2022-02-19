@@ -12,10 +12,7 @@ import Headline1 from "./Headline1";
  */
 const Client = ({ data }) => {
   return (
-    <div
-      className="flex flex-col items-center gap-3 p-4 mx-auto lg:text-lg bg-primary text-secondary"
-      style={{ backgroundImage: "url(/assets/images/grid.png)" }}
-    >
+    <div className={data.cls}>
       <div className="w-full text-right">
         <ButtonAdmin type="client" data={data} />
       </div>

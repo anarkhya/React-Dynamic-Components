@@ -9,7 +9,7 @@ const AbonnementData = [
   {
     component: "abonnement",
     data: {
-      cls: "p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-primary text-secondary",
+      cls: "chisel p-4 lg:text-lg gap-3 mx-auto flex items-center flex-col bg-secondary text-white pb-[30%] lg:pb-[10px]",
       title: "Abonnements",
 
       details: [

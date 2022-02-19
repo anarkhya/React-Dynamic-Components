@@ -13,10 +13,7 @@ import Headline1 from "./Headline1";
 const Product = ({ data }) => {
   // composant product se trouvant sur la page Echanges
   return (
-    <div
-      className={data.cls}
-      style={{ backgroundImage: "url(/assets/images/grid.png)" }}
-    >
+    <div className={data.cls}>
       <div className="w-full text-right">
         <ButtonAdmin type="product" data={data} />
       </div>

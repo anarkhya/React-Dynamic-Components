@@ -14,10 +14,7 @@ import Headline1 from "./Headline1";
 const ArticleImage = ({ data }) => {
   return (
     <div className="">
-      <div
-        className={data.cls}
-        style={{ backgroundImage: "url(/assets/images/grid.png)" }}
-      >
+      <div className={data.cls}>
         <div className="w-full text-right">
           <ButtonAdmin type="articleImage" data={data} />
         </div>
